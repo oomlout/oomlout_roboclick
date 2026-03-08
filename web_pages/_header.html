@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div>
+    <h1 class="site-title">{{ site_title }}</h1>
+  </div>
+  <div style="margin-left: auto; display: flex; gap: 1em; align-items: center;">
+    {# Dynamically generate header navigation from nav_pages context #}
+    {% for page in nav_pages %}
+      <a href="{{ page.url }}" style="color: inherit; text-decoration: none;">{{ page.title }}</a>
+    {% endfor %}
+  </div>
+</header>

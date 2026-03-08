@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page_title | default(site_title) }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    {% include "_header.html" %}
+    <div class="main-layout">
+      {% include "_navigation.html" %}
+      <main class="content-column">
+        {% block content %}{% endblock %}
+        {% if debug_info is defined %}
+        <!-- <section class="info-card">
+          <h2>Debug</h2>
+          <pre>{{ debug_info | tojson(indent=2) }}</pre>
+        </section> -->
+        {% endif %}
+      </main>
+    </div>
+    {% include "_footer.html" %}
+  </body>
+</html>

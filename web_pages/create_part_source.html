@@ -1,0 +1,36 @@
+{#
+  create_part_source.html
+  This template renders a form for creating a new part source entry.
+  The form fields are provided by part_form_fields from the Flask context.
+  To add new fields, update part_form_fields in working_web.py.
+  All submitted values are written to working.yaml in a new directory under parts_source/.
+#}
+
+{% extends "layout.html" %}
+{% block content %}
+<h2>Create Part Source</h2>
+
+<form method="post" class="main-form" style="width: 100%; max-width: 900px; margin: 2em auto 0 auto; background: #f9f9fb; padding: 2.5em 2em; border-radius: 12px; box-shadow: 0 4px 24px #0002;">
+  <div class="form-fields" style="display: flex; flex-wrap: wrap; gap: 2em 3em;">
+    {# Loop through all fields provided by part_form_fields, two columns on desktop #}
+    {% for field, label, default in part_form_fields %}
+      <div class="form-group" style="flex: 1 1 320px; min-width: 260px; margin-bottom: 1.5em;">
+        <label for="{{ field }}" style="display: block; font-weight: 600; margin-bottom: 0.4em; color: #333; letter-spacing: 0.02em;">{{ label }}</label>
+        <input type="text" id="{{ field }}" name="{{ field }}" class="form-control" value="{{ default }}" style="width: 100%; padding: 0.7em; border: 1.5px solid #bfc4cc; border-radius: 6px; box-sizing: border-box; font-size: 1.08em; background: #fff; transition: border-color 0.2s;" autocomplete="off" onfocus="this.style.borderColor='#007bff'" onblur="this.style.borderColor='#bfc4cc'">
+      </div>
+    {% endfor %}
+  </div>
+  <button type="submit" class="btn btn-primary" style="background: linear-gradient(90deg, #007bff 60%, #0056b3 100%); color: #fff; border: none; padding: 0.9em 1.5em; border-radius: 6px; font-size: 1.08em; cursor: pointer; width: 100%; max-width: 400px; margin: 2.5em auto 0 auto; display: block; box-shadow: 0 2px 8px #007bff22; font-weight: 600; letter-spacing: 0.03em; transition: background 0.2s;">Create Part Source</button>
+</form>
+
+<form method="post" action="{{ url_for('launch_working_all') }}" style="width: 100%; max-width: 700px; margin: 2.5em auto 0 auto; text-align: center;">
+  <button type="submit" class="btn btn-secondary" style="background: linear-gradient(90deg, #28a745 60%, #218838 100%); color: #fff; border: none; padding: 0.9em 1.5em; border-radius: 6px; font-size: 1.08em; cursor: pointer; width: 100%; max-width: 400px; margin: 0 auto; display: block; box-shadow: 0 2px 8px #28a74522; font-weight: 600; letter-spacing: 0.03em; transition: background 0.2s;">Launch working_all</button>
+</form>
+</form>
+
+{#
+  To add extra form elements:
+  1. Add a (field, label) tuple to part_form_fields in working_web.py.
+  2. The new field will automatically appear in this form and be saved to working.yaml.
+#}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% set active = page_meta.get("highlight") if page_meta is defined and page_meta else None %}
+<nav class="side-nav">
+  <h2>Pages</h2>
+  <ul class="nav-list">
+    {# Dynamically generate navigation links from nav_pages context #}
+    {% for page in nav_pages %}
+      <li class="{{ 'is-active' if active == page.name else '' }}">
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
