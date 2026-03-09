@@ -550,6 +550,23 @@ def _discover_oomp_modes(workings: dict[str, Any]) -> list[str]:
     return discovered
 
 
+
+def run_folder_recursive(**kwargs: Any) -> None:
+    directory = kwargs.get("directory", "")    
+
+    #get folders in directory but do not recurse into them yet
+    entries = sorted(os.listdir(directory))
+    for entry in entries:
+        run_dir = os.path.join(directory, entry)
+        if not os.path.isdir(run_dir):
+            continue
+        print(f"Processing folder: {run_dir}")
+        run_kwargs = copy.deepcopy(kwargs)
+        #pop directory from kwargs and set folder for run_folder
+        run_kwargs.pop("directory", None)
+        run_kwargs["folder"] = run_dir        
+        run_folder(**run_kwargs)
+
 def run_folder(**kwargs: Any) -> None:
     folder = kwargs.get("folder", "")
     if not folder:
@@ -816,5 +833,53 @@ def cli() -> None:
         )
 
 
+##### utility stuff
+def get_url(part):
+    file_url = "url.yaml"
+    directory = get_directory(part)
+    file_url = f"{directory}\\url.yaml"
+    import yaml
+    url = ""
+    if os.path.isfile(file_url):
+        #url may have multiple lines use the last one
+        with open(file_url, 'r', encoding='utf-8') as f:
+            try:
+                data_list = yaml.safe_load(f)
+                url = data_list[len(data_list)-1]
+            except Exception as e:
+                print(f"Error reading url from {file_url}: {e}")
+    return url
+                
+            
+
+def get_directory(part):
+    
+    #type, size, color, description_main, description_extra
+    tags = ["classification","type", "size", "color", "description_main", "description_extra", "manufacturer", "part_number"]
+
+    directory = ""
+
+    for tag in tags:
+        if tag in part:
+            if part[tag] != "":
+                if directory != "":
+                    directory += "_"
+                directory += part[tag]
+    #make lowercase and replace spaces with underscores and slashes with underscores
+    directory = directory.replace(" ", "_")
+    directory = directory.replace("/", "_")
+    directory = directory.replace("\\", "_")
+    directory = directory.replace("__", "_")
+    directory = directory.replace(")", "_")
+    directory = directory.replace("(", "_")
+    directory = directory.lower()
+
+    directory = f"parts\\{directory}"
+
+    return directory
+
+
 if __name__ == "__main__":
     cli()
+
+
