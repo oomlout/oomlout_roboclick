@@ -1,5 +1,0 @@
-part_sources:
-  - name: base_parts
-    directory: parts
-  - name: oomp_main
-    directory: Z:\oomlout_oomp_version_1_messy\parts
