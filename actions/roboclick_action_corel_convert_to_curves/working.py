@@ -30,8 +30,8 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'ungroup', 'description': 'Legacy parameter: ungroup', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay', 'description': 'Legacy parameter: delay', 'type': 'string', 'default': ''})
+        v.append({'name': 'ungroup', 'description': 'Whether to ungroup objects after converting to curves.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay', 'description': 'Delay duration in seconds.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -37,9 +37,9 @@ def describe():
     d["category"] = 'AI Image'
     v = []
     if True:
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
-        v.append({'name': 'position_click', 'description': 'Legacy parameter: position_click', 'type': 'string', 'default': ''})
-        v.append({'name': 'mode_ai_wait', 'description': 'Legacy parameter: mode_ai_wait', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'position_click', 'description': 'Screen position used to open the generated image context menu.', 'type': 'string', 'default': ''})
+        v.append({'name': 'mode_ai_wait', 'description': 'AI wait strategy (slow, fast_button_state, or fast_clipboard_state).', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -28,8 +28,8 @@ def describe():
     d["category"] = 'Image'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -26,8 +26,8 @@ def describe():
     d["category"] = 'Legacy Alias'
     v = []
     if True:
-        v.append({'name': 'description', 'description': 'Legacy parameter: description', 'type': 'string', 'default': ''})
-        v.append({'name': 'log_url', 'description': 'Legacy parameter: log_url', 'type': 'string', 'default': ''})
+        v.append({'name': 'description', 'description': 'Optional kickoff note sent in the first chat message.', 'type': 'string', 'default': ''})
+        v.append({'name': 'log_url', 'description': 'Whether to capture and store the current chat URL.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

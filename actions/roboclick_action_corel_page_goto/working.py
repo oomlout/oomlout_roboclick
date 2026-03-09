@@ -30,7 +30,7 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'page_number', 'description': 'Legacy parameter: page_number', 'type': 'string', 'default': ''})
+        v.append({'name': 'page_number', 'description': 'Target page number to switch to.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

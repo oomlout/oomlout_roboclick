@@ -26,10 +26,10 @@ def describe():
     d["category"] = 'Legacy Alias'
     v = []
     if True:
-        v.append({'name': 'text', 'description': 'Legacy parameter: text', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay', 'description': 'Legacy parameter: delay', 'type': 'string', 'default': ''})
-        v.append({'name': 'mode_ai_wait', 'description': 'Legacy parameter: mode_ai_wait', 'type': 'string', 'default': ''})
-        v.append({'name': 'method', 'description': 'Legacy parameter: method', 'type': 'string', 'default': ''})
+        v.append({'name': 'text', 'description': 'Text content used by this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay', 'description': 'Delay duration in seconds.', 'type': 'string', 'default': ''})
+        v.append({'name': 'mode_ai_wait', 'description': 'AI wait strategy (slow, fast_button_state, or fast_clipboard_state).', 'type': 'string', 'default': ''})
+        v.append({'name': 'method', 'description': 'Query input method (typing or paste).', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

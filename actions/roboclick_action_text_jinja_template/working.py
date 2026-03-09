@@ -30,13 +30,13 @@ def describe():
     d["category"] = 'Text'
     v = []
     if True:
-        v.append({'name': 'file_template', 'description': 'Legacy parameter: file_template', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_output', 'description': 'Legacy parameter: file_output', 'type': 'string', 'default': ''})
-        v.append({'name': 'search_and_replace', 'description': 'Legacy parameter: search_and_replace', 'type': 'string', 'default': ''})
-        v.append({'name': 'convert_to_pdf', 'description': 'Legacy parameter: convert_to_pdf', 'type': 'string', 'default': ''})
-        v.append({'name': 'convert_to_png', 'description': 'Legacy parameter: convert_to_png', 'type': 'string', 'default': ''})
-        v.append({'name': 'dict_data', 'description': 'Legacy parameter: dict_data', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_template', 'description': 'Template file to render with Jinja variables.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_output', 'description': 'Output file path for rendered text or converted assets.', 'type': 'string', 'default': ''})
+        v.append({'name': 'search_and_replace', 'description': 'Search/replace rules applied during templating.', 'type': 'string', 'default': ''})
+        v.append({'name': 'convert_to_pdf', 'description': 'Whether to convert rendered output to PDF.', 'type': 'string', 'default': ''})
+        v.append({'name': 'convert_to_png', 'description': 'Whether to convert rendered output to PNG.', 'type': 'string', 'default': ''})
+        v.append({'name': 'dict_data', 'description': 'Dictionary data passed into template rendering.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

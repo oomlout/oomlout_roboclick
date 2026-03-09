@@ -30,7 +30,7 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'angle', 'description': 'Legacy parameter: angle', 'type': 'string', 'default': ''})
+        v.append({'name': 'angle', 'description': 'Rotation angle in degrees.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

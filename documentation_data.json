@@ -1,85 +1,6 @@
 {
   "actions": [
     {
-      "command": "roboclick_action_ai_add_image",
-      "name_long": "roboclick_action_ai_add_image",
-      "name_short_options": [
-        "add_image",
-        "image",
-        "ai_add_image"
-      ],
-      "description": "Add image.",
-      "summary": "Add image.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "position_click",
-          "description": "Legacy parameter: position_click",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "mode -- source_files from source_files directory",
-          "description": "Legacy parameter: mode -- source_files from source_files directory",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "position_click",
-        "mode -- source_files from source_files directory"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "add_image",
-        "image",
-        "ai_add_image"
-      ]
-    },
-    {
-      "command": "roboclick_action_ai_continue_chat",
-      "name_long": "roboclick_action_ai_continue_chat",
-      "name_short_options": [
-        "continue_chat",
-        "chat",
-        "ai_continue_chat"
-      ],
-      "description": "Continue chat.",
-      "summary": "Continue chat.",
-      "variables": [
-        {
-          "name": "url_chat",
-          "description": "Legacy parameter: url_chat",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "log_url",
-          "description": "Legacy parameter: log_url",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "url_chat",
-        "log_url"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "continue_chat",
-        "chat",
-        "ai_continue_chat"
-      ]
-    },
-    {
       "command": "roboclick_action_ai_file_add_file",
       "name_long": "roboclick_action_ai_file_add_file",
       "name_short_options": [
@@ -111,162 +32,6 @@
       ]
     },
     {
-      "command": "roboclick_action_ai_new_chat",
-      "name_long": "roboclick_action_ai_new_chat",
-      "name_short_options": [
-        "new_chat",
-        "chat",
-        "ai_new_chat"
-      ],
-      "description": "New chat.",
-      "summary": "New chat.",
-      "variables": [
-        {
-          "name": "log_url",
-          "description": "Legacy parameter: log_url",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "description",
-          "description": "Legacy parameter: description",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "log_url",
-        "description"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "new_chat",
-        "chat",
-        "ai_new_chat"
-      ]
-    },
-    {
-      "command": "roboclick_action_ai_query",
-      "name_long": "roboclick_action_ai_query",
-      "name_short_options": [
-        "ai_query",
-        "query"
-      ],
-      "description": "Ai query.",
-      "summary": "Ai query.",
-      "variables": [
-        {
-          "name": "text",
-          "description": "Legacy parameter: text",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "delay",
-          "description": "Legacy parameter: delay",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "mode_ai_wait",
-          "description": "Legacy parameter: mode_ai_wait",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "method",
-          "description": "Legacy parameter: method",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "text",
-        "delay",
-        "mode_ai_wait",
-        "method"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "ai_query",
-        "query"
-      ]
-    },
-    {
-      "command": "roboclick_action_ai_save_text",
-      "name_long": "roboclick_action_ai_save_text",
-      "name_short_options": [
-        "save_text",
-        "text",
-        "ai_save_text"
-      ],
-      "description": "Save text.",
-      "summary": "Save text.",
-      "variables": [
-        {
-          "name": "file_name_full",
-          "description": "Legacy parameter: file_name_full",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_name_clip",
-          "description": "Legacy parameter: file_name_clip",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "clip",
-          "description": "Legacy parameter: clip",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_name_full",
-        "file_name_clip",
-        "clip"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "save_text",
-        "text",
-        "ai_save_text"
-      ]
-    },
-    {
-      "command": "roboclick_action_ai_set_mode",
-      "name_long": "roboclick_action_ai_set_mode",
-      "name_short_options": [
-        "set_mode",
-        "mode",
-        "ai_set_mode"
-      ],
-      "description": "Set mode.",
-      "summary": "Set mode.",
-      "variables": [
-        {
-          "name": "mode",
-          "description": "Legacy parameter: mode",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "mode"
-      ],
-      "category": "AI",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "set_mode",
-        "mode",
-        "ai_set_mode"
-      ]
-    },
-    {
       "command": "roboclick_action_ai_skill_image_laser_cut_logo_full",
       "name_long": "roboclick_action_ai_skill_image_laser_cut_logo_full",
       "name_short_options": [
@@ -279,13 +44,13 @@
       "variables": [
         {
           "name": "image_detail",
-          "description": "Legacy parameter: image_detail",
+          "description": "Prompt detail level for generated image instructions.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -315,13 +80,13 @@
       "variables": [
         {
           "name": "image_detail",
-          "description": "Legacy parameter: image_detail",
+          "description": "Prompt detail level for generated image instructions.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -351,13 +116,13 @@
       "variables": [
         {
           "name": "text",
-          "description": "Legacy parameter: text",
+          "description": "Text content used by this action.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -387,13 +152,13 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -480,7 +245,7 @@
       "variables": [
         {
           "name": "file_name",
-          "description": "Legacy parameter: file_name",
+          "description": "File name to read or write for this action.",
           "type": "string",
           "default": ""
         }
@@ -509,13 +274,13 @@
       "variables": [
         {
           "name": "file_name",
-          "description": "Legacy parameter: file_name",
+          "description": "File name to read or write for this action.",
           "type": "string",
           "default": ""
         },
         {
           "name": "position_click",
-          "description": "Legacy parameter: position_click",
+          "description": "Screen position to click before executing the step.",
           "type": "string",
           "default": ""
         }
@@ -546,19 +311,19 @@
       "variables": [
         {
           "name": "file_name",
-          "description": "Legacy parameter: file_name",
+          "description": "File name to read or write for this action.",
           "type": "string",
           "default": ""
         },
         {
           "name": "position_click",
-          "description": "Legacy parameter: position_click",
+          "description": "Screen position to click before executing the step.",
           "type": "string",
           "default": ""
         },
         {
           "name": "mode_ai_wait",
-          "description": "Legacy parameter: mode_ai_wait",
+          "description": "AI wait strategy (slow, fast_button_state, or fast_clipboard_state).",
           "type": "string",
           "default": ""
         }
@@ -610,13 +375,13 @@
       "variables": [
         {
           "name": "description",
-          "description": "Legacy parameter: description",
+          "description": "Optional kickoff note sent in the first chat message.",
           "type": "string",
           "default": ""
         },
         {
           "name": "log_url",
-          "description": "Legacy parameter: log_url",
+          "description": "Whether to capture and store the current chat URL.",
           "type": "string",
           "default": ""
         }
@@ -647,19 +412,19 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         },
         {
           "name": "delay",
-          "description": "Legacy parameter: delay",
+          "description": "Delay duration in seconds.",
           "type": "string",
           "default": ""
         }
@@ -690,25 +455,25 @@
       "variables": [
         {
           "name": "text",
-          "description": "Legacy parameter: text",
+          "description": "Text content used by this action.",
           "type": "string",
           "default": ""
         },
         {
           "name": "delay",
-          "description": "Legacy parameter: delay",
+          "description": "Delay duration in seconds.",
           "type": "string",
           "default": ""
         },
         {
           "name": "mode_ai_wait",
-          "description": "Legacy parameter: mode_ai_wait",
+          "description": "AI wait strategy (slow, fast_button_state, or fast_clipboard_state).",
           "type": "string",
           "default": ""
         },
         {
           "name": "method",
-          "description": "Legacy parameter: method",
+          "description": "Query input method (typing or paste).",
           "type": "string",
           "default": ""
         }
@@ -786,913 +551,6 @@
       ]
     },
     {
-      "command": "roboclick_action_browser_close_tab",
-      "name_long": "roboclick_action_browser_close_tab",
-      "name_short_options": [
-        "close_tab",
-        "tab",
-        "browser_close_tab"
-      ],
-      "description": "Close tab.",
-      "summary": "Close tab.",
-      "variables": [],
-      "variable_names": [],
-      "category": "Browser",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "close_tab",
-        "tab",
-        "browser_close_tab"
-      ]
-    },
-    {
-      "command": "roboclick_action_browser_open_url",
-      "name_long": "roboclick_action_browser_open_url",
-      "name_short_options": [
-        "open_url",
-        "url",
-        "browser_open_url"
-      ],
-      "description": "Open url.",
-      "summary": "Open url.",
-      "variables": [
-        {
-          "name": "url",
-          "description": "Legacy parameter: url",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "url"
-      ],
-      "category": "Browser",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "open_url",
-        "url",
-        "browser_open_url"
-      ]
-    },
-    {
-      "command": "roboclick_action_browser_save_url",
-      "name_long": "roboclick_action_browser_save_url",
-      "name_short_options": [
-        "save_url",
-        "url",
-        "browser_save_url"
-      ],
-      "description": "Save url.",
-      "summary": "Save url.",
-      "variables": [
-        {
-          "name": "url",
-          "description": "Legacy parameter: url",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "url_directory",
-          "description": "Legacy parameter: url_directory",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "url",
-        "url_directory"
-      ],
-      "category": "Browser",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "save_url",
-        "url",
-        "browser_save_url"
-      ]
-    },
-    {
-      "command": "roboclick_action_convert_svg_to_pdf",
-      "name_long": "roboclick_action_convert_svg_to_pdf",
-      "name_short_options": [
-        "svg_to_pdf",
-        "to",
-        "convert_svg_to_pdf"
-      ],
-      "description": "Svg to pdf.",
-      "summary": "Svg to pdf.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "file_destination"
-      ],
-      "category": "Conversion",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "svg_to_pdf",
-        "to",
-        "convert_svg_to_pdf"
-      ]
-    },
-    {
-      "command": "roboclick_action_convert_svg_to_png",
-      "name_long": "roboclick_action_convert_svg_to_png",
-      "name_short_options": [
-        "svg_to_png",
-        "to",
-        "convert_svg_to_png"
-      ],
-      "description": "Svg to png.",
-      "summary": "Svg to png.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "file_destination"
-      ],
-      "category": "Conversion",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "svg_to_png",
-        "to",
-        "convert_svg_to_png"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_add_text",
-      "name_long": "roboclick_action_corel_add_text",
-      "name_short_options": [
-        "add_text",
-        "text",
-        "corel_add_text"
-      ],
-      "description": "Add text.",
-      "summary": "Add text.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "text",
-          "description": "Legacy parameter: text",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "x",
-          "description": "Legacy parameter: x",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "y",
-          "description": "Legacy parameter: y",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "font",
-          "description": "Legacy parameter: font",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "font_size",
-          "description": "Legacy parameter: font_size",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "bold",
-          "description": "Legacy parameter: bold",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "italic",
-          "description": "Legacy parameter: italic",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "text",
-        "x",
-        "y",
-        "font",
-        "font_size",
-        "bold",
-        "italic"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "add_text",
-        "text",
-        "corel_add_text"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_add_text_box",
-      "name_long": "roboclick_action_corel_add_text_box",
-      "name_short_options": [
-        "add_text_box",
-        "text",
-        "corel_add_text_box"
-      ],
-      "description": "Add text box.",
-      "summary": "Add text box.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "text",
-          "description": "Legacy parameter: text",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "x",
-          "description": "Legacy parameter: x",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "y",
-          "description": "Legacy parameter: y",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "width",
-          "description": "Legacy parameter: width",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "height",
-          "description": "Legacy parameter: height",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "font",
-          "description": "Legacy parameter: font",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "font_size",
-          "description": "Legacy parameter: font_size",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "bold",
-          "description": "Legacy parameter: bold",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "italic",
-          "description": "Legacy parameter: italic",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "text",
-        "x",
-        "y",
-        "width",
-        "height",
-        "font",
-        "font_size",
-        "bold",
-        "italic"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "add_text_box",
-        "text",
-        "corel_add_text_box"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_close_file",
-      "name_long": "roboclick_action_corel_close_file",
-      "name_short_options": [
-        "close_file",
-        "file",
-        "corel_close_file"
-      ],
-      "description": "Close file.",
-      "summary": "Close file.",
-      "variables": [],
-      "variable_names": [],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "close_file",
-        "file",
-        "corel_close_file"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_convert_to_curves",
-      "name_long": "roboclick_action_corel_convert_to_curves",
-      "name_short_options": [
-        "convert_to_curves",
-        "to",
-        "corel_convert_to_curves"
-      ],
-      "description": "Convert to curves.",
-      "summary": "Convert to curves.",
-      "variables": [
-        {
-          "name": "ungroup",
-          "description": "Legacy parameter: ungroup",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "delay",
-          "description": "Legacy parameter: delay",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "ungroup",
-        "delay"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "convert_to_curves",
-        "to",
-        "corel_convert_to_curves"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_copy",
-      "name_long": "roboclick_action_corel_copy",
-      "name_short_options": [
-        "corel_copy",
-        "copy"
-      ],
-      "description": "Corel copy.",
-      "summary": "Corel copy.",
-      "variables": [],
-      "variable_names": [],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_copy",
-        "copy"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_export",
-      "name_long": "roboclick_action_corel_export",
-      "name_short_options": [
-        "corel_export",
-        "export"
-      ],
-      "description": "Corel export.",
-      "summary": "Corel export.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_type",
-          "description": "Legacy parameter: file_type",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "delay",
-          "description": "Legacy parameter: delay",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "file_destination",
-        "file_type",
-        "delay"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_export",
-        "export"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_group",
-      "name_long": "roboclick_action_corel_group",
-      "name_short_options": [
-        "corel_group",
-        "group"
-      ],
-      "description": "Corel group.",
-      "summary": "Corel group.",
-      "variables": [],
-      "variable_names": [],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_group",
-        "group"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_import",
-      "name_long": "roboclick_action_corel_import",
-      "name_short_options": [
-        "corel_import",
-        "import"
-      ],
-      "description": "Corel import.",
-      "summary": "Corel import.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "x",
-          "description": "Legacy parameter: x",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "y",
-          "description": "Legacy parameter: y",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "width",
-          "description": "Legacy parameter: width",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "height",
-          "description": "Legacy parameter: height",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "max_dimension",
-          "description": "Legacy parameter: max_dimension",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "angle",
-          "description": "Legacy parameter: angle",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "special, 'no double click' - to deal with non square objects",
-          "description": "Legacy parameter: special, 'no double click' - to deal with non square objects",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source",
-        "x",
-        "y",
-        "width",
-        "height",
-        "max_dimension",
-        "angle",
-        "special, 'no double click' - to deal with non square objects"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_import",
-        "import"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_object_order",
-      "name_long": "roboclick_action_corel_object_order",
-      "name_short_options": [
-        "object_order",
-        "order",
-        "corel_object_order"
-      ],
-      "description": "Object order.",
-      "summary": "Object order.",
-      "variables": [
-        {
-          "name": "order",
-          "description": "Legacy parameter: order",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "order"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "object_order",
-        "order",
-        "corel_object_order"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_open",
-      "name_long": "roboclick_action_corel_open",
-      "name_short_options": [
-        "corel_open",
-        "open"
-      ],
-      "description": "Corel open.",
-      "summary": "Corel open.",
-      "variables": [
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_source"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_open",
-        "open"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_page_goto",
-      "name_long": "roboclick_action_corel_page_goto",
-      "name_short_options": [
-        "page_goto",
-        "goto",
-        "corel_page_goto"
-      ],
-      "description": "Page goto.",
-      "summary": "Page goto.",
-      "variables": [
-        {
-          "name": "page_number",
-          "description": "Legacy parameter: page_number",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "page_number"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "page_goto",
-        "goto",
-        "corel_page_goto"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_paste",
-      "name_long": "roboclick_action_corel_paste",
-      "name_short_options": [
-        "corel_paste",
-        "paste"
-      ],
-      "description": "Corel paste.",
-      "summary": "Corel paste.",
-      "variables": [
-        {
-          "name": "x",
-          "description": "Legacy parameter: x",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "y",
-          "description": "Legacy parameter: y",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "width",
-          "description": "Legacy parameter: width",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "height",
-          "description": "Legacy parameter: height",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "x",
-        "y",
-        "width",
-        "height"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_paste",
-        "paste"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_save",
-      "name_long": "roboclick_action_corel_save",
-      "name_short_options": [
-        "corel_save",
-        "save"
-      ],
-      "description": "Corel save.",
-      "summary": "Corel save.",
-      "variables": [],
-      "variable_names": [],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_save",
-        "save"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_save_as",
-      "name_long": "roboclick_action_corel_save_as",
-      "name_short_options": [
-        "save_as",
-        "as",
-        "corel_save_as"
-      ],
-      "description": "Save as.",
-      "summary": "Save as.",
-      "variables": [
-        {
-          "name": "file_name",
-          "description": "Legacy parameter: file_name",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_name"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "save_as",
-        "as",
-        "corel_save_as"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_set_position",
-      "name_long": "roboclick_action_corel_set_position",
-      "name_short_options": [
-        "set_position",
-        "position",
-        "corel_set_position"
-      ],
-      "description": "Set position.",
-      "summary": "Set position.",
-      "variables": [
-        {
-          "name": "x",
-          "description": "Legacy parameter: x",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "y",
-          "description": "Legacy parameter: y",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "x",
-        "y"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "set_position",
-        "position",
-        "corel_set_position"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_set_rotation",
-      "name_long": "roboclick_action_corel_set_rotation",
-      "name_short_options": [
-        "set_rotation",
-        "rotation",
-        "corel_set_rotation"
-      ],
-      "description": "Set rotation.",
-      "summary": "Set rotation.",
-      "variables": [
-        {
-          "name": "angle",
-          "description": "Legacy parameter: angle",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "angle"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "set_rotation",
-        "rotation",
-        "corel_set_rotation"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_set_size",
-      "name_long": "roboclick_action_corel_set_size",
-      "name_short_options": [
-        "set_size",
-        "size",
-        "corel_set_size"
-      ],
-      "description": "Set size.",
-      "summary": "Set size.",
-      "variables": [
-        {
-          "name": "width",
-          "description": "Legacy parameter: width",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "height",
-          "description": "Legacy parameter: height",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "max_dimension",
-          "description": "Legacy parameter: max_dimension",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "select_all",
-          "description": "Legacy parameter: select_all",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "width",
-        "height",
-        "max_dimension",
-        "select_all"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "set_size",
-        "size",
-        "corel_set_size"
-      ]
-    },
-    {
-      "command": "roboclick_action_corel_trace",
-      "name_long": "roboclick_action_corel_trace",
-      "name_short_options": [
-        "corel_trace",
-        "trace"
-      ],
-      "description": "Corel trace.",
-      "summary": "Corel trace.",
-      "variables": [
-        {
-          "name": "file_name",
-          "description": "Legacy parameter: file_name",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "remove_background_color_from_entire_image",
-          "description": "Legacy parameter: remove_background_color_from_entire_image",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "delay_trace",
-          "description": "Legacy parameter: delay_trace",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "number_of_colors",
-          "description": "Legacy parameter: number_of_colors",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "detail_minus",
-          "description": "Legacy parameter: detail_minus",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "smoothing",
-          "description": "Legacy parameter: smoothing",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "corner_smoothness",
-          "description": "Legacy parameter: corner_smoothness",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_name",
-        "remove_background_color_from_entire_image",
-        "delay_trace",
-        "number_of_colors",
-        "detail_minus",
-        "smoothing",
-        "corner_smoothness"
-      ],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "corel_trace",
-        "trace"
-      ]
-    },
-    {
       "command": "roboclick_action_corel_trace_full",
       "name_long": "roboclick_action_corel_trace_full",
       "name_short_options": [
@@ -1705,79 +563,79 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_source_trace",
-          "description": "Legacy parameter: file_source_trace",
+          "description": "Path to the raster file used for tracing.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         },
         {
           "name": "delay_trace",
-          "description": "Legacy parameter: delay_trace",
+          "description": "Delay in seconds before trace-specific steps.",
           "type": "string",
           "default": ""
         },
         {
           "name": "delay_png",
-          "description": "Legacy parameter: delay_png",
+          "description": "Delay in seconds before PNG export steps.",
           "type": "string",
           "default": ""
         },
         {
           "name": "max_dimension",
-          "description": "Legacy parameter: max_dimension",
+          "description": "Maximum dimension allowed when scaling content.",
           "type": "string",
           "default": ""
         },
         {
           "name": "detail_minus",
-          "description": "Legacy parameter: detail_minus",
+          "description": "Trace detail reduction amount.",
           "type": "string",
           "default": ""
         },
         {
           "name": "x",
-          "description": "Legacy parameter: x",
+          "description": "X coordinate for placement.",
           "type": "string",
           "default": ""
         },
         {
           "name": "y",
-          "description": "Legacy parameter: y",
+          "description": "Y coordinate for placement.",
           "type": "string",
           "default": ""
         },
         {
           "name": "number_of_colors",
-          "description": "Legacy parameter: number_of_colors",
+          "description": "Color count target used by trace settings.",
           "type": "string",
           "default": ""
         },
         {
           "name": "remove_background_color_from_entire_image",
-          "description": "Legacy parameter: remove_background_color_from_entire_image",
+          "description": "Whether to remove the background color before tracing.",
           "type": "string",
           "default": ""
         },
         {
           "name": "smoothing",
-          "description": "Legacy parameter: smoothing",
+          "description": "Trace smoothing level.",
           "type": "string",
           "default": ""
         },
         {
           "name": "corner_smoothness",
-          "description": "Legacy parameter: corner_smoothness",
+          "description": "Corner smoothing level for trace output.",
           "type": "string",
           "default": ""
         }
@@ -1817,13 +675,13 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -1840,126 +698,6 @@
       ]
     },
     {
-      "command": "roboclick_action_file_create_text_file",
-      "name_long": "roboclick_action_file_create_text_file",
-      "name_short_options": [
-        "create_text_file",
-        "text",
-        "file_create_text_file"
-      ],
-      "description": "Create text file.",
-      "summary": "Create text file.",
-      "variables": [
-        {
-          "name": "file_name",
-          "description": "Legacy parameter: file_name",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "content",
-          "description": "Legacy parameter: content",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_name",
-        "content"
-      ],
-      "category": "File",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "create_text_file",
-        "text",
-        "file_create_text_file"
-      ]
-    },
-    {
-      "command": "roboclick_action_google_doc_add_text",
-      "name_long": "roboclick_action_google_doc_add_text",
-      "name_short_options": [
-        "add_text",
-        "add",
-        "google_doc_add_text"
-      ],
-      "description": "Add text.",
-      "summary": "Add text.",
-      "variables": [
-        {
-          "name": "url",
-          "description": "Legacy parameter: url",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "text",
-          "description": "Legacy parameter: text",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "position",
-          "description": "Legacy parameter: position",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "url",
-        "text",
-        "position"
-      ],
-      "category": "Google Doc",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "add_text",
-        "add",
-        "google_doc_add_text"
-      ]
-    },
-    {
-      "command": "roboclick_action_google_doc_new",
-      "name_long": "roboclick_action_google_doc_new",
-      "name_short_options": [
-        "google_doc_new",
-        "new"
-      ],
-      "description": "Google doc new.",
-      "summary": "Google doc new.",
-      "variables": [
-        {
-          "name": "template",
-          "description": "Legacy parameter: template",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "title",
-          "description": "Legacy parameter: title",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "folder",
-          "description": "Legacy parameter: folder",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "template",
-        "title",
-        "folder"
-      ],
-      "category": "Google Doc",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "google_doc_new",
-        "new"
-      ]
-    },
-    {
       "command": "roboclick_action_image_crop",
       "name_long": "roboclick_action_image_crop",
       "name_short_options": [
@@ -1971,19 +709,19 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         },
         {
           "name": "crop",
-          "description": "Legacy parameter: crop",
+          "description": "Crop box or crop mode applied to the image.",
           "type": "string",
           "default": ""
         }
@@ -2013,13 +751,13 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -2049,13 +787,13 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         }
@@ -2084,25 +822,25 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         },
         {
           "name": "scale",
-          "description": "Legacy parameter: scale",
+          "description": "Scale multiplier applied during image upscaling.",
           "type": "string",
           "default": ""
         },
         {
           "name": "crop",
-          "description": "Legacy parameter: crop",
+          "description": "Crop box or crop mode applied to the image.",
           "type": "string",
           "default": ""
         }
@@ -2132,25 +870,25 @@
       "variables": [
         {
           "name": "file_source",
-          "description": "Legacy parameter: file_source",
+          "description": "Path to the source input file.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_destination",
-          "description": "Legacy parameter: file_destination",
+          "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
         },
         {
           "name": "render_type",
-          "description": "Legacy parameter: render_type",
+          "description": "Rendering mode passed to the OpenSCAD render step.",
           "type": "string",
           "default": ""
         },
         {
           "name": "delay",
-          "description": "Legacy parameter: delay",
+          "description": "Delay duration in seconds.",
           "type": "string",
           "default": ""
         }
@@ -2169,166 +907,6 @@
       ]
     },
     {
-      "command": "roboclick_action_save_image_generated",
-      "name_long": "roboclick_action_save_image_generated",
-      "name_short_options": [
-        "save_image_generated",
-        "generated"
-      ],
-      "description": "Save image generated.",
-      "summary": "Save image generated.",
-      "variables": [
-        {
-          "name": "file_name",
-          "description": "Legacy parameter: file_name",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "position_click",
-          "description": "Legacy parameter: position_click",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "mode_ai_wait",
-          "description": "Legacy parameter: mode_ai_wait",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_name",
-        "position_click",
-        "mode_ai_wait"
-      ],
-      "category": "AI Image",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "save_image_generated",
-        "generated"
-      ]
-    },
-    {
-      "command": "roboclick_action_save_image_search_result",
-      "name_long": "roboclick_action_save_image_search_result",
-      "name_short_options": [
-        "save_image_search_result",
-        "search"
-      ],
-      "description": "Save image search result.",
-      "summary": "Save image search result.",
-      "variables": [
-        {
-          "name": "index",
-          "description": "Legacy parameter: index",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_name",
-          "description": "Legacy parameter: file_name",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "overwrite",
-          "description": "Legacy parameter: overwrite",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "position_click",
-          "description": "Legacy parameter: position_click",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "index",
-        "file_name",
-        "overwrite",
-        "position_click"
-      ],
-      "category": "AI Image",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "save_image_search_result",
-        "search"
-      ]
-    },
-    {
-      "command": "roboclick_action_text_jinja_template",
-      "name_long": "roboclick_action_text_jinja_template",
-      "name_short_options": [
-        "jinja_template",
-        "template",
-        "text_jinja_template"
-      ],
-      "description": "Jinja template.",
-      "summary": "Jinja template.",
-      "variables": [
-        {
-          "name": "file_template",
-          "description": "Legacy parameter: file_template",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_source",
-          "description": "Legacy parameter: file_source",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "file_output",
-          "description": "Legacy parameter: file_output",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "search_and_replace",
-          "description": "Legacy parameter: search_and_replace",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "convert_to_pdf",
-          "description": "Legacy parameter: convert_to_pdf",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "convert_to_png",
-          "description": "Legacy parameter: convert_to_png",
-          "type": "string",
-          "default": ""
-        },
-        {
-          "name": "dict_data",
-          "description": "Legacy parameter: dict_data",
-          "type": "string",
-          "default": ""
-        }
-      ],
-      "variable_names": [
-        "file_template",
-        "file_source",
-        "file_output",
-        "search_and_replace",
-        "convert_to_pdf",
-        "convert_to_png",
-        "dict_data"
-      ],
-      "category": "Text",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "jinja_template",
-        "template",
-        "text_jinja_template"
-      ]
-    },
-    {
       "command": "roboclick_action_wait_for_file",
       "name_long": "roboclick_action_wait_for_file",
       "name_short_options": [
@@ -2340,43 +918,43 @@
       "variables": [
         {
           "name": "file_name",
-          "description": "Legacy parameter: file_name",
+          "description": "Primary file name to wait for in the action directory.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_1",
-          "description": "Legacy parameter: file_name_1",
+          "description": "first candidate file name to wait for.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_2",
-          "description": "Legacy parameter: file_name_2",
+          "description": "second candidate file name to wait for.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_3",
-          "description": "Legacy parameter: file_name_3",
+          "description": "third candidate file name to wait for.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_4",
-          "description": "Legacy parameter: file_name_4",
+          "description": "fourth candidate file name to wait for.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_5",
-          "description": "Legacy parameter: file_name_5",
+          "description": "fifth candidate file name to wait for.",
           "type": "string",
           "default": ""
         },
         {
           "name": "file_name_6",
-          "description": "Legacy parameter: file_name_6",
+          "description": "sixth candidate file name to wait for.",
           "type": "string",
           "default": ""
         }
@@ -2399,5 +977,5 @@
     }
   ],
   "generated_date": "2026-03-09",
-  "total_actions": 57
+  "total_actions": 22
 }

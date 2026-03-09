@@ -30,19 +30,19 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_source_trace', 'description': 'Legacy parameter: file_source_trace', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay_trace', 'description': 'Legacy parameter: delay_trace', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay_png', 'description': 'Legacy parameter: delay_png', 'type': 'string', 'default': ''})
-        v.append({'name': 'max_dimension', 'description': 'Legacy parameter: max_dimension', 'type': 'string', 'default': ''})
-        v.append({'name': 'detail_minus', 'description': 'Legacy parameter: detail_minus', 'type': 'string', 'default': ''})
-        v.append({'name': 'x', 'description': 'Legacy parameter: x', 'type': 'string', 'default': ''})
-        v.append({'name': 'y', 'description': 'Legacy parameter: y', 'type': 'string', 'default': ''})
-        v.append({'name': 'number_of_colors', 'description': 'Legacy parameter: number_of_colors', 'type': 'string', 'default': ''})
-        v.append({'name': 'remove_background_color_from_entire_image', 'description': 'Legacy parameter: remove_background_color_from_entire_image', 'type': 'string', 'default': ''})
-        v.append({'name': 'smoothing', 'description': 'Legacy parameter: smoothing', 'type': 'string', 'default': ''})
-        v.append({'name': 'corner_smoothness', 'description': 'Legacy parameter: corner_smoothness', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source_trace', 'description': 'Path to the raster file used for tracing.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay_trace', 'description': 'Delay in seconds before trace-specific steps.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay_png', 'description': 'Delay in seconds before PNG export steps.', 'type': 'string', 'default': ''})
+        v.append({'name': 'max_dimension', 'description': 'Maximum dimension allowed when scaling content.', 'type': 'string', 'default': ''})
+        v.append({'name': 'detail_minus', 'description': 'Trace detail reduction amount.', 'type': 'string', 'default': ''})
+        v.append({'name': 'x', 'description': 'X coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'y', 'description': 'Y coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'number_of_colors', 'description': 'Color count target used by trace settings.', 'type': 'string', 'default': ''})
+        v.append({'name': 'remove_background_color_from_entire_image', 'description': 'Whether to remove the background color before tracing.', 'type': 'string', 'default': ''})
+        v.append({'name': 'smoothing', 'description': 'Trace smoothing level.', 'type': 'string', 'default': ''})
+        v.append({'name': 'corner_smoothness', 'description': 'Corner smoothing level for trace output.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

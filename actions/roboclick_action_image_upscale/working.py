@@ -30,10 +30,10 @@ def describe():
     d["category"] = 'Image'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
-        v.append({'name': 'scale', 'description': 'Legacy parameter: scale', 'type': 'string', 'default': ''})
-        v.append({'name': 'crop', 'description': 'Legacy parameter: crop', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
+        v.append({'name': 'scale', 'description': 'Scale multiplier applied during image upscaling.', 'type': 'string', 'default': ''})
+        v.append({'name': 'crop', 'description': 'Crop box or crop mode applied to the image.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

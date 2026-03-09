@@ -30,8 +30,8 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'x', 'description': 'Legacy parameter: x', 'type': 'string', 'default': ''})
-        v.append({'name': 'y', 'description': 'Legacy parameter: y', 'type': 'string', 'default': ''})
+        v.append({'name': 'x', 'description': 'X coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'y', 'description': 'Y coordinate for placement.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -28,13 +28,13 @@ def describe():
     d["category"] = 'Utility'
     v = []
     if True:
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_1', 'description': 'Legacy parameter: file_name_1', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_2', 'description': 'Legacy parameter: file_name_2', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_3', 'description': 'Legacy parameter: file_name_3', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_4', 'description': 'Legacy parameter: file_name_4', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_5', 'description': 'Legacy parameter: file_name_5', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_6', 'description': 'Legacy parameter: file_name_6', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'Primary file name to wait for in the action directory.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_1', 'description': 'first candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_2', 'description': 'second candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_3', 'description': 'third candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_4', 'description': 'fourth candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_5', 'description': 'fifth candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_6', 'description': 'sixth candidate file name to wait for.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

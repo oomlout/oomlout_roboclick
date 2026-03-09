@@ -30,13 +30,13 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
-        v.append({'name': 'remove_background_color_from_entire_image', 'description': 'Legacy parameter: remove_background_color_from_entire_image', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay_trace', 'description': 'Legacy parameter: delay_trace', 'type': 'string', 'default': ''})
-        v.append({'name': 'number_of_colors', 'description': 'Legacy parameter: number_of_colors', 'type': 'string', 'default': ''})
-        v.append({'name': 'detail_minus', 'description': 'Legacy parameter: detail_minus', 'type': 'string', 'default': ''})
-        v.append({'name': 'smoothing', 'description': 'Legacy parameter: smoothing', 'type': 'string', 'default': ''})
-        v.append({'name': 'corner_smoothness', 'description': 'Legacy parameter: corner_smoothness', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'remove_background_color_from_entire_image', 'description': 'Whether to remove the background color before tracing.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay_trace', 'description': 'Delay in seconds before trace-specific steps.', 'type': 'string', 'default': ''})
+        v.append({'name': 'number_of_colors', 'description': 'Color count target used by trace settings.', 'type': 'string', 'default': ''})
+        v.append({'name': 'detail_minus', 'description': 'Trace detail reduction amount.', 'type': 'string', 'default': ''})
+        v.append({'name': 'smoothing', 'description': 'Trace smoothing level.', 'type': 'string', 'default': ''})
+        v.append({'name': 'corner_smoothness', 'description': 'Corner smoothing level for trace output.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

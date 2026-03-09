@@ -30,8 +30,8 @@ def describe():
     d["category"] = 'Browser'
     v = []
     if True:
-        v.append({'name': 'url', 'description': 'Legacy parameter: url', 'type': 'string', 'default': ''})
-        v.append({'name': 'url_directory', 'description': 'Legacy parameter: url_directory', 'type': 'string', 'default': ''})
+        v.append({'name': 'url', 'description': 'URL to open or use for the operation.', 'type': 'string', 'default': ''})
+        v.append({'name': 'url_directory', 'description': 'Subdirectory used when saving URL snapshots.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

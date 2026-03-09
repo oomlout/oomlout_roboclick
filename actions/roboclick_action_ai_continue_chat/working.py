@@ -32,8 +32,8 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
-        v.append({'name': 'url_chat', 'description': 'Legacy parameter: url_chat', 'type': 'string', 'default': ''})
-        v.append({'name': 'log_url', 'description': 'Legacy parameter: log_url', 'type': 'string', 'default': ''})
+        v.append({'name': 'url_chat', 'description': 'Chat URL to continue an existing conversation.', 'type': 'string', 'default': ''})
+        v.append({'name': 'log_url', 'description': 'Whether to capture and store the current chat URL.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

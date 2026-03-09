@@ -28,10 +28,10 @@ def describe():
     d["category"] = 'OpenSCAD'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
-        v.append({'name': 'render_type', 'description': 'Legacy parameter: render_type', 'type': 'string', 'default': ''})
-        v.append({'name': 'delay', 'description': 'Legacy parameter: delay', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
+        v.append({'name': 'render_type', 'description': 'Rendering mode passed to the OpenSCAD render step.', 'type': 'string', 'default': ''})
+        v.append({'name': 'delay', 'description': 'Delay duration in seconds.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

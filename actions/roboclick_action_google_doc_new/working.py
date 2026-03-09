@@ -32,9 +32,9 @@ def describe():
     d["category"] = 'Google Doc'
     v = []
     if True:
-        v.append({'name': 'template', 'description': 'Legacy parameter: template', 'type': 'string', 'default': ''})
-        v.append({'name': 'title', 'description': 'Legacy parameter: title', 'type': 'string', 'default': ''})
-        v.append({'name': 'folder', 'description': 'Legacy parameter: folder', 'type': 'string', 'default': ''})
+        v.append({'name': 'template', 'description': 'Template name used when creating a new Google Doc.', 'type': 'string', 'default': ''})
+        v.append({'name': 'title', 'description': 'Title for the new Google Doc.', 'type': 'string', 'default': ''})
+        v.append({'name': 'folder', 'description': 'Drive folder destination for the new Google Doc.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

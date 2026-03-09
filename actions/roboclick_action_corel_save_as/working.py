@@ -30,7 +30,7 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

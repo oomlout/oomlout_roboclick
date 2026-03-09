@@ -28,8 +28,8 @@ def describe():
     d["category"] = 'AI Skill'
     v = []
     if True:
-        v.append({'name': 'text', 'description': 'Legacy parameter: text', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
+        v.append({'name': 'text', 'description': 'Text content used by this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -30,14 +30,14 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'text', 'description': 'Legacy parameter: text', 'type': 'string', 'default': ''})
-        v.append({'name': 'x', 'description': 'Legacy parameter: x', 'type': 'string', 'default': ''})
-        v.append({'name': 'y', 'description': 'Legacy parameter: y', 'type': 'string', 'default': ''})
-        v.append({'name': 'font', 'description': 'Legacy parameter: font', 'type': 'string', 'default': ''})
-        v.append({'name': 'font_size', 'description': 'Legacy parameter: font_size', 'type': 'string', 'default': ''})
-        v.append({'name': 'bold', 'description': 'Legacy parameter: bold', 'type': 'string', 'default': ''})
-        v.append({'name': 'italic', 'description': 'Legacy parameter: italic', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'text', 'description': 'Text content used by this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'x', 'description': 'X coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'y', 'description': 'Y coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'font', 'description': 'Font family name to apply.', 'type': 'string', 'default': ''})
+        v.append({'name': 'font_size', 'description': 'Font size value to apply.', 'type': 'string', 'default': ''})
+        v.append({'name': 'bold', 'description': 'Whether text should be bold.', 'type': 'string', 'default': ''})
+        v.append({'name': 'italic', 'description': 'Whether text should be italic.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

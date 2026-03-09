@@ -1,69 +1,99 @@
 Running 2 mode(s) from C:\gh\oomlout_roboclick\test_data\example_duirectory\working.oomp
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_add_image\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_continue_chat\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_new_chat\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_query\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_save_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_set_mode\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
 Warning: action 'roboclick_action_ai_text_fix_yaml_copy_paste' define().name='roboclick_action_ai_text_yaml_copy_paste'. Using folder name 'roboclick_action_ai_text_fix_yaml_copy_paste'.
-Warning: alias 'add_image' for action 'roboclick_action_ai_file_add_file' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'ai_add_image' for action 'roboclick_action_ai_file_add_file' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'chat' for action 'roboclick_action_ai_new_chat' conflicts with action 'roboclick_action_ai_continue_chat'.
-Warning: alias 'image' for action 'roboclick_action_ai_skill_image_laser_cut_logo_full' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'image' for action 'roboclick_action_ai_skill_image_prompt_full' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'text' for action 'roboclick_action_ai_skill_text_to_speech' conflicts with action 'roboclick_action_ai_save_text'.
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_close_tab\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_open_url\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_save_url\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_convert_svg_to_pdf\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_convert_svg_to_png\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_add_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_add_text_box\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_close_file\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_convert_to_curves\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_copy\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_export\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_group\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_import\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_object_order\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_open\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_page_goto\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_paste\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_save\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_save_as\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_position\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_rotation\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_size\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_trace\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_file_create_text_file\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_google_doc_add_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_google_doc_new\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_save_image_generated\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_save_image_search_result\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_text_jinja_template\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: alias 'image' for action 'roboclick_action_ai_skill_image_prompt_full' conflicts with action 'roboclick_action_ai_skill_image_laser_cut_logo_full'.
 Warning: alias 'add_file' for action 'roboclick_action_alias_add_file' conflicts with action 'roboclick_action_ai_file_add_file'.
-Warning: alias 'add_image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_add_image'.
+Warning: alias 'add_image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_file_add_file'.
+Warning: alias 'image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_skill_image_laser_cut_logo_full'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_ai_save_image' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_close_tab' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'new_chat' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_ai_new_chat'.
-Warning: alias 'chat' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_ai_continue_chat'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_openscad_render_file' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'query' for action 'roboclick_action_alias_query' conflicts with action 'roboclick_action_ai_query'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_query' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'close_tab' for action 'roboclick_action_browser_close_tab' conflicts with action 'roboclick_action_alias_close_tab'.
-Warning: alias 'tab' for action 'roboclick_action_browser_close_tab' conflicts with action 'roboclick_action_alias_close_tab'.
-Warning: alias 'url' for action 'roboclick_action_browser_save_url' conflicts with action 'roboclick_action_browser_open_url'.
-Warning: alias 'to' for action 'roboclick_action_convert_svg_to_png' conflicts with action 'roboclick_action_convert_svg_to_pdf'.
-Warning: alias 'text' for action 'roboclick_action_corel_add_text' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'text' for action 'roboclick_action_corel_add_text_box' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'file' for action 'roboclick_action_corel_close_file' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'to' for action 'roboclick_action_corel_convert_to_curves' conflicts with action 'roboclick_action_convert_svg_to_pdf'.
-Warning: alias 'save' for action 'roboclick_action_corel_save' conflicts with action 'roboclick_action_alias_ai_save_image'.
-Warning: alias 'copy' for action 'roboclick_action_file_copy' conflicts with action 'roboclick_action_corel_copy'.
-Warning: alias 'text' for action 'roboclick_action_file_create_text_file' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'add_text' for action 'roboclick_action_google_doc_add_text' conflicts with action 'roboclick_action_corel_add_text'.
 Warning: alias 'render' for action 'roboclick_action_openscad_render' conflicts with action 'roboclick_action_alias_openscad_render_file'.
 Warning: alias 'file' for action 'roboclick_action_wait_for_file' conflicts with action 'roboclick_action_alias_add_file'.
 Running with actions: 1
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_add_image\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_continue_chat\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_new_chat\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_query\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_save_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_ai_set_mode\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
 Warning: action 'roboclick_action_ai_text_fix_yaml_copy_paste' define().name='roboclick_action_ai_text_yaml_copy_paste'. Using folder name 'roboclick_action_ai_text_fix_yaml_copy_paste'.
-Warning: alias 'add_image' for action 'roboclick_action_ai_file_add_file' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'ai_add_image' for action 'roboclick_action_ai_file_add_file' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'chat' for action 'roboclick_action_ai_new_chat' conflicts with action 'roboclick_action_ai_continue_chat'.
-Warning: alias 'image' for action 'roboclick_action_ai_skill_image_laser_cut_logo_full' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'image' for action 'roboclick_action_ai_skill_image_prompt_full' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'text' for action 'roboclick_action_ai_skill_text_to_speech' conflicts with action 'roboclick_action_ai_save_text'.
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_close_tab\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_open_url\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_browser_save_url\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_convert_svg_to_pdf\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_convert_svg_to_png\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_add_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_add_text_box\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_close_file\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_convert_to_curves\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_copy\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_export\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_group\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_import\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_object_order\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_open\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_page_goto\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_paste\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_save\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_save_as\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_position\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_rotation\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_set_size\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_corel_trace\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_file_create_text_file\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_google_doc_add_text\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_google_doc_new\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_save_image_generated\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_save_image_search_result\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: failed to import action module C:\gh\oomlout_roboclick\actions\roboclick_action_text_jinja_template\working.py: cannot import name 'check_key_pressed' from 'oomlout_ai_roboclick' (C:\gh\oomlout_ai_chat_gpt_robo_click\oomlout_ai_roboclick.py)
+Warning: alias 'image' for action 'roboclick_action_ai_skill_image_prompt_full' conflicts with action 'roboclick_action_ai_skill_image_laser_cut_logo_full'.
 Warning: alias 'add_file' for action 'roboclick_action_alias_add_file' conflicts with action 'roboclick_action_ai_file_add_file'.
-Warning: alias 'add_image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_add_image'.
-Warning: alias 'image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_add_image'.
+Warning: alias 'add_image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_file_add_file'.
+Warning: alias 'image' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_ai_skill_image_laser_cut_logo_full'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_add_image' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_ai_save_image' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_close_tab' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'new_chat' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_ai_new_chat'.
-Warning: alias 'chat' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_ai_continue_chat'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_new_chat' conflicts with action 'roboclick_action_alias_add_file'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_openscad_render_file' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'query' for action 'roboclick_action_alias_query' conflicts with action 'roboclick_action_ai_query'.
 Warning: alias 'legacy_alias' for action 'roboclick_action_alias_query' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'close_tab' for action 'roboclick_action_browser_close_tab' conflicts with action 'roboclick_action_alias_close_tab'.
-Warning: alias 'tab' for action 'roboclick_action_browser_close_tab' conflicts with action 'roboclick_action_alias_close_tab'.
-Warning: alias 'url' for action 'roboclick_action_browser_save_url' conflicts with action 'roboclick_action_browser_open_url'.
-Warning: alias 'to' for action 'roboclick_action_convert_svg_to_png' conflicts with action 'roboclick_action_convert_svg_to_pdf'.
-Warning: alias 'text' for action 'roboclick_action_corel_add_text' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'text' for action 'roboclick_action_corel_add_text_box' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'file' for action 'roboclick_action_corel_close_file' conflicts with action 'roboclick_action_alias_add_file'.
-Warning: alias 'to' for action 'roboclick_action_corel_convert_to_curves' conflicts with action 'roboclick_action_convert_svg_to_pdf'.
-Warning: alias 'save' for action 'roboclick_action_corel_save' conflicts with action 'roboclick_action_alias_ai_save_image'.
-Warning: alias 'copy' for action 'roboclick_action_file_copy' conflicts with action 'roboclick_action_corel_copy'.
-Warning: alias 'text' for action 'roboclick_action_file_create_text_file' conflicts with action 'roboclick_action_ai_save_text'.
-Warning: alias 'add_text' for action 'roboclick_action_google_doc_add_text' conflicts with action 'roboclick_action_corel_add_text'.
 Warning: alias 'render' for action 'roboclick_action_openscad_render' conflicts with action 'roboclick_action_alias_openscad_render_file'.
 Warning: alias 'file' for action 'roboclick_action_wait_for_file' conflicts with action 'roboclick_action_alias_add_file'.
 Running with actions: 1

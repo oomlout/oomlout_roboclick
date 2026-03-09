@@ -32,9 +32,9 @@ def describe():
     d["category"] = 'Google Doc'
     v = []
     if True:
-        v.append({'name': 'url', 'description': 'Legacy parameter: url', 'type': 'string', 'default': ''})
-        v.append({'name': 'text', 'description': 'Legacy parameter: text', 'type': 'string', 'default': ''})
-        v.append({'name': 'position', 'description': 'Legacy parameter: position', 'type': 'string', 'default': ''})
+        v.append({'name': 'url', 'description': 'URL to open or use for the operation.', 'type': 'string', 'default': ''})
+        v.append({'name': 'text', 'description': 'Text content used by this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'position', 'description': 'Insertion position in the Google Doc (for example end).', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

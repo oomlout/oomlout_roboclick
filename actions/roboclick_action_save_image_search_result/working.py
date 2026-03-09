@@ -30,10 +30,10 @@ def describe():
     d["category"] = 'AI Image'
     v = []
     if True:
-        v.append({'name': 'index', 'description': 'Legacy parameter: index', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
-        v.append({'name': 'overwrite', 'description': 'Legacy parameter: overwrite', 'type': 'string', 'default': ''})
-        v.append({'name': 'position_click', 'description': 'Legacy parameter: position_click', 'type': 'string', 'default': ''})
+        v.append({'name': 'index', 'description': '1-based search result index used to offset the click position.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'overwrite', 'description': 'Whether existing output files should be overwritten.', 'type': 'string', 'default': ''})
+        v.append({'name': 'position_click', 'description': 'Base screen position for search results before index offset.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

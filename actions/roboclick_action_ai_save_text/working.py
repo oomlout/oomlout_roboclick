@@ -30,9 +30,9 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
-        v.append({'name': 'file_name_full', 'description': 'Legacy parameter: file_name_full', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_name_clip', 'description': 'Legacy parameter: file_name_clip', 'type': 'string', 'default': ''})
-        v.append({'name': 'clip', 'description': 'Legacy parameter: clip', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_full', 'description': 'Full file path to save captured content.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name_clip', 'description': 'File path used to store clipboard text.', 'type': 'string', 'default': ''})
+        v.append({'name': 'clip', 'description': 'Clipboard text payload to save.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

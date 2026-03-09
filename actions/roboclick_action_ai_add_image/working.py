@@ -30,9 +30,9 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'position_click', 'description': 'Legacy parameter: position_click', 'type': 'string', 'default': ''})
-        v.append({'name': 'mode -- source_files from source_files directory', 'description': 'Legacy parameter: mode -- source_files from source_files directory', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'position_click', 'description': 'Screen position to click before executing the step.', 'type': 'string', 'default': ''})
+        v.append({'name': 'mode -- source_files from source_files directory', 'description': 'Value for mode -- source files from source files directory.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

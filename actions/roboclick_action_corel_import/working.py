@@ -30,14 +30,14 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'file_source', 'description': 'Legacy parameter: file_source', 'type': 'string', 'default': ''})
-        v.append({'name': 'x', 'description': 'Legacy parameter: x', 'type': 'string', 'default': ''})
-        v.append({'name': 'y', 'description': 'Legacy parameter: y', 'type': 'string', 'default': ''})
-        v.append({'name': 'width', 'description': 'Legacy parameter: width', 'type': 'string', 'default': ''})
-        v.append({'name': 'height', 'description': 'Legacy parameter: height', 'type': 'string', 'default': ''})
-        v.append({'name': 'max_dimension', 'description': 'Legacy parameter: max_dimension', 'type': 'string', 'default': ''})
-        v.append({'name': 'angle', 'description': 'Legacy parameter: angle', 'type': 'string', 'default': ''})
-        v.append({'name': "special, 'no double click' - to deal with non square objects", 'description': "Legacy parameter: special, 'no double click' - to deal with non square objects", 'type': 'string', 'default': ''})
+        v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
+        v.append({'name': 'x', 'description': 'X coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'y', 'description': 'Y coordinate for placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'width', 'description': 'Target width for sizing or placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'height', 'description': 'Target height for sizing or placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'max_dimension', 'description': 'Maximum dimension allowed when scaling content.', 'type': 'string', 'default': ''})
+        v.append({'name': 'angle', 'description': 'Rotation angle in degrees.', 'type': 'string', 'default': ''})
+        v.append({'name': "special, 'no double click' - to deal with non square objects", 'description': 'Special import flag to skip double-click sizing behavior for non-square objects.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

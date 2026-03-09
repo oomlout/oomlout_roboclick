@@ -28,7 +28,7 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
-        v.append({'name': 'mode', 'description': 'Legacy parameter: mode', 'type': 'string', 'default': ''})
+        v.append({'name': 'mode', 'description': 'Mode selector controlling action behavior.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

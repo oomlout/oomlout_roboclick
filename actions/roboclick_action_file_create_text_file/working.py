@@ -30,8 +30,8 @@ def describe():
     d["category"] = 'File'
     v = []
     if True:
-        v.append({'name': 'file_name', 'description': 'Legacy parameter: file_name', 'type': 'string', 'default': ''})
-        v.append({'name': 'content', 'description': 'Legacy parameter: content', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
+        v.append({'name': 'content', 'description': 'Text content to write into the created file.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

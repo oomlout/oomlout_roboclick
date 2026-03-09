@@ -26,8 +26,8 @@ def describe():
     d["category"] = 'AI Skill'
     v = []
     if True:
-        v.append({'name': 'image_detail', 'description': 'Legacy parameter: image_detail', 'type': 'string', 'default': ''})
-        v.append({'name': 'file_destination', 'description': 'Legacy parameter: file_destination', 'type': 'string', 'default': ''})
+        v.append({'name': 'image_detail', 'description': 'Prompt detail level for generated image instructions.', 'type': 'string', 'default': ''})
+        v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

@@ -28,7 +28,7 @@ def describe():
     d["category"] = 'Browser'
     v = []
     if True:
-        v.append({'name': 'url', 'description': 'Legacy parameter: url', 'type': 'string', 'default': ''})
+        v.append({'name': 'url', 'description': 'URL to open or use for the operation.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

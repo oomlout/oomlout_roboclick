@@ -30,7 +30,7 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'order', 'description': 'Legacy parameter: order', 'type': 'string', 'default': ''})
+        v.append({'name': 'order', 'description': 'Object stacking order command (for example, to_front or to_back).', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

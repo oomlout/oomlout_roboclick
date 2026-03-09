@@ -30,10 +30,10 @@ def describe():
     d["category"] = 'CorelDRAW'
     v = []
     if True:
-        v.append({'name': 'width', 'description': 'Legacy parameter: width', 'type': 'string', 'default': ''})
-        v.append({'name': 'height', 'description': 'Legacy parameter: height', 'type': 'string', 'default': ''})
-        v.append({'name': 'max_dimension', 'description': 'Legacy parameter: max_dimension', 'type': 'string', 'default': ''})
-        v.append({'name': 'select_all', 'description': 'Legacy parameter: select_all', 'type': 'string', 'default': ''})
+        v.append({'name': 'width', 'description': 'Target width for sizing or placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'height', 'description': 'Target height for sizing or placement.', 'type': 'string', 'default': ''})
+        v.append({'name': 'max_dimension', 'description': 'Maximum dimension allowed when scaling content.', 'type': 'string', 'default': ''})
+        v.append({'name': 'select_all', 'description': 'Whether to select all objects before resizing.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 
