@@ -13,7 +13,7 @@ from typing import Any, Callable
 
 import yaml
 
-from oomlout_ai_roboclick import discover_actions, run_folder
+from oomlout_roboclick import discover_actions, run_folder
 
 
 ROOT_DIR = Path(__file__).resolve().parent
