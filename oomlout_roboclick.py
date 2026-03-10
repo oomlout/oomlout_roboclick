@@ -701,6 +701,16 @@ def run_single(**kwargs: Any) -> Any:
             _persist_result_dict(file_action=file_action, result=result)
     return result
 
+def run_single_action(**kwargs: Any) -> Any:
+    action = kwargs.get("action", {}) or {}
+    if not isinstance(action, dict):
+        print("Error: action must be a dict")
+        return ""
+    result = run_action(**kwargs)
+    if isinstance(result, dict):
+        file_action = kwargs.get("file_action", "working.yaml")
+        _persist_result_dict(file_action=file_action, result=result)
+    return result
 
 def main(**kwargs: Any) -> None:
     mode_list = _normalize_mode_list(kwargs.get("mode", "all"))
