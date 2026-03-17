@@ -876,9 +876,9 @@ def get_directory(part):
             if part[tag] != "":
                 if directory != "":
                     directory += "_"
-                    extra = part[tag]
-                    if extra == None:
-                        extra = ""
+                extra = part[tag]
+                if extra == None:
+                    extra = ""
                 directory += extra
     #make lowercase and replace spaces with underscores and slashes with underscores
     directory = directory.replace(" ", "_")
