@@ -24,7 +24,7 @@ def describe():
     d["name"] = 'roboclick_action_file_create_text_file'
     d["name_long"] = 'roboclick_action_file_create_text_file'
     d["name_short"] = ['create_text_file', 'text', 'file_create_text_file']
-    d["name_short_options"] = ['create_text_file', 'text', 'file_create_text_file']
+    
     d["description"] = 'Create text file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'File'

@@ -3,7 +3,7 @@ from __future__ import annotations
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
-from oomlout_ai_roboclick import check_key_pressed, delay, robo_delay, scroll_lock_toggled
+from oomlout_roboclick import check_key_pressed, delay, robo_delay, scroll_lock_toggled
 
 __all__ = [
     "check_key_pressed",

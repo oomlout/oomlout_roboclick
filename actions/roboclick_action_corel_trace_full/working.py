@@ -24,7 +24,6 @@ def describe():
     d["name"] = 'roboclick_action_corel_trace_full'
     d["name_long"] = 'roboclick_action_corel_trace_full'
     d["name_short"] = ['trace_full', 'full', 'corel_trace_full']
-    d["name_short_options"] = ['trace_full', 'full', 'corel_trace_full']
     d["description"] = 'Trace full.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'
@@ -85,7 +84,9 @@ def old(**kwargs):
     file_source_trace_just_file_and_extension_upscaled = file_source_trace_just_file_and_extension.replace(".png", "_upscaled.png").replace(".jpg", "_upscaled.jpg").replace(".jpeg", "_upscaled.jpeg")
     file_destination = action.get("file_destination", None)
     if not file_destination:
-        file_destination = action.get("file_output", "")
+        file_destination = action.get("file_output", None)
+        if not file_destination:
+            file_destination = action.get("file_destination", file_source_trace.replace(".png", "_trace.cdr").replace(".jpg", "_trace.cdr").replace(".jpeg", "_trace.cdr"))
     file_destination_just_file_and_extension = os.path.basename(file_destination)
     file_destination_just_file_and_extension_pdf = file_destination_just_file_and_extension.replace(".cdr", ".pdf").replace(".png", ".pdf").replace(".jpg", ".pdf").replace(".jpeg", ".pdf")
     file_destination_just_file_and_extension_png = file_destination_just_file_and_extension.replace(".cdr", ".png").replace(".pdf", ".png").replace(".jpg", ".png").replace(".jpeg", ".png")
@@ -144,6 +145,7 @@ def old(**kwargs):
     if "number_of_colors" in action_main:
         action["number_of_colors"] = action_main["number_of_colors"]
     if "remove_background_color_from_entire_image" in action_main:
+        remove_value = action_main.get("remove_background_color_from_entire_image", True)
         action["remove_background_color_from_entire_image"] = action_main["remove_background_color_from_entire_image"]
     if detail_minus != 0:
         action["detail_minus"] = detail_minus

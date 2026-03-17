@@ -13,7 +13,7 @@ from typing import Any, Callable
 
 import yaml
 
-from oomlout_roboclick import discover_actions, run_folder
+from oomlout_roboclick import discover_actions, get_all_actions_documentation, run_folder
 
 
 ROOT_DIR = Path(__file__).resolve().parent
@@ -204,6 +204,109 @@ def _load_test_definitions() -> list[tuple[Path, dict[str, Any]]]:
 def _build_test_cases() -> list[TestCase]:
     test_cases: list[TestCase] = []
     discovered_actions = discover_actions()
+    action_root = ROOT_DIR / "actions"
+
+    def _action_audit_runner() -> dict[str, Any]:
+        action_dirs = sorted(path for path in action_root.iterdir() if path.is_dir())
+        import_failures: list[str] = []
+        contract_failures: list[str] = []
+        duplicate_named_files: list[str] = []
+        metadata_name_mismatches: list[str] = []
+        smoke_failures: list[str] = []
+
+        for action_dir in action_dirs:
+            working_file = action_dir / "working.py"
+            named_file = action_dir / f"{action_dir.name}.py"
+            if named_file.exists():
+                duplicate_named_files.append(action_dir.name)
+            if not working_file.is_file():
+                contract_failures.append(f"{action_dir.name}: missing working.py")
+                continue
+
+            try:
+                module = _load_module_from_file(
+                    working_file,
+                    f"audit_{action_dir.name}_{abs(hash(str(working_file)))}",
+                )
+            except Exception as exc:
+                import_failures.append(f"{action_dir.name}: {exc}")
+                continue
+
+            define_fn = getattr(module, "define", None)
+            action_fn = getattr(module, "action", None)
+            if not callable(define_fn) or not callable(action_fn):
+                contract_failures.append(
+                    f"{action_dir.name}: define={callable(define_fn)}, action={callable(action_fn)}"
+                )
+                continue
+
+            metadata = define_fn()
+            if not isinstance(metadata, dict):
+                contract_failures.append(f"{action_dir.name}: define() did not return dict")
+                continue
+
+            for key in ("name", "description", "variables", "category"):
+                if key not in metadata:
+                    contract_failures.append(f"{action_dir.name}: missing metadata key {key}")
+            if metadata.get("name") != action_dir.name:
+                metadata_name_mismatches.append(
+                    f"{action_dir.name}: define().name={metadata.get('name')!r}"
+                )
+
+            test_fn = getattr(module, "test", None)
+            if not callable(test_fn):
+                fallback_test = action_dir / "oomlout_test.py"
+                if fallback_test.is_file():
+                    test_module = _load_module_from_file(
+                        fallback_test,
+                        f"audit_test_{action_dir.name}_{abs(hash(str(fallback_test)))}",
+                    )
+                    test_fn = getattr(test_module, "test", None)
+            if callable(test_fn):
+                try:
+                    result = test_fn()
+                except Exception as exc:
+                    smoke_failures.append(f"{action_dir.name}: {exc}")
+                else:
+                    passed, details = _normalize_test_result(result)
+                    if not passed:
+                        smoke_failures.append(f"{action_dir.name}: {details}")
+            else:
+                contract_failures.append(f"{action_dir.name}: missing callable test()")
+
+        docs = get_all_actions_documentation()
+        doc_commands = {item.get("command", "") for item in docs}
+        expected_commands = {path.name for path in action_dirs}
+        missing_docs = sorted(name for name in expected_commands if name not in doc_commands)
+        missing_discovered = sorted(name for name in expected_commands if name not in discovered_actions)
+
+        failures = []
+        failures.extend(import_failures)
+        failures.extend(contract_failures)
+        failures.extend(metadata_name_mismatches)
+        failures.extend(smoke_failures)
+        failures.extend(f"duplicate_named_file:{name}" for name in duplicate_named_files)
+        failures.extend(f"missing_discovered:{name}" for name in missing_discovered)
+        failures.extend(f"missing_docs:{name}" for name in missing_docs)
+
+        return {
+            "all_passed": len(failures) == 0,
+            "passed": len(action_dirs) - len(failures),
+            "failed": len(failures),
+            "total_action_dirs": len(action_dirs),
+            "discovered_actions": len(discovered_actions),
+            "documented_actions": len(docs),
+            "details": failures,
+        }
+
+    test_cases.append(
+        TestCase(
+            name="Action audit: all action folders",
+            kind="audit",
+            runner=_action_audit_runner,
+            definition_file="run_tests.py",
+        )
+    )
 
     for definition_file, definition in _load_test_definitions():
         test_type = str(definition.get("type", "")).strip().lower()

@@ -19,8 +19,8 @@ def describe():
             d["name_long"] += adding
     if d["name_long"].endswith("_"):
         d["name_long"] = d["name_long"][:-1]
-    d["name"] = 'roboclick_action_ai_text_yaml_copy_paste'
-    d["name_long"] = 'roboclick_action_ai_text_yaml_copy_paste'
+    d["name"] = 'roboclick_action_ai_text_fix_yaml_copy_paste'
+    d["name_long"] = 'roboclick_action_ai_text_fix_yaml_copy_paste'
     d["name_short"] = ['yaml_copy_paste', 'ai_fix_yaml_copy_paste', 'fix_yaml_copy_paste']
     d["name_short_options"] = ['yaml_copy_paste', 'ai_fix_yaml_copy_paste', 'fix_yaml_copy_paste']
     d["description"] = 'Fix YAML formatting from copy-pasted content.'

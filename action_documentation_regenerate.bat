@@ -14,7 +14,7 @@ if not exist "%DOCS_TEMPLATE%" (
     exit /b 1
 )
 
-python oomlout_ai_roboclick.py ^
+python oomlout_roboclick.py ^
     --docs-json "%DOCS_JSON%" ^
     --docs-html-template "%DOCS_TEMPLATE%" ^
     --docs-html-output "%DOCS_HTML%" ^

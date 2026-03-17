@@ -65,11 +65,13 @@ def old(**kwargs):
     file_name = action.get("file_name", "")
     kwargs2["file_name"] = file_name
     remove_background_color_from_entire_image = action.get("remove_background_color_from_entire_image", False)
+    if remove_background_color_from_entire_image == "":
+        remove_background_color_from_entire_image = False
     kwargs2["remove_background_color_from_entire_image"] = remove_background_color_from_entire_image    
     
     delay_trace = action.get("delay_trace", None)
     number_of_colors = action.get("number_of_colors", None)
-    if number_of_colors is not None:
+    if number_of_colors is not None and number_of_colors != "":
         kwargs2["number_of_colors"] = number_of_colors
     detail_minus = action.get("detail_minus", None)
     if detail_minus is not None:

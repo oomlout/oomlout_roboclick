@@ -207,7 +207,8 @@ def discover_actions(actions_root: str | Path | None = None) -> dict[str, Discov
     if not root.exists():
         return actions
 
-    for entry in sorted(root.iterdir(), key=lambda p: p.name):
+    entries = sorted(root.iterdir(), key=lambda p: p.name)
+    for entry in entries:
         if not entry.is_dir():
             continue
         working_file = entry / "working.py"
@@ -740,7 +741,8 @@ def main(**kwargs: Any) -> None:
             run_kwargs["file_action"] = file_action
             run_kwargs["workings"] = _load_yaml_file(file_action)
 
-            for mode_name in _expand_numbered_variants(mode_list):
+            modes_list = _expand_numbered_variants(mode_list)
+            for mode_name in modes_list:
                 run_kwargs["mode"] = mode_name
                 run_single(**run_kwargs)
         return
@@ -874,7 +876,10 @@ def get_directory(part):
             if part[tag] != "":
                 if directory != "":
                     directory += "_"
-                directory += part[tag]
+                    extra = part[tag]
+                    if extra == None:
+                        extra = ""
+                directory += extra
     #make lowercase and replace spaces with underscores and slashes with underscores
     directory = directory.replace(" ", "_")
     directory = directory.replace("/", "_")
@@ -888,6 +893,146 @@ def get_directory(part):
 
     return directory
 
+def add_action(**kwargs):
+    part = kwargs.get("part", {})
+    actions = kwargs.get("actions", {})
+    action_name = kwargs.get("action_name", "")
+    action_type = kwargs.get("action_type", "ai")
+    file_test = kwargs.get("file_test", "tag")
+
+    #get largest existing index for this action_type
+    count = 1
+    if True:
+        while True:
+            test_action_name = f"oomlout_{action_type}_roboclick_{count}"
+            test_action = part.get(test_action_name, {})
+            if test_action != {}:
+                count += 1
+            else:                
+                break
+
+        action_id = f"oomlout_{action_type}_roboclick_{count}"
+
+    #filetest_name and add create file at end if tag
+    if True:
+        if file_test =="tag":
+            file_test = f"aaaa_{action_name}_tag_done.txt"
+            action = {}
+            action["command"] = "create_text_file"
+            action["file_name"] = file_test
+            action["content"] = f"Tag for {action_name} completed."
+            actions.append(action)
+
+    base = {}
+    base["actions"] = actions
+    base["file_test"] = file_test
+    part[action_id] = base
+
+################################ utility routines
+def ai_query_from_prompts(part,prompts,mode_ai_wait, count):
+    count += 1            
+    action_type = "ai" # "corel"
+    action_name = f"create_prompt_verbose"
+
+    #default to a tag but if an image is created use that instead
+    file_test = "tag" #(creates a tag at the end)
+
+    actions = []
+    
+    ### action 1
+    # new chat
+    action = {}
+    #- command: 'new_chat'
+    action["command"] = "new_chat"  
+    action["description"] = f"{action_name}"
+    actions.append(action)
+    
+    ### action 2
+    
+    
+    
+    for prompt in prompts:                
+        file_name_image = prompt.get("file_name_image", "")
+        prompt.pop("file_name_image", None)
+    
+        action = {}
+        action.update(copy.deepcopy(prompt))
+        action["command"] = "ai_query"
+        action["mode_ai_wait"] = mode_ai_wait
+        actions.append(action)
+    
+        if file_name_image != "":
+            action = {}
+            #- command: 'save_image'
+            action["command"] = "save_image_generated"  
+            action["file_name"] = file_name_image
+            action["mode_ai_wait"] = mode_ai_wait
+            actions.append(action)
+            #if image is created use that rather than tag
+            file_test = file_name_image
+
+    #close tab
+    action = {}
+    action["command"] = "close_tab"
+    actions.append(action)
+
+    add_action(part=part, action_type=action_type, action_name=action_name, actions=actions, file_test=file_test)  
+    return count       
+
+def ai_action_from_folder(**kwargs):
+    part = kwargs.get("part", {})
+    part2 = kwargs.get("part2", {})
+    folder_name = part2.get("folder_name", "")    
+    count = kwargs.get("count", 1)    
+    
+    
+
+    for i in range(1,101):
+        file_name = f"{folder_name}\\working_{i}.yaml"
+        if os.path.isfile(file_name):
+            #load yaml file
+            with open(file_name, 'r', encoding='utf-8') as f:
+                try:
+                    data = yaml.safe_load(f)
+                    prompts = data.get("prompts", [])
+                    if prompts:
+                        count = ai_query_from_prompts(part,prompts,mode_ai_wait, count)
+                except Exception as e:
+                    print(f"Error reading yaml from {file_name}: {e}")
+            part2.update(data)
+        else:
+            print(f"No file found at {file_name}, stopping folder processing.")
+            robo_delay(delay=10)
+
+
+        ####f string format
+        #f string update part_2 variables and all actions in part2
+        for key, value in part2.items():
+            if isinstance(value, str):
+                part2[key] = value.format(**part2)
+        #for actions
+        actions_working = part2.get("actions", [])
+        for action in actions_working:
+            for key, value in action.items():
+                if isinstance(value, str):
+                    try:
+                        action[key] = value.format(**part2)
+                    except Exception as e:
+                        print(f"Error formatting action key {key} with value {value}: {e}")
+                        action[key] = ""
+                        pass
+
+        actions = part2.get("actions", [])       
+        action_name = part2.get("action_name", f"{folder_name}_action")
+        action_type = part2.get("action_type", "ai")
+        file_test = part2.get("file_test", "tag")
+        mode_ai_wait = part2.get("mode_ai_wait", "slow")
+
+
+        file_test = part2.get("file_test", "tag")
+        add_action(part=part, action_type=action_type, action_name=action_name, actions=actions, file_test=file_test)  
+        count += 1
+        return count  
 
 if __name__ == "__main__":
     cli()
