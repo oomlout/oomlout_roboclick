@@ -651,6 +651,7 @@ def run_action(**kwargs: Any) -> Any:
     action_module = discovered.get(command)
     if action_module is None:
         print(f"Warning: Unknown command '{command}'")
+        robo_delay(delay=10)
         return ""
     return action_module.action_fn(**kwargs)
 

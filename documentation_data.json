@@ -1166,7 +1166,7 @@
       "name_short_options": [
         "close_file",
         "file",
-        "corel_close_file"
+        "corel_close_file, corel_close"
       ],
       "description": "Close file.",
       "summary": "Close file.",
@@ -1177,7 +1177,7 @@
       "aliases": [
         "close_file",
         "file",
-        "corel_close_file"
+        "corel_close_file, corel_close"
       ]
     },
     {
@@ -1430,6 +1430,35 @@
       "aliases": [
         "corel_open",
         "open"
+      ]
+    },
+    {
+      "command": "roboclick_action_corel_page_add",
+      "name_long": "roboclick_action_corel_page_goto",
+      "name_short_options": [
+        "page_add",
+        "add_page",
+        "corel_page_add"
+      ],
+      "description": "Page add.",
+      "summary": "Page add.",
+      "variables": [
+        {
+          "name": "repeat",
+          "description": "Number of times to repeat.",
+          "type": "string",
+          "default": ""
+        }
+      ],
+      "variable_names": [
+        "repeat"
+      ],
+      "category": "CorelDRAW",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "page_add",
+        "add_page",
+        "corel_page_add"
       ]
     },
     {
@@ -2405,6 +2434,6 @@
       ]
     }
   ],
-  "generated_date": "2026-03-16",
-  "total_actions": 57
+  "generated_date": "2026-03-18",
+  "total_actions": 58
 }

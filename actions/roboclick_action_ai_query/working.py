@@ -108,7 +108,7 @@ def new(**kwargs):
                 #load text from file.
                 #file is in the prompt directory of the project
                 filename_absolute = ""
-                if file_name.startswith("prompt\\") or file_name.startswith("prompt/"):                
+                if file_name.startswith("prompt\\") or file_name.startswith("prompt/") or file_name.startswith("roboclick\\") or file_name.startswith("roboclick/"):                
                     filename_absolute = os.path.abspath(file_name)
             #file is in the directory of the part
                 else:
