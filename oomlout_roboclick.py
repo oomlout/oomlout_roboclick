@@ -290,7 +290,7 @@ def discover_actions(actions_root: str | Path | None = None) -> dict[str, Discov
 def _extract_aliases(metadata: dict[str, Any]) -> list[str]:
     raw_aliases: list[str] = []
 
-    for key in ("name_short", "name_short_options", "aliases"):
+    for key in ("name_short",):
         value = metadata.get(key)
         if isinstance(value, str):
             raw_aliases.append(value)

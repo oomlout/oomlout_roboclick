@@ -8,8 +8,8 @@ def describe():
     d["name_long_1"] = 'roboclick'
     d["name_long_2"] = 'action'
     d["name_long_3"] = 'corel'
-    d["name_long_4"] = 'close'
-    d["name_long_5"] = 'close_file'
+    d["name_long_4"] = 'file'
+    d["name_long_5"] = 'close'
     d["name_long"] = ""
     for i in range(1, 50):
         adding = d.get(f"name_long_{i}", "")
@@ -21,7 +21,7 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_corel_close_file'
     d["name_long"] = 'roboclick_action_corel_close_file'
-    d["name_short"] = ['close_file', 'file', 'corel_close_file, corel_close']
+    d["name_short"] = ["corel_file_close", 'close_file', 'file', 'corel_close_file', 'corel_close']
     d["description"] = 'Close file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'

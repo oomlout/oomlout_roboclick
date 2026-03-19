@@ -1161,26 +1161,6 @@
       ]
     },
     {
-      "command": "roboclick_action_corel_close_file",
-      "name_long": "roboclick_action_corel_close_file",
-      "name_short_options": [
-        "close_file",
-        "file",
-        "corel_close_file, corel_close"
-      ],
-      "description": "Close file.",
-      "summary": "Close file.",
-      "variables": [],
-      "variable_names": [],
-      "category": "CorelDRAW",
-      "returns": "Pass-through action result.",
-      "aliases": [
-        "close_file",
-        "file",
-        "corel_close_file, corel_close"
-      ]
-    },
-    {
       "command": "roboclick_action_corel_convert_to_curves",
       "name_long": "roboclick_action_corel_convert_to_curves",
       "name_short_options": [
@@ -1280,6 +1260,30 @@
       "aliases": [
         "corel_export",
         "export"
+      ]
+    },
+    {
+      "command": "roboclick_action_corel_file_close",
+      "name_long": "roboclick_action_corel_close_file",
+      "name_short_options": [
+        "corel_file_close",
+        "close_file",
+        "file",
+        "corel_close_file",
+        "corel_close"
+      ],
+      "description": "Close file.",
+      "summary": "Close file.",
+      "variables": [],
+      "variable_names": [],
+      "category": "CorelDRAW",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "corel_file_close",
+        "close_file",
+        "file",
+        "corel_close_file",
+        "corel_close"
       ]
     },
     {
@@ -2434,6 +2438,6 @@
       ]
     }
   ],
-  "generated_date": "2026-03-18",
+  "generated_date": "2026-03-19",
   "total_actions": 58
 }
