@@ -63,7 +63,7 @@ def old(**kwargs):
     if not file_output:
         file_output = action.get("file_output", "working_fixed.yaml")
     directory = kwargs.get("directory", "")
-    remove_top_level = action.get("remove_top_level", [])
+    remove_top_level = action.get("remove_top_level", ["data"])
     new_item_name = action.get("new_item_name", "")
     search_and_replace = action.get("search_and_replace", [])
     #load input file

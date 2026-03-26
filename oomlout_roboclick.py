@@ -880,7 +880,7 @@ def get_directory(part):
                 extra = part[tag]
                 if extra == None:
                     extra = ""
-                directory += extra
+                directory += str(extra)
     #make lowercase and replace spaces with underscores and slashes with underscores
     directory = directory.replace(" ", "_")
     directory = directory.replace("/", "_")
@@ -930,10 +930,12 @@ def add_action(**kwargs):
     part[action_id] = base
 
 ################################ utility routines
-def ai_query_from_prompts(part,prompts,mode_ai_wait, count):
+def ai_query_from_prompts(part,part2,prompts,mode_ai_wait, count, file_destination_yaml="", action_name=""):
     count += 1            
     action_type = "ai" # "corel"
-    action_name = f"create_prompt_verbose"
+    action_default_name = f"create_prompt_verbose"
+    if action_name == "":         
+        action_name = f"{action_default_name}" 
 
     #default to a tag but if an image is created use that instead
     file_test = "tag" #(creates a tag at the end)
@@ -971,6 +973,36 @@ def ai_query_from_prompts(part,prompts,mode_ai_wait, count):
             actions.append(action)
             #if image is created use that rather than tag
             file_test = file_name_image
+
+    if file_destination_yaml != "":
+        action = {}
+        action["text"] = "if the above output is yaml please put it in the reply, if it is not please summarize the above information in a yaml format and only return the yaml without any other text. The yaml should be in the format of a dictionary with keys and values. The keys should be descriptive of the information they contain. The values should be the information itself. Please make sure the yaml is between two &&&tag for copy&&& strings"
+        action["command"] = "ai_query"
+        action["mode_ai_wait"] = mode_ai_wait
+        actions.append(action)
+        
+        action = {}
+        action["command"] = "ai_save_text"
+        action["file_name_clip"] = file_destination_yaml.replace(".yaml", "_raw.yaml")
+        action["file_name_full"] = file_destination_yaml.replace(".yaml", "_full.txt")
+        actions.append(action)
+        if action_name == "" or action_name == action_default_name:            
+            file_test = file_destination_yaml
+
+        action = {}
+        action["command"] = "ai_fix_yaml_copy_paste"
+        new_item_name = part2.get("new_item_name", "")
+        if new_item_name != "":
+            action["new_item_name"] = new_item_name
+        remove_top_level = part2.get("remove_top_level", "")
+        if remove_top_level != "":
+            action["remove_top_level"] = remove_top_level
+        search_and_replace = part2.get("search_and_replace", {})
+        if search_and_replace != {}:
+            action["search_and_replace"] = search_and_replace
+        action["file_source"] = file_destination_yaml.replace(".yaml", "_raw.yaml")
+        action["file_destination"] = file_destination_yaml
+        actions.append(action)
 
     #close tab
     action = {}

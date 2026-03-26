@@ -117,22 +117,24 @@ def new(**kwargs):
                 if filename_absolute != "":
                     #if the file exists
                     if os.path.exists(filename_absolute):
-                        try:
-                            with open(filename_absolute, 'r', encoding='utf-8') as f:
-                                query_text = f.read()
-                                if f_string_replace:
-                                    #interpret the query as an fstring and replace with kwargs variables
+                        
+                        with open(filename_absolute, 'r', encoding='utf-8') as f:
+                            query_text = f.read()
+                            if f_string_replace:
+                                #replace {tags} in query_text with values from workings, leaving missing tags unchanged
+                                    import string
+                                    workings = kwargs.get("workings", {})
+                                    class SafeDict(dict):
+                                        def __missing__(self, key):
+                                            return '{' + key + '}'
                                     try:
-                                        workings = kwargs.get("workings", {})
-                                        query_text = query_text.format(**workings)
+                                        query_text = query_text.format_map(SafeDict(workings))
                                     except Exception as e:
-                                        print(f"     Error formatting query text from f string substitution issue maybe just missing value{filename_absolute} with kwargs: ")                                        
+                                        print(f"     Error formatting query_text: {e}")
                                         robo.robo_delay(delay=10)
-                            query_texts.append(query_text)
-                            print(f"     Loaded query text from {filename_absolute}")
-                        except Exception as e:
-                            print(f"     Error loading query text from {filename_absolute}: {e}")
-                            robo.robo_delay(delay=10)                            
+                        query_texts.append(query_text)
+                        print(f"     Loaded query text from {filename_absolute}")
+                        
                     else:
                         ###error checking annoying because of folder
                         if folder_name == "":
@@ -196,7 +198,7 @@ def new(**kwargs):
             #paste the entire text at once
             #delay 5 seconds
             robo.robo_delay(delay=5)
-            robo.robo_keyboard_press_ctrl_generic(string="v", delay=2)
+            #robo.robo_keyboard_press_ctrl_generic(string="v", delay=2)
         
 
         print(f"Querying with text: {query_text}")

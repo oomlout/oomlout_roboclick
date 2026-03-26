@@ -32,7 +32,7 @@ def describe():
     if True:
         v.append({'name': 'file_name_full', 'description': 'Full file path to save captured content.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_name_clip', 'description': 'File path used to store clipboard text.', 'type': 'string', 'default': ''})
-        v.append({'name': 'clip', 'description': 'Clipboard text payload to save.', 'type': 'string', 'default': ''})
+        v.append({'name': 'clip', 'description': 'Clipboard text payload to save. default:&&&tag for copy&&&', 'type': 'string', 'default': '&&&tag for copy&&&'})
     d["variables"] = v
     return d
 
