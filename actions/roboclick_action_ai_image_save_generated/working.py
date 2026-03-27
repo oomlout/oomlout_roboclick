@@ -73,6 +73,7 @@ def new(**kwargs):
             robo.robo_keyboard_press_ctrl_generic(string="r", delay=20)
             #click on the image to focus
             #robo.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
+            robo.ai_check_for_too_many_requests()
             robo.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
             #robo.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
             robo.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
