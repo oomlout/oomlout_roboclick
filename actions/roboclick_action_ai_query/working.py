@@ -170,7 +170,7 @@ def new(**kwargs):
         query_texts = [query_texts]
 
     for query_text in query_texts:
-        #clear text box
+        robo.ai_check_for_too_many_requests()#clear text box
         if True:
             print("    Clearing text box before query...")
             #select all
@@ -207,6 +207,8 @@ def new(**kwargs):
             #robo.robo_keyboard_press_enter(delay=delay)
             #ctrl enter
             robo.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
+            #check for too many requests
+            robo.ai_check_for_too_many_requests()
         elif "fast" in mode_ai: 
             #robo.robo_keyboard_press_enter(delay=1)
             robo.robo_keyboard_press_ctrl_generic(string="enter", delay=1)

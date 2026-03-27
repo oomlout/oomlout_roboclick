@@ -71,12 +71,7 @@ def old(**kwargs):
             print("    Delaying for 6 hours before retrying...")
             robo.robo_delay(delay=21600)  # Delay for 6 hours
             return "exit"
-        elif "requests too quickly" in clip.lower():
-            print("    Detected rate limit, delaying for 30 minutes before retrying...")
-            robo.robo_delay(delay=1800)  # Delay for 30 minutes
-            #press tab and enter to close the rate limit message
-            robo.robo_keyboard_press_tab(delay=2)
-            robo.robo_keyboard_press_enter(delay=2)
+        robo.ai_check_for_too_many_requests()
         pass
     #type in start query
     start_query = ""
@@ -89,7 +84,7 @@ def old(**kwargs):
     #robo.robo_keyboard_press_enter(delay=40)
     #control enter
     robo.robo_keyboard_press_ctrl_generic(string="enter", delay=40)
-
+    robo.ai_check_for_too_many_requests()
     #if log_url is True:
     if log_url:
         #press ctrl l
