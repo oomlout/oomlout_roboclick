@@ -25,7 +25,7 @@ def describe():
     d["name_long"] = 'roboclick_action_corel_object_order'
     d["name_short"] = ['object_order', 'order', 'corel_object_order']
     d["name_short_options"] = ['object_order', 'order', 'corel_object_order']
-    d["description"] = 'Object order.'
+    d["description"] = 'Object order. (to_front, to_back)'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'
     v = []

@@ -76,9 +76,12 @@ def old(**kwargs):
     action = {}
     action["command"] = "ai_query"
     prompt = f"""
+Create a prompt for generating a 1-colour (black on white) chibi-style mascot illustration designed for a 40x40 mm thermal label that visually represents a given theme (theme). The artwork should feature one central cute anthropomorphic mascot themed to (theme) — this could be a food, person, place, object, animal, occupation, landmark, idea, or other subject — simplified into an instantly readable, charming character. For example, this might be a smiling sausage, a cheerful teapot, a cute lighthouse, a happy planet, a friendly scientist, or an adorable broccoli. Include up to two simple surrounding icons that support the identity, mood, or context of the theme, such as a heart puff, spark, leaf, tool, star, cloud, small landmark element, prop, or symbolic motif. Use pure black on white only, with no grey, shading, gradients, halftones, or text. Keep bold linework suitable for thermal printing, with outer lines at 3.5-4.5 pt and inner details at 2-2.5 pt at 300 dpi. The composition should be centered, clean, and balanced, with 3-4 mm margins and no border. Style should be kawaii, playful, sticker-like, minimal-detail, high-contrast, and screen-print inspired. The mascot and supporting icons should fill about 70-80% of the square, with the small secondary icons arranged loosely for balance without clutter. The final output should be a ready-to-paste image-generation prompt using (theme) as the placeholder variable.
+    """
+    prompt_old = f"""
 Create a prompt for generating a 1-colour (black on white) chibi-style
 mascot illustration designed for a 40x40 mm thermal label that visually
-represents a given recipe name (recipe_name). The artwork should feature
+represents a given theme (theme). The artwork should feature
 one central cute anthropomorphic mascot themed to the recipe (for example
 a smiling sausage, happy bowl of curry, or cheerful casserole pot) with
 up to two simple surrounding icons that fit the meal's personality (such
@@ -89,7 +92,7 @@ on white only with no grey, shading, gradients, or text. Keep bold linework
 minimal detail, high contrast, screen-print inspired, with composition
 filling about 70-80 % of the square and background icons arranged loosely
 for balance. The output should be a ready-to-paste image-generation prompt
-with (recipe_name) as a placeholder variable. Take all the time you need
+with (theme) as a placeholder variable. Take all the time you need
 """    
     action["text"] = prompt
     action["method"] = "paste"
