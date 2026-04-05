@@ -79,22 +79,23 @@ def new(**kwargs):
             robo.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
         #check if limit reached
         if True:
-            clip = robo.robo_keyboard_copy(delay=2)
-            if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
-                #get text bewteen "resets in" and  minutes
-                time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
-                #check to make sure it worked
-                delay_time  = 6 * 60 * 60 # 6 hours
-                if time_out != "":
-                    #get hours
-                    if "hour" in time_out:
-                        hours = int(time_out.split("hour")[0].strip()) + 1
-                        delay_time = hours * 60 * 60
-                    #print message
-                    print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
-                robo.robo_delay(delay=delay_time)
+            robo.ai_check_for_too_many_requests()
+            # clip = robo.robo_keyboard_copy(delay=2)
+            # if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
+            #     #get text bewteen "resets in" and  minutes
+            #     time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
+            #     #check to make sure it worked
+            #     delay_time  = 6 * 60 * 60 # 6 hours
+            #     if time_out != "":
+            #         #get hours
+            #         if "hour" in time_out:
+            #             hours = int(time_out.split("hour")[0].strip()) + 1
+            #             delay_time = hours * 60 * 60
+            #         #print message
+            #         print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
+            #     robo.robo_delay(delay=delay_time)
 
-                return "exit"
+                # return "exit"
         #save image        
         if True:
             robo.ai_save_image(**kwargs)
