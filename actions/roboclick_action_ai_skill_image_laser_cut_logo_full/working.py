@@ -137,7 +137,7 @@ square proportions and take as much time as you need
     action = {}
     #- command: 'save_image'
     action["command"] = "ai_save_image"
-    action["file_name"] = f"initial_generated.png"
+    action["file_name"] = f"{file_destination}"
     if mode_ai_wait != "":
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)

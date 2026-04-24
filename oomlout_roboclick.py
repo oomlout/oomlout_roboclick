@@ -868,7 +868,10 @@ def get_url(part):
 def get_directory(part):
     
     #type, size, color, description_main, description_extra
-    tags = ["classification","type", "size", "color", "description_main", "description_extra", "manufacturer", "part_number"]
+    tags = []
+    #taxonomy_1 to 15
+    for i in range(1, 16):
+        tags.append(f"taxonomy_{i}")
 
     directory = ""
 
