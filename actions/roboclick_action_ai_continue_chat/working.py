@@ -59,13 +59,12 @@ def old(**kwargs):
     action = kwargs.get("action", {})    
     log_url = kwargs.get("log_url", False)
     url_chat = action.get("url_chat", "")
-    print("continue_chat -- continuing an existing chat")
-    #robo.robo_chrome_open_url(url=url_chat, delay=15, message="    opening a new chat")    
+    print("continue_chat -- continuing an existing chat")    
     #longer delay for long chats
     robo.robo_chrome_open_url(url=url_chat, delay=30, message="    opening a new chat")    
     #check for hitting limit
     if True:
-        print("    Checking for message limit...")
+        print(".:check message limit:.")
         clip = robo.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
         if "0 messages remaining" in clip.lower():
             print("    Hit message limit, cannot proceed.")
@@ -80,7 +79,7 @@ def old(**kwargs):
         #copy the url
         url = robo.robo_keyboard_copy(delay=2)
         #print the url
-        print(f"    New chat URL: {url}")
+        print(f".:current chat url is {url[:60]}:.")
         #press esc
         robo.robo_keyboard_press_escape(delay=2, repeat=5)
         #save to url.yaml

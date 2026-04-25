@@ -28,7 +28,7 @@ def robo_chatgpt_prompt_type(**kwargs):
     pyautogui.typewrite(prompt, interval=0.025)
     time.sleep(1)
     #press enter to send the prompt
-    print(".:enter:.", end="", flush=True)
+    print(".:enter:.")
     pyautogui.press('enter')
     robo_delay(delay=40)
 
@@ -473,7 +473,7 @@ def robo_corel_import_file(**kwargs):
     width = kwargs.get('width', "")
     height = kwargs.get('height', "")
     max_dimension = kwargs.get('max_dimension', "")
-    special = kwargs.get('special', "")
+    special = kwargs.get('special', "no_double_click")
     if directory != '':
         file_name = os.path.join(directory, file_name)
     file_name_absolute = os.path.abspath(file_name)
@@ -765,6 +765,17 @@ def robo_corel_page_goto(**kwargs):
     #press enter
     robo_keyboard_press_enter(delay=2)
     robo_delay(delay=delay)
+
+def robo_corel_page_add(**kwargs):
+    repeat = kwargs.get('repeat', 1)
+    delay = kwargs.get('delay', 3)
+    message = kwargs.get('message', f"Going to add {repeat} pages...")
+    print(message)
+    #mouse click at 132 965
+    for i in range(0,repeat):
+        robo_mouse_click(position=[223, 965], delay=2)
+        #send page number
+        robo_delay(delay=delay)
 
 def robo_corel_set_position(**kwargs):
     x = kwargs.get('x', "")
@@ -1135,13 +1146,13 @@ def robo_keyboard_press_alt_generic(**kwargs):
     repeat = kwargs.get('repeat', 1)
     #press ctrl + string
     if repeat > 1:
-        print(f".:alt + {string} x {repeat}:.")
+        print(f"'.:'alt + {string} x {repeat}:.", flush=True, end="")
         for i in range(repeat):
             pyautogui.hotkey('alt', string)
             time.sleep(delay_keypress)
         robo_delay(delay=delay)
     else:
-        print(f".:alt + {string}:.")
+        print(f"'.:'alt + {string}:.", flush=True, end="")
         pyautogui.hotkey('alt', string)
         robo_delay(delay=delay)
 
@@ -1152,13 +1163,13 @@ def robo_keyboard_press_ctrl_generic(**kwargs):
     repeat = kwargs.get('repeat', 1)
     #press ctrl + string
     if repeat > 1:
-        print(f".:ctrl + {string} x {repeat}:.")
+        print(f"'.:'ctrl + {string} x {repeat}:.", flush=True, end="")
         for i in range(repeat):
             pyautogui.hotkey('ctrl', string)
             time.sleep(delay_keypress)
         robo_delay(delay=delay)
     else:
-        print(f".:ctrl + {string}:.")
+        print(f"'.:'ctrl + {string}:.", flush=True, end="")
         pyautogui.hotkey('ctrl', string)
         robo_delay(delay=delay)
 
@@ -1239,7 +1250,9 @@ def robo_keyboard_press_string(**kwargs):
     string = kwargs.get('string', '')
     delay = kwargs.get('delay', 1)
     delay_keypress = kwargs.get('delay_keypress', 0.025)    
-    print(f".:{string}:.", end="", flush=True)
+    #remove new lines and tabs from the string for the print statement
+    string_print = string.replace("\n", "\\n").replace("\t", "\\t")
+    print(f".: typing: {string_print[:60]}:.", flush=True, end="")
     pyautogui.typewrite(string, interval=delay_keypress)
     robo_delay(delay=delay)
 
@@ -1250,13 +1263,15 @@ def robo_keyboard_press_generic(**kwargs):
     repeat = kwargs.get('repeat', 1)
     #press escape to close the menu
     if repeat > 1:
-        print(f".:{string} x {repeat}:.", end="", flush=True)
+        string_print = string.replace("\n", "\\n").replace("\t", "\\t")
+        print(f".: typing: {string_print[:60]} x {repeat}:.", flush=True, end="")
         for i in range(repeat):
             pyautogui.press(string)
             time.sleep(delay_keypress)
         robo_delay(delay=delay)
     else:
-        print(f".:{string}:.", end="", flush=True)
+        string_print = string.replace("\n", "\\n").replace("\t", "\\t")
+        print(f".: typing: {string_print[:60]}:.", flush=True, end="")
         pyautogui.press(string)
         robo_delay(delay=delay)
 
@@ -1267,7 +1282,8 @@ def robo_keyboard_press_shift_generic(**kwargs):
     repeat = kwargs.get('repeat', 1)
     #press escape to close the menu
     if repeat > 1:
-        print(f".:shift + {string} x {repeat}:.")
+        string_print = string.replace("\n", "\\n").replace("\t", "\\t")
+        print(f".:shift {string_print[:60]} x {repeat}:.", flush=True, end="")
         for i in range(repeat):
             pyautogui.keyDown('shift')
             pyautogui.press(string)
@@ -1275,7 +1291,8 @@ def robo_keyboard_press_shift_generic(**kwargs):
             time.sleep(delay_keypress)
         robo_delay(delay=delay)
     else:
-        print(f".:shift + {string}:.")
+        string_print = string.replace("\n", "\\n").replace("\t", "\\t")
+        print(f".:shift {string_print[:60]}:.", flush=True, end="")
         pyautogui.keyDown('shift')
         pyautogui.press(string)
         pyautogui.keyUp('shift')
@@ -1309,7 +1326,14 @@ def check_key_pressed():
 
 def robo_delay(**kwargs):
     delay = kwargs.get('delay', 1)
+    #if delay is a string turn it into an int
+    if isinstance(delay, str):
+        delay = int(delay)
     rand = kwargs.get('rand', 0)
+    if rand == 0:
+        rand = kwargs.get('random', 0)
+        if rand == 0:
+            rand = kwargs.get('randomize', 0)
     message = kwargs.get('message', f"")
     if message != "":
         print(f"message")
@@ -1319,7 +1343,8 @@ def robo_delay(**kwargs):
     if delay <= 1:
         time.sleep(delay)
     elif delay > 5:
-        print(f"<<<<<>>>>> {delay}")
+        print("")
+        print(f"<<<<<>>>>> {delay} ")
     
         splits = 10
         for i in range(splits):
@@ -1336,7 +1361,7 @@ def robo_delay(**kwargs):
                 import ctypes
 
                 if ctypes.windll.user32.GetKeyState(0x91) & 1 == 1:
-                    print(".:skipped:.", flush=True, end="")
+                    print(".:skip:.", end='', flush=True)
                     time.sleep(2)
                     pyautogui.press('scrolllock')
                     return
@@ -1344,17 +1369,17 @@ def robo_delay(**kwargs):
         print("")
     else:
         print(f".:{delay}:.", end='', flush=True)
-        for i in range(delay):
+        for i in range(int(delay)):
             #print the progress bar
             print(".", end='', flush=True)
             # Check if 's' key is pressed
             key = check_key_pressed()
             if key == 's':
-                print("\nDelay skipped by pressing 's' key")
+                print("\n.:skipped:.", flush=True, end="")
                 time.sleep(5)
                 return
             time.sleep(1)
-        print("")
+        #print("")
 
 def robo_mouse_click(**kwargs):
     position = kwargs.get('position', [0, 0])
@@ -1732,3 +1757,115 @@ def robo_pdf_merge(**kwargs):
         merger.append(pdf)
     merger.write(file_output)
     merger.close()
+
+
+###### ai utilities
+
+def ai_check_for_too_many_requests():
+    #robo copy
+    text = robo_keyboard_copy()
+    if "making requests too quickly" in text.lower():
+        print("     Detected 'too many requests' in AI response. Waiting for 60 seconds before retrying...")
+        robo_delay(delay=1800, randomize=1800)
+        #press tab once
+        robo_keyboard_press_tab(delay=2)
+        #press enter once
+        robo_keyboard_press_enter(delay=10)
+        pass
+    if True:
+        clip = text
+        if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
+            #get text bewteen "resets in" and  minutes
+            time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
+            #check to make sure it worked
+            delay_time  = 6 * 60 * 60 # 6 hours
+            if time_out != "":
+                #get hours
+                if "hour" in time_out:
+                    hours = int(time_out.split("hour")[0].strip()) + 1
+                    delay_time = hours * 60 * 60
+                #print message
+                print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
+            robo_delay(delay=delay_time)
+    pass
+    robo_delay(delay=2)
+
+
+
+def ai_wait_mode_fast_check(mode_ai_wait="fast_button_state"):  
+    if mode_ai_wait == "fast_button_state" or mode_ai_wait == "fast":
+        return ai_wait_mode_fast_check_state_of_submit_button_approach()
+    elif mode_ai_wait == "fast_clipboard_state":
+        return ai_wait_mode_fast_clipboard_creating_image_approach()
+
+def ai_wait_mode_fast_check_state_of_submit_button_approach():  
+    print("Waiting for AI to finish responding (fast mode)...")
+    count = 0
+    count_max = 100
+    running = True    
+    point_check_color = [1445,964]
+    #point_check_color = [1331,964]
+    color_done= (0, 0, 0)
+    color_expecting = (236,236,236)
+
+    while running and count < count_max:
+        ai_check_for_too_many_requests()
+        robo_delay(delay=10)
+        pixel_color = pyautogui.screenshot().getpixel((point_check_color[0], point_check_color[1]))
+        print(f"    Pixel color at {point_check_color}: {pixel_color} ")
+        #check if it is the expected color
+        if pixel_color == color_expecting:
+            print("    Good news the right color was found")
+        else:
+            print("    The expected color was not found, may need to move")
+        if pixel_color == color_done:
+            print("    AI apIpears to have finished responding.")
+            running = False
+            robo_delay(delay=2)
+
+def ai_wait_mode_fast_clipboard_creating_image_approach():  
+    print("Waiting for AI to finish responding (fast mode)...")
+    count = 0
+    count_max = 100
+    running = True    
+    string_check = "Creating image"
+    strings_check = ["one last tweak", "creating_image", "sketching it out", "making the first draft", "setting the scene", "polishing details"]
+    
+    while running and count < count_max:
+        robo_delay(delay=10)
+        #mouse click at 300,300
+        robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
+        text = robo_keyboard_copy(delay=2)
+        #if string_check in text:
+        #any of the strings in strings_check in text
+        if any(s.lower() in text.lower() for s in strings_check):
+            print("    AI appears to have finished responding.")
+            running = False
+            robo_delay(delay=60)
+        else:
+            print("    AI appears to be creating an image, waiting for it to finish...")
+            
+
+def ai_save_image(**kwargs):
+    #position_click = kwargs.get("position_click", [960, 500])
+    #position_click = kwargs.get("position_click", [960, 360])
+    #position_click = kwargs.get("position_click", [960, 280])
+    #also set in kwags
+    position_click = kwargs.get("position_click", [960, 455])
+    
+    action = kwargs.get("action", {})
+    file_name = action.get("file_name", "working.png")   
+    directory_absolute = kwargs.get("directory_absolute", "")
+    file_name_absolute = os.path.join(directory_absolute, file_name)
+    file_name_abs = os.path.abspath(file_name) 
+    print(f"Saving image as {file_name}")
+    #save the image
+    robo_mouse_click(position=position_click, delay=2, button="right")  # Click on the image to focus
+    #press down twice
+    robo_keyboard_press_down(delay=1, repeat=2)
+    robo_keyboard_press_enter(delay=5)
+    robo_keyboard_send(string=file_name_absolute, delay=5)
+    robo_keyboard_press_enter(delay=5)
+    robo_keyboard_send(string="y", delay=5)
+    robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+    print(f"Image saved as {file_name}")

@@ -449,7 +449,7 @@ def ai_continue_chat(**kwargs):
     robo.robo_chrome_open_url(url=url_chat, delay=30, message="    opening a new chat")    
     #check for hitting limit
     if True:
-        print("    Checking for message limit...")
+        print(".:check message limit:.")
         clip = robo.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
         if "0 messages remaining" in clip.lower():
             print("    Hit message limit, cannot proceed.")
@@ -570,7 +570,7 @@ def ai_new_chat(**kwargs):
     robo.robo_chrome_open_url(url="https://chat.openai.com/chat", delay=15, message="    opening a new chat")    
     #check for hitting limit
     if True:
-        print("    Checking for message limit...")
+        print(".:check message limit:.")
         clip = robo.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
         if "0 messages remaining" in clip.lower():
             print("    Hit message limit, cannot proceed.")

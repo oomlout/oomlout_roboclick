@@ -1,7 +1,7 @@
 import os
 
 import pyautogui
-import robo
+import robo_roboclick
 
 d = {}
 
@@ -62,8 +62,8 @@ def action(**kwargs):
 
 def new(**kwargs): 
     """Send query to AI"""
-    print("#################################################")
-    print("######  ai_query -- sending a query")
+    print("")
+    print(".:action:. -- ai_query -- sending a query")
 
     directory = kwargs.get("directory", "") #current directory of the part
     action = kwargs.get("action", {})
@@ -85,7 +85,7 @@ def new(**kwargs):
         #both file_name and query_text are defined
         if file_name != "" and query_text != "":
             print(f"     ERROR bothquery text and file are defined query text will be used")
-            robo.robo_delay(delay=10)
+            robo_roboclick.robo_delay(delay=10)
         
         ##load the text from the file
         file_names = file_name
@@ -131,7 +131,7 @@ def new(**kwargs):
                                         query_text = query_text.format_map(SafeDict(workings))
                                     except Exception as e:
                                         print(f"     Error formatting query_text: {e}")
-                                        robo.robo_delay(delay=10)
+                                        robo_roboclick.robo_delay(delay=10)
                         query_texts.append(query_text)
                         print(f"     Loaded query text from {filename_absolute}")
                         
@@ -139,19 +139,19 @@ def new(**kwargs):
                         ###error checking annoying because of folder
                         if folder_name == "":
                             print(f"     File Missing")
-                            robo.robo_delay(delay=10)
+                            robo_roboclick.robo_delay(delay=10)
                         
                         #get the folder name of the file                        
                         folder_name_check = os.path.dirname(filename_absolute)
                         #if the folder doesnt eiistt print error
                         if not os.path.exists(folder_name_check):
                             print(f"     Folder {folder_name_check} does not exist for file {filename_absolute}")
-                            robo.robo_delay(delay=10)
+                            robo_roboclick.robo_delay(delay=10)
                         
                         
                 else:
                     print(f"     No valid file name provided for query text.")
-                    robo.robo_delay(delay=10)
+                    robo_roboclick.robo_delay(delay=10)
                     query_text = ""
         
     
@@ -170,18 +170,18 @@ def new(**kwargs):
         query_texts = [query_texts]
 
     for query_text in query_texts:
-        robo.ai_check_for_too_many_requests()#clear text box
+        robo_roboclick.ai_check_for_too_many_requests()#clear text box
         if True:
-            print("    Clearing text box before query...")
+            print(".:clearing:.")
             #select all
-            robo.robo_keyboard_press_ctrl_generic(string="a", delay=2)
+            robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
             #back space
-            robo.robo_keyboard_press_backspace(delay=2, repeat=1)
+            robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
 
         #if query text is more than 1000 characters use paste method
         if len(query_text) > 1000:
             method = "paste"
-            print("    Query text is long, using paste method.")
+            print(".:paste_method:.")
 
         if method == "typing":
             #split the text on line breaks
@@ -189,30 +189,32 @@ def new(**kwargs):
             query_text_lines = query_text.split("\n")
             for line in query_text_lines:
                 #send each line with a delay of 1 second between lines
-                robo.robo_keyboard_send(string=line, delay=0.1)
-                robo.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
+                robo_roboclick.robo_keyboard_send(string=line, delay=0.1)
+                robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
         elif method == "paste":
             #press space twice to ensure focus
-            robo.robo_keyboard_send(string="  ")
-            robo.robo_keyboard_paste(text=query_text)
+            robo_roboclick.robo_keyboard_send(string="  ")
+            robo_roboclick.robo_keyboard_paste(text=query_text)
             #paste the entire text at once
             #delay 5 seconds
-            robo.robo_delay(delay=5)
-            #robo.robo_keyboard_press_ctrl_generic(string="v", delay=2)
+            robo_roboclick.robo_delay(delay=5)
+            #robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
         
-
-        print(f"Querying with text: {query_text}")
+        #remove tabs and new lines
+        query_text_print = query_text.replace("\n", "\\n").replace("\t", "\\t")
+        print("")
+        print(f".: text: {query_text_print[:60]}:.")
         
         if mode_ai =="slow":
-            #robo.robo_keyboard_press_enter(delay=delay)
+            #robo_roboclick.robo_keyboard_press_enter(delay=delay)
             #ctrl enter
-            robo.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
+            robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
             #check for too many requests
-            robo.ai_check_for_too_many_requests()
+            robo_roboclick.ai_check_for_too_many_requests()
         elif "fast" in mode_ai: 
-            #robo.robo_keyboard_press_enter(delay=1)
-            robo.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
-            robo.ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
+            #robo_roboclick.robo_keyboard_press_enter(delay=1)
+            robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
+            robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
 
 
 def old(**kwargs):
@@ -232,7 +234,7 @@ def old(**kwargs):
     if True:
         if file_name != "" and query_text != "":
             print(f"     ERROR bothquery text and file are defined query text will be used")
-            robo.robo_delay(delay=10)
+            robo_roboclick.robo_delay(delay=10)
         if query_text == "" and file_name != "":
             #load text from file.
             #file is in the prompt directory of the project
@@ -250,11 +252,11 @@ def old(**kwargs):
                     print(f"     Loaded query text from {filename_absolute}")
                 except Exception as e:
                     print(f"     Error loading query text from {filename_absolute}: {e}")
-                    robo.robo_delay(delay=10)
+                    robo_roboclick.robo_delay(delay=10)
                     query_text = ""
             else:
                 print(f"     No valid file name provided for query text.")
-                robo.robo_delay(delay=10)
+                robo_roboclick.robo_delay(delay=10)
                 query_text = ""
     mode_ai = action.get("mode_ai_wait", "slow")
     if mode_ai == None:
@@ -265,9 +267,9 @@ def old(**kwargs):
     if True:
         print("    Clearing text box before query...")
         #select all
-        robo.robo_keyboard_press_ctrl_generic(string="a", delay=2)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
         #back space
-        robo.robo_keyboard_press_backspace(delay=2, repeat=1)
+        robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
 
     #if query text is more than 1000 characters use paste method
     if len(query_text) > 1000:
@@ -280,27 +282,30 @@ def old(**kwargs):
         query_text_lines = query_text.split("\n")
         for line in query_text_lines:
             #send each line with a delay of 1 second between lines
-            robo.robo_keyboard_send(string=line, delay=0.1)
-            robo.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
+            robo_roboclick.robo_keyboard_send(string=line, delay=0.1)
+            robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
     elif method == "paste":
         #press space twice to ensure focus
-        robo.robo_keyboard_send(string="  ")
-        robo.robo_keyboard_paste(text=query_text)
+        robo_roboclick.robo_keyboard_send(string="  ")
+        robo_roboclick.robo_keyboard_paste(text=query_text)
         #paste the entire text at once
         #delay 5 seconds
-        robo.robo_delay(delay=5)
-        robo.robo_keyboard_press_ctrl_generic(string="v", delay=2)
+        robo_roboclick.robo_delay(delay=5)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
     
-
-    print(f"Querying with text: {query_text}")
+    # remove tabs and new lines
+    
+    query_text_print = query_text.replace("\n", "\\n").replace("\t", "\\t")
+    print("")
+    print(f".: text: {query_text_print[:60]}:.")
     
     if mode_ai =="slow":
-        #robo.robo_keyboard_press_enter(delay=delay)
+        #robo_roboclick.robo_keyboard_press_enter(delay=delay)
         #ctrl enter
-        robo.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
     elif "fast" in mode_ai: 
-        #robo.robo_keyboard_press_enter(delay=1)
-        robo.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
+        #robo_roboclick.robo_keyboard_press_enter(delay=1)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
         ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
 
 def test(**kwargs):

@@ -115,7 +115,7 @@ def delay(**kwargs: Any) -> str:
         print("")
         return ""
 
-    print(f"waiting for {delay_seconds:.0f} seconds (press 's' to skip)", end="", flush=True)
+    print(f"waiting {delay_seconds:.0f} seconds, ", end="", flush=True)
     remaining = max(1, int(round(delay_seconds)))
     for _ in range(remaining):
         print(".", end="", flush=True)
@@ -124,7 +124,7 @@ def delay(**kwargs: Any) -> str:
             time.sleep(1)
             return ""
         time.sleep(1)
-    print("")
+    #print("")
     return ""
 
 

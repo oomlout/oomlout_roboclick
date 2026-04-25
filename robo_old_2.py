@@ -32,6 +32,13 @@ def _load_legacy_robo_module():
 
     module = module_from_spec(spec)
     spec.loader.exec_module(module)
+    for helper_name, helper in {
+        "check_key_pressed": check_key_pressed,
+        "scroll_lock_toggled": scroll_lock_toggled,
+        "delay": delay,
+        "robo_delay": robo_delay,
+    }.items():
+        setattr(module, helper_name, helper)
     _legacy_robo_module = module
     return module
 

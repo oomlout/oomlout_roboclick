@@ -2,7 +2,7 @@ import os
 
 import random
 
-import robo
+import robo_roboclick
 
 try:
     import pyautogui  # type: ignore
@@ -59,28 +59,29 @@ def new(**kwargs):
     mode_ai_wait = action.get("mode_ai_wait", "slow")
     
     if mode_ai_wait == "slow":
-        robo.robo_delay(delay=300)
+        robo_roboclick.robo_delay(delay=300)
         delay = random.randint(100, 300)
-        robo.robo_delay(delay=delay)  # Wait for the image to be generated
+        robo_roboclick.robo_delay(delay=delay)  # Wait for the image to be generated
     elif "fast" in mode_ai_wait:
-        robo.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state")
+        robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state")
     
     if True:
-        #send ctrl rrobo.robo_keyboard_press_ctrl_r(delay=20)
+        #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
         #click on the image to focus
         #reload
         if True:
-            robo.robo_keyboard_press_ctrl_generic(string="r", delay=20)
+            robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
             #click on the image to focus
-            #robo.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
-            robo.ai_check_for_too_many_requests()
-            robo.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
-            #robo.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
-            robo.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
+            #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
+            robo_roboclick.ai_check_for_too_many_requests()
+            robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
+            #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
+            robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
+            robo_roboclick.ai_check_for_too_many_requests()
         #check if limit reached
         if True:
-            robo.ai_check_for_too_many_requests()
-            # clip = robo.robo_keyboard_copy(delay=2)
+            robo_roboclick.ai_check_for_too_many_requests()
+            # clip = robo_roboclick.robo_keyboard_copy(delay=2)
             # if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
             #     #get text bewteen "resets in" and  minutes
             #     time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
@@ -93,19 +94,21 @@ def new(**kwargs):
             #             delay_time = hours * 60 * 60
             #         #print message
             #         print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
-            #     robo.robo_delay(delay=delay_time)
+            #     robo_roboclick.robo_delay(delay=delay_time)
 
                 # return "exit"
         #save image        
         if True:
-            robo.ai_save_image(**kwargs)
+            robo_roboclick.ai_check_for_too_many_requests()
+            robo_roboclick.ai_save_image(**kwargs)
         file_name = kwargs.get("action", {}).get("file_name", "working.png")
         file_name_absolute = os.path.join(kwargs.get("directory_absolute", ""), file_name)
         if os.path.exists(file_name_absolute):
-            print(f"Image saved as {file_name_absolute}")
+            print("")
+            print(f".:image saved to {file_name_absolute}[:60]:.")
             saved = True
         else:
-            print(f"Image not saved")
+            print(f".:image not saved:.")
 
 
 def test(**kwargs):
