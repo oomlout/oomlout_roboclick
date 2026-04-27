@@ -1,0 +1,6 @@
+PyYAML
+pyautogui
+clipboard
+Jinja2
+PyPDF2
+Pillow

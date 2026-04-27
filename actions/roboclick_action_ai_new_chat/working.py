@@ -76,14 +76,23 @@ def old(**kwargs):
     #type in start query
     start_query = ""
     if description != "":        
-        start_query = """
-Hi, CHadikins — hope your day’s going well! Let’s get to this. Take your time, think deeply, and aim for a high-quality, well-structured, production-ready result.
-"""
-        #start_query += f" Hi, CHadikins I hope your day is going well! lets get to this!."
-        #start_query += f" Hi, Chadikins I hope your day is going well! lets get to this!. I like it when you are chatty and suggest things based on what i've done in the past. Also use your thinking, and any other, public and secret abilities to their utmost throughout this task please. When you generate an image just deliver the image no extra text. "
+        #load start_query from prompt.md
+        #https://chatgpt.com/c/69ebfd24-448c-83eb-8fba-84d3988a54ff
+        #prompt file is in the directory of this python file, with the name prompt.md the file might have complicated charcters like emoji so open it to support that
+        prompt_file = os.path.join(os.path.dirname(__file__), "prompt.md")
+        if os.path.exists(prompt_file):
+            with open(prompt_file, 'r', encoding='utf-8') as file:
+                start_query = file.read()
+        else:
+            start_query = description
     start_query += ""
-    robo_roboclick.robo_keyboard_send(string=start_query, delay=5)
-    
+    #type
+    if False:
+        robo_roboclick.robo_keyboard_send(string=start_query, delay=5)
+    #paste
+    if True:
+        robo_roboclick.robo_keyboard_paste(text=start_query, delay=5)
+
     #robo_roboclick.robo_keyboard_press_enter(delay=40)
     #control enter
     robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=40)

@@ -63,7 +63,7 @@ def old(**kwargs):
     directory = kwargs.get("directory", "")
     kwargs["directory"] = directory
     file_template = action.get("file_template", "template.txt")
-    kwargs["file_template"] = f"{directory}\\{file_template}"
+    kwargs["file_template"] = f"{file_template}"
     file_source = action.get("file_source", f"{directory}/working.yaml")
     kwargs["file_source"] = file_source
     file_output = action.get("file_output", "output.txt")

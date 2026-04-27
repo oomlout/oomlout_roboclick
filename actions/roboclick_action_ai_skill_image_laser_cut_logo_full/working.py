@@ -1,7 +1,18 @@
 import oomlout_roboclick
 import copy
+from pathlib import Path
 
 d = {}
+
+
+PROMPT_DIR = Path(__file__).resolve().parent
+
+
+def _load_prompt(filename, **replacements):
+    prompt_text = (PROMPT_DIR / filename).read_text(encoding="utf-8")
+    for key, value in replacements.items():
+        prompt_text = prompt_text.replace(f"{{{key}}}", str(value))
+    return prompt_text
 
 
 def describe():
@@ -75,25 +86,7 @@ def old(**kwargs):
 
     action = {}
     action["command"] = "ai_query"
-    prompt = f"""
-Create a prompt for generating a 1-colour (black on white) chibi-style mascot illustration designed for a 40x40 mm thermal label that visually represents a given theme (theme). The artwork should feature one central cute anthropomorphic mascot themed to (theme) — this could be a food, person, place, object, animal, occupation, landmark, idea, or other subject — simplified into an instantly readable, charming character. For example, this might be a smiling sausage, a cheerful teapot, a cute lighthouse, a happy planet, a friendly scientist, or an adorable broccoli. Include up to two simple surrounding icons that support the identity, mood, or context of the theme, such as a heart puff, spark, leaf, tool, star, cloud, small landmark element, prop, or symbolic motif. Use pure black on white only, with no grey, shading, gradients, halftones, or text. Keep bold linework suitable for thermal printing, with outer lines at 3.5-4.5 pt and inner details at 2-2.5 pt at 300 dpi. The composition should be centered, clean, and balanced, with 3-4 mm margins and no border. Style should be kawaii, playful, sticker-like, minimal-detail, high-contrast, and screen-print inspired. The mascot and supporting icons should fill about 70-80% of the square, with the small secondary icons arranged loosely for balance without clutter. The final output should be a ready-to-paste image-generation prompt using (theme) as the placeholder variable.
-    """
-    prompt_old = f"""
-Create a prompt for generating a 1-colour (black on white) chibi-style
-mascot illustration designed for a 40x40 mm thermal label that visually
-represents a given theme (theme). The artwork should feature
-one central cute anthropomorphic mascot themed to the recipe (for example
-a smiling sausage, happy bowl of curry, or cheerful casserole pot) with
-up to two simple surrounding icons that fit the meal's personality (such
-as a heart puff, herb sprig, spoon, bowl, or local motif). Use pure black
-on white only with no grey, shading, gradients, or text. Keep bold linework
-(outer 3.5-4.5 pt, inner 2-2.5 pt at 300 dpi), centered composition with
-3-4 mm margins and no border. Style should be kawaii, playful, sticker-like,
-minimal detail, high contrast, screen-print inspired, with composition
-filling about 70-80 % of the square and background icons arranged loosely
-for balance. The output should be a ready-to-paste image-generation prompt
-with (theme) as a placeholder variable. Take all the time you need
-"""    
+    prompt = _load_prompt("prompt_1.md")
     action["text"] = prompt
     action["method"] = "paste"
     action["delay"] = 120
@@ -105,10 +98,7 @@ with (theme) as a placeholder variable. Take all the time you need
     
     action = {}
     action["command"] = "ai_query"
-    prompt = f"""
-That is so so great! please do it for {image_detail}.
-Take all the time you need
-"""
+    prompt = _load_prompt("prompt_2.md", image_detail=image_detail)
     action["text"] = prompt
     action["method"] = "paste"
     action["delay"] = 240
@@ -120,10 +110,7 @@ Take all the time you need
 
     action = {}
     action["command"] = "ai_query"
-    prompt = f"""
-You are a star that's perfect! now pelase geenrate the image remember
-square proportions and take as much time as you need
-"""
+    prompt = _load_prompt("prompt_3.md")
     action["text"] = prompt
     action["method"] = "paste"
     action["delay"] = 240

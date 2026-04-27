@@ -9,6 +9,50 @@ import jinja2
 import pickle
 import copy
 
+_PYAUTOGUI_ORIGINALS = {}
+
+
+def _recover_from_pyautogui_failsafe():
+    """Move the pointer away from a fail-safe corner before retrying."""
+    move_to = _PYAUTOGUI_ORIGINALS.get("moveTo", pyautogui.moveTo)
+    original_failsafe = pyautogui.FAILSAFE
+    try:
+        width, height = pyautogui.size()
+        pyautogui.FAILSAFE = False
+        move_to(width // 2, height // 2)
+    finally:
+        pyautogui.FAILSAFE = original_failsafe
+    time.sleep(1)
+
+
+def _wrap_pyautogui_call(name):
+    original = getattr(pyautogui, name)
+    _PYAUTOGUI_ORIGINALS[name] = original
+
+    def wrapped(*args, **kwargs):
+        try:
+            return original(*args, **kwargs)
+        except pyautogui.FailSafeException:
+            print(f"PyAutoGUI fail-safe triggered during {name}; moving mouse to screen center and retrying.")
+            _recover_from_pyautogui_failsafe()
+            return original(*args, **kwargs)
+
+    setattr(pyautogui, name, wrapped)
+
+
+for _pyautogui_method in [
+    "click",
+    "press",
+    "hotkey",
+    "typewrite",
+    "moveTo",
+    "dragTo",
+    "keyDown",
+    "keyUp",
+    "screenshot",
+]:
+    _wrap_pyautogui_call(_pyautogui_method)
+
 # Import platform-specific key detection modules
 if sys.platform == "win32":
     import msvcrt
@@ -1124,6 +1168,7 @@ def robo_keyboard_paste(**kwargs):
     delay = kwargs.get('delay', 1)
     position = kwargs.get('position', [0, 0])
     text = kwargs.get('text', '')
+    print(f'.:pasting:. .:{text[:60]}:.", flush=True, end="":.')
     #click positionem of 
     if position != [0, 0]:
         pos = position
@@ -1132,7 +1177,8 @@ def robo_keyboard_paste(**kwargs):
     clipboard.copy(text)
     #paste the text from the clipboard
     pyautogui.hotkey('ctrl', 'v')
-    
+    pass
+
 
 
 def robo_keyboard_press_alt_f(**kwargs):
@@ -1788,7 +1834,14 @@ def ai_check_for_too_many_requests():
                 print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
             robo_delay(delay=delay_time)
     pass
+    #send s
+    robo_keyboard_send(string="s", delay=1)
+    #send backspace
+    robo_keyboard_press_backspace(delay=1)
+    #send backspace
+    
     robo_delay(delay=2)
+
 
 
 
