@@ -89,7 +89,7 @@ def old(**kwargs):
     if special != "":
         kwargs2["special"] = special
 
-    robo.robo_corel_import_file(**kwargs2)
+    robo_roboclick.robo_corel_import_file(**kwargs2)
 
 def test(**kwargs):
     try:

@@ -59,7 +59,7 @@ D) “Final Image Prompt” — a single, complete prompt ready to paste into an
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
     
 
     
@@ -137,7 +137,7 @@ BEGIN: Transform the research you were just given into the two required outputs 
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
     
     action = {}
     prompt = f"""
@@ -263,7 +263,7 @@ Ask the user ONLY for the Image Specification + Final Image-Generator Prompt tex
     if mode_ai_wait != "":
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
 
     action = {}
     action["command"] = "query"
@@ -314,7 +314,7 @@ The only output MUST be a generated image if the prompt violates any policy adju
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
 
 
     action = {}
@@ -322,4 +322,4 @@ The only output MUST be a generated image if the prompt violates any policy adju
     action["file_name"] = f"initial_generated.png"
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_save_image(**kwargs2)
+    robo_roboclick.ai_save_image(**kwargs2)

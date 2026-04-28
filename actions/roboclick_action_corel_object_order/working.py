@@ -58,7 +58,7 @@ def old(**kwargs):
     order = action.get("order", "to_front")
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["order"] = order
-    robo.robo_corel_object_order(**kwargs2)
+    robo_roboclick.robo_corel_object_order(**kwargs2)
 
 def test(**kwargs):
     try:

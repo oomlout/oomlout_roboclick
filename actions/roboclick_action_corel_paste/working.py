@@ -73,7 +73,7 @@ def old(**kwargs):
         kwargs2["width"] = width
     if height != "":
         kwargs2["height"] = height
-    robo.robo_corel_paste(**kwargs2)
+    robo_roboclick.robo_corel_paste(**kwargs2)
 
 def test(**kwargs):
     try:

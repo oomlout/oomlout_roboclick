@@ -56,15 +56,15 @@ def old(**kwargs):
     mode = action.get("mode", "")
     if mode == "deep_research" or mode == "deep_research_off":
         #press tab twice
-        robo.robo_keyboard_press_tab(delay=2, repeat=1)  # Press tab twice to set the mode        
+        robo_roboclick.robo_keyboard_press_tab(delay=2, repeat=1)  # Press tab twice to set the mode        
         #press_enter
-        robo.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
+        robo_roboclick.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
         #press down once
-        robo.robo_keyboard_press_down(delay=2, repeat=1)
+        robo_roboclick.robo_keyboard_press_down(delay=2, repeat=1)
         ##press down 0 #times to select the deep research mode
-        #robo.robo_keyboard_press_down(delay=2, repeat=2)  # Press down twice to select the deep research mode
+        #robo_roboclick.robo_keyboard_press_down(delay=2, repeat=2)  # Press down twice to select the deep research mode
         #press enter
-        robo.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
+        robo_roboclick.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
         print("     AI mode set to deep research")
 
 def test(**kwargs):

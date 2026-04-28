@@ -53,9 +53,9 @@ def old(**kwargs):
     """Close the current browser tab"""
     print("browser_close_tab -- closing the current tab")
     #close the current tab
-    robo.robo_chrome_close_tab(**kwargs)
+    robo_roboclick.robo_chrome_close_tab(**kwargs)
     #wait for 5 seconds
-    robo.robo_delay(delay=5)  # Wait for the tab to close
+    robo_roboclick.robo_delay(delay=5)  # Wait for the tab to close
 
 def test(**kwargs):
     try:

@@ -52,7 +52,7 @@ def old(**kwargs):
     """Close current file in CorelDRAW"""
     print("corel_close_file -- closing corel")
     #close corel
-    robo.robo_corel_close_file(**kwargs)
+    robo_roboclick.robo_corel_close_file(**kwargs)
 
 def test(**kwargs):
     try:

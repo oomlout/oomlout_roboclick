@@ -69,7 +69,7 @@ def old(**kwargs):
     kwargs2["select_all"] = select_all
     if max_dimension != "":
         kwargs2["max_dimension"] = max_dimension
-    robo.robo_corel_set_size(**kwargs2)
+    robo_roboclick.robo_corel_set_size(**kwargs2)
 
 def test(**kwargs):
     try:

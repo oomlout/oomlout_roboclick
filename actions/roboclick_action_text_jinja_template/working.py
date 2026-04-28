@@ -71,17 +71,17 @@ def old(**kwargs):
     search_and_replace = action.get("search_and_replace", [])
     if search_and_replace != []:
         kwargs["search_and_replace"] = search_and_replace
-    robo.robo_text_jinja_template(**kwargs)
+    robo_roboclick.robo_text_jinja_template(**kwargs)
     if action.get("convert_to_pdf", False):
         kwargs2 = copy.deepcopy(kwargs)
         kwargs2["file_input"] = kwargs["file_output"]
         kwargs2.pop("file_output")
-        robo.robo_convert_svg_to_pdf(**kwargs2)
+        robo_roboclick.robo_convert_svg_to_pdf(**kwargs2)
     if action.get("convert_to_png", False):
         kwargs2 = copy.deepcopy(kwargs)
         kwargs2["file_input"] = kwargs["file_output"]
         kwargs2.pop("file_output")
-        robo.robo_convert_svg_to_png(**kwargs2)
+        robo_roboclick.robo_convert_svg_to_png(**kwargs2)
     pass
 
 def test(**kwargs):

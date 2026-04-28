@@ -81,7 +81,7 @@ def old(**kwargs):
     kwargs2["text"] = text
     kwargs2["position"] = position
     kwargs2["method"] = method
-    robo.robo_google_doc_add_text(**kwargs2)
+    robo_roboclick.robo_google_doc_add_text(**kwargs2)
 
 def test(**kwargs):
     try:

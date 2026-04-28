@@ -57,7 +57,7 @@ def new(**kwargs):
     repeat = action.get("repeat", 1)
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["repeat"] = repeat
-    robo.robo_corel_page_add(**kwargs2)
+    robo_roboclick.robo_corel_page_add(**kwargs2)
 
 def test(**kwargs):
     try:

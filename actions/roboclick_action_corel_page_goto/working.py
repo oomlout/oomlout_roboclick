@@ -58,7 +58,7 @@ def old(**kwargs):
     page_number = action.get("page_number", 1)
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["page_number"] = page_number
-    robo.robo_corel_page_goto(**kwargs2)
+    robo_roboclick.robo_corel_page_goto(**kwargs2)
 
 def test(**kwargs):
     try:

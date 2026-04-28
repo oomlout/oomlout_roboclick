@@ -82,9 +82,9 @@ def old(**kwargs):
     kwargs2["font_size"] = font_size
     kwargs2["bold"] = bold
     kwargs2["italic"] = italic
-    robo.robo_corel_add_text(**kwargs2)
+    robo_roboclick.robo_corel_add_text(**kwargs2)
     #wait for 2 seconds
-    robo.robo_delay(delay=2)  # Wait for the text to be added
+    robo_roboclick.robo_delay(delay=2)  # Wait for the text to be added
 
 def test(**kwargs):
     try:

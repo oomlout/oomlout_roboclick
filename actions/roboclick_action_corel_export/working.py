@@ -70,7 +70,7 @@ def old(**kwargs):
     kwargs2["file_name"] = file_name
     kwargs2["file_type"] = file_type
     kwargs2["delay"] = delay_export
-    robo.robo_corel_export_file(**kwargs2)
+    robo_roboclick.robo_corel_export_file(**kwargs2)
 
 def test(**kwargs):
     try:

@@ -88,9 +88,9 @@ def old(**kwargs):
     kwargs2["italic"] = italic
     kwargs2["width"] = width
     kwargs2["height"] = height
-    robo.robo_corel_add_text_box(**kwargs2)
+    robo_roboclick.robo_corel_add_text_box(**kwargs2)
     #wait for 2 seconds
-    robo.robo_delay(delay=2)  # Wait for the text to be added
+    robo_roboclick.robo_delay(delay=2)  # Wait for the text to be added
 
 def test(**kwargs):
     try:

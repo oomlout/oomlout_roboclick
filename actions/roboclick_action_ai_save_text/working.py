@@ -68,8 +68,8 @@ def old(**kwargs):
     clip = action.get("clip", "&&&tag for copy&&&")
     directory = kwargs.get("directory", "")
 
-    robo.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
-    text = robo.robo_keyboard_copy(delay=2)  # Copy the selected text
+    robo_roboclick.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
+    text = robo_roboclick.robo_keyboard_copy(delay=2)  # Copy the selected text
 
     if file_name_full != "":
         file_name_full_full = os.path.join(directory, file_name_full)

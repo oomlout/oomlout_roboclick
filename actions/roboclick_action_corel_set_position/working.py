@@ -62,7 +62,7 @@ def old(**kwargs):
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["x"] = x
     kwargs2["y"] = y
-    robo.robo_corel_set_position(**kwargs2)
+    robo_roboclick.robo_corel_set_position(**kwargs2)
 
 def test(**kwargs):
     try:

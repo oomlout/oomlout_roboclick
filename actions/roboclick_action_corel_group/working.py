@@ -53,7 +53,7 @@ def old(**kwargs):
     """Group selected items in CorelDRAW"""
     print("corel_group -- grouping selected items in corel")
     #group selected items in corel
-    robo.robo_corel_group(**kwargs)
+    robo_roboclick.robo_corel_group(**kwargs)
 
 def test(**kwargs):
     try:

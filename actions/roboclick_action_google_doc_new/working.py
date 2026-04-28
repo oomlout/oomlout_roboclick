@@ -72,7 +72,7 @@ def old(**kwargs):
     if folder != "":
         kwargs2["folder"] = folder
     
-    result = robo.robo_google_doc_new(**kwargs2)
+    result = robo_roboclick.robo_google_doc_new(**kwargs2)
     
     file_name = action.get("file_name", "google_doc_url.txt")
     directory = kwargs.get("directory", "")

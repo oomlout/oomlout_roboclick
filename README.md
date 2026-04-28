@@ -46,7 +46,7 @@ pip install -r requirements.txt
 Notes:
 
 - Many actions automate live desktop applications, so headless or CI-only environments will be limited.
-- Several action modules still import `robo`, while this repo currently ships [`robo_roboclick.py`](robo_roboclick.py) at the top level and [`old/robo.py`](old/robo.py) in `old/`. If you hit import errors, that compatibility path likely needs cleanup.
+- Several action modules still import `robo`, while this repo currently ships [`robo_roboclick.py`](robo_roboclick.py) at the top level and [`old/robo_roboclick.py`](old/robo_roboclick.py) in `old/`. If you hit import errors, that compatibility path likely needs cleanup.
 - Some action folders still show migration mismatches between folder names and metadata names; the runner tolerates at least some of these cases.
 
 ## Docs Generation

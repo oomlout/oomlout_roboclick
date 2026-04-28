@@ -20,7 +20,7 @@ def _load_legacy_robo_module():
     if _legacy_robo_module is not None:
         return _legacy_robo_module
 
-    legacy_path = Path(__file__).resolve().parent / "old" / "robo.py"
+    legacy_path = Path(__file__).resolve().parent / "old" / "robo_roboclick.py"
     if not legacy_path.is_file():
         _legacy_robo_module = False
         return None

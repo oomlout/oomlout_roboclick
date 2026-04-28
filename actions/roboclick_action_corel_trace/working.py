@@ -87,7 +87,7 @@ def old(**kwargs):
     delay_trace = action.get("delay_trace", 30)
     kwargs2["delay_trace"] = delay_trace
 
-    robo.robo_corel_trace(**kwargs2)
+    robo_roboclick.robo_corel_trace(**kwargs2)
     pass
 
 def test(**kwargs):

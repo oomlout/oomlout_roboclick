@@ -66,7 +66,7 @@ def old(**kwargs):
         print(f"Text file created at {file_name_full}")
     except Exception as e:
         print(f"Error creating text file at {file_name_full }: {e}")
-    robo.robo_delay(delay=delay)  # Wait for the file to be created
+    robo_roboclick.robo_delay(delay=delay)  # Wait for the file to be created
 
 def test(**kwargs):
     try:

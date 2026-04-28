@@ -53,7 +53,7 @@ def old(**kwargs):
     """Copy selected items in CorelDRAW"""
     print("corel_copy -- copying selected items in corel")
     #copy selected items in corel
-    robo.robo_corel_copy(**kwargs)
+    robo_roboclick.robo_corel_copy(**kwargs)
 
 def test(**kwargs):
     try:

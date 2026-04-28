@@ -72,14 +72,14 @@ def old(**kwargs):
         print(f"File {file_name_absolute} already exists and overwrite is disabled.")
         return
     else:
-        robo.robo_mouse_click(position=position_click, delay=2, button="left")
-        robo.robo_mouse_click(position=position_click, delay=2, button="right")
-        robo.robo_keyboard_press_down(delay=1, repeat=2)
-        robo.robo_keyboard_press_enter(delay=5)
-        robo.robo_keyboard_send(string=file_name_absolute, delay=5)
-        robo.robo_keyboard_press_enter(delay=5)
-        robo.robo_keyboard_send(string="y", delay=5)
-        robo.robo_keyboard_press_escape(delay=5, repeat=5)
+        robo_roboclick.robo_mouse_click(position=position_click, delay=2, button="left")
+        robo_roboclick.robo_mouse_click(position=position_click, delay=2, button="right")
+        robo_roboclick.robo_keyboard_press_down(delay=1, repeat=2)
+        robo_roboclick.robo_keyboard_press_enter(delay=5)
+        robo_roboclick.robo_keyboard_send(string=file_name_absolute, delay=5)
+        robo_roboclick.robo_keyboard_press_enter(delay=5)
+        robo_roboclick.robo_keyboard_send(string="y", delay=5)
+        robo_roboclick.robo_keyboard_press_escape(delay=5, repeat=5)
         print(f"Image saved as {file_name}")
 
 def test(**kwargs):

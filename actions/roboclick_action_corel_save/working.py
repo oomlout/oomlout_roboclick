@@ -56,7 +56,7 @@ def old(**kwargs):
     action = kwargs.get("action", {})
     # Use file_source when available
     kwargs2 = copy.deepcopy(kwargs)
-    robo.robo_corel_save(**kwargs2)
+    robo_roboclick.robo_corel_save(**kwargs2)
 
 def test(**kwargs):
     try:

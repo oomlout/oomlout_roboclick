@@ -408,25 +408,25 @@ def ai_add_image(**kwargs):
         print(f"File {file_name_absolute} does not exist, skipping action.")
         return_value = "exit"
         print(f"    ERROR ERROR ERROR Exiting action due to missing file: {file_name_absolute}")
-        robo.robo_delay(delay=5)  # Delay to allow user to see the message
+        robo_roboclick.robo_delay(delay=5)  # Delay to allow user to see the message
         return return_value
     #send "  "
-    robo.robo_keyboard_send(string="  ", delay=2)  # Send two spaces to open the add image dialog
+    robo_roboclick.robo_keyboard_send(string="  ", delay=2)  # Send two spaces to open the add image dialog
     #tab once
-    robo.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
+    robo_roboclick.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
     #down zero times
-    #robo.robo_keyboard_press_down(delay=1, repeat=1)  # Press down zero times to select the file input
+    #robo_roboclick.robo_keyboard_press_down(delay=1, repeat=1)  # Press down zero times to select the file input
     #enter once
-    robo.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
+    robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
     #new needs two enters maybe
     if True:
-        robo.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
-    #robo.robo_keyboard_press_down(delay=1, repeat=2)  # Press down twice to select the file input
-    robo.robo_keyboard_send(string=file_name_absolute, delay=5)  # Type the file name
-    robo.robo_keyboard_press_enter(delay=5)  # Press enter to confirm
-    robo.robo_delay(delay=15)  # Wait for the image to be added
+        robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
+    #robo_roboclick.robo_keyboard_press_down(delay=1, repeat=2)  # Press down twice to select the file input
+    robo_roboclick.robo_keyboard_send(string=file_name_absolute, delay=5)  # Type the file name
+    robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to confirm
+    robo_roboclick.robo_delay(delay=15)  # Wait for the image to be added
     #preess escape 5 times in case of any dialog boxes
-    robo.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+    robo_roboclick.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
     return return_value
 
 
@@ -444,29 +444,29 @@ def ai_continue_chat(**kwargs):
     log_url = kwargs.get("log_url", False)
     url_chat = action.get("url_chat", "")
     print("continue_chat -- continuing an existing chat")
-    #robo.robo_chrome_open_url(url=url_chat, delay=15, message="    opening a new chat")    
+    #robo_roboclick.robo_chrome_open_url(url=url_chat, delay=15, message="    opening a new chat")    
     #longer delay for long chats
-    robo.robo_chrome_open_url(url=url_chat, delay=30, message="    opening a new chat")    
+    robo_roboclick.robo_chrome_open_url(url=url_chat, delay=30, message="    opening a new chat")    
     #check for hitting limit
     if True:
         print(".:check message limit:.")
-        clip = robo.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
+        clip = robo_roboclick.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
         if "0 messages remaining" in clip.lower():
             print("    Hit message limit, cannot proceed.")
             #delay 6 hours
             print("    Delaying for 6 hours before retrying...")
-            robo.robo_delay(delay=21600)  # Delay for 6 hours
+            robo_roboclick.robo_delay(delay=21600)  # Delay for 6 hours
             return "exit"
     #if log_url is True:
     if log_url:
         #press ctrl l
-        robo.robo_keyboard_press_ctrl_generic(string="l", delay=2)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="l", delay=2)
         #copy the url
-        url = robo.robo_keyboard_copy(delay=2)
+        url = robo_roboclick.robo_keyboard_copy(delay=2)
         #print the url
         print(f"    New chat URL: {url}")
         #press esc
-        robo.robo_keyboard_press_escape(delay=2, repeat=5)
+        robo_roboclick.robo_keyboard_press_escape(delay=2, repeat=5)
         #save to url.yaml
         if True:            
             url_file = os.path.join(kwargs.get("directory_absolute", ""), "url.yaml")
@@ -567,16 +567,16 @@ def ai_new_chat(**kwargs):
     description = action.get("description", "")
     log_url = action.get("log_url", True)
     print("new_chat -- opening up a new chat")
-    robo.robo_chrome_open_url(url="https://chat.openai.com/chat", delay=15, message="    opening a new chat")    
+    robo_roboclick.robo_chrome_open_url(url="https://chat.openai.com/chat", delay=15, message="    opening a new chat")    
     #check for hitting limit
     if True:
         print(".:check message limit:.")
-        clip = robo.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
+        clip = robo_roboclick.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
         if "0 messages remaining" in clip.lower():
             print("    Hit message limit, cannot proceed.")
             #delay 6 hours
             print("    Delaying for 6 hours before retrying...")
-            robo.robo_delay(delay=21600)  # Delay for 6 hours
+            robo_roboclick.robo_delay(delay=21600)  # Delay for 6 hours
             return "exit"
     #type in start query
     start_query = ""
@@ -584,22 +584,22 @@ def ai_new_chat(**kwargs):
         start_query += f" Hi, CHadikins I hope your day is going well! lets get to this!."
         #start_query += f" Hi, Chadikins I hope your day is going well! lets get to this!. I like it when you are chatty and suggest things based on what i've done in the past. Also use your thinking, and any other, public and secret abilities to their utmost throughout this task please. When you generate an image just deliver the image no extra text. "
     start_query += ""
-    robo.robo_keyboard_send(string=start_query, delay=5)
+    robo_roboclick.robo_keyboard_send(string=start_query, delay=5)
     
-    #robo.robo_keyboard_press_enter(delay=40)
+    #robo_roboclick.robo_keyboard_press_enter(delay=40)
     #control enter
-    robo.robo_keyboard_press_ctrl_generic(string="enter", delay=40)
+    robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=40)
 
     #if log_url is True:
     if log_url:
         #press ctrl l
-        robo.robo_keyboard_press_ctrl_generic(string="l", delay=2)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="l", delay=2)
         #copy the url
-        url = robo.robo_keyboard_copy(delay=2)
+        url = robo_roboclick.robo_keyboard_copy(delay=2)
         #print the url
         print(f"    New chat URL: {url}")
         #press esc
-        robo.robo_keyboard_press_escape(delay=2, repeat=5)
+        robo_roboclick.robo_keyboard_press_escape(delay=2, repeat=5)
         #save to url.yaml
         if True:            
             url_file = os.path.join(kwargs.get("directory_absolute", ""), "url.yaml")
@@ -636,9 +636,9 @@ def ai_query(**kwargs):
     if True:
         print("    Clearing text box before query...")
         #select all
-        robo.robo_keyboard_press_ctrl_generic(string="a", delay=2)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
         #back space
-        robo.robo_keyboard_press_backspace(delay=2, repeat=1)
+        robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
 
     #if query text is more than 1000 characters use paste method
     if len(query_text) > 1000:
@@ -651,28 +651,28 @@ def ai_query(**kwargs):
         query_text_lines = query_text.split("\n")
         for line in query_text_lines:
             #send each line with a delay of 1 second between lines
-            robo.robo_keyboard_send(string=line, delay=0.1)
-            robo.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
+            robo_roboclick.robo_keyboard_send(string=line, delay=0.1)
+            robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
     elif method == "paste":
         #press space twice to ensure focus
-        robo.robo_keyboard_send(string="  ")
-        robo.robo_keyboard_paste(text=query_text)
+        robo_roboclick.robo_keyboard_send(string="  ")
+        robo_roboclick.robo_keyboard_paste(text=query_text)
         #paste the entire text at once
         #delay 5 seconds
-        robo.robo_delay(delay=5)
-        robo.robo_keyboard_press_ctrl_generic(string="v", delay=2)
+        robo_roboclick.robo_delay(delay=5)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
     
 
 
     print(f"Querying with text: {query_text}")
     
     if mode_ai =="slow":
-        #robo.robo_keyboard_press_enter(delay=delay)
+        #robo_roboclick.robo_keyboard_press_enter(delay=delay)
         #ctrl enter
-        robo.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
     elif "fast" in mode_ai: 
-        #robo.robo_keyboard_press_enter(delay=1)
-        robo.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
+        #robo_roboclick.robo_keyboard_press_enter(delay=1)
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
         ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
 
 
@@ -692,8 +692,8 @@ def ai_save_text(**kwargs):
     clip = action.get("clip", "&&&tag for copy&&&")
     directory = kwargs.get("directory", "")
 
-    robo.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
-    text = robo.robo_keyboard_copy(delay=2)  # Copy the selected text
+    robo_roboclick.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
+    text = robo_roboclick.robo_keyboard_copy(delay=2)  # Copy the selected text
 
     if file_name_full != "":
         file_name_full_full = os.path.join(directory, file_name_full)
@@ -724,15 +724,15 @@ def ai_set_mode(**kwargs):
     mode = action.get("mode", "")
     if mode == "deep_research" or mode == "deep_research_off":
         #press tab twice
-        robo.robo_keyboard_press_tab(delay=2, repeat=1)  # Press tab twice to set the mode        
+        robo_roboclick.robo_keyboard_press_tab(delay=2, repeat=1)  # Press tab twice to set the mode        
         #press_enter
-        robo.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
+        robo_roboclick.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
         #press down once
-        robo.robo_keyboard_press_down(delay=2, repeat=1)
+        robo_roboclick.robo_keyboard_press_down(delay=2, repeat=1)
         ##press down 0 #times to select the deep research mode
-        #robo.robo_keyboard_press_down(delay=2, repeat=2)  # Press down twice to select the deep research mode
+        #robo_roboclick.robo_keyboard_press_down(delay=2, repeat=2)  # Press down twice to select the deep research mode
         #press enter
-        robo.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
+        robo_roboclick.robo_keyboard_press_enter(delay=2)  # Press enter to confirm the mode
         print("     AI mode set to deep research")
 
 ####ai_skill
@@ -875,9 +875,9 @@ def browser_close_tab(**kwargs):
     """Close the current browser tab"""
     print("browser_close_tab -- closing the current tab")
     #close the current tab
-    robo.robo_chrome_close_tab(**kwargs)
+    robo_roboclick.robo_chrome_close_tab(**kwargs)
     #wait for 5 seconds
-    robo.robo_delay(delay=5)  # Wait for the tab to close
+    robo_roboclick.robo_delay(delay=5)  # Wait for the tab to close
 
 @action("browser_open_url", ["url"])
 def browser_open_url(**kwargs):
@@ -885,7 +885,7 @@ def browser_open_url(**kwargs):
     action = kwargs.get("action", {})
     url = action.get("url", "")
     print(f"browser_open_url -- opening URL: {url}")
-    robo.robo_chrome_open_url(url=url, delay=15, message="    opening URL in browser")
+    robo_roboclick.robo_chrome_open_url(url=url, delay=15, message="    opening URL in browser")
 
 @action("browser_save_url", ["url", "url_directory"])
 def browser_save_url(**kwargs):
@@ -898,7 +898,7 @@ def browser_save_url(**kwargs):
     kwargs2["url"] = url
     kwargs2["url_directory"] = url_directory
     kwargs2["delay"] = 15
-    robo.robo_chrome_save_url(**kwargs2)
+    robo_roboclick.robo_chrome_save_url(**kwargs2)
 
 ##### convert commands
 
@@ -923,7 +923,7 @@ def convert_svg_to_pdf(**kwargs):
     if file_output == "":
         file_output = file_input.replace(".svg", ".pdf")    
     kwargs["file_output"] = f"{directory}\{file_output}"
-    robo.robo_convert_svg_to_pdf(**kwargs)
+    robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 @action("convert_svg_to_png", ["file_source", "file_destination"])
 def convert_svg_to_png(**kwargs):
@@ -940,7 +940,7 @@ def convert_svg_to_png(**kwargs):
     if file_output == "":
         file_output = file_input.replace(".svg", ".png")
     kwargs["file_output"] = f"{directory}\{file_output}"
-    robo.robo_convert_svg_to_pdf(**kwargs)
+    robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 
 
@@ -972,9 +972,9 @@ def corel_add_text(**kwargs):
     kwargs2["font_size"] = font_size
     kwargs2["bold"] = bold
     kwargs2["italic"] = italic
-    robo.robo_corel_add_text(**kwargs2)
+    robo_roboclick.robo_corel_add_text(**kwargs2)
     #wait for 2 seconds
-    robo.robo_delay(delay=2)  # Wait for the text to be added
+    robo_roboclick.robo_delay(delay=2)  # Wait for the text to be added
 
 
 @action("corel_add_text_box", ["file_source", "text", "x", "y", "width", "height", "font", "font_size", "bold", "italic"])
@@ -1006,9 +1006,9 @@ def corel_add_text_box(**kwargs):
     kwargs2["italic"] = italic
     kwargs2["width"] = width
     kwargs2["height"] = height
-    robo.robo_corel_add_text_box(**kwargs2)
+    robo_roboclick.robo_corel_add_text_box(**kwargs2)
     #wait for 2 seconds
-    robo.robo_delay(delay=2)  # Wait for the text to be added
+    robo_roboclick.robo_delay(delay=2)  # Wait for the text to be added
 
 
 @action("corel_close_file", [])
@@ -1016,7 +1016,7 @@ def corel_close_file(**kwargs):
     """Close current file in CorelDRAW"""
     print("corel_close_file -- closing corel")
     #close corel
-    robo.robo_corel_close_file(**kwargs)
+    robo_roboclick.robo_corel_close_file(**kwargs)
 
 
 @action("corel_convert_to_curves", ["ungroup", "delay"])
@@ -1031,7 +1031,7 @@ def corel_convert_to_curves(**kwargs):
     kwargs2["delay"] = delay_convert
     if ungroup:
         kwargs2["ungroup"] = ungroup
-    robo.robo_corel_convert_to_curves(**kwargs2)
+    robo_roboclick.robo_corel_convert_to_curves(**kwargs2)
 
 
 @action("corel_copy", [])
@@ -1039,7 +1039,7 @@ def corel_copy(**kwargs):
     """Copy selected items in CorelDRAW"""
     print("corel_copy -- copying selected items in corel")
     #copy selected items in corel
-    robo.robo_corel_copy(**kwargs)
+    robo_roboclick.robo_corel_copy(**kwargs)
 
 
 
@@ -1060,7 +1060,7 @@ def corel_export(**kwargs):
     kwargs2["file_name"] = file_name
     kwargs2["file_type"] = file_type
     kwargs2["delay"] = delay_export
-    robo.robo_corel_export_file(**kwargs2)
+    robo_roboclick.robo_corel_export_file(**kwargs2)
 
 
 @action("corel_group", [])
@@ -1068,7 +1068,7 @@ def corel_group(**kwargs):
     """Group selected items in CorelDRAW"""
     print("corel_group -- grouping selected items in corel")
     #group selected items in corel
-    robo.robo_corel_group(**kwargs)
+    robo_roboclick.robo_corel_group(**kwargs)
 
 
 @action("corel_import", ["file_source", "x", "y", "width", "height", "max_dimension", "angle", "special, 'no double click' - to deal with non square objects"])
@@ -1103,7 +1103,7 @@ def corel_import(**kwargs):
     if special != "":
         kwargs2["special"] = special
 
-    robo.robo_corel_import_file(**kwargs2)
+    robo_roboclick.robo_corel_import_file(**kwargs2)
 
 
 @action("corel_object_order", ["order"])
@@ -1114,7 +1114,7 @@ def corel_object_order(**kwargs):
     order = action.get("order", "to_front")
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["order"] = order
-    robo.robo_corel_object_order(**kwargs2)
+    robo_roboclick.robo_corel_object_order(**kwargs2)
 
 
 @action("corel_open", ["file_source"])
@@ -1127,7 +1127,7 @@ def corel_open(**kwargs):
         file_name = action.get("file_name", "")
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["file_name"] = file_name
-    robo.robo_corel_open(**kwargs2)
+    robo_roboclick.robo_corel_open(**kwargs2)
 
 
 @action("corel_page_goto", ["page_number"])
@@ -1138,7 +1138,7 @@ def corel_page_goto(**kwargs):
     page_number = action.get("page_number", 1)
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["page_number"] = page_number
-    robo.robo_corel_page_goto(**kwargs2)
+    robo_roboclick.robo_corel_page_goto(**kwargs2)
 
 
 @action("corel_paste", ["x", "y", "width", "height"])
@@ -1161,7 +1161,7 @@ def corel_paste(**kwargs):
         kwargs2["width"] = width
     if height != "":
         kwargs2["height"] = height
-    robo.robo_corel_paste(**kwargs2)
+    robo_roboclick.robo_corel_paste(**kwargs2)
 
 
 @action("corel_save")
@@ -1170,7 +1170,7 @@ def corel_save(**kwargs):
     action = kwargs.get("action", {})
     # Use file_source when available
     kwargs2 = copy.deepcopy(kwargs)
-    robo.robo_corel_save(**kwargs2)
+    robo_roboclick.robo_corel_save(**kwargs2)
 
 
 @action("corel_save_as", ["file_name"])
@@ -1185,7 +1185,7 @@ def corel_save_as(**kwargs):
         file_name = action.get("file_destination", "")
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["file_name"] = file_name
-    robo.robo_corel_save_as(**kwargs2)
+    robo_roboclick.robo_corel_save_as(**kwargs2)
 
 
 @action("corel_set_position", ["x", "y"])
@@ -1199,7 +1199,7 @@ def corel_set_position(**kwargs):
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["x"] = x
     kwargs2["y"] = y
-    robo.robo_corel_set_position(**kwargs2)
+    robo_roboclick.robo_corel_set_position(**kwargs2)
 
 #corel set rotation
 
@@ -1212,7 +1212,7 @@ def corel_set_rotation(**kwargs):
     
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["angle"] = angle
-    robo.robo_corel_set_rotation(**kwargs2)
+    robo_roboclick.robo_corel_set_rotation(**kwargs2)
 
 
 @action("corel_set_size", ["width", "height", "max_dimension", "select_all"])
@@ -1231,7 +1231,7 @@ def corel_set_size(**kwargs):
     kwargs2["select_all"] = select_all
     if max_dimension != "":
         kwargs2["max_dimension"] = max_dimension
-    robo.robo_corel_set_size(**kwargs2)
+    robo_roboclick.robo_corel_set_size(**kwargs2)
 
 
 @action("corel_trace", ["file_name", "remove_background_color_from_entire_image", "delay_trace", "number_of_colors", "detail_minus", "smoothing", "corner_smoothness"])
@@ -1263,7 +1263,7 @@ def corel_trace(**kwargs):
     delay_trace = action.get("delay_trace", 30)
     kwargs2["delay_trace"] = delay_trace
 
-    robo.robo_corel_trace(**kwargs2)
+    robo_roboclick.robo_corel_trace(**kwargs2)
     pass
             
 
@@ -1440,7 +1440,7 @@ def file_create_text_file(**kwargs):
         print(f"Text file created at {file_name_full}")
     except Exception as e:
         print(f"Error creating text file at {file_name_full }: {e}")
-    robo.robo_delay(delay=delay)  # Wait for the file to be created
+    robo_roboclick.robo_delay(delay=delay)  # Wait for the file to be created
 ##google commands
 
 @action("google_doc_new", ["template", "title", "folder"])
@@ -1461,7 +1461,7 @@ def google_doc_new(**kwargs):
     if folder != "":
         kwargs2["folder"] = folder
     
-    result = robo.robo_google_doc_new(**kwargs2)
+    result = robo_roboclick.robo_google_doc_new(**kwargs2)
     
     file_name = action.get("file_name", "google_doc_url.txt")
     directory = kwargs.get("directory", "")
@@ -1505,7 +1505,7 @@ def google_doc_add_text(**kwargs):
     kwargs2["text"] = text
     kwargs2["position"] = position
     kwargs2["method"] = method
-    robo.robo_google_doc_add_text(**kwargs2)    
+    robo_roboclick.robo_google_doc_add_text(**kwargs2)    
     
 
 @action("image_crop", ["file_source", "file_destination", "crop"])
@@ -1811,14 +1811,14 @@ def save_image_search_result(**kwargs):
         print(f"File {file_name_absolute} already exists and overwrite is disabled.")
         return
     else:
-        robo.robo_mouse_click(position=position_click, delay=2, button="left")
-        robo.robo_mouse_click(position=position_click, delay=2, button="right")
-        robo.robo_keyboard_press_down(delay=1, repeat=2)
-        robo.robo_keyboard_press_enter(delay=5)
-        robo.robo_keyboard_send(string=file_name_absolute, delay=5)
-        robo.robo_keyboard_press_enter(delay=5)
-        robo.robo_keyboard_send(string="y", delay=5)
-        robo.robo_keyboard_press_escape(delay=5, repeat=5)
+        robo_roboclick.robo_mouse_click(position=position_click, delay=2, button="left")
+        robo_roboclick.robo_mouse_click(position=position_click, delay=2, button="right")
+        robo_roboclick.robo_keyboard_press_down(delay=1, repeat=2)
+        robo_roboclick.robo_keyboard_press_enter(delay=5)
+        robo_roboclick.robo_keyboard_send(string=file_name_absolute, delay=5)
+        robo_roboclick.robo_keyboard_press_enter(delay=5)
+        robo_roboclick.robo_keyboard_send(string="y", delay=5)
+        robo_roboclick.robo_keyboard_press_escape(delay=5, repeat=5)
         print(f"Image saved as {file_name}")
 
 @action("text_jinja_template", ["file_template", "file_source", "file_output", "search_and_replace", "convert_to_pdf", "convert_to_png", "dict_data"])
@@ -1836,17 +1836,17 @@ def text_jinja_template(**kwargs):
     search_and_replace = action.get("search_and_replace", [])
     if search_and_replace != []:
         kwargs["search_and_replace"] = search_and_replace
-    robo.robo_text_jinja_template(**kwargs)
+    robo_roboclick.robo_text_jinja_template(**kwargs)
     if action.get("convert_to_pdf", False):
         kwargs2 = copy.deepcopy(kwargs)
         kwargs2["file_input"] = kwargs["file_output"]
         kwargs2.pop("file_output")
-        robo.robo_convert_svg_to_pdf(**kwargs2)
+        robo_roboclick.robo_convert_svg_to_pdf(**kwargs2)
     if action.get("convert_to_png", False):
         kwargs2 = copy.deepcopy(kwargs)
         kwargs2["file_input"] = kwargs["file_output"]
         kwargs2.pop("file_output")
-        robo.robo_convert_svg_to_png(**kwargs2)
+        robo_roboclick.robo_convert_svg_to_png(**kwargs2)
     pass
 
 @action("wait_for_file", ["file_name", "file_name_1", "file_name_2", "file_name_3", "file_name_4", "file_name_5", "file_name_6"])
@@ -1867,7 +1867,7 @@ def wait_for_file(**kwargs):
             if os.path.exists(f):
                 print(f"File found: {f}")
                 return f
-        #robo.robo_delay(delay=interval)
+        #robo_roboclick.robo_delay(delay=interval)
         elapsed += interval
     print("Timeout waiting for files.")
     return "exit"
@@ -1965,26 +1965,26 @@ def save_image_generated_old_press_down_40_time_approach(**kwargs):
     #kwargs["position_click"] = [960, 280]  # Default position for clicking the image    
     
     if mode_ai_wait == "slow":
-        robo.robo_delay(delay=300)
+        robo_roboclick.robo_delay(delay=300)
         delay = random.randint(100, 300)
-        robo.robo_delay(delay=delay)  # Wait for the image to be generated
+        robo_roboclick.robo_delay(delay=delay)  # Wait for the image to be generated
     elif "fast" in mode_ai_wait:
         ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state")
     
     if True:
-        #send ctrl rrobo.robo_keyboard_press_ctrl_r(delay=20)
+        #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
         #click on the image to focus
         #reload
         if True:
-            robo.robo_keyboard_press_ctrl_generic(string="r", delay=20)
+            robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
             #click on the image to focus
-            #robo.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
-            robo.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
-            #robo.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
-            robo.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
+            #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
+            robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
+            #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
+            robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
         #check if limit reached
         if True:
-            clip = robo.robo_keyboard_copy(delay=2)
+            clip = robo_roboclick.robo_keyboard_copy(delay=2)
             if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
                 #get text bewteen "resets in" and  minutes
                 time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
@@ -1997,7 +1997,7 @@ def save_image_generated_old_press_down_40_time_approach(**kwargs):
                         delay_time = hours * 60 * 60
                     #print message
                     print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
-                robo.robo_delay(delay=delay_time)
+                robo_roboclick.robo_delay(delay=delay_time)
 
 
                 return "exit"
@@ -2026,16 +2026,16 @@ def ai_wait_mode_fast_clipboard_creating_image_approach():
     string_check = "Creating image"
 
     while running and count < count_max:
-        robo.robo_delay(delay=10)
+        robo_roboclick.robo_delay(delay=10)
         #mouse click at 300,300
-        robo.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
-        text = robo.robo_keyboard_copy(delay=2)
+        robo_roboclick.robo_mouse_click(position=[300, 300], delay=2, button="left")  # Click to focus
+        text = robo_roboclick.robo_keyboard_copy(delay=2)
         if string_check in text:
             print("    AI appears to be creating an image, waiting for it to finish...")
         else:
             print("    AI appears to have finished responding.")
             running = False
-            robo.robo_delay(delay=2)
+            robo_roboclick.robo_delay(delay=2)
 
 def ai_wait_mode_fast_check_state_of_submit_button_approach():  
     print("Waiting for AI to finish responding (fast mode)...")
@@ -2048,7 +2048,7 @@ def ai_wait_mode_fast_check_state_of_submit_button_approach():
     color_expecting = (236,236,236)
 
     while running and count < count_max:
-        robo.robo_delay(delay=10)
+        robo_roboclick.robo_delay(delay=10)
         pixel_color = pyautogui.screenshot().getpixel((point_check_color[0], point_check_color[1]))
         print(f"    Pixel color at {point_check_color}: {pixel_color} ")
         #check if it is the expected color
@@ -2059,7 +2059,7 @@ def ai_wait_mode_fast_check_state_of_submit_button_approach():
         if pixel_color == color_done:
             print("    AI apIpears to have finished responding.")
             running = False
-            robo.robo_delay(delay=2)
+            robo_roboclick.robo_delay(delay=2)
 
 def save_image(**kwargs):
     #position_click = kwargs.get("position_click", [960, 500])
@@ -2073,14 +2073,14 @@ def save_image(**kwargs):
     file_name_abs = os.path.abspath(file_name) 
     print(f"Saving image as {file_name}")
     #save the image
-    robo.robo_mouse_click(position=position_click, delay=2, button="right")  # Click on the image to focus
+    robo_roboclick.robo_mouse_click(position=position_click, delay=2, button="right")  # Click on the image to focus
     #press down twice
-    robo.robo_keyboard_press_down(delay=1, repeat=2)
-    robo.robo_keyboard_press_enter(delay=5)
-    robo.robo_keyboard_send(string=file_name_absolute, delay=5)
-    robo.robo_keyboard_press_enter(delay=5)
-    robo.robo_keyboard_send(string="y", delay=5)
-    robo.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=2)
+    robo_roboclick.robo_keyboard_press_enter(delay=5)
+    robo_roboclick.robo_keyboard_send(string=file_name_absolute, delay=5)
+    robo_roboclick.robo_keyboard_press_enter(delay=5)
+    robo_roboclick.robo_keyboard_send(string="y", delay=5)
+    robo_roboclick.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
     print(f"Image saved as {file_name}")
 
 # Documentation-only tweaks for ai_fix_yaml_copy_paste and corel_trace_full

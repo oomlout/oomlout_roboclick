@@ -63,7 +63,7 @@ def old(**kwargs):
     kwargs2["delay"] = delay_convert
     if ungroup:
         kwargs2["ungroup"] = ungroup
-    robo.robo_corel_convert_to_curves(**kwargs2)
+    robo_roboclick.robo_corel_convert_to_curves(**kwargs2)
 
 def test(**kwargs):
     try:

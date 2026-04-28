@@ -72,7 +72,7 @@ def old(**kwargs):
             if os.path.exists(f):
                 print(f"File found: {f}")
                 return f
-        #robo.robo_delay(delay=interval)
+        #robo_roboclick.robo_delay(delay=interval)
         elapsed += interval
     print("Timeout waiting for files.")
     return "exit"

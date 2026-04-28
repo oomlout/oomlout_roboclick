@@ -64,7 +64,7 @@ def old(**kwargs):
     if file_output == "":
         file_output = file_input.replace(".svg", ".png")
     kwargs["file_output"] = f"{directory}\{file_output}"
-    robo.robo_convert_svg_to_pdf(**kwargs)
+    robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 def test(**kwargs):
     try:

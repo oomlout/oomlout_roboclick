@@ -59,7 +59,7 @@ def old(**kwargs):
     
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["angle"] = angle
-    robo.robo_corel_set_rotation(**kwargs2)
+    robo_roboclick.robo_corel_set_rotation(**kwargs2)
 
 def test(**kwargs):
     try:

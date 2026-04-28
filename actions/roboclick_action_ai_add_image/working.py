@@ -83,25 +83,25 @@ def old(**kwargs):
         print(f"File {file_name_absolute} does not exist, skipping action.")
         return_value = "exit"
         print(f"    ERROR ERROR ERROR Exiting action due to missing file: {file_name_absolute}")
-        robo.robo_delay(delay=5)  # Delay to allow user to see the message
+        robo_roboclick.robo_delay(delay=5)  # Delay to allow user to see the message
         return return_value
     #send "  "
-    robo.robo_keyboard_send(string="  ", delay=2)  # Send two spaces to open the add image dialog
+    robo_roboclick.robo_keyboard_send(string="  ", delay=2)  # Send two spaces to open the add image dialog
     #tab once
-    robo.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
+    robo_roboclick.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
     #down zero times
-    #robo.robo_keyboard_press_down(delay=1, repeat=1)  # Press down zero times to select the file input
+    #robo_roboclick.robo_keyboard_press_down(delay=1, repeat=1)  # Press down zero times to select the file input
     #enter once
-    robo.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
+    robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
     #new needs two enters maybe
     if True:
-        robo.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
-    #robo.robo_keyboard_press_down(delay=1, repeat=2)  # Press down twice to select the file input
-    robo.robo_keyboard_send(string=file_name_absolute, delay=5)  # Type the file name
-    robo.robo_keyboard_press_enter(delay=5)  # Press enter to confirm
-    robo.robo_delay(delay=15)  # Wait for the image to be added
+        robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to open the file dialog
+    #robo_roboclick.robo_keyboard_press_down(delay=1, repeat=2)  # Press down twice to select the file input
+    robo_roboclick.robo_keyboard_send(string=file_name_absolute, delay=5)  # Type the file name
+    robo_roboclick.robo_keyboard_press_enter(delay=5)  # Press enter to confirm
+    robo_roboclick.robo_delay(delay=15)  # Wait for the image to be added
     #preess escape 5 times in case of any dialog boxes
-    robo.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+    robo_roboclick.robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
     return return_value
 
 def test(**kwargs):

@@ -18,7 +18,7 @@ def main(**kwargs):
     kwargs2 = copy.deepcopy(kwargs)
     action["description"] = f"making a icon logo for {image_detail} using AI"
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_new_chat(**kwargs2)
+    robo_roboclick.ai_new_chat(**kwargs2)
 
     action = {}
     #action["command"] = "query"
@@ -45,7 +45,7 @@ with (recipe_name) as a placeholder variable. Take all the time you need
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
     
     action = {}
     prompt = f"""
@@ -59,7 +59,7 @@ Take all the time you need
     if mode_ai_wait != "":
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
 
     action = {}
     action["command"] = "query"
@@ -74,7 +74,7 @@ square proportions and take as much time as you need
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_query(**kwargs2)
+    robo_roboclick.ai_query(**kwargs2)
 
 
     action = {}
@@ -84,4 +84,4 @@ square proportions and take as much time as you need
         action["mode_ai_wait"] = mode_ai_wait
     kwargs2 = copy.deepcopy(kwargs)
     kwargs2["action"] = copy.deepcopy(action)
-    robo.ai_save_image(**kwargs2)
+    robo_roboclick.ai_save_image(**kwargs2)
