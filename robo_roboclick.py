@@ -63,6 +63,31 @@ else:
     import termios
 
 
+
+
+
+###### affinity
+def robo_affinity_open(**kwargs):
+    file_name = kwargs.get('file_name', '')
+    #if file_name = try file_source
+    if file_name == '':
+
+        file_name = kwargs.get('file_source', '')
+    directory = kwargs.get('directory', '')
+    if directory != '':
+        file_name = os.path.join(directory, file_name)
+    delay = kwargs.get('delay', 45)
+    message = kwargs.get('message', f"Opening the file: {file_name}...")
+    #open the file in affinity
+    print(message)
+    #os.system(f"start Affinity {file_name}")
+    #os.system(f'start {file_name}')
+    os.system(f'start "" "{file_name}"')
+    robo_delay(delay=delay)
+
+
+###### chatgpt
+
 def robo_chatgpt_prompt_type(**kwargs):
     position = kwargs.get('position', [0, 0])
     robo_mouse_click(position=position)
@@ -75,6 +100,9 @@ def robo_chatgpt_prompt_type(**kwargs):
     print(".:enter:.")
     pyautogui.press('enter')
     robo_delay(delay=40)
+
+
+####### chrome
 
 def robo_chrome_close_tab(**kwargs):
     delay = kwargs.get('delay', 1)
