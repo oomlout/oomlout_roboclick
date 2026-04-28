@@ -1,6 +1,6 @@
 import os
 
-import robo
+import robo_roboclick
 
 d = {}
 

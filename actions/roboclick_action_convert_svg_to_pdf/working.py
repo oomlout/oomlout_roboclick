@@ -1,4 +1,4 @@
-import robo
+import robo_roboclick
 
 d = {}
 

@@ -2,7 +2,7 @@ import os
 
 import random
 
-import robo
+import robo_roboclick
 
 try:
     import pyautogui  # type: ignore

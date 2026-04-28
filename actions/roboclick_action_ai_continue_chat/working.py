@@ -2,7 +2,7 @@ import os
 
 import yaml
 
-import robo
+import robo_roboclick
 
 d = {}
 

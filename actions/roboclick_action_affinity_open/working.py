@@ -63,13 +63,13 @@ def test(**kwargs):
     try:
         import oomlout_test
     except Exception:
-        return callable(old)
+        return callable(action)
 
     test_fn = getattr(oomlout_test, "test", None)
     if not callable(test_fn):
-        return callable(old)
+        return callable(action)
 
     try:
         return bool(test_fn(**kwargs))
     except Exception:
-        return callable(old)
+        return callable(action)

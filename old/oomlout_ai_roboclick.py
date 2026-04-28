@@ -3,7 +3,7 @@ import random
 import argparse
 from statistics import mode
 import yaml
-import robo
+import robo_roboclick
 import copy
 import sys
 import os
@@ -21,7 +21,7 @@ import random
 import argparse
 from statistics import mode
 import yaml
-import robo
+import robo_roboclick
 import copy
 import sys
 import os
