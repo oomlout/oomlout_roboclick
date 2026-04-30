@@ -1489,16 +1489,22 @@ def robo_text_jinja_template(**kwargs):
     # profiler = cProfile.Profile()
     # profiler.enable()
     
-    file_template = kwargs.get("file_template","")
-    file_output = kwargs.get("file_output","")
-    file_source = kwargs.get("file_source","")
-    
-    search_and_replace = kwargs.get("search_and_replace",[])
+    file_template = kwargs.get("file_template", "")
+    file_output = kwargs.get("file_output", "")
+    file_source = kwargs.get("file_source", "")
 
-    dict_data = kwargs.get("dict_data",{})
+    search_and_replace = kwargs.get("search_and_replace", [])
+    dict_data = kwargs.get("dict_data", {})
+
+    # Recursion protection
+    recursion_depth = kwargs.get("recursion_depth", 0)
+    max_recursion_depth = kwargs.get("max_recursion_depth", 5)
+    if recursion_depth > max_recursion_depth:
+        print(f"[RECURSION PROTECTION] Aborting: recursion_depth={recursion_depth} > max_recursion_depth={max_recursion_depth}")
+        return
 
     if dict_data == {} and file_source != "":
-        #load yaml file
+        # load yaml file
         import yaml
         old = False
 
@@ -1506,26 +1512,26 @@ def robo_text_jinja_template(**kwargs):
             with open(file_source, "r") as infile:
                 dict_data = yaml.safe_load(infile)
         else:
-            dict_data = load_yaml_unicode_test(file_source) 
+            dict_data = load_yaml_unicode_test(file_source)
 
     markdown_string = ""
-    #if running in windows
+    # if running in windows
     if os.name == "nt":
         file_template = file_template.replace("/", "\\")
     else:
         file_template = file_template.replace("\\", "/")
     with open(file_template, "r") as infile:
         markdown_string = infile.read()
-    #data2 = copy.deepcopy(dict_data)
-    #use pickle to deep copy the dictionary
+    # data2 = copy.deepcopy(dict_data)
+    # use pickle to deep copy the dictionary
     data2 = pickle.loads(pickle.dumps(dict_data, -1))
 
     pass
 
-    #def fix search and replace for special characters
+    # def fix search and replace for special characters
     data2 = fix_search_replace_special_characters(data2)
 
-    #do search and replace
+    # do search and replace
     if search_and_replace != []:
         for item in search_and_replace:
             search = item[0]
@@ -1541,20 +1547,20 @@ def robo_text_jinja_template(**kwargs):
         print(f"error in jinja2 template: {file_template}")
         print(e)
         markdown_string = f"markdown_string_error\n{e}"
-    #make directory if it doesn't exist
+    # make directory if it doesn't exist
     directory = os.path.dirname(file_output)
     if not os.path.exists(directory):
         os.makedirs(directory)
-    
-    #mode = "open"
+
+    # mode = "open"
     mode = "buffer"
-    
+
     if mode == "open":
         with open(file_output, "w", encoding="utf-8") as outfile:
             outfile.write(markdown_string)
-            
+
     elif mode == "buffer":
-        #write to a buffer then save for speen
+        # write to a buffer then save for speed
         with io.StringIO() as outfile:
             outfile.write(markdown_string)
             with open(file_output, "w", encoding="utf-8") as outfile2:
