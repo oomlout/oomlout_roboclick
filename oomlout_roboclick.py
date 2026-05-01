@@ -657,6 +657,8 @@ def run_action(**kwargs: Any) -> Any:
 
 
 def run_single(**kwargs: Any) -> Any:
+    #print a dot
+    print(".", end="", flush=True)
     file_action = kwargs.get("file_action", "working.yaml")
     mode = kwargs.get("mode", "")
 
@@ -682,6 +684,9 @@ def run_single(**kwargs: Any) -> Any:
         if file_test_mode != "exists" and not os.path.exists(file_test_absolute):
             print(f"File test {file_test_absolute} does not exist, skipping actions.")
             return ""
+
+    if "p_g_o_calendar_297_210_3_calendar_month_a4_landscape_2026_month_01_variant_image_topic_unicorn_fairy_importance_10_border_15_mm_stylesheet_rainbow_vibrant" in file_test_absolute:
+        pass
 
     discovered = kwargs.get("_discovered_actions")
     if discovered is None:
