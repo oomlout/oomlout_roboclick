@@ -1539,6 +1539,27 @@ def robo_text_jinja_template(**kwargs):
     # def fix search and replace for special characters
     data2 = fix_search_replace_special_characters(data2)
 
+    #if add variants is true add upper, lower and varius lengths for all keys in data2
+    add_variants = kwargs.get("add_variants", True)
+    if add_variants:
+        data3 = copy.deepcopy(data2)
+        for key in list(data2.keys()):
+            value = data2[key]
+            if isinstance(value, str):
+                for i in range(1, 10):
+                    data3[key + "_length_" + str(i)] = value[:i]    
+                data3[key + "_upper"] = value.upper()
+                for i in range(1, 10):
+                    data3[key + "_length_" + str(i) + "_upper"] = value[:i].upper()
+                data3[key + "_lower"] = value.lower()
+                for i in range(1, 10):
+                    data3[key + "_length_" + str(i) + "_lower"] = value[:i].lower()
+    data2 = data3
+    file_output = kwargs.get("file_output", file_output)          
+    if "warehouse_storage_kallax_front_room_location_a_column_3_row" in file_output:
+        pass
+
+
     # do search and replace
     if search_and_replace != []:
         for item in search_and_replace:
