@@ -916,13 +916,13 @@ def convert_svg_to_pdf(**kwargs):
     file_input = action.get("file_source", None)
     if not file_input:
         file_input = action.get("file_input", "")    
-    kwargs["file_input"] = f"{directory}\{file_input}"
+    kwargs["file_input"] = directory + "\\" + file_input
     file_output = action.get("file_destination", None)
     if not file_output:
         file_output = action.get("file_output", "")
     if file_output == "":
         file_output = file_input.replace(".svg", ".pdf")    
-    kwargs["file_output"] = f"{directory}\{file_output}"
+    kwargs["file_output"] = directory + "\\" + file_output
     robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 @action("convert_svg_to_png", ["file_source", "file_destination"])
@@ -933,13 +933,13 @@ def convert_svg_to_png(**kwargs):
     file_input = action.get("file_source", None)
     if not file_input:
         file_input = action.get("file_input", "")
-    kwargs["file_input"] = f"{directory}\{file_input}"
+    kwargs["file_input"] = directory + "\\" + file_input
     file_output = action.get("file_destination", None)
     if not file_output:
         file_output = action.get("file_output", "")
     if file_output == "":
         file_output = file_input.replace(".svg", ".png")
-    kwargs["file_output"] = f"{directory}\{file_output}"
+    kwargs["file_output"] = directory + "\\" + file_output
     robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 

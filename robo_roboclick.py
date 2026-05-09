@@ -1520,8 +1520,16 @@ def robo_text_jinja_template(**kwargs):
         file_template = file_template.replace("/", "\\")
     else:
         file_template = file_template.replace("\\", "/")
-    with open(file_template, "r") as infile:
-        markdown_string = infile.read()
+    try:
+        with open(file_template, "r") as infile:
+            markdown_string = infile.read()
+    except Exception as e:
+        print(f"error opening file_template: {file_template}")
+        print(e)
+        import time
+        #pause 5 seconds
+        time.sleep(5)
+        #markdown_string = f"markdown_string_error\n{e}"
     # data2 = copy.deepcopy(dict_data)
     # use pickle to deep copy the dictionary
     data2 = pickle.loads(pickle.dumps(dict_data, -1))
