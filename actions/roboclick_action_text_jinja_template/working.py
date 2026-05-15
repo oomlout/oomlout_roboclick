@@ -25,7 +25,7 @@ def describe():
     d["name_long"] = 'roboclick_action_text_jinja_template'
     d["name_short"] = ['jinja_template', 'template', 'text_jinja_template']
     d["name_short_options"] = ['jinja_template', 'template', 'text_jinja_template']
-    d["description"] = 'Jinja template.'
+    d["description"] = 'Jinja template. When `robo_roboclick.robo_text_jinja_template()` receives string values in `dict_data` or the source yaml, it automatically adds template helper strings for each key: `{key}_upper`, `{key}_lower`, `{key}_length_1` through `{key}_length_9`, plus `{key}_length_1_upper` through `{key}_length_9_upper` and `{key}_length_1_lower` through `{key}_length_9_lower`.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Text'
     v = []
@@ -36,7 +36,7 @@ def describe():
         v.append({'name': 'search_and_replace', 'description': 'Search/replace rules applied during templating.', 'type': 'string', 'default': ''})
         v.append({'name': 'convert_to_pdf', 'description': 'Whether to convert rendered output to PDF.', 'type': 'string', 'default': ''})
         v.append({'name': 'convert_to_png', 'description': 'Whether to convert rendered output to PNG.', 'type': 'string', 'default': ''})
-        v.append({'name': 'dict_data', 'description': 'Dictionary data passed into template rendering.', 'type': 'string', 'default': ''})
+        v.append({'name': 'dict_data', 'description': 'Dictionary data passed into template rendering. For each string value, the template also gets helper strings named `{key}_upper`, `{key}_lower`, `{key}_length_1` to `{key}_length_9`, `{key}_length_1_upper` to `{key}_length_9_upper`, and `{key}_length_1_lower` to `{key}_length_9_lower`.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 

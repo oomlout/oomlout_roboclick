@@ -1,6 +1,33 @@
 {
   "actions": [
     {
+      "command": "roboclick_action_affinity_open",
+      "name_long": "roboclick_action_affinity_open",
+      "name_short_options": [
+        "affinity_open",
+        "open"
+      ],
+      "description": "Affinity open.",
+      "summary": "Affinity open.",
+      "variables": [
+        {
+          "name": "file_source",
+          "description": "Path to the source input file.",
+          "type": "string",
+          "default": ""
+        }
+      ],
+      "variable_names": [
+        "file_source"
+      ],
+      "category": "Affinity",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "affinity_open",
+        "open"
+      ]
+    },
+    {
       "command": "roboclick_action_ai_add_image",
       "name_long": "roboclick_action_ai_add_image",
       "name_short_options": [
@@ -267,9 +294,9 @@
         },
         {
           "name": "clip",
-          "description": "Clipboard text payload to save.",
+          "description": "Clipboard text payload to save. default:&&&tag for copy&&&",
           "type": "string",
-          "default": ""
+          "default": "&&&tag for copy&&&"
         }
       ],
       "variable_names": [
@@ -1388,7 +1415,7 @@
         "order",
         "corel_object_order"
       ],
-      "description": "Object order.",
+      "description": "Object order. (to_front, to_back)",
       "summary": "Object order.",
       "variables": [
         {
@@ -2305,7 +2332,7 @@
         "template",
         "text_jinja_template"
       ],
-      "description": "Jinja template.",
+      "description": "Jinja template. When `robo_roboclick.robo_text_jinja_template()` receives string values in `dict_data` or the source yaml, it automatically adds template helper strings for each key: `{key}_upper`, `{key}_lower`, `{key}_length_1` through `{key}_length_9`, plus `{key}_length_1_upper` through `{key}_length_9_upper` and `{key}_length_1_lower` through `{key}_length_9_lower`.",
       "summary": "Jinja template.",
       "variables": [
         {
@@ -2346,7 +2373,7 @@
         },
         {
           "name": "dict_data",
-          "description": "Dictionary data passed into template rendering.",
+          "description": "Dictionary data passed into template rendering. For each string value, the template also gets helper strings named `{key}_upper`, `{key}_lower`, `{key}_length_1` to `{key}_length_9`, `{key}_length_1_upper` to `{key}_length_9_upper`, and `{key}_length_1_lower` to `{key}_length_9_lower`.",
           "type": "string",
           "default": ""
         }
@@ -2438,6 +2465,6 @@
       ]
     }
   ],
-  "generated_date": "2026-03-19",
-  "total_actions": 58
+  "generated_date": "2026-05-15",
+  "total_actions": 59
 }
