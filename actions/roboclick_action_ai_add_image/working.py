@@ -88,7 +88,8 @@ def old(**kwargs):
     #send "  "
     robo_roboclick.robo_keyboard_send(string="  ", delay=2)  # Send two spaces to open the add image dialog
     #tab once
-    robo_roboclick.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
+    #robo_roboclick.robo_keyboard_press_tab(delay=5, repeat=1)  # Press tab once to focus on the add image button
+    robo_roboclick.robo_keyboard_press_tab_shift(delay=5, repeat=1)  # Press shift+tab once to focus on the add image button
     #down zero times
     #robo_roboclick.robo_keyboard_press_down(delay=1, repeat=1)  # Press down zero times to select the file input
     #enter once
