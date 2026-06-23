@@ -1524,12 +1524,20 @@ def robo_text_jinja_template(**kwargs):
         with open(file_template, "r") as infile:
             markdown_string = infile.read()
     except Exception as e:
-        print(f"error opening file_template: {file_template}")
-        print(e)
-        import time
-        #pause 5 seconds
-        time.sleep(5)
-        #markdown_string = f"markdown_string_error\n{e}"
+        #file not in the project directory
+        #try adding directory of part to the filename
+        directory_part = kwargs.get("directory", "")
+        file_template = os.path.join(directory_part, file_template)
+        try:
+            with open(file_template, "r") as infile:
+                markdown_string = infile.read()
+        except Exception as e:
+            print(f"error opening file_template: {file_template}")
+            print(e)
+            import time
+            #pause 5 seconds
+            time.sleep(5)
+            #markdown_string = f"markdown_string_error\n{e}"
     # data2 = copy.deepcopy(dict_data)
     # use pickle to deep copy the dictionary
     data2 = pickle.loads(pickle.dumps(dict_data, -1))
@@ -1967,7 +1975,8 @@ def ai_save_image(**kwargs):
     #position_click = kwargs.get("position_click", [960, 360])
     #position_click = kwargs.get("position_click", [960, 280])
     #also set in kwags
-    position_click = kwargs.get("position_click", [960, 455])
+    #position_click = kwargs.get("position_click", [960, 455])
+    position_click = kwargs.get("position_click", [960, 600])
     
     action = kwargs.get("action", {})
     file_name = action.get("file_name", "working.png")   

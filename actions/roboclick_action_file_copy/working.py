@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_file_copy'
     d["name_long"] = 'roboclick_action_file_copy'
-    d["name_short"] = ['file_copy', 'copy']
-    d["name_short_options"] = ['file_copy', 'copy']
+    d["name_short"] = ['file_copy']
+    d["name_short_options"] = ['file_copy']
     d["description"] = 'File copy.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'File'

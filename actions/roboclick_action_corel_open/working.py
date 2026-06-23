@@ -24,8 +24,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_corel_open'
     d["name_long"] = 'roboclick_action_corel_open'
-    d["name_short"] = ['corel_open', 'open']
-    d["name_short_options"] = ['corel_open', 'open']
+    d["name_short"] = ['corel_open']
+    d["name_short_options"] = ['corel_open']
     d["description"] = 'Corel open.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'

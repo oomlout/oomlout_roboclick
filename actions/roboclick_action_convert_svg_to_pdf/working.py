@@ -1,3 +1,5 @@
+import os
+
 import robo_roboclick
 
 d = {}
@@ -21,8 +23,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_convert_svg_to_pdf'
     d["name_long"] = 'roboclick_action_convert_svg_to_pdf'
-    d["name_short"] = ['svg_to_pdf', 'to', 'convert_svg_to_pdf']
-    d["name_short_options"] = ['svg_to_pdf', 'to', 'convert_svg_to_pdf']
+    d["name_short"] = ['svg_to_pdf', 'convert_svg_to_pdf']
+    d["name_short_options"] = ['svg_to_pdf', 'convert_svg_to_pdf']
     d["description"] = 'Svg to pdf.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Conversion'
@@ -57,13 +59,13 @@ def old(**kwargs):
     file_input = action.get("file_source", None)
     if not file_input:
         file_input = action.get("file_input", "")    
-    kwargs["file_input"] = f"{directory}\{file_input}"
+    kwargs["file_input"] = os.path.join(directory, file_input)
     file_output = action.get("file_destination", None)
     if not file_output:
         file_output = action.get("file_output", "")
     if file_output == "":
         file_output = file_input.replace(".svg", ".pdf")    
-    kwargs["file_output"] = f"{directory}\{file_output}"
+    kwargs["file_output"] = os.path.join(directory, file_output)
     robo_roboclick.robo_convert_svg_to_pdf(**kwargs)
 
 def test(**kwargs):

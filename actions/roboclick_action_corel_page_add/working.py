@@ -21,8 +21,8 @@ def describe():
             d["name_long"] += adding
     if d["name_long"].endswith("_"):
         d["name_long"] = d["name_long"][:-1]
-    d["name"] = 'roboclick_action_corel_page_goto'
-    d["name_long"] = 'roboclick_action_corel_page_goto'
+    d["name"] = 'roboclick_action_corel_page_add'
+    d["name_long"] = 'roboclick_action_corel_page_add'
     d["name_short"] = ['page_add', 'add_page', 'corel_page_add']
     d["description"] = 'Page add.'
     d["returns"] = 'Pass-through action result.'

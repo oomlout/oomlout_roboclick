@@ -1,4 +1,5 @@
 import copy
+import os
 
 import robo_roboclick
 
@@ -71,6 +72,34 @@ def old(**kwargs):
     search_and_replace = action.get("search_and_replace", [])
     if search_and_replace != []:
         kwargs["search_and_replace"] = search_and_replace
+    # dict_data_files maps a template variable to a text file whose CONTENT is
+    # read fresh at render time; dict_data_files_exists maps a variable to a
+    # file name set as the variable's value only if that file EXISTS at render
+    # time (else ""). Both let values produced by earlier actions in the same
+    # run - a generated joke, a generated background image - reach the template
+    # instead of the stale value baked into the source yaml at build time.
+    dict_data_files = action.get("dict_data_files", {})
+    dict_data_files_exists = action.get("dict_data_files_exists", {})
+    has_content = isinstance(dict_data_files, dict) and dict_data_files != {}
+    has_exists = isinstance(dict_data_files_exists, dict) and dict_data_files_exists != {}
+    if has_content or has_exists:
+        dict_data = {}
+        try:
+            dict_data = robo_roboclick.load_yaml_unicode_test(file_source) or {}
+        except Exception as error:
+            print(f"could not load {file_source} for render-time data: {error}")
+        if has_content:
+            for key, file_name in dict_data_files.items():
+                file_path = file_name if os.path.isabs(file_name) else os.path.join(directory, file_name)
+                if os.path.isfile(file_path):
+                    with open(file_path, "r", encoding="utf-8") as infile:
+                        dict_data[key] = infile.read().strip()
+        if has_exists:
+            for key, file_name in dict_data_files_exists.items():
+                file_path = file_name if os.path.isabs(file_name) else os.path.join(directory, file_name)
+                dict_data[key] = file_name if os.path.isfile(file_path) else ""
+        if dict_data != {}:
+            kwargs["dict_data"] = dict_data
     robo_roboclick.robo_text_jinja_template(**kwargs)
     if action.get("convert_to_pdf", False):
         kwargs2 = copy.deepcopy(kwargs)

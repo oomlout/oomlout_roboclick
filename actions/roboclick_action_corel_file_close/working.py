@@ -19,9 +19,9 @@ def describe():
             d["name_long"] += adding
     if d["name_long"].endswith("_"):
         d["name_long"] = d["name_long"][:-1]
-    d["name"] = 'roboclick_action_corel_close_file'
-    d["name_long"] = 'roboclick_action_corel_close_file'
-    d["name_short"] = ["corel_file_close", 'close_file', 'file', 'corel_close_file', 'corel_close']
+    d["name"] = 'roboclick_action_corel_file_close'
+    d["name_long"] = 'roboclick_action_corel_file_close'
+    d["name_short"] = ["corel_file_close", 'close_file', 'corel_close_file', 'corel_close']
     d["description"] = 'Close file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'

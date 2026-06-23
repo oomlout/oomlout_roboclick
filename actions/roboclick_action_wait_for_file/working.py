@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_wait_for_file'
     d["name_long"] = 'roboclick_action_wait_for_file'
-    d["name_short"] = ['wait_for_file', 'file']
-    d["name_short_options"] = ['wait_for_file', 'file']
+    d["name_short"] = ['wait_for_file']
+    d["name_short_options"] = ['wait_for_file']
     d["description"] = 'Wait for file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Utility'

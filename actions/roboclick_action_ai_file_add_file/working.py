@@ -19,8 +19,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_ai_file_add_file'
     d["name_long"] = 'roboclick_action_ai_file_add_file'
-    d["name_short"] = ['add_file', 'ai_add_file', 'add_image', 'ai_add_image']
-    d["name_short_options"] = ['add_file', 'ai_add_file', 'add_image', 'ai_add_image']
+    d["name_short"] = ['add_file', 'ai_add_file']
+    d["name_short_options"] = ['add_file', 'ai_add_file']
     d["description"] = 'Add a file (alias for add_image).'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'ai'

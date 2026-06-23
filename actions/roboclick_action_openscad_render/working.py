@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_openscad_render'
     d["name_long"] = 'roboclick_action_openscad_render'
-    d["name_short"] = ['openscad_render', 'render']
-    d["name_short_options"] = ['openscad_render', 'render']
+    d["name_short"] = ['openscad_render']
+    d["name_short_options"] = ['openscad_render']
     d["description"] = 'Openscad render.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'OpenSCAD'

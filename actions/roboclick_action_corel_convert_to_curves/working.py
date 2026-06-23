@@ -23,8 +23,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_corel_convert_to_curves'
     d["name_long"] = 'roboclick_action_corel_convert_to_curves'
-    d["name_short"] = ['convert_to_curves', 'to', 'corel_convert_to_curves']
-    d["name_short_options"] = ['convert_to_curves', 'to', 'corel_convert_to_curves']
+    d["name_short"] = ['convert_to_curves', 'corel_convert_to_curves']
+    d["name_short_options"] = ['convert_to_curves', 'corel_convert_to_curves']
     d["description"] = 'Convert to curves.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'CorelDRAW'

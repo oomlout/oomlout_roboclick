@@ -25,8 +25,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_ai_continue_chat'
     d["name_long"] = 'roboclick_action_ai_continue_chat'
-    d["name_short"] = ['continue_chat', 'chat', 'ai_continue_chat']
-    d["name_short_options"] = ['continue_chat', 'chat', 'ai_continue_chat']
+    d["name_short"] = ['continue_chat', 'ai_continue_chat']
+    d["name_short_options"] = ['continue_chat', 'ai_continue_chat']
     d["description"] = 'Continue chat.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'AI'

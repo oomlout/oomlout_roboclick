@@ -19,8 +19,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_alias_new_chat'
     d["name_long"] = 'roboclick_action_alias_new_chat'
-    d["name_short"] = ['new_chat', 'chat', 'legacy_alias']
-    d["name_short_options"] = ['new_chat', 'chat', 'legacy_alias']
+    d["name_short"] = ['alias_new_chat']
+    d["name_short_options"] = ['alias_new_chat']
     d["description"] = 'New chat.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Legacy Alias'

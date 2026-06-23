@@ -25,8 +25,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_google_doc_add_text'
     d["name_long"] = 'roboclick_action_google_doc_add_text'
-    d["name_short"] = ['add_text', 'add', 'google_doc_add_text']
-    d["name_short_options"] = ['add_text', 'add', 'google_doc_add_text']
+    d["name_short"] = ['add', 'google_doc_add_text']
+    d["name_short_options"] = ['add', 'google_doc_add_text']
     d["description"] = 'Add text.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Google Doc'

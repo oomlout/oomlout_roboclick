@@ -23,8 +23,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_affinity_open'
     d["name_long"] = 'roboclick_action_affinity_open'
-    d["name_short"] = ['affinity_open', 'open']
-    d["name_short_options"] = ['affinity_open', 'open']
+    d["name_short"] = ['affinity_open']
+    d["name_short_options"] = ['affinity_open']
     d["description"] = 'Affinity open.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Affinity'

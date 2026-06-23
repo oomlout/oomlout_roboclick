@@ -275,7 +275,8 @@
       "name_short_options": [
         "save_text",
         "text",
-        "ai_save_text"
+        "ai_save_text",
+        "save_file_generated"
       ],
       "description": "Save text.",
       "summary": "Save text.",
@@ -309,7 +310,8 @@
       "aliases": [
         "save_text",
         "text",
-        "ai_save_text"
+        "ai_save_text",
+        "save_file_generated"
       ]
     },
     {
@@ -2277,6 +2279,47 @@
       ]
     },
     {
+      "command": "roboclick_action_run_python",
+      "name_long": "roboclick_action_run_python",
+      "name_short_options": [
+        "run_python",
+        "python_run"
+      ],
+      "description": "Run a local python script, passing the action details to it as a json kwargs argument.",
+      "summary": "Run a local python script, passing the action details to it as a json kwargs argument.",
+      "variables": [
+        {
+          "name": "file_python",
+          "description": "Path to the python script to run.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "file_output",
+          "description": "Path to the output file the script should create, relative to the part directory.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "timeout",
+          "description": "Maximum seconds to wait for the script to finish.",
+          "type": "string",
+          "default": "600"
+        }
+      ],
+      "variable_names": [
+        "file_python",
+        "file_output",
+        "timeout"
+      ],
+      "category": "File",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "run_python",
+        "python_run"
+      ]
+    },
+    {
       "command": "roboclick_action_save_image_search_result",
       "name_long": "roboclick_action_save_image_search_result",
       "name_short_options": [
@@ -2465,6 +2508,6 @@
       ]
     }
   ],
-  "generated_date": "2026-05-15",
-  "total_actions": 59
+  "generated_date": "2026-06-11",
+  "total_actions": 60
 }

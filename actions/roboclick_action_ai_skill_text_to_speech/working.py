@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_ai_skill_text_to_speech'
     d["name_long"] = 'roboclick_action_ai_skill_text_to_speech'
-    d["name_short"] = ['text_to_speech', 'text', 'ai_skill_text_to_speech']
-    d["name_short_options"] = ['text_to_speech', 'text', 'ai_skill_text_to_speech']
+    d["name_short"] = ['text_to_speech', 'ai_skill_text_to_speech']
+    d["name_short_options"] = ['text_to_speech', 'ai_skill_text_to_speech']
     d["description"] = 'Text to speech.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'AI Skill'

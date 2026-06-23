@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_browser_open_url'
     d["name_long"] = 'roboclick_action_browser_open_url'
-    d["name_short"] = ['open_url', 'url', 'browser_open_url']
-    d["name_short_options"] = ['open_url', 'url', 'browser_open_url']
+    d["name_short"] = ['open_url', 'browser_open_url']
+    d["name_short_options"] = ['open_url', 'browser_open_url']
     d["description"] = 'Open url.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Browser'

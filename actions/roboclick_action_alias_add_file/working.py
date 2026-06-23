@@ -19,8 +19,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_alias_add_file'
     d["name_long"] = 'roboclick_action_alias_add_file'
-    d["name_short"] = ['add_file', 'file', 'legacy_alias']
-    d["name_short_options"] = ['add_file', 'file', 'legacy_alias']
+    d["name_short"] = ['alias_add_file']
+    d["name_short_options"] = ['alias_add_file']
     d["description"] = 'Add file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Legacy Alias'
@@ -44,15 +44,15 @@ def _check_key_pressed():
 def _scroll_lock_toggled():
     return False
 
-def ai_add_image(**kwargs):
-    return _dispatch_action("ai_add_image", **kwargs)
+def ai_add_file(**kwargs):
+    return _dispatch_action("ai_add_file", **kwargs)
 
 def action(**kwargs):
     return old(**kwargs)
 
 def old(**kwargs):
-    """RETIRED - use ai_add_image instead."""
-    return ai_add_image(**kwargs)
+    """RETIRED - use ai_add_file instead."""
+    return ai_add_file(**kwargs)
 
 def test(**kwargs):
     try:

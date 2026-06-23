@@ -34,8 +34,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_ai_skill_image_laser_cut_logo_full'
     d["name_long"] = 'roboclick_action_ai_skill_image_laser_cut_logo_full'
-    d["name_short"] = ['image_laser_cut_logo_full', 'image', 'ai_skill_image_laser_cut_logo_full']
-    d["name_short_options"] = ['image_laser_cut_logo_full', 'image', 'ai_skill_image_laser_cut_logo_full']
+    d["name_short"] = ['image_laser_cut_logo_full', 'ai_skill_image_laser_cut_logo_full']
+    d["name_short_options"] = ['image_laser_cut_logo_full', 'ai_skill_image_laser_cut_logo_full']
     d["description"] = 'Image laser cut logo full.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'AI Skill'

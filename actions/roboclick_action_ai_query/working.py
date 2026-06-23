@@ -100,8 +100,6 @@ def new(**kwargs):
             for i in range(1, 50):
                 file_name_check = f"{folder_name}\\working_{i}.md"
                 file_names.append(file_name_check)
-                
-                
         for file_name_seed in file_names:
             file_name = file_name_seed
             if True:

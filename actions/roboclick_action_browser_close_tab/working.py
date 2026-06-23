@@ -21,8 +21,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_browser_close_tab'
     d["name_long"] = 'roboclick_action_browser_close_tab'
-    d["name_short"] = ['close_tab', 'tab', 'browser_close_tab']
-    d["name_short_options"] = ['close_tab', 'tab', 'browser_close_tab']
+    d["name_short"] = ['close_tab', 'browser_close_tab']
+    d["name_short_options"] = ['close_tab', 'browser_close_tab']
     d["description"] = 'Close tab.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Browser'

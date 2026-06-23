@@ -28,8 +28,8 @@ def describe():
             d["name_long"] += adding
     if d["name_long"].endswith("_"):
         d["name_long"] = d["name_long"][:-1]
-    d["name"] = 'roboclick_action_save_image_generated'
-    d["name_long"] = 'roboclick_action_save_image_generated'
+    d["name"] = 'roboclick_action_ai_image_save_generated'
+    d["name_long"] = 'roboclick_action_ai_image_save_generated'
     d["name_short"] = ['save_image_generated', 'generated']
     d["name_short_options"] = ['save_image_generated', 'generated']
     d["description"] = 'Save image generated.'
@@ -115,13 +115,13 @@ def test(**kwargs):
     try:
         import oomlout_test
     except Exception:
-        return callable(old)
+        return callable(new)
 
     test_fn = getattr(oomlout_test, "test", None)
     if not callable(test_fn):
-        return callable(old)
+        return callable(new)
 
     try:
         return bool(test_fn(**kwargs))
     except Exception:
-        return callable(old)
+        return callable(new)

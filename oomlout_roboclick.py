@@ -675,6 +675,7 @@ def run_single(**kwargs: Any) -> Any:
 
     file_test = base.get("file_test", "")
     file_test_mode = base.get("file_test_mode", "exists")
+    file_test_absolute = ""
     if file_test:
         file_test_absolute = os.path.join(kwargs.get("directory_absolute", ""), file_test)
         print(f"file test mode {file_test_mode} on {file_test_absolute}")

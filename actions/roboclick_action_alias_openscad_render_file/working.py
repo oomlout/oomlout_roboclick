@@ -19,8 +19,8 @@ def describe():
         d["name_long"] = d["name_long"][:-1]
     d["name"] = 'roboclick_action_alias_openscad_render_file'
     d["name_long"] = 'roboclick_action_alias_openscad_render_file'
-    d["name_short"] = ['openscad_render_file', 'render', 'render_file', 'legacy_alias']
-    d["name_short_options"] = ['openscad_render_file', 'render', 'render_file', 'legacy_alias']
+    d["name_short"] = ['openscad_render_file', 'render_file']
+    d["name_short_options"] = ['openscad_render_file', 'render_file']
     d["description"] = 'Openscad render file.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Legacy Alias'
