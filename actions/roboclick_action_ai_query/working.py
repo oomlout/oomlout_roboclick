@@ -195,7 +195,7 @@ def new(**kwargs):
             robo_roboclick.robo_keyboard_paste(text=query_text)
             #paste the entire text at once
             #delay 5 seconds
-            robo_roboclick.robo_delay(delay=5)
+            robo_roboclick.robo_delay(delay=10)
             #robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
         
         #remove tabs and new lines

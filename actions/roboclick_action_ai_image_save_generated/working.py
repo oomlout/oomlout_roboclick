@@ -107,9 +107,42 @@ def new(**kwargs):
             print("")
             print(f".:image saved to {file_name_absolute}[:60]:.")
             saved = True
+            clean_png(file_name_absolute)
+            pass
         else:
             print(f".:image not saved:.")
 
+import os
+from pathlib import Path
+import shutil
+from PIL import Image
+
+def clean_png(file_name):
+    path = Path(file_name)
+    try:
+        with Image.open(path) as img:
+            # Force clean RGBA/RGB conversion
+            if img.mode in ("RGBA", "LA", "P"):
+                img = img.convert("RGBA")
+            else:
+                img = img.convert("RGB")
+
+            temp_path = path.with_suffix(".tmp.png")
+
+            # Save clean stripped PNG
+            img.save(
+                temp_path,
+                format="PNG",
+                optimize=False,
+                compress_level=6
+            )
+
+            temp_path.replace(path)
+
+            print(f"[OK] {path}")
+
+    except Exception as e:
+        print(f"[FAIL] {path} -> {e}")
 
 def test(**kwargs):
     try:

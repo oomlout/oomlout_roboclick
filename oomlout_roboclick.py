@@ -965,13 +965,18 @@ def ai_query_from_prompts(part,part2,prompts,mode_ai_wait, count, file_destinati
     
     for prompt in prompts:                
         file_name_image = prompt.get("file_name_image", "")
+        folder_name = prompt.get("folder_name", "")
         prompt.pop("file_name_image", None)
-    
-        action = {}
-        action.update(copy.deepcopy(prompt))
-        action["command"] = "ai_query"
-        action["mode_ai_wait"] = mode_ai_wait
-        actions.append(action)
+        text = prompt.get("text", "")
+        
+        if not (text == "" and folder_name == ""):
+            action = {}
+            action.update(copy.deepcopy(prompt))
+            action["command"] = "ai_query"
+            action["mode_ai_wait"] = mode_ai_wait
+            actions.append(action)
+        else:
+            pass
     
         if file_name_image != "":
             action = {}
