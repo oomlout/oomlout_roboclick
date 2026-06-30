@@ -1521,7 +1521,7 @@ def robo_text_jinja_template(**kwargs):
     else:
         file_template = file_template.replace("\\", "/")
     try:
-        with open(file_template, "r") as infile:
+        with open(file_template, "r", encoding="utf-8") as infile:
             markdown_string = infile.read()
     except Exception as e:
         #file not in the project directory
@@ -1529,7 +1529,7 @@ def robo_text_jinja_template(**kwargs):
         directory_part = kwargs.get("directory", "")
         file_template = os.path.join(directory_part, file_template)
         try:
-            with open(file_template, "r") as infile:
+            with open(file_template, "r", encoding="utf-8") as infile:
                 markdown_string = infile.read()
         except Exception as e:
             print(f"error opening file_template: {file_template}")
