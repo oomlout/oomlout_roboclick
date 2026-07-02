@@ -130,6 +130,7 @@ def old(**kwargs):
                 clipping = clipping.replace("\n\n", "\n")
             f.write(clipping)
             print(f"Clip text saved to {file_name_clip_full}")
+    pass
 
 def test(**kwargs):
     try:
