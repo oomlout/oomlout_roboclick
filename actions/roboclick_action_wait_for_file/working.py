@@ -1,4 +1,5 @@
 import os
+import time
 
 d = {}
 
@@ -35,6 +36,8 @@ def describe():
         v.append({'name': 'file_name_4', 'description': 'fourth candidate file name to wait for.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_name_5', 'description': 'fifth candidate file name to wait for.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_name_6', 'description': 'sixth candidate file name to wait for.', 'type': 'string', 'default': ''})
+        v.append({'name': 'timeout', 'description': 'Seconds to wait before exiting the current action chain.', 'type': 'number', 'default': 300})
+        v.append({'name': 'interval', 'description': 'Seconds between file checks.', 'type': 'number', 'default': 2})
     d["variables"] = v
     return d
 
@@ -64,16 +67,25 @@ def old(**kwargs):
         key = f"file_name_{i}" if i>1 else "file_name"
         if key in action and action.get(key):
             files.append(os.path.join(directory, action.get(key)))
-    timeout = action.get("timeout", 300)
-    interval = action.get("interval", 2)
-    elapsed = 0
-    while elapsed < timeout:
+    try:
+        timeout = float(action.get("timeout", 300))
+    except Exception:
+        timeout = 300.0
+    try:
+        interval = float(action.get("interval", 2))
+    except Exception:
+        interval = 2.0
+    interval = max(0.1, interval)
+    deadline = time.time() + max(0.0, timeout)
+    while True:
         for f in files:
             if os.path.exists(f):
                 print(f"File found: {f}")
                 return f
-        #robo_roboclick.robo_delay(delay=interval)
-        elapsed += interval
+        remaining = deadline - time.time()
+        if remaining <= 0:
+            break
+        time.sleep(min(interval, remaining))
     print("Timeout waiting for files.")
     return "exit"
 

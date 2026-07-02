@@ -9,7 +9,7 @@ def define():
         "description": (
             "Create a zip from explicit files and/or directory trees. "
             "If any required source is missing, write a <zip>_error.txt listing the gaps and exit the chain. "
-            "On success, delete any prior error file."
+            "On missing sources, delete any stale zip. On success, delete any prior error file."
         ),
         "variables": [
             {
@@ -86,6 +86,8 @@ def action(**kwargs):
 
     if missing:
         os.makedirs(os.path.dirname(zip_path), exist_ok=True)
+        if os.path.exists(zip_path):
+            os.remove(zip_path)
         with open(error_path, "w", encoding="utf-8") as f:
             f.write("create_zip: missing sources -- zip not created.\n\n")
             for m in missing:

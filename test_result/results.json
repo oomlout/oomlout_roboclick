@@ -1,26 +1,40 @@
 {
-  "timestamp_utc": "2026-03-10T15:31:35.929191+00:00",
-  "total": 59,
-  "passed": 59,
-  "failed": 0,
+  "timestamp_utc": "2026-07-02T15:34:45.052458+00:00",
+  "total": 66,
+  "passed": 64,
+  "failed": 2,
   "results": [
     {
       "name": "Action audit: all action folders",
       "kind": "audit",
-      "status": "passed",
-      "duration_seconds": 0.172,
+      "status": "failed",
+      "duration_seconds": 0.046,
       "result": {
-        "all_passed": true,
-        "passed": 57,
-        "failed": 0,
-        "total_action_dirs": 57,
-        "discovered_actions": 57,
-        "documented_actions": 57,
-        "details": []
+        "all_passed": false,
+        "passed": 63,
+        "failed": 1,
+        "total_action_dirs": 64,
+        "discovered_actions": 64,
+        "documented_actions": 64,
+        "details": [
+          "roboclick_action_corel_page_add: name 'old' is not defined"
+        ]
       },
       "error": "",
       "log_file": "test_result\\action_audit_all_action_folders.log",
       "definition_file": "run_tests.py"
+    },
+    {
+      "name": "Action test: roboclick_action_affinity_open",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_affinity_open.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
       "name": "Action test: roboclick_action_ai_add_image",
@@ -38,7 +52,7 @@
       "name": "Action test: roboclick_action_ai_continue_chat",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.015,
+      "duration_seconds": 0.0,
       "result": {
         "returned": true
       },
@@ -56,6 +70,30 @@
       },
       "error": "",
       "log_file": "test_result\\action_test_roboclick_action_ai_file_add_file.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_ai_from_directory",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_ai_from_directory.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_ai_image_save_generated",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_ai_image_save_generated.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -110,7 +148,7 @@
       "name": "Action test: roboclick_action_ai_skill_image_laser_cut_logo_full",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.016,
+      "duration_seconds": 0.0,
       "result": {
         "returned": true
       },
@@ -266,7 +304,7 @@
       "name": "Action test: roboclick_action_browser_close_tab",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.0,
+      "duration_seconds": 0.016,
       "result": {
         "returned": true
       },
@@ -338,24 +376,12 @@
       "name": "Action test: roboclick_action_corel_add_text_box",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.016,
-      "result": {
-        "returned": true
-      },
-      "error": "",
-      "log_file": "test_result\\action_test_roboclick_action_corel_add_text_box.log",
-      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
-    },
-    {
-      "name": "Action test: roboclick_action_corel_close_file",
-      "kind": "action",
-      "status": "passed",
       "duration_seconds": 0.0,
       "result": {
         "returned": true
       },
       "error": "",
-      "log_file": "test_result\\action_test_roboclick_action_corel_close_file.log",
+      "log_file": "test_result\\action_test_roboclick_action_corel_add_text_box.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -392,6 +418,18 @@
       },
       "error": "",
       "log_file": "test_result\\action_test_roboclick_action_corel_export.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_corel_file_close",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_corel_file_close.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -440,6 +478,16 @@
       },
       "error": "",
       "log_file": "test_result\\action_test_roboclick_action_corel_open.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_corel_page_add",
+      "kind": "action",
+      "status": "failed",
+      "duration_seconds": 0.0,
+      "result": {},
+      "error": "Traceback (most recent call last):\n  File \"C:\\gh\\oomlout_roboclick\\actions\\roboclick_action_corel_page_add\\working.py\", line 64, in test\n    import oomlout_test\nModuleNotFoundError: No module named 'oomlout_test'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"C:\\gh\\oomlout_roboclick\\run_tests.py\", line 93, in _run_case\n    raw_result = test_case.runner()\n                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\gh\\oomlout_roboclick\\actions\\roboclick_action_corel_page_add\\working.py\", line 66, in test\n    return callable(old)\n                    ^^^\nNameError: name 'old' is not defined. Did you mean: 'ord'?\n",
+      "log_file": "test_result\\action_test_roboclick_action_corel_page_add.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -575,6 +623,30 @@
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
+      "name": "Action test: roboclick_action_file_create_zip",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_file_create_zip.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_file_text_yaml_fix",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_file_text_yaml_fix.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
       "name": "Action test: roboclick_action_google_doc_add_text",
       "kind": "action",
       "status": "passed",
@@ -626,12 +698,24 @@
       "name": "Action test: roboclick_action_image_quad_swap_for_tile",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.015,
+      "duration_seconds": 0.0,
       "result": {
         "returned": true
       },
       "error": "",
       "log_file": "test_result\\action_test_roboclick_action_image_quad_swap_for_tile.log",
+      "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
+    },
+    {
+      "name": "Action test: roboclick_action_image_remove_background",
+      "kind": "action",
+      "status": "passed",
+      "duration_seconds": 0.0,
+      "result": {
+        "returned": true
+      },
+      "error": "",
+      "log_file": "test_result\\action_test_roboclick_action_image_remove_background.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -659,7 +743,7 @@
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
-      "name": "Action test: roboclick_action_save_image_generated",
+      "name": "Action test: roboclick_action_run_python",
       "kind": "action",
       "status": "passed",
       "duration_seconds": 0.0,
@@ -667,7 +751,7 @@
         "returned": true
       },
       "error": "",
-      "log_file": "test_result\\action_test_roboclick_action_save_image_generated.log",
+      "log_file": "test_result\\action_test_roboclick_action_run_python.log",
       "definition_file": "tests\\100_run_all_action_tests\\working.yaml"
     },
     {
@@ -698,7 +782,7 @@
       "name": "Action test: roboclick_action_wait_for_file",
       "kind": "action",
       "status": "passed",
-      "duration_seconds": 0.016,
+      "duration_seconds": 0.0,
       "result": {
         "returned": true
       },
@@ -710,7 +794,7 @@
       "name": "Integration (python): run folder test_data/example_duirectory",
       "kind": "integration",
       "status": "passed",
-      "duration_seconds": 0.328,
+      "duration_seconds": 0.25,
       "result": {
         "all_passed": true,
         "passed": 1,
