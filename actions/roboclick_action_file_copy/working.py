@@ -69,7 +69,14 @@ def old(**kwargs):
         print(f"copying {file_source} to {file_destination}")
         #use shutil to copy the file
         import shutil
-        shutil.copy(file_source, file_destination)
+        try: 
+            #create directory if it does not exist
+            os.makedirs(os.path.dirname(file_destination), exist_ok=True)
+            shutil.copy(file_source, file_destination)
+        except Exception as e:
+            print(f"Error copying file: {e}")
+            import time
+            time.sleep(1)
     else:
         print(f"file {file_source} does not exist")
         return_value = "exit_no_tab"

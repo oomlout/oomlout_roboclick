@@ -3,6 +3,7 @@ import io
 import re
 import sys
 import time
+import tempfile
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
@@ -48,11 +49,63 @@ def test_3(**kwargs):
     working_test = getattr(working, "test", None)
     if not callable(working_test):
         return {"passed": True, "details": "working.test() not defined; skipped"}
-    result = working_test()
+    result = working_test(test_to_run="1")
     passed = bool(result)
     return {
         "passed": passed,
         "details": f"working_test_result={result!r}",
+    }
+
+def test_4(**kwargs):
+    """Test 4: tag_open/tag_close extracts to file_name before legacy clip parsing."""
+    working = _load_working_module()
+    copied_text = (
+        "before\n"
+        "&&&song_seeds_output&&&\n"
+        "[{\"moment\": \"stale\"}]\n"
+        "&&&song_seeds_output&&&\n"
+        "middle\n"
+        "&&&song_seeds_output&&&\n"
+        "[{\"moment\": \"opening\"}]\n"
+        "&&&song_seeds_output&&&\n"
+        "after &&&tag for copy&&&legacy&&&tag for copy&&&"
+    )
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "song_seeds.json",
+                "tag_open": "&&&song_seeds_output&&&",
+                "tag_close": "&&&song_seeds_output&&&",
+            },
+        )
+        output = (Path(temp_dir) / "song_seeds.json").read_text(encoding="utf-8")
+    return {
+        "passed": output.strip() == '[{"moment": "opening"}]',
+        "details": f"output={output!r}",
+    }
+
+
+def test_5(**kwargs):
+    """Test 5: missing tag_open/tag_close markers fall back to the legacy clip marker."""
+    working = _load_working_module()
+    copied_text = "before &&&tag for copy&&&legacy value&&&tag for copy&&& after"
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "fallback.txt",
+                "tag_open": "&&&missing_open&&&",
+                "tag_close": "&&&missing_close&&&",
+                "clip": "&&&tag for copy&&&",
+            },
+        )
+        output = (Path(temp_dir) / "fallback.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == "legacy value",
+        "details": f"output={output!r}",
     }
 
 
@@ -116,6 +169,10 @@ def _load_working_module():
 def _write_text(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
+
+def _stub_copy(working, copied_text):
+    working.robo_roboclick.robo_mouse_click = lambda **kwargs: None
+    working.robo_roboclick.robo_keyboard_copy = lambda **kwargs: copied_text
 
 
 def _get_test_description(test_fn):

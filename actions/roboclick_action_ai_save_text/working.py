@@ -30,8 +30,11 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
+        v.append({'name': 'file_name', 'description': 'File name to save captured or extracted content.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_name_full', 'description': 'Full file path to save captured content.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_name_clip', 'description': 'File path used to store clipboard text.', 'type': 'string', 'default': ''})
+        v.append({'name': 'tag_open', 'description': 'Opening tag used to extract copied text before falling back to clip.', 'type': 'string', 'default': ''})
+        v.append({'name': 'tag_close', 'description': 'Closing tag used to extract copied text before falling back to clip.', 'type': 'string', 'default': ''})
         v.append({'name': 'clip', 'description': 'Clipboard text payload to save. default:&&&tag for copy&&&', 'type': 'string', 'default': '&&&tag for copy&&&'})
     d["variables"] = v
     return d
@@ -53,6 +56,39 @@ def _scroll_lock_toggled():
 def action(**kwargs):
     return old(**kwargs)
 
+def _extract_between_tags(text, tag_open, tag_close):
+    if not tag_open or not tag_close:
+        return None
+    if tag_open == tag_close:
+        parts = text.split(tag_open)
+        if len(parts) >= 3:
+            return parts[-2]
+        return None
+    start = text.find(tag_open)
+    if start == -1:
+        return None
+    start += len(tag_open)
+    end = text.find(tag_close, start)
+    if end == -1:
+        return None
+    return text[start:end]
+
+def _extract_clip(text, clip):
+    clipping = text.split(clip)
+    if len(clipping) > 1:
+        return clipping[len(clipping)-2]
+    return text
+
+def _extract_text(text, action, clip):
+    tag_clipping = _extract_between_tags(
+        text,
+        action.get("tag_open", ""),
+        action.get("tag_close", ""),
+    )
+    if tag_clipping is not None:
+        return tag_clipping
+    return _extract_clip(text, clip)
+
 def old(**kwargs):
     """Save text content from AI default between &&&tag for copy&&&"""
     action = kwargs.get("action", {})
@@ -60,9 +96,17 @@ def old(**kwargs):
     file_name_full = action.get("file_name_full", "text.txt")
     file_name_clip = action.get("file_name_clip", "")
     if file_name_clip == "":
-        file_name_full = action.get("file_name", "")
-        if file_name_full == "":
-            file_name_full = action.get("file_destination", "clip.txt")
+        tag_open = action.get("tag_open", "")
+        tag_close = action.get("tag_close", "")
+        if tag_open != "" and tag_close != "":
+            file_name_clip = action.get("file_name", "")
+            if file_name_clip == "":
+                file_name_clip = action.get("file_destination", "clip.txt")
+            file_name_full = action.get("file_name_full", "")
+        else:
+            file_name_full = action.get("file_name", "")
+            if file_name_full == "":
+                file_name_full = action.get("file_destination", "clip.txt")
     
     
     clip = action.get("clip", "&&&tag for copy&&&")
@@ -79,12 +123,8 @@ def old(**kwargs):
     if file_name_clip != "":
         file_name_clip_full = os.path.join(directory, file_name_clip)
         with open(file_name_clip_full, 'w', encoding='utf-8') as f:
-            #text between two clip tages
-            clipping = text.split(clip)
-            if len(clipping) > 1:
-                clipping = clipping[len(clipping)-2]
-            else:
-                clipping = text
+            # Prefer explicit tag pairs, then the legacy clip marker, then the full text.
+            clipping = _extract_text(text, action, clip)
             if remove_double_line_breaks:
                 clipping = clipping.replace("\n\n", "\n")
                 clipping = clipping.replace("\n\n", "\n")

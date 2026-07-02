@@ -1524,10 +1524,16 @@ def robo_text_jinja_template(**kwargs):
         with open(file_template, "r", encoding="utf-8") as infile:
             markdown_string = infile.read()
     except Exception as e:
+        file_template_absolute_temp = os.path.abspath(file_template)
+        print(f"error opening file_template: {file_template_absolute_temp}")
         #file not in the project directory
         #try adding directory of part to the filename
         directory_part = kwargs.get("directory", "")
         file_template = os.path.join(directory_part, file_template)
+#C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_oomlout_76_2_mm_50_8_mm\
+#C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_76_2_mm_width_50_8_mm_height         
+
+        
         try:
             with open(file_template, "r", encoding="utf-8") as infile:
                 markdown_string = infile.read()
