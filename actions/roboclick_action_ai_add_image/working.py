@@ -70,11 +70,9 @@ def old(**kwargs):
     action = kwargs.get("action", {})
     mode = action.get("mode", "")
     if mode == "":    
-        file_name_absolute = os.path.join(directory_absolute, file_name)
-        file_name_abs = os.path.abspath(file_name) 
+        file_name_absolute = os.path.abspath(os.path.join(directory_absolute, file_name))
     if mode == "source_files":
-        file_name_absolute = os.path.join(os.path.abspath("source_files"), file_name)
-        file_name_abs = os.path.abspath(file_name)
+        file_name_absolute = os.path.abspath(os.path.join(os.path.abspath("source_files"), file_name))
         pass
     
     #print(f"Adding image {file_name} at position {position_click}")

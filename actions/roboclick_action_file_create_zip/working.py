@@ -9,7 +9,8 @@ def define():
         "description": (
             "Create a zip from explicit files and/or directory trees. "
             "If any required source is missing, write a <zip>_error.txt listing the gaps and exit the chain. "
-            "On missing sources, delete any stale zip. On success, delete any prior error file."
+            "Also zip that error text as <zip>_error.zip. "
+            "On missing sources, delete any stale zip. On success, delete any prior error files."
         ),
         "variables": [
             {
@@ -64,23 +65,27 @@ def action(**kwargs):
         return "exit"
 
     zip_path   = _resolve(zip_path, directory)
-    error_path = os.path.splitext(zip_path)[0] + "_error.txt"
+    zip_stem = os.path.splitext(zip_path)[0]
+    error_path = zip_stem + "_error.txt"
+    error_zip_path = zip_stem + "_error.zip"
 
     missing = []
 
     # Check explicit files (paths may be relative to part directory)
     for entry in files:
-        src = _resolve(entry.get("source", ""), directory)
+        source_raw = entry.get("source", "")
+        src = _resolve(source_raw, directory)
         if not src or not os.path.isfile(src):
-            missing.append(src or "(no source specified)")
+            missing.append(source_raw or "(no source specified)")
         else:
             entry["_resolved"] = src
 
     # Check dirs exist (paths may be relative to part directory)
     for entry in dirs:
-        d = _resolve(entry.get("path", ""), directory)
+        path_raw = entry.get("path", "")
+        d = _resolve(path_raw, directory)
         if not d or not os.path.isdir(d):
-            missing.append(f"(dir) {d or '(no path specified)'}")
+            missing.append(f"(dir) {path_raw or '(no path specified)'}")
         else:
             entry["_resolved"] = d
 
@@ -92,7 +97,9 @@ def action(**kwargs):
             f.write("create_zip: missing sources -- zip not created.\n\n")
             for m in missing:
                 f.write(f"  MISSING: {m}\n")
-        print(f"[create_zip] {len(missing)} source(s) missing -- wrote {error_path}")
+        with zipfile.ZipFile(error_zip_path, "w", zipfile.ZIP_DEFLATED) as zf:
+            zf.write(error_path, os.path.basename(error_path))
+        print(f"[create_zip] {len(missing)} source(s) missing -- wrote {error_path} and {error_zip_path}")
         for m in missing:
             print(f"  MISSING: {m}")
         return "exit"
@@ -116,6 +123,8 @@ def action(**kwargs):
 
     if os.path.exists(error_path):
         os.remove(error_path)
+    if os.path.exists(error_zip_path):
+        os.remove(error_zip_path)
 
     print(f"[create_zip] zip created: {zip_path} ({total} files)")
     return ""

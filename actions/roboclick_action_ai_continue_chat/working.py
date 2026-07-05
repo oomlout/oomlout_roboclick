@@ -59,6 +59,18 @@ def old(**kwargs):
     action = kwargs.get("action", {})    
     log_url = kwargs.get("log_url", False)
     url_chat = action.get("url_chat", "")
+    if not url_chat:
+        url_file = os.path.join(kwargs.get("directory_absolute", ""), "url.yaml")
+        if os.path.exists(url_file):
+            with open(url_file, 'r') as file:
+                url_data = yaml.safe_load(file)
+            if isinstance(url_data, list) and url_data:
+                url_chat = url_data[-1]
+            elif isinstance(url_data, str):
+                url_chat = url_data
+    if not url_chat:
+        print("continue_chat -- no url_chat provided and url.yaml has no saved chat URL")
+        return "exit_no_tab"
     print("continue_chat -- continuing an existing chat")    
     #longer delay for long chats
     robo_roboclick.robo_chrome_open_url(url=url_chat, delay=30, message="    opening a new chat")    

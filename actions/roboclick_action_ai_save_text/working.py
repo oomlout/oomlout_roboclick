@@ -92,7 +92,9 @@ def _extract_text(text, action, clip):
 def old(**kwargs):
     """Save text content from AI default between &&&tag for copy&&&"""
     action = kwargs.get("action", {})
+    return_value = ""
     remove_double_line_breaks = action.get("remove_double_line_breaks", True)
+    skip_if_tag_missing = action.get("skip_if_tag_missing", False)
     file_name_full = action.get("file_name_full", "text.txt")
     file_name_clip = action.get("file_name_clip", "")
     if file_name_clip == "":
@@ -122,6 +124,13 @@ def old(**kwargs):
             print(f"Text saved to {file_name_full_full}")
     if file_name_clip != "":
         file_name_clip_full = os.path.join(directory, file_name_clip)
+        tag_open = action.get("tag_open", "")
+        tag_close = action.get("tag_close", "")
+        if skip_if_tag_missing and tag_open and tag_close:
+            tag_clipping = _extract_between_tags(text, tag_open, tag_close)
+            if tag_clipping is None:
+                print(f"Tag {tag_open} not found; skipping {file_name_clip_full}")
+                return return_value
         with open(file_name_clip_full, 'w', encoding='utf-8') as f:
             # Prefer explicit tag pairs, then the legacy clip marker, then the full text.
             clipping = _extract_text(text, action, clip)

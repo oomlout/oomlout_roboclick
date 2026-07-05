@@ -102,7 +102,7 @@ def new(**kwargs):
             robo_roboclick.ai_check_for_too_many_requests()
             robo_roboclick.ai_save_image(**kwargs)
         file_name = kwargs.get("action", {}).get("file_name", "working.png")
-        file_name_absolute = os.path.join(kwargs.get("directory_absolute", ""), file_name)
+        file_name_absolute = os.path.abspath(os.path.join(kwargs.get("directory_absolute", ""), file_name))
         if os.path.exists(file_name_absolute):
             print("")
             print(f".:image saved to {file_name_absolute}[:60]:.")

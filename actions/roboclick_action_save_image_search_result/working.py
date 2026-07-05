@@ -65,9 +65,11 @@ def old(**kwargs):
     position_click[0] += (int(index)-1) * 200
     file_name = action.get("file_name", "working.png")
     directory_absolute = kwargs.get("directory_absolute", "")
-    file_name_absolute = os.path.join(directory_absolute, file_name)
+    file_name_absolute = os.path.abspath(os.path.join(directory_absolute, file_name))
     overwrite = action.get("overwrite", True)
     print(f"Saving image as {file_name}")
+    print(f"Resolved image save path: {file_name_absolute}")
+    os.makedirs(os.path.dirname(file_name_absolute), exist_ok=True)
     if not overwrite and os.path.exists(file_name_absolute):
         print(f"File {file_name_absolute} already exists and overwrite is disabled.")
         return

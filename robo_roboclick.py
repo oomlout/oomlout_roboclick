@@ -1987,9 +1987,10 @@ def ai_save_image(**kwargs):
     action = kwargs.get("action", {})
     file_name = action.get("file_name", "working.png")   
     directory_absolute = kwargs.get("directory_absolute", "")
-    file_name_absolute = os.path.join(directory_absolute, file_name)
-    file_name_abs = os.path.abspath(file_name) 
+    file_name_absolute = os.path.abspath(os.path.join(directory_absolute, file_name))
     print(f"Saving image as {file_name}")
+    print(f"Resolved image save path: {file_name_absolute}")
+    os.makedirs(os.path.dirname(file_name_absolute), exist_ok=True)
     #save the image
     robo_mouse_click(position=position_click, delay=2, button="right")  # Click on the image to focus
     #press down twice
