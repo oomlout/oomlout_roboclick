@@ -1,4 +1,6 @@
 import os
+import re
+import unicodedata
 
 import robo_roboclick
 
@@ -36,6 +38,8 @@ def describe():
         v.append({'name': 'tag_open', 'description': 'Opening tag used to extract copied text before falling back to clip.', 'type': 'string', 'default': ''})
         v.append({'name': 'tag_close', 'description': 'Closing tag used to extract copied text before falling back to clip.', 'type': 'string', 'default': ''})
         v.append({'name': 'clip', 'description': 'Clipboard text payload to save. default:&&&tag for copy&&&', 'type': 'string', 'default': '&&&tag for copy&&&'})
+        v.append({'name': 'sanitize_text', 'description': 'Whether saved text should replace common Unicode punctuation with ASCII-friendly text and remove emoji.', 'type': 'boolean', 'default': True})
+        v.append({'name': 'sanitize_double_linebreaks', 'description': 'Whether repeated line breaks should be reduced by half so accidental doubles become singles and four line breaks become two.', 'type': 'boolean', 'default': True})
     d["variables"] = v
     return d
 
@@ -89,11 +93,110 @@ def _extract_text(text, action, clip):
         return tag_clipping
     return _extract_clip(text, clip)
 
+def _as_bool(value, default):
+    if value in (None, ""):
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in ("true", "yes", "y", "1", "on"):
+            return True
+        if normalized in ("false", "no", "n", "0", "off"):
+            return False
+    return default
+
+def _option_bool(kwargs, action, key, default):
+    if key in kwargs:
+        return _as_bool(kwargs.get(key), default)
+    return _as_bool(action.get(key, default), default)
+
+def _is_emoji_char(char):
+    codepoint = ord(char)
+    emoji_ranges = (
+        (0x1F000, 0x1FAFF),
+        (0x1FB00, 0x1FFFF),
+        (0x2600, 0x27BF),
+        (0x2300, 0x23FF),
+    )
+    return any(start <= codepoint <= end for start, end in emoji_ranges)
+
+def _strip_emoji(text):
+    stripped = []
+    for char in text:
+        codepoint = ord(char)
+        if (
+            _is_emoji_char(char)
+            or 0x1F1E6 <= codepoint <= 0x1F1FF
+            or 0x1F3FB <= codepoint <= 0x1F3FF
+            or codepoint in (0x200D, 0x20E3, 0xFE0E, 0xFE0F)
+        ):
+            continue
+        stripped.append(char)
+    return "".join(stripped)
+
+def _sanitize_text(text):
+    replacements = {
+        "\u2018": "'",
+        "\u2019": "'",
+        "\u201a": "'",
+        "\u201b": "'",
+        "\u201c": '"',
+        "\u201d": '"',
+        "\u201e": '"',
+        "\u201f": '"',
+        "\u2013": "-",
+        "\u2014": "-",
+        "\u2015": "-",
+        "\u2212": "-",
+        "\u2026": "...",
+        "\u00a0": " ",
+        "\u202f": " ",
+        "\u2009": " ",
+        "\u200b": "",
+        "\u2022": "-",
+        "\u00b7": "-",
+        "\u2032": "'",
+        "\u2033": '"',
+        "\u00d7": "x",
+        "\u00f7": "/",
+        "\u00a9": "(c)",
+        "\u00ae": "(r)",
+        "\u2122": "TM",
+        "\u2264": "<=",
+        "\u2265": ">=",
+    }
+    text = "".join(replacements.get(char, char) for char in text)
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    return _strip_emoji(text)
+
+def _sanitize_double_linebreaks(text):
+    def reduce_linebreaks(match):
+        linebreaks = re.findall(r"\r\n|\r|\n", match.group(0))
+        if not linebreaks:
+            return match.group(0)
+        return linebreaks[0] * ((len(linebreaks) + 1) // 2)
+
+    return re.sub(r"(?:(?:\r\n)|\r|\n){2,}", reduce_linebreaks, text)
+
+def _apply_sanitizers(text, sanitize_text, sanitize_double_linebreaks):
+    if sanitize_text:
+        text = _sanitize_text(text)
+    if sanitize_double_linebreaks:
+        text = _sanitize_double_linebreaks(text)
+    return text
+
 def old(**kwargs):
     """Save text content from AI default between &&&tag for copy&&&"""
     action = kwargs.get("action", {})
     return_value = ""
-    remove_double_line_breaks = action.get("remove_double_line_breaks", True)
+    sanitize_text = _option_bool(kwargs, action, "sanitize_text", True)
+    sanitize_double_linebreaks = _option_bool(kwargs, action, "sanitize_double_linebreaks", True)
+    if "sanitize_double_linebreaks" not in kwargs and "sanitize_double_linebreaks" not in action:
+        sanitize_double_linebreaks = _option_bool(kwargs, action, "remove_double_line_breaks", True)
     skip_if_tag_missing = action.get("skip_if_tag_missing", False)
     file_name_full = action.get("file_name_full", "text.txt")
     file_name_clip = action.get("file_name_clip", "")
@@ -120,7 +223,7 @@ def old(**kwargs):
     if file_name_full != "":
         file_name_full_full = os.path.join(directory, file_name_full)
         with open(file_name_full_full, 'w', encoding='utf-8') as f:
-            f.write(text)
+            f.write(_apply_sanitizers(text, sanitize_text, sanitize_double_linebreaks))
             print(f"Text saved to {file_name_full_full}")
     if file_name_clip != "":
         file_name_clip_full = os.path.join(directory, file_name_clip)
@@ -134,9 +237,7 @@ def old(**kwargs):
         with open(file_name_clip_full, 'w', encoding='utf-8') as f:
             # Prefer explicit tag pairs, then the legacy clip marker, then the full text.
             clipping = _extract_text(text, action, clip)
-            if remove_double_line_breaks:
-                clipping = clipping.replace("\n\n", "\n")
-                clipping = clipping.replace("\n\n", "\n")
+            clipping = _apply_sanitizers(clipping, sanitize_text, sanitize_double_linebreaks)
             f.write(clipping)
             print(f"Clip text saved to {file_name_clip_full}")
     pass

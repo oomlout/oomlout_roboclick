@@ -40,6 +40,7 @@ def describe():
         v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
         v.append({'name': 'position_click', 'description': 'Screen position used to open the generated image context menu.', 'type': 'string', 'default': ''})
         v.append({'name': 'mode_ai_wait', 'description': 'AI wait strategy (slow, fast_button_state, or fast_clipboard_state).', 'type': 'string', 'default': ''})
+        v.append({'name': 'retry_if_failed', 'description': 'Number of times to ask the AI to retry and save again if the expected image file is missing. Use false or 0 to disable.', 'type': 'number', 'default': 1})
     d["variables"] = v
     return d
 
@@ -54,63 +55,86 @@ def define():
 def action(**kwargs):
     return new(**kwargs)
 
-def new(**kwargs):
-    action = kwargs.get("action", {})
-    mode_ai_wait = action.get("mode_ai_wait", "slow")
-    
+def _retry_count(value, default=1):
+    if value in (None, ""):
+        return default
+    if isinstance(value, bool):
+        return 1 if value else 0
+    if isinstance(value, (int, float)):
+        return max(0, int(value))
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in ("false", "no", "n", "off"):
+            return 0
+        if normalized in ("true", "yes", "y", "on"):
+            return 1
+        try:
+            return max(0, int(float(normalized)))
+        except Exception:
+            return default
+    return default
+
+def _wait_for_image(mode_ai_wait):
+    if mode_ai_wait is None:
+        mode_ai_wait = "slow"
     if mode_ai_wait == "slow":
         robo_roboclick.robo_delay(delay=300)
         delay = random.randint(100, 300)
         robo_roboclick.robo_delay(delay=delay)  # Wait for the image to be generated
     elif "fast" in mode_ai_wait:
         robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state")
-    
-    if True:
-        #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
-        #click on the image to focus
-        #reload
-        if True:
-            robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
-            #click on the image to focus
-            #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
-            robo_roboclick.ai_check_for_too_many_requests()
-            robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
-            #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
-            robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
-            robo_roboclick.ai_check_for_too_many_requests()
-        #check if limit reached
-        if True:
-            robo_roboclick.ai_check_for_too_many_requests()
-            # clip = robo_roboclick.robo_keyboard_copy(delay=2)
-            # if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
-            #     #get text bewteen "resets in" and  minutes
-            #     time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
-            #     #check to make sure it worked
-            #     delay_time  = 6 * 60 * 60 # 6 hours
-            #     if time_out != "":
-            #         #get hours
-            #         if "hour" in time_out:
-            #             hours = int(time_out.split("hour")[0].strip()) + 1
-            #             delay_time = hours * 60 * 60
-            #         #print message
-            #         print(f"Image generation limit reached, waiting for {delay_time/3600:.2f} hours until reset...")
-            #     robo_roboclick.robo_delay(delay=delay_time)
 
-                # return "exit"
-        #save image        
-        if True:
-            robo_roboclick.ai_check_for_too_many_requests()
-            robo_roboclick.ai_save_image(**kwargs)
-        file_name = kwargs.get("action", {}).get("file_name", "working.png")
-        file_name_absolute = os.path.abspath(os.path.join(kwargs.get("directory_absolute", ""), file_name))
-        if os.path.exists(file_name_absolute):
-            print("")
-            print(f".:image saved to {file_name_absolute}[:60]:.")
-            saved = True
-            clean_png(file_name_absolute)
-            pass
-        else:
-            print(f".:image not saved:.")
+def _prepare_to_save_image():
+    #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
+    #click on the image to focus
+    #reload
+    robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
+    #click on the image to focus
+    #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
+    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
+    #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
+    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
+    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_check_for_too_many_requests()
+
+def _send_retry_prompt():
+    retry_prompt = "oops the image seems to have not generated please try again"
+    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
+    robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
+    robo_roboclick.robo_keyboard_paste(text=retry_prompt, delay=2)
+    robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
+    print(f".:retrying image generation:. {retry_prompt}")
+
+def _save_image_once(kwargs, file_name_absolute):
+    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_save_image(**kwargs)
+    if os.path.exists(file_name_absolute):
+        print("")
+        print(f".:image saved to {file_name_absolute}[:60]:.")
+        clean_png(file_name_absolute)
+        return True
+    print(f".:image not saved:.")
+    return False
+
+def new(**kwargs):
+    action = kwargs.get("action", {})
+    mode_ai_wait = action.get("mode_ai_wait", "slow")
+    retry_value = kwargs.get("retry_if_failed", action.get("retry_if_failed", 1))
+    retry_if_failed = _retry_count(retry_value, 1)
+    file_name = action.get("file_name", "working.png")
+    file_name_absolute = os.path.abspath(os.path.join(kwargs.get("directory_absolute", ""), file_name))
+    
+    for attempt in range(retry_if_failed + 1):
+        if attempt > 0:
+            _send_retry_prompt()
+        _wait_for_image(mode_ai_wait)
+        _prepare_to_save_image()
+        if _save_image_once(kwargs, file_name_absolute):
+            return ""
+        if attempt < retry_if_failed:
+            print(f".:image save retry {attempt + 1} of {retry_if_failed}:.")
 
 import os
 from pathlib import Path

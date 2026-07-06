@@ -108,6 +108,70 @@ def test_5(**kwargs):
         "details": f"output={output!r}",
     }
 
+def test_6(**kwargs):
+    """Test 6: sanitize_text and sanitize_double_linebreaks default to enabled."""
+    working = _load_working_module()
+    copied_text = (
+        "Alpha\u2014beta \u201cquoted\u201d and \u2018single\u2019 "
+        "smile\U0001f642\n\nGamma\n\n\n\nDelta"
+    )
+    expected = "Alpha-beta \"quoted\" and 'single' smile\nGamma\n\nDelta"
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "sanitized.txt",
+            },
+        )
+        output = (Path(temp_dir) / "sanitized.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == expected,
+        "details": f"output={output!r}",
+    }
+
+
+def test_7(**kwargs):
+    """Test 7: sanitize_text and sanitize_double_linebreaks can be disabled."""
+    working = _load_working_module()
+    copied_text = "Alpha\u2014beta smile\U0001f642\n\nGamma"
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "unsanitized.txt",
+                "sanitize_text": False,
+                "sanitize_double_linebreaks": False,
+            },
+        )
+        output = (Path(temp_dir) / "unsanitized.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == copied_text,
+        "details": f"output={output!r}",
+    }
+
+
+def test_8(**kwargs):
+    """Test 8: top-level kwargs can override sanitize options."""
+    working = _load_working_module()
+    copied_text = "Alpha\u2014beta smile\U0001f642\n\nGamma"
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            sanitize_text=False,
+            sanitize_double_linebreaks=False,
+            action={
+                "file_name": "kwargs_unsanitized.txt",
+            },
+        )
+        output = (Path(temp_dir) / "kwargs_unsanitized.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == copied_text,
+        "details": f"output={output!r}",
+    }
+
 
 def test(test_to_run="all", **kwargs):
     selected = _resolve_selected_tests(test_to_run)

@@ -3,6 +3,7 @@ import io
 import re
 import sys
 import time
+import tempfile
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
@@ -48,11 +49,134 @@ def test_3(**kwargs):
     working_test = getattr(working, "test", None)
     if not callable(working_test):
         return {"passed": True, "details": "working.test() not defined; skipped"}
-    result = working_test()
+    result = working_test(test_to_run="1")
     passed = bool(result)
     return {
         "passed": passed,
         "details": f"working_test_result={result!r}",
+    }
+
+def test_4(**kwargs):
+    """Test 4: define() documents retry_if_failed with a default of 1."""
+    working = _load_working_module()
+    metadata = working.define()
+    variables = metadata.get("variables", [])
+    retry_vars = [item for item in variables if isinstance(item, dict) and item.get("name") == "retry_if_failed"]
+    passed = len(retry_vars) == 1 and retry_vars[0].get("default") == 1
+    return {
+        "passed": passed,
+        "details": f"retry_vars={retry_vars!r}",
+    }
+
+
+def test_5(**kwargs):
+    """Test 5: successful first save does not send a retry prompt."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls={1})
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "image.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    passed = output_exists and calls["save_count"] == 1 and calls["pasted"] == []
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
+    }
+
+
+def test_6(**kwargs):
+    """Test 6: default retry_if_failed sends the retry prompt once and saves on the second attempt."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls={2})
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "retry.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    retry_prompt = "oops the image seems to have not generated please try again"
+    passed = output_exists and calls["save_count"] == 2 and calls["pasted"] == [retry_prompt]
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
+    }
+
+
+def test_7(**kwargs):
+    """Test 7: retry_if_failed false disables retry prompts and extra save attempts."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls=set())
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "missing.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+                "retry_if_failed": False,
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    passed = not output_exists and calls["save_count"] == 1 and calls["pasted"] == []
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
+    }
+
+
+def test_8(**kwargs):
+    """Test 8: retry_if_failed controls the number of retry prompts after the first failure."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls={3})
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "third_try.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+                "retry_if_failed": 2,
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    retry_prompt = "oops the image seems to have not generated please try again"
+    passed = output_exists and calls["save_count"] == 3 and calls["pasted"] == [retry_prompt, retry_prompt]
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
+    }
+
+
+def test_9(**kwargs):
+    """Test 9: top-level retry_if_failed overrides the action value."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls=set())
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "top_level_override.png"
+        working.action(
+            directory_absolute=temp_dir,
+            retry_if_failed=False,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+                "retry_if_failed": 2,
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    passed = not output_exists and calls["save_count"] == 1 and calls["pasted"] == []
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
     }
 
 
@@ -116,6 +240,44 @@ def _load_working_module():
 def _write_text(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
+
+def _stub_robo(working, create_on_calls):
+    calls = {
+        "save_count": 0,
+        "pasted": [],
+        "ctrl": [],
+    }
+
+    def no_op(*args, **kwargs):
+        return None
+
+    def ctrl_generic(**kwargs):
+        calls["ctrl"].append(kwargs.get("string", ""))
+
+    def paste(**kwargs):
+        calls["pasted"].append(kwargs.get("text", ""))
+
+    def save_image(**kwargs):
+        calls["save_count"] += 1
+        if calls["save_count"] in create_on_calls:
+            action = kwargs.get("action", {})
+            file_name = action.get("file_name", "working.png")
+            directory_absolute = kwargs.get("directory_absolute", "")
+            output_path = Path(directory_absolute) / file_name
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            output_path.write_bytes(b"not a real png")
+
+    working.robo_roboclick.robo_delay = no_op
+    working.robo_roboclick.ai_wait_mode_fast_check = no_op
+    working.robo_roboclick.ai_check_for_too_many_requests = no_op
+    working.robo_roboclick.robo_mouse_click = no_op
+    working.robo_roboclick.robo_keyboard_press_down = no_op
+    working.robo_roboclick.robo_keyboard_press_backspace = no_op
+    working.robo_roboclick.robo_keyboard_press_ctrl_generic = ctrl_generic
+    working.robo_roboclick.robo_keyboard_paste = paste
+    working.robo_roboclick.ai_save_image = save_image
+    working.clean_png = no_op
+    return calls
 
 
 def _get_test_description(test_fn):
