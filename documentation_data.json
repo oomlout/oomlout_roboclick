@@ -4,8 +4,7 @@
       "command": "roboclick_action_affinity_open",
       "name_long": "roboclick_action_affinity_open",
       "name_short_options": [
-        "affinity_open",
-        "open"
+        "affinity_open"
       ],
       "description": "Affinity open.",
       "summary": "Affinity open.",
@@ -23,8 +22,7 @@
       "category": "Affinity",
       "returns": "Pass-through action result.",
       "aliases": [
-        "affinity_open",
-        "open"
+        "affinity_open"
       ]
     },
     {
@@ -32,7 +30,6 @@
       "name_long": "roboclick_action_ai_add_image",
       "name_short_options": [
         "add_image",
-        "image",
         "ai_add_image"
       ],
       "description": "Add image.",
@@ -66,7 +63,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "add_image",
-        "image",
         "ai_add_image"
       ]
     },
@@ -75,7 +71,6 @@
       "name_long": "roboclick_action_ai_continue_chat",
       "name_short_options": [
         "continue_chat",
-        "chat",
         "ai_continue_chat"
       ],
       "description": "Continue chat.",
@@ -102,7 +97,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "continue_chat",
-        "chat",
         "ai_continue_chat"
       ]
     },
@@ -111,9 +105,7 @@
       "name_long": "roboclick_action_ai_file_add_file",
       "name_short_options": [
         "add_file",
-        "ai_add_file",
-        "add_image",
-        "ai_add_image"
+        "ai_add_file"
       ],
       "description": "Add a file (alias for add_image).",
       "summary": "Add a file (alias for add_image).",
@@ -132,14 +124,46 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "add_file",
-        "ai_add_file",
-        "add_image",
-        "ai_add_image"
+        "ai_add_file"
+      ]
+    },
+    {
+      "command": "roboclick_action_ai_from_directory",
+      "name_long": "roboclick_action_ai_from_directory",
+      "name_short_options": [
+        "ai_from_directory",
+        "from_directory"
+      ],
+      "description": "Load working.yaml then working_1.yaml, working_2.yaml, ... from a directory and execute the roboclick actions defined in each file one by one. Each file may define a single action (flat keys) or a list under actions:. {variable} placeholders are replaced with values from the part workings.",
+      "summary": "Load working.yaml then working_1.yaml, working_2.yaml, ...",
+      "variables": [
+        {
+          "name": "directory",
+          "description": "Path to the folder containing working.yaml and working_N.yaml files.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "mode_ai_wait",
+          "description": "AI wait strategy (slow, fast_button_state, or fast_clipboard_state).",
+          "type": "string",
+          "default": "slow"
+        }
+      ],
+      "variable_names": [
+        "directory",
+        "mode_ai_wait"
+      ],
+      "category": "AI",
+      "returns": "Executes all actions found in the directory sequence.",
+      "aliases": [
+        "ai_from_directory",
+        "from_directory"
       ]
     },
     {
       "command": "roboclick_action_ai_image_save_generated",
-      "name_long": "roboclick_action_save_image_generated",
+      "name_long": "roboclick_action_ai_image_save_generated",
       "name_short_options": [
         "save_image_generated",
         "generated"
@@ -164,12 +188,19 @@
           "description": "AI wait strategy (slow, fast_button_state, or fast_clipboard_state).",
           "type": "string",
           "default": ""
+        },
+        {
+          "name": "retry_if_failed",
+          "description": "Number of times to ask the AI to retry and save again if the expected image file is missing. Use false or 0 to disable.",
+          "type": "number",
+          "default": 1
         }
       ],
       "variable_names": [
         "file_name",
         "position_click",
-        "mode_ai_wait"
+        "mode_ai_wait",
+        "retry_if_failed"
       ],
       "category": "AI Image",
       "returns": "Pass-through action result.",
@@ -183,7 +214,6 @@
       "name_long": "roboclick_action_ai_new_chat",
       "name_short_options": [
         "new_chat",
-        "chat",
         "ai_new_chat"
       ],
       "description": "New chat.",
@@ -210,7 +240,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "new_chat",
-        "chat",
         "ai_new_chat"
       ]
     },
@@ -274,13 +303,18 @@
       "name_long": "roboclick_action_ai_save_text",
       "name_short_options": [
         "save_text",
-        "text",
         "ai_save_text",
         "save_file_generated"
       ],
       "description": "Save text.",
       "summary": "Save text.",
       "variables": [
+        {
+          "name": "file_name",
+          "description": "File name to save captured or extracted content.",
+          "type": "string",
+          "default": ""
+        },
         {
           "name": "file_name_full",
           "description": "Full file path to save captured content.",
@@ -294,22 +328,50 @@
           "default": ""
         },
         {
+          "name": "tag_open",
+          "description": "Opening tag used to extract copied text before falling back to clip.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "tag_close",
+          "description": "Closing tag used to extract copied text before falling back to clip.",
+          "type": "string",
+          "default": ""
+        },
+        {
           "name": "clip",
           "description": "Clipboard text payload to save. default:&&&tag for copy&&&",
           "type": "string",
           "default": "&&&tag for copy&&&"
+        },
+        {
+          "name": "sanitize_text",
+          "description": "Whether saved text should replace common Unicode punctuation with ASCII-friendly text and remove emoji.",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "sanitize_double_linebreaks",
+          "description": "Whether repeated line breaks should be reduced by half so accidental doubles become singles and four line breaks become two.",
+          "type": "boolean",
+          "default": true
         }
       ],
       "variable_names": [
+        "file_name",
         "file_name_full",
         "file_name_clip",
-        "clip"
+        "tag_open",
+        "tag_close",
+        "clip",
+        "sanitize_text",
+        "sanitize_double_linebreaks"
       ],
       "category": "AI",
       "returns": "Pass-through action result.",
       "aliases": [
         "save_text",
-        "text",
         "ai_save_text",
         "save_file_generated"
       ]
@@ -348,7 +410,6 @@
       "name_long": "roboclick_action_ai_skill_image_laser_cut_logo_full",
       "name_short_options": [
         "image_laser_cut_logo_full",
-        "image",
         "ai_skill_image_laser_cut_logo_full"
       ],
       "description": "Image laser cut logo full.",
@@ -375,7 +436,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "image_laser_cut_logo_full",
-        "image",
         "ai_skill_image_laser_cut_logo_full"
       ]
     },
@@ -384,7 +444,6 @@
       "name_long": "roboclick_action_ai_skill_image_prompt_full",
       "name_short_options": [
         "image_prompt_full",
-        "image",
         "ai_skill_image_prompt_full"
       ],
       "description": "Image prompt full.",
@@ -411,7 +470,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "image_prompt_full",
-        "image",
         "ai_skill_image_prompt_full"
       ]
     },
@@ -420,7 +478,6 @@
       "name_long": "roboclick_action_ai_skill_text_to_speech",
       "name_short_options": [
         "text_to_speech",
-        "text",
         "ai_skill_text_to_speech"
       ],
       "description": "Text to speech.",
@@ -447,7 +504,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "text_to_speech",
-        "text",
         "ai_skill_text_to_speech"
       ]
     },
@@ -548,9 +604,7 @@
       "command": "roboclick_action_alias_add_file",
       "name_long": "roboclick_action_alias_add_file",
       "name_short_options": [
-        "add_file",
-        "file",
-        "legacy_alias"
+        "alias_add_file"
       ],
       "description": "Add file.",
       "summary": "Add file.",
@@ -568,18 +622,14 @@
       "category": "Legacy Alias",
       "returns": "Pass-through action result.",
       "aliases": [
-        "add_file",
-        "file",
-        "legacy_alias"
+        "alias_add_file"
       ]
     },
     {
       "command": "roboclick_action_alias_add_image",
       "name_long": "roboclick_action_alias_add_image",
       "name_short_options": [
-        "add_image",
-        "image",
-        "legacy_alias"
+        "alias_add_image"
       ],
       "description": "Add image.",
       "summary": "Add image.",
@@ -604,9 +654,7 @@
       "category": "Legacy Alias",
       "returns": "Pass-through action result.",
       "aliases": [
-        "add_image",
-        "image",
-        "legacy_alias"
+        "alias_add_image"
       ]
     },
     {
@@ -614,9 +662,7 @@
       "name_long": "roboclick_action_alias_ai_save_image",
       "name_short_options": [
         "ai_save_image",
-        "save",
-        "save_image",
-        "legacy_alias"
+        "save_image"
       ],
       "description": "Ai save image.",
       "summary": "Ai save image.",
@@ -649,18 +695,14 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "ai_save_image",
-        "save",
-        "save_image",
-        "legacy_alias"
+        "save_image"
       ]
     },
     {
       "command": "roboclick_action_alias_close_tab",
       "name_long": "roboclick_action_alias_close_tab",
       "name_short_options": [
-        "close_tab",
-        "tab",
-        "legacy_alias"
+        "alias_close_tab"
       ],
       "description": "Close tab.",
       "summary": "Close tab.",
@@ -669,18 +711,14 @@
       "category": "Legacy Alias",
       "returns": "Pass-through action result.",
       "aliases": [
-        "close_tab",
-        "tab",
-        "legacy_alias"
+        "alias_close_tab"
       ]
     },
     {
       "command": "roboclick_action_alias_new_chat",
       "name_long": "roboclick_action_alias_new_chat",
       "name_short_options": [
-        "new_chat",
-        "chat",
-        "legacy_alias"
+        "alias_new_chat"
       ],
       "description": "New chat.",
       "summary": "New chat.",
@@ -705,9 +743,7 @@
       "category": "Legacy Alias",
       "returns": "Pass-through action result.",
       "aliases": [
-        "new_chat",
-        "chat",
-        "legacy_alias"
+        "alias_new_chat"
       ]
     },
     {
@@ -715,9 +751,7 @@
       "name_long": "roboclick_action_alias_openscad_render_file",
       "name_short_options": [
         "openscad_render_file",
-        "render",
-        "render_file",
-        "legacy_alias"
+        "render_file"
       ],
       "description": "Openscad render file.",
       "summary": "Openscad render file.",
@@ -750,17 +784,14 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "openscad_render_file",
-        "render",
-        "render_file",
-        "legacy_alias"
+        "render_file"
       ]
     },
     {
       "command": "roboclick_action_alias_query",
       "name_long": "roboclick_action_alias_query",
       "name_short_options": [
-        "query",
-        "legacy_alias"
+        "alias_query"
       ],
       "description": "Query.",
       "summary": "Query.",
@@ -799,8 +830,7 @@
       "category": "Legacy Alias",
       "returns": "Pass-through action result.",
       "aliases": [
-        "query",
-        "legacy_alias"
+        "alias_query"
       ]
     },
     {
@@ -867,7 +897,6 @@
       "name_long": "roboclick_action_browser_close_tab",
       "name_short_options": [
         "close_tab",
-        "tab",
         "browser_close_tab"
       ],
       "description": "Close tab.",
@@ -878,7 +907,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "close_tab",
-        "tab",
         "browser_close_tab"
       ]
     },
@@ -887,7 +915,6 @@
       "name_long": "roboclick_action_browser_open_url",
       "name_short_options": [
         "open_url",
-        "url",
         "browser_open_url"
       ],
       "description": "Open url.",
@@ -907,7 +934,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "open_url",
-        "url",
         "browser_open_url"
       ]
     },
@@ -916,7 +942,6 @@
       "name_long": "roboclick_action_browser_save_url",
       "name_short_options": [
         "save_url",
-        "url",
         "browser_save_url"
       ],
       "description": "Save url.",
@@ -943,7 +968,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "save_url",
-        "url",
         "browser_save_url"
       ]
     },
@@ -952,7 +976,6 @@
       "name_long": "roboclick_action_convert_svg_to_pdf",
       "name_short_options": [
         "svg_to_pdf",
-        "to",
         "convert_svg_to_pdf"
       ],
       "description": "Svg to pdf.",
@@ -979,7 +1002,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "svg_to_pdf",
-        "to",
         "convert_svg_to_pdf"
       ]
     },
@@ -988,7 +1010,6 @@
       "name_long": "roboclick_action_convert_svg_to_png",
       "name_short_options": [
         "svg_to_png",
-        "to",
         "convert_svg_to_png"
       ],
       "description": "Svg to png.",
@@ -1015,7 +1036,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "svg_to_png",
-        "to",
         "convert_svg_to_png"
       ]
     },
@@ -1024,7 +1044,6 @@
       "name_long": "roboclick_action_corel_add_text",
       "name_short_options": [
         "add_text",
-        "text",
         "corel_add_text"
       ],
       "description": "Add text.",
@@ -1093,7 +1112,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "add_text",
-        "text",
         "corel_add_text"
       ]
     },
@@ -1102,7 +1120,6 @@
       "name_long": "roboclick_action_corel_add_text_box",
       "name_short_options": [
         "add_text_box",
-        "text",
         "corel_add_text_box"
       ],
       "description": "Add text box.",
@@ -1185,7 +1202,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "add_text_box",
-        "text",
         "corel_add_text_box"
       ]
     },
@@ -1194,7 +1210,6 @@
       "name_long": "roboclick_action_corel_convert_to_curves",
       "name_short_options": [
         "convert_to_curves",
-        "to",
         "corel_convert_to_curves"
       ],
       "description": "Convert to curves.",
@@ -1221,7 +1236,6 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "convert_to_curves",
-        "to",
         "corel_convert_to_curves"
       ]
     },
@@ -1229,8 +1243,7 @@
       "command": "roboclick_action_corel_copy",
       "name_long": "roboclick_action_corel_copy",
       "name_short_options": [
-        "corel_copy",
-        "copy"
+        "corel_copy"
       ],
       "description": "Corel copy.",
       "summary": "Corel copy.",
@@ -1239,8 +1252,7 @@
       "category": "CorelDRAW",
       "returns": "Pass-through action result.",
       "aliases": [
-        "corel_copy",
-        "copy"
+        "corel_copy"
       ]
     },
     {
@@ -1293,11 +1305,10 @@
     },
     {
       "command": "roboclick_action_corel_file_close",
-      "name_long": "roboclick_action_corel_close_file",
+      "name_long": "roboclick_action_corel_file_close",
       "name_short_options": [
         "corel_file_close",
         "close_file",
-        "file",
         "corel_close_file",
         "corel_close"
       ],
@@ -1310,7 +1321,6 @@
       "aliases": [
         "corel_file_close",
         "close_file",
-        "file",
         "corel_close_file",
         "corel_close"
       ]
@@ -1442,8 +1452,7 @@
       "command": "roboclick_action_corel_open",
       "name_long": "roboclick_action_corel_open",
       "name_short_options": [
-        "corel_open",
-        "open"
+        "corel_open"
       ],
       "description": "Corel open.",
       "summary": "Corel open.",
@@ -1461,13 +1470,12 @@
       "category": "CorelDRAW",
       "returns": "Pass-through action result.",
       "aliases": [
-        "corel_open",
-        "open"
+        "corel_open"
       ]
     },
     {
       "command": "roboclick_action_corel_page_add",
-      "name_long": "roboclick_action_corel_page_goto",
+      "name_long": "roboclick_action_corel_page_add",
       "name_short_options": [
         "page_add",
         "add_page",
@@ -1575,8 +1583,7 @@
       "command": "roboclick_action_corel_save",
       "name_long": "roboclick_action_corel_save",
       "name_short_options": [
-        "corel_save",
-        "save"
+        "corel_save"
       ],
       "description": "Corel save.",
       "summary": "Corel save.",
@@ -1585,8 +1592,7 @@
       "category": "CorelDRAW",
       "returns": "Pass-through action result.",
       "aliases": [
-        "corel_save",
-        "save"
+        "corel_save"
       ]
     },
     {
@@ -1919,8 +1925,7 @@
       "command": "roboclick_action_file_copy",
       "name_long": "roboclick_action_file_copy",
       "name_short_options": [
-        "file_copy",
-        "copy"
+        "file_copy"
       ],
       "description": "File copy.",
       "summary": "File copy.",
@@ -1945,8 +1950,7 @@
       "category": "File",
       "returns": "Pass-through action result.",
       "aliases": [
-        "file_copy",
-        "copy"
+        "file_copy"
       ]
     },
     {
@@ -1954,7 +1958,6 @@
       "name_long": "roboclick_action_file_create_text_file",
       "name_short_options": [
         "create_text_file",
-        "text",
         "file_create_text_file"
       ],
       "description": "Create text file.",
@@ -1981,15 +1984,79 @@
       "returns": "Pass-through action result.",
       "aliases": [
         "create_text_file",
-        "text",
         "file_create_text_file"
+      ]
+    },
+    {
+      "command": "roboclick_action_file_create_zip",
+      "name_long": "roboclick_action_file_create_zip",
+      "name_short_options": [
+        "create_zip",
+        "file_create_zip"
+      ],
+      "description": "Create a zip from explicit files and/or directory trees. If any required source is missing, write a <zip>_error.txt listing the gaps and exit the chain. Also zip that error text as <zip>_error.zip. On missing sources, delete any stale zip. On success, delete any prior error files.",
+      "summary": "Create a zip from explicit files and/or directory trees.",
+      "variables": [
+        {
+          "name": "zip_path",
+          "description": "Absolute path where the zip file should be written.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "files",
+          "description": "List of dicts with 'arcname' (name inside zip) and 'source' (absolute path). Example: [{'arcname': 'story_guide.md', 'source': '/abs/path/story_guide.md'}]",
+          "type": "list",
+          "default": []
+        },
+        {
+          "name": "dirs",
+          "description": "List of dicts with 'path' (absolute dir to walk recursively) and 'arcname_prefix' (prefix inside the zip for files in this dir). Example: [{'path': '/abs/source/raw', 'arcname_prefix': 'source/raw'}]. Dirs must exist; missing dirs are reported as errors.",
+          "type": "list",
+          "default": []
+        }
+      ],
+      "variable_names": [
+        "zip_path",
+        "files",
+        "dirs"
+      ],
+      "category": "File",
+      "returns": "",
+      "aliases": [
+        "create_zip",
+        "file_create_zip"
+      ]
+    },
+    {
+      "command": "roboclick_action_file_text_yaml_fix",
+      "name_long": "roboclick_action_file_text_yaml_fix",
+      "name_short_options": [
+        "file_text_yaml_fix"
+      ],
+      "description": "Fix malformed YAML with unindented block scalar content.",
+      "summary": "Fix malformed YAML with unindented block scalar content.",
+      "variables": [
+        {
+          "name": "file_name",
+          "description": "Filename to fix in place.",
+          "type": "string",
+          "default": ""
+        }
+      ],
+      "variable_names": [
+        "file_name"
+      ],
+      "category": "File",
+      "returns": "None on success, exit_no_tab if file missing.",
+      "aliases": [
+        "file_text_yaml_fix"
       ]
     },
     {
       "command": "roboclick_action_google_doc_add_text",
       "name_long": "roboclick_action_google_doc_add_text",
       "name_short_options": [
-        "add_text",
         "add",
         "google_doc_add_text"
       ],
@@ -2023,7 +2090,6 @@
       "category": "Google Doc",
       "returns": "Pass-through action result.",
       "aliases": [
-        "add_text",
         "add",
         "google_doc_add_text"
       ]
@@ -2183,6 +2249,54 @@
       ]
     },
     {
+      "command": "roboclick_action_image_remove_background",
+      "name_long": "roboclick_action_image_remove_background",
+      "name_short_options": [
+        "image_remove_background",
+        "remove_background"
+      ],
+      "description": "Key a flat chroma screen background (green or magenta) out of an image, replacing it with real transparency, in place.",
+      "summary": "Key a flat chroma screen background (green or magenta) out of an image, replacing it with real transparency, in place.",
+      "variables": [
+        {
+          "name": "file_name",
+          "description": "Image to process, relative to the part directory. Overwritten as an RGBA png.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "color_key",
+          "description": "Which screen colour to remove: green or magenta.",
+          "type": "string",
+          "default": "green"
+        },
+        {
+          "name": "threshold_low",
+          "description": "Keyness where edge feathering starts.",
+          "type": "string",
+          "default": "20"
+        },
+        {
+          "name": "threshold_high",
+          "description": "Keyness treated as pure background.",
+          "type": "string",
+          "default": "90"
+        }
+      ],
+      "variable_names": [
+        "file_name",
+        "color_key",
+        "threshold_low",
+        "threshold_high"
+      ],
+      "category": "Image",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "image_remove_background",
+        "remove_background"
+      ]
+    },
+    {
       "command": "roboclick_action_image_upscale",
       "name_long": "roboclick_action_image_upscale",
       "name_short_options": [
@@ -2234,8 +2348,7 @@
       "command": "roboclick_action_openscad_render",
       "name_long": "roboclick_action_openscad_render",
       "name_short_options": [
-        "openscad_render",
-        "render"
+        "openscad_render"
       ],
       "description": "Openscad render.",
       "summary": "Openscad render.",
@@ -2274,8 +2387,7 @@
       "category": "OpenSCAD",
       "returns": "Pass-through action result.",
       "aliases": [
-        "openscad_render",
-        "render"
+        "openscad_render"
       ]
     },
     {
@@ -2442,8 +2554,7 @@
       "command": "roboclick_action_wait_for_file",
       "name_long": "roboclick_action_wait_for_file",
       "name_short_options": [
-        "wait_for_file",
-        "file"
+        "wait_for_file"
       ],
       "description": "Wait for file.",
       "summary": "Wait for file.",
@@ -2489,6 +2600,18 @@
           "description": "sixth candidate file name to wait for.",
           "type": "string",
           "default": ""
+        },
+        {
+          "name": "timeout",
+          "description": "Seconds to wait before exiting the current action chain.",
+          "type": "number",
+          "default": 300
+        },
+        {
+          "name": "interval",
+          "description": "Seconds between file checks.",
+          "type": "number",
+          "default": 2
         }
       ],
       "variable_names": [
@@ -2498,16 +2621,17 @@
         "file_name_3",
         "file_name_4",
         "file_name_5",
-        "file_name_6"
+        "file_name_6",
+        "timeout",
+        "interval"
       ],
       "category": "Utility",
       "returns": "Pass-through action result.",
       "aliases": [
-        "wait_for_file",
-        "file"
+        "wait_for_file"
       ]
     }
   ],
-  "generated_date": "2026-06-11",
-  "total_actions": 60
+  "generated_date": "2026-07-06",
+  "total_actions": 64
 }
