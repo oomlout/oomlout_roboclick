@@ -1941,11 +1941,25 @@
           "description": "Path to the output file to create or update.",
           "type": "string",
           "default": ""
+        },
+        {
+          "name": "exit_on_missing",
+          "description": "Exit the current roboclick when the source file is missing.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "delete_before_copy",
+          "description": "Delete the destination first so a missing source leaves it absent rather than stale.",
+          "type": "boolean",
+          "default": true
         }
       ],
       "variable_names": [
         "file_source",
-        "file_destination"
+        "file_destination",
+        "exit_on_missing",
+        "delete_before_copy"
       ],
       "category": "File",
       "returns": "Pass-through action result.",
@@ -2391,6 +2405,47 @@
       ]
     },
     {
+      "command": "roboclick_action_pdf_create",
+      "name_long": "roboclick_action_pdf_create",
+      "name_short_options": [
+        "pdf_create",
+        "create_pdf"
+      ],
+      "description": "Create a single PDF from a list of PDF files.",
+      "summary": "Create a single PDF from a list of PDF files.",
+      "variables": [
+        {
+          "name": "pdfs",
+          "description": "List of PDF files to merge into one output PDF.",
+          "type": "list",
+          "default": []
+        },
+        {
+          "name": "file_destination",
+          "description": "Path to the output PDF file.",
+          "type": "string",
+          "default": "combined.pdf"
+        },
+        {
+          "name": "fill_missing_files_with_blank_page",
+          "description": "Whether missing input files should be replaced with a blank A4 page labeled with the missing filename.",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "variable_names": [
+        "pdfs",
+        "file_destination",
+        "fill_missing_files_with_blank_page"
+      ],
+      "category": "PDF",
+      "returns": "Pass-through action result.",
+      "aliases": [
+        "pdf_create",
+        "create_pdf"
+      ]
+    },
+    {
       "command": "roboclick_action_run_python",
       "name_long": "roboclick_action_run_python",
       "name_short_options": [
@@ -2531,6 +2586,12 @@
           "description": "Dictionary data passed into template rendering. For each string value, the template also gets helper strings named `{key}_upper`, `{key}_lower`, `{key}_length_1` to `{key}_length_9`, `{key}_length_1_upper` to `{key}_length_9_upper`, and `{key}_length_1_lower` to `{key}_length_9_lower`.",
           "type": "string",
           "default": ""
+        },
+        {
+          "name": "dict_data_yaml_files",
+          "description": "Map of template variable names to YAML files whose parsed contents are loaded fresh at render time.",
+          "type": "dict",
+          "default": {}
         }
       ],
       "variable_names": [
@@ -2540,7 +2601,8 @@
         "search_and_replace",
         "convert_to_pdf",
         "convert_to_png",
-        "dict_data"
+        "dict_data",
+        "dict_data_yaml_files"
       ],
       "category": "Text",
       "returns": "Pass-through action result.",
@@ -2632,6 +2694,6 @@
       ]
     }
   ],
-  "generated_date": "2026-07-06",
-  "total_actions": 64
+  "generated_date": "2026-07-08",
+  "total_actions": 65
 }
