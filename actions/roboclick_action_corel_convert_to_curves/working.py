@@ -50,7 +50,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_corel_convert_to_curves", old, **kwargs)
 
 def old(**kwargs):
     """Convert selected items to curves in CorelDRAW"""

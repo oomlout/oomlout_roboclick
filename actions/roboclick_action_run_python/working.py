@@ -2,6 +2,7 @@ import json
 import os
 import subprocess
 import sys
+import robo_roboclick
 
 d = {}
 
@@ -52,7 +53,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_run_python", old, **kwargs)
 
 def old(**kwargs):
     """Run a python script with the action details passed as --kwargs json"""

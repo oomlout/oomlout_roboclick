@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -50,7 +51,7 @@ def openscad_render(**kwargs):
     return _dispatch_action("openscad_render", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_openscad_render_file", old, **kwargs)
 
 def old(**kwargs):
     """Compatibility wrapper for openscad_render."""

@@ -1,4 +1,5 @@
 import os
+import robo_roboclick
 
 d = {}
 
@@ -44,7 +45,7 @@ def define():
     return defined_variable
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_image_remove_background", old, **kwargs)
 
 def old(**kwargs):
     """Remove a chroma key screen from an image, leaving real transparency.

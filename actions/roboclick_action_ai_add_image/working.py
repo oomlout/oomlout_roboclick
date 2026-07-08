@@ -51,7 +51,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_add_image", old, **kwargs)
 
 def old(**kwargs):
     """Add a file (alias for add_image)"""

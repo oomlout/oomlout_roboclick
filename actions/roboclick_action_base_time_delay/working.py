@@ -3,6 +3,7 @@ import random
 import sys
 
 import time
+import robo_roboclick
 
 d = {}
 
@@ -89,7 +90,7 @@ def _as_bool(value, default):
     return bool(value)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_base_time_delay", old, **kwargs)
 
 def old(**kwargs):
     action_cfg = kwargs.get("action", {}) or {}

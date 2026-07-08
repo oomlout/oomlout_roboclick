@@ -1,4 +1,5 @@
 import os
+import robo_roboclick
 
 d = {}
 
@@ -49,7 +50,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_image_crop", old, **kwargs)
 
 def old(**kwargs):
     """Crop image to specified format."""

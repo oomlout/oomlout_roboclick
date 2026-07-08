@@ -1,4 +1,5 @@
 import os
+import robo_roboclick
 
 d = {}
 
@@ -51,7 +52,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_text_fix_yaml_copy_paste", old, **kwargs)
 
 def old(**kwargs):
     """Fix YAML formatting from copy-pasted content."""

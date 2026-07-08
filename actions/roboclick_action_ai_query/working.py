@@ -56,8 +56,7 @@ def _scroll_lock_toggled():
 
 
 def action(**kwargs):
-    #return old(**kwargs)
-    return new(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_query", new, **kwargs)
 
 
 def new(**kwargs): 
@@ -119,17 +118,16 @@ def new(**kwargs):
                         with open(filename_absolute, 'r', encoding='utf-8') as f:
                             query_text = f.read()
                             if f_string_replace:
-                                #replace {tags} in query_text with values from workings, leaving missing tags unchanged
-                                    import string
+                                #replace {tags} in query_text with values from workings, leaving missing tags
+                                #and literal braces (JSON examples) unchanged. str.format_map raised on any
+                                #literal '{' and silently disabled substitution for the whole text.
+                                    import re
                                     workings = kwargs.get("workings", {})
-                                    class SafeDict(dict):
-                                        def __missing__(self, key):
-                                            return '{' + key + '}'
-                                    try:
-                                        query_text = query_text.format_map(SafeDict(workings))
-                                    except Exception as e:
-                                        print(f"     Error formatting query_text: {e}")
-                                        robo_roboclick.robo_delay(delay=10)
+                                    query_text = re.sub(
+                                        r"\{([A-Za-z_][A-Za-z0-9_]*)\}",
+                                        lambda m: str(workings[m.group(1)]) if m.group(1) in workings else m.group(0),
+                                        query_text,
+                                    )
                         query_texts.append(query_text)
                         print(f"     Loaded query text from {filename_absolute}")
                         

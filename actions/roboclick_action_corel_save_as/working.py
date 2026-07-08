@@ -49,7 +49,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_corel_save_as", old, **kwargs)
 
 def old(**kwargs):
     """Save file with new name in CorelDRAW."""

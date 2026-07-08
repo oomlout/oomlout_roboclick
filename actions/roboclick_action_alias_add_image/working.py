@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -49,7 +50,7 @@ def ai_add_image(**kwargs):
     return _dispatch_action("ai_add_image", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_add_image", old, **kwargs)
 
 def old(**kwargs):
     """RETIRED - use ai_add_image instead."""

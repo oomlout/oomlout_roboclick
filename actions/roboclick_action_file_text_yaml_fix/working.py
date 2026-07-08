@@ -18,6 +18,7 @@ Returns None on success, "exit_no_tab" if the file is missing.
 
 import os
 import re
+import robo_roboclick
 
 
 def describe():
@@ -120,6 +121,9 @@ def _write(pairs):
 
 
 def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_file_text_yaml_fix", _action_impl, **kwargs)
+
+def _action_impl(**kwargs):
     action_cfg = kwargs.get("action", {})
     file_name  = action_cfg.get("file_name", "")
     directory  = kwargs.get("directory", "")

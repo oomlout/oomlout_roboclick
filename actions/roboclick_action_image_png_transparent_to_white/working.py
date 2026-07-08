@@ -1,4 +1,5 @@
 import os
+import robo_roboclick
 
 d = {}
 
@@ -48,7 +49,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_image_png_transparent_to_white", old, **kwargs)
 
 def old(**kwargs):
     """Convert transparent PNG to white background PNG."""

@@ -55,7 +55,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_corel_trace", old, **kwargs)
 
 def old(**kwargs):
     """Trace bitmap image in CorelDRAW"""

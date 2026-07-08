@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -48,7 +49,7 @@ def ai_add_file(**kwargs):
     return _dispatch_action("ai_add_file", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_add_file", old, **kwargs)
 
 def old(**kwargs):
     """RETIRED - use ai_add_file instead."""

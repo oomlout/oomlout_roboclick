@@ -53,7 +53,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_google_doc_add_text", old, **kwargs)
 
 def old(**kwargs):
     """Add text to a Google Doc at specified position. file to source defaults to /google_doc_url.txt if url is not provided."""

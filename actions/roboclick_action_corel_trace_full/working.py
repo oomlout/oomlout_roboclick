@@ -1,6 +1,7 @@
 import copy
 
 import os
+import robo_roboclick
 
 d = {}
 
@@ -69,7 +70,7 @@ def run_action(**kwargs):
     return _dispatch_action(command_name, **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_corel_trace_full", old, **kwargs)
 
 def old(**kwargs):
     """Complete trace workflow in CorelDRAW."""

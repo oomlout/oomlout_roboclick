@@ -180,6 +180,52 @@ def test_9(**kwargs):
     }
 
 
+def test_10(**kwargs):
+    """Test 10: an invalid png is deleted and retried as a failed save."""
+    working = _load_working_module()
+    calls = _stub_robo(working, create_on_calls={2}, invalid_on_calls={1})
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "bad_then_good.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+            },
+        )
+        output_path = Path(temp_dir) / file_name
+        output_exists = output_path.exists()
+        output_is_png = _path_is_png(output_path) if output_exists else False
+    retry_prompt = "oops the image seems to have not generated please try again"
+    passed = output_exists and output_is_png and calls["save_count"] == 2 and calls["pasted"] == [retry_prompt]
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}, output_is_png={output_is_png}",
+    }
+
+
+def test_11(**kwargs):
+    """Test 11: an invalid png is deleted even when retries are disabled."""
+    working = _load_working_module()
+    calls = _stub_robo(working, invalid_on_calls={1})
+    with tempfile.TemporaryDirectory() as temp_dir:
+        file_name = "bad_no_retry.png"
+        working.action(
+            directory_absolute=temp_dir,
+            action={
+                "file_name": file_name,
+                "mode_ai_wait": "fast_clipboard_state",
+                "retry_if_failed": False,
+            },
+        )
+        output_exists = (Path(temp_dir) / file_name).exists()
+    passed = not output_exists and calls["save_count"] == 1 and calls["pasted"] == []
+    return {
+        "passed": passed,
+        "details": f"save_count={calls['save_count']}, pasted={calls['pasted']!r}, output_exists={output_exists}",
+    }
+
+
 def test(test_to_run="all", **kwargs):
     selected = _resolve_selected_tests(test_to_run)
     if not selected:
@@ -241,7 +287,29 @@ def _write_text(path, content):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8")
 
-def _stub_robo(working, create_on_calls):
+def _write_valid_png(path):
+    from PIL import Image
+
+    with Image.new("RGB", (1, 1), (255, 255, 255)) as img:
+        img.save(path, format="PNG")
+
+def _path_is_png(path):
+    from PIL import Image
+
+    try:
+        with Image.open(path) as img:
+            if img.format != "PNG":
+                return False
+            img.verify()
+        return True
+    except Exception:
+        return False
+
+def _stub_robo(working, create_on_calls=None, invalid_on_calls=None):
+    if create_on_calls is None:
+        create_on_calls = set()
+    if invalid_on_calls is None:
+        invalid_on_calls = set()
     calls = {
         "save_count": 0,
         "pasted": [],
@@ -259,13 +327,16 @@ def _stub_robo(working, create_on_calls):
 
     def save_image(**kwargs):
         calls["save_count"] += 1
-        if calls["save_count"] in create_on_calls:
+        if calls["save_count"] in create_on_calls or calls["save_count"] in invalid_on_calls:
             action = kwargs.get("action", {})
             file_name = action.get("file_name", "working.png")
             directory_absolute = kwargs.get("directory_absolute", "")
             output_path = Path(directory_absolute) / file_name
             output_path.parent.mkdir(parents=True, exist_ok=True)
-            output_path.write_bytes(b"not a real png")
+            if calls["save_count"] in invalid_on_calls:
+                output_path.write_text("<html>not an image</html>", encoding="utf-8")
+            else:
+                _write_valid_png(output_path)
 
     working.robo_roboclick.robo_delay = no_op
     working.robo_roboclick.ai_wait_mode_fast_check = no_op

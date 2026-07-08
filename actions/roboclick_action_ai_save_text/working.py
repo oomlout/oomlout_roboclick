@@ -58,7 +58,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_save_text", old, **kwargs)
 
 def _extract_between_tags(text, tag_open, tag_close):
     if not tag_open or not tag_close:
@@ -171,7 +171,7 @@ def _sanitize_text(text):
     text = "".join(replacements.get(char, char) for char in text)
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
-    return _strip_emoji(text)
+    return _strip_emoji(text).strip()
 
 def _sanitize_double_linebreaks(text):
     def reduce_linebreaks(match):

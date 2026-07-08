@@ -173,6 +173,47 @@ def test_8(**kwargs):
     }
 
 
+def test_9(**kwargs):
+    """Test 9: sanitize_text trims whitespace at the beginning and end by default."""
+    working = _load_working_module()
+    copied_text = " \n\t Alpha\u2014beta \U0001f642 \n\t "
+    expected = "Alpha-beta"
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "trimmed.txt",
+            },
+        )
+        output = (Path(temp_dir) / "trimmed.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == expected,
+        "details": f"output={output!r}",
+    }
+
+
+def test_10(**kwargs):
+    """Test 10: disabling sanitize_text preserves whitespace at the beginning and end."""
+    working = _load_working_module()
+    copied_text = " \n\t Alpha\n\t "
+    with tempfile.TemporaryDirectory() as temp_dir:
+        _stub_copy(working, copied_text)
+        working.action(
+            directory=temp_dir,
+            action={
+                "file_name": "not_trimmed.txt",
+                "sanitize_text": False,
+                "sanitize_double_linebreaks": False,
+            },
+        )
+        output = (Path(temp_dir) / "not_trimmed.txt").read_text(encoding="utf-8")
+    return {
+        "passed": output == copied_text,
+        "details": f"output={output!r}",
+    }
+
+
 def test(test_to_run="all", **kwargs):
     selected = _resolve_selected_tests(test_to_run)
     if not selected:

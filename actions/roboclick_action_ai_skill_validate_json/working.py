@@ -1,4 +1,5 @@
 import copy
+import robo_roboclick
 
 d = {}
 
@@ -63,7 +64,7 @@ def browser_close_tab(**kwargs):
     return _dispatch_action("browser_close_tab", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_skill_validate_json", old, **kwargs)
 
 def old(**kwargs):
     """Validate and fix JSON content using AI."""

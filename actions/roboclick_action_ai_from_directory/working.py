@@ -44,6 +44,9 @@ def test(**kwargs):
 
 
 def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_ai_from_directory", _action_impl, **kwargs)
+
+def _action_impl(**kwargs):
     print("")
     print(".:action:. -- ai_from_directory -- loading directory action chain")
 
@@ -122,6 +125,25 @@ def action(**kwargs):
             oomlout_roboclick.run_action(**run_kwargs)
 
 
+_PLACEHOLDER_RE = None
+
+
+def _substitute_str(text, workings):
+    """Replace {key} only where key is a known working. Literal braces (JSON
+    schema examples in prompts, etc.) are left untouched. str.format_map was
+    used before, but any literal '{' raised and silently disabled
+    substitution for the WHOLE string — prompts then reached the AI with raw
+    '{base_length}'-style placeholders."""
+    global _PLACEHOLDER_RE
+    import re
+    if _PLACEHOLDER_RE is None:
+        _PLACEHOLDER_RE = re.compile(r"\{([A-Za-z_][A-Za-z0-9_]*)\}")
+    return _PLACEHOLDER_RE.sub(
+        lambda m: str(workings[m.group(1)]) if m.group(1) in workings else m.group(0),
+        text,
+    )
+
+
 def _substitute_dict(obj, workings):
     """Recursively substitute {variable} in all string values."""
     if isinstance(obj, dict):
@@ -129,11 +151,5 @@ def _substitute_dict(obj, workings):
     if isinstance(obj, list):
         return [_substitute_dict(v, workings) for v in obj]
     if isinstance(obj, str):
-        class SafeDict(dict):
-            def __missing__(self, key):
-                return "{" + key + "}"
-        try:
-            return obj.format_map(SafeDict(workings))
-        except Exception:
-            return obj
+        return _substitute_str(obj, workings)
     return obj

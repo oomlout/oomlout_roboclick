@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -46,7 +47,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_skill_image_prompt_full", old, **kwargs)
 
 def old(**kwargs):
     """ make an image prompt using AI."""

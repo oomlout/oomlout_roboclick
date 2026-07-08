@@ -1,5 +1,6 @@
 import os
 import zipfile
+import robo_roboclick
 
 
 def define():
@@ -54,6 +55,9 @@ def _resolve(path, directory):
 
 
 def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_file_create_zip", _action_impl, **kwargs)
+
+def _action_impl(**kwargs):
     action_cfg = kwargs.get("action", {})
     zip_path   = action_cfg.get("zip_path", "")
     files      = action_cfg.get("files", [])

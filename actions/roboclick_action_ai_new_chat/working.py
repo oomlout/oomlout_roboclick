@@ -52,7 +52,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_new_chat", old, **kwargs)
 
 def old(**kwargs):
     """Open new chat session"""

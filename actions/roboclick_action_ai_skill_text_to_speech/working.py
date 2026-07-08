@@ -1,4 +1,5 @@
 import copy
+import robo_roboclick
 
 d = {}
 
@@ -48,7 +49,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_skill_text_to_speech", old, **kwargs)
 
 def old(**kwargs):
     """Convert text to speech using AI."""

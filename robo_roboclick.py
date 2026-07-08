@@ -9,6 +9,111 @@ import jinja2
 import pickle
 import copy
 
+_ACTION_LOG_IMPORTANT_KEYS = (
+    "file_name",
+    "file_destination",
+    "file_source",
+    "file_output",
+    "file_input",
+    "pdfs",
+    "pdf_files",
+    "files",
+    "text",
+    "content",
+    "url",
+    "directory",
+    "mode",
+    "mode_ai_wait",
+    "delay",
+    "position",
+    "position_click",
+    "x",
+    "y",
+    "width",
+    "height",
+)
+
+def _robo_compact_log_value(value, max_chars=36):
+    if isinstance(value, bool):
+        text = "true" if value else "false"
+    elif isinstance(value, (list, tuple)):
+        items = [_robo_compact_log_value(item, 14) for item in value[:3]]
+        suffix = ",..." if len(value) > 3 else ""
+        text = "[" + ",".join(items) + suffix + "]"
+    elif isinstance(value, dict):
+        keys = [str(key) for key in list(value.keys())[:3]]
+        suffix = ",..." if len(value) > 3 else ""
+        text = "{" + ",".join(keys) + suffix + "}"
+    else:
+        text = str(value)
+
+    text = " ".join(text.replace("\r", " ").replace("\n", " ").replace("\t", " ").split())
+    if len(text) > max_chars:
+        return text[: max(0, max_chars - 3)] + "..."
+    return text
+
+def _robo_action_log_values(action_cfg, max_fields=3):
+    if not isinstance(action_cfg, dict):
+        return ""
+
+    selected = []
+    seen = set()
+    for key in _ACTION_LOG_IMPORTANT_KEYS:
+        if key in action_cfg and action_cfg.get(key) not in (None, ""):
+            selected.append(key)
+            seen.add(key)
+            if len(selected) >= max_fields:
+                break
+
+    if len(selected) < max_fields:
+        for key, value in action_cfg.items():
+            if key == "command" or str(key).startswith("_") or key in seen:
+                continue
+            if value in (None, ""):
+                continue
+            selected.append(key)
+            if len(selected) >= max_fields:
+                break
+
+    return " ".join(f"{key}={_robo_compact_log_value(action_cfg.get(key))}" for key in selected)
+
+def _robo_short_action_log_line(tag, message, max_chars=180):
+    prefix = f"[roboclick] [{tag}] "
+    text = " ".join(str(message).replace("\r", " ").replace("\n", " ").replace("\t", " ").split())
+    line = prefix + text
+    if len(line) > max_chars:
+        return line[: max(0, max_chars - 3)] + "..."
+    return line
+
+def robo_action_log_start(action_name, **kwargs):
+    action_cfg = kwargs.get("action", {}) or {}
+    command = action_name or (action_cfg.get("command", "") if isinstance(action_cfg, dict) else "")
+    values = _robo_action_log_values(action_cfg)
+    message = f"{command} {values}".strip()
+    print(_robo_short_action_log_line("action", message))
+
+def robo_action_log_finished(action_name, result="", error=None):
+    command = action_name or "unknown"
+    if error is not None:
+        message = f"{command} error={error.__class__.__name__}"
+    elif result in ("exit", "exit_no_tab"):
+        message = f"{command} result={result}"
+    elif isinstance(result, dict):
+        message = f"{command} result=updated {len(result)} value(s)"
+    else:
+        message = f"{command} ok"
+    print(_robo_short_action_log_line("action_finished", message))
+
+def robo_action_run(action_name, action_callable, **kwargs):
+    robo_action_log_start(action_name, **kwargs)
+    try:
+        result = action_callable(**kwargs)
+    except Exception as exc:
+        robo_action_log_finished(action_name, error=exc)
+        raise
+    robo_action_log_finished(action_name, result=result)
+    return result
+
 _PYAUTOGUI_ORIGINALS = {}
 
 

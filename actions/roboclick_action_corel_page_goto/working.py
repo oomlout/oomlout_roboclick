@@ -49,7 +49,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_corel_page_goto", old, **kwargs)
 
 def old(**kwargs):
     """Navigate to specific page in CorelDRAW"""

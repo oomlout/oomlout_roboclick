@@ -50,7 +50,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_convert_svg_to_png", old, **kwargs)
 
 def old(**kwargs):
     """Convert SVG file to PNG format."""

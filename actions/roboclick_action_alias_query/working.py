@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -51,7 +52,7 @@ def ai_query(**kwargs):
     return _dispatch_action("ai_query", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_query", old, **kwargs)
 
 def old(**kwargs):
     """RETIRED - use ai_query instead."""

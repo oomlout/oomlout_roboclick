@@ -47,7 +47,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_set_mode", old, **kwargs)
 
 def old(**kwargs):
     """Set AI mode (e.g., deep_research)"""

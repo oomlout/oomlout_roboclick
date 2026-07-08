@@ -49,6 +49,17 @@ Notes:
 - Several action modules still import `robo`, while this repo currently ships [`robo_roboclick.py`](robo_roboclick.py) at the top level and [`old/robo_roboclick.py`](old/robo_roboclick.py) in `old/`. If you hit import errors, that compatibility path likely needs cleanup.
 - Some action folders still show migration mismatches between folder names and metadata names; the runner tolerates at least some of these cases.
 
+## Action Logging Convention
+
+Every action module should make its public `action(**kwargs)` entry point call `robo_roboclick.robo_action_run(...)`. This prints compact one-line start and finish messages:
+
+```python
+def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_example", old, **kwargs)
+```
+
+For actions with custom inline logic, move that logic into `_action_impl(**kwargs)` and wrap that instead. New action modules should keep this pattern so workflows consistently emit `[roboclick] [action] ...` and `[roboclick] [action_finished] ...` lines.
+
 ## Docs Generation
 
 Regenerate action documentation:

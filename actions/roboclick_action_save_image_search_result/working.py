@@ -52,7 +52,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_save_image_search_result", old, **kwargs)
 
 def old(**kwargs):
     """Save image from search results."""

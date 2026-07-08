@@ -53,7 +53,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_google_doc_new", old, **kwargs)
 
 def old(**kwargs):
     """Create a new Google Doc and return its URL"""

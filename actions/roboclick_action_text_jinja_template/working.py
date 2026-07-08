@@ -38,6 +38,7 @@ def describe():
         v.append({'name': 'convert_to_pdf', 'description': 'Whether to convert rendered output to PDF.', 'type': 'string', 'default': ''})
         v.append({'name': 'convert_to_png', 'description': 'Whether to convert rendered output to PNG.', 'type': 'string', 'default': ''})
         v.append({'name': 'dict_data', 'description': 'Dictionary data passed into template rendering. For each string value, the template also gets helper strings named `{key}_upper`, `{key}_lower`, `{key}_length_1` to `{key}_length_9`, `{key}_length_1_upper` to `{key}_length_9_upper`, and `{key}_length_1_lower` to `{key}_length_9_lower`.', 'type': 'string', 'default': ''})
+        v.append({'name': 'dict_data_yaml_files', 'description': 'Map of template variable names to YAML files whose parsed contents are loaded fresh at render time.', 'type': 'dict', 'default': {}})
     d["variables"] = v
     return d
 
@@ -56,7 +57,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_text_jinja_template", old, **kwargs)
 
 def old(**kwargs):
     """Process text using Jinja template."""
@@ -79,10 +80,12 @@ def old(**kwargs):
     # run - a generated joke, a generated background image - reach the template
     # instead of the stale value baked into the source yaml at build time.
     dict_data_files = action.get("dict_data_files", {})
+    dict_data_yaml_files = action.get("dict_data_yaml_files", {})
     dict_data_files_exists = action.get("dict_data_files_exists", {})
     has_content = isinstance(dict_data_files, dict) and dict_data_files != {}
+    has_yaml = isinstance(dict_data_yaml_files, dict) and dict_data_yaml_files != {}
     has_exists = isinstance(dict_data_files_exists, dict) and dict_data_files_exists != {}
-    if has_content or has_exists:
+    if has_content or has_yaml or has_exists:
         dict_data = {}
         try:
             dict_data = robo_roboclick.load_yaml_unicode_test(file_source) or {}
@@ -94,6 +97,14 @@ def old(**kwargs):
                 if os.path.isfile(file_path):
                     with open(file_path, "r", encoding="utf-8") as infile:
                         dict_data[key] = infile.read().strip()
+        if has_yaml:
+            for key, file_name in dict_data_yaml_files.items():
+                file_path = file_name if os.path.isabs(file_name) else os.path.join(directory, file_name)
+                if os.path.isfile(file_path):
+                    try:
+                        dict_data[key] = robo_roboclick.load_yaml_unicode_test(file_path) or {}
+                    except Exception as error:
+                        print(f"could not load YAML data file {file_path}: {error}")
         if has_exists:
             for key, file_name in dict_data_files_exists.items():
                 file_path = file_name if os.path.isabs(file_name) else os.path.join(directory, file_name)

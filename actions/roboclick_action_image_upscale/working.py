@@ -1,6 +1,7 @@
 import copy
 
 import os
+import robo_roboclick
 
 d = {}
 
@@ -55,7 +56,7 @@ def image_crop(**kwargs):
     return _dispatch_action("image_crop", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_image_upscale", old, **kwargs)
 
 def old(**kwargs):
     """Upscale image resolution."""

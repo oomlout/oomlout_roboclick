@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -48,7 +49,7 @@ def browser_close_tab(**kwargs):
     return _dispatch_action("browser_close_tab", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_close_tab", old, **kwargs)
 
 def old(**kwargs):
     """RETIRED - use browser_close_tab instead."""

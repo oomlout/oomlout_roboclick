@@ -47,7 +47,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_browser_close_tab", old, **kwargs)
 
 def old(**kwargs):
     """Close the current browser tab"""

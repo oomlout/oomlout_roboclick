@@ -3,8 +3,17 @@ import io
 import re
 import sys
 import time
+import tempfile
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
+
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+
+try:
+    from pypdf import PdfReader
+except Exception:
+    from PyPDF2 import PdfReader
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -26,19 +35,16 @@ def test_1(**kwargs):
 
 
 def test_2(**kwargs):
-    """Test 2: define() returns a dict with basic metadata keys."""
+    """Test 2: define() returns a dict with basic metadata keys and aliases."""
     working = _load_working_module()
-    define_fn = getattr(working, "define", None)
-    if not callable(define_fn):
-        return {"passed": False, "details": "define() missing"}
-    metadata = define_fn()
-    if not isinstance(metadata, dict):
-        return {"passed": False, "details": "define() did not return dict"}
+    metadata = working.define()
+    aliases = metadata.get("name_short", [])
     required = ["name", "description", "variables", "category"]
     missing = [key for key in required if key not in metadata]
+    passed = len(missing) == 0 and "pdf_create" in aliases and "create_pdf" in aliases
     return {
-        "passed": len(missing) == 0,
-        "details": f"missing_keys={missing}",
+        "passed": passed,
+        "details": f"missing_keys={missing}, aliases={aliases!r}",
     }
 
 
@@ -55,40 +61,108 @@ def test_3(**kwargs):
         "details": f"working_test_result={result!r}",
     }
 
+
 def test_4(**kwargs):
-    """Test 4: missing source does not exit by default."""
+    """Test 4: merges the provided PDFs in order."""
     working = _load_working_module()
-    missing_source = str(BASE_DIR / "test_result" / "missing-source.txt")
-    result = working.old(
-        directory=str(BASE_DIR / "test_result"),
-        action={
-            "file_source": missing_source,
-            "file_destination": "copied.txt",
-        },
-    )
-    passed = result == ""
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        _write_pdf(temp_path / "one.pdf", "First PDF")
+        _write_pdf(temp_path / "two.pdf", "Second PDF")
+        working.action(
+            directory=temp_dir,
+            action={
+                "pdfs": ["one.pdf", "two.pdf"],
+                "file_destination": "combined.pdf",
+            },
+        )
+        output = PdfReader(str(temp_path / "combined.pdf"))
+        texts = [_page_text(page) for page in output.pages]
+    passed = len(texts) == 2 and "First PDF" in texts[0] and "Second PDF" in texts[1]
     return {
         "passed": passed,
-        "details": f"result={result!r}",
+        "details": f"texts={texts!r}",
     }
 
 
 def test_5(**kwargs):
-    """Test 5: exit_on_missing preserves the old exit behavior."""
+    """Test 5: missing input PDFs are replaced with a labeled A4 page by default."""
     working = _load_working_module()
-    missing_source = str(BASE_DIR / "test_result" / "missing-source.txt")
-    result = working.old(
-        directory=str(BASE_DIR / "test_result"),
-        action={
-            "file_source": missing_source,
-            "file_destination": "copied.txt",
-            "exit_on_missing": True,
-        },
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        _write_pdf(temp_path / "one.pdf", "First PDF")
+        _write_pdf(temp_path / "two.pdf", "Second PDF")
+        working.action(
+            directory=temp_dir,
+            action={
+                "pdfs": ["one.pdf", "missing.pdf", "two.pdf"],
+                "file_destination": "with_missing.pdf",
+            },
+        )
+        output = PdfReader(str(temp_path / "with_missing.pdf"))
+        texts = [_page_text(page) for page in output.pages]
+        missing_page_size = (
+            round(float(output.pages[1].mediabox.width)),
+            round(float(output.pages[1].mediabox.height)),
+        )
+    a4_size = (round(A4[0]), round(A4[1]))
+    passed = (
+        len(texts) == 3
+        and "First PDF" in texts[0]
+        and "missing.pdf" in texts[1]
+        and "Second PDF" in texts[2]
+        and missing_page_size == a4_size
     )
-    passed = result == "exit_no_tab"
     return {
         "passed": passed,
-        "details": f"result={result!r}",
+        "details": f"texts={texts!r}, missing_page_size={missing_page_size}, a4_size={a4_size}",
+    }
+
+
+def test_6(**kwargs):
+    """Test 6: fill_missing_files_with_blank_page false skips missing input PDFs."""
+    working = _load_working_module()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        _write_pdf(temp_path / "one.pdf", "First PDF")
+        _write_pdf(temp_path / "two.pdf", "Second PDF")
+        working.action(
+            directory=temp_dir,
+            action={
+                "pdfs": ["one.pdf", "missing.pdf", "two.pdf"],
+                "file_destination": "skip_missing.pdf",
+                "fill_missing_files_with_blank_page": False,
+            },
+        )
+        output = PdfReader(str(temp_path / "skip_missing.pdf"))
+        texts = [_page_text(page) for page in output.pages]
+    passed = len(texts) == 2 and "First PDF" in texts[0] and "Second PDF" in texts[1]
+    return {
+        "passed": passed,
+        "details": f"texts={texts!r}",
+    }
+
+
+def test_7(**kwargs):
+    """Test 7: comma-separated PDF lists are accepted."""
+    working = _load_working_module()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        _write_pdf(temp_path / "one.pdf", "First PDF")
+        _write_pdf(temp_path / "two.pdf", "Second PDF")
+        working.action(
+            directory=temp_dir,
+            action={
+                "pdfs": "one.pdf, two.pdf",
+                "file_destination": "comma.pdf",
+            },
+        )
+        output = PdfReader(str(temp_path / "comma.pdf"))
+        texts = [_page_text(page) for page in output.pages]
+    passed = len(texts) == 2 and "First PDF" in texts[0] and "Second PDF" in texts[1]
+    return {
+        "passed": passed,
+        "details": f"texts={texts!r}",
     }
 
 
@@ -97,7 +171,7 @@ def test(test_to_run="all", **kwargs):
     if not selected:
         _write_text(
             SUMMARY_FILE,
-            "# roboclick_action_file_copy Tests\n\n"
+            "# roboclick_action_pdf_create Tests\n\n"
             f"- Status: failed\n"
             f"- Reason: unknown test_to_run `{test_to_run}`\n",
         )
@@ -115,7 +189,7 @@ def test(test_to_run="all", **kwargs):
     passed = sum(1 for item in results if item["status"] == "passed")
     failed = len(results) - passed
     lines = [
-        "# roboclick_action_file_copy Tests",
+        "# roboclick_action_pdf_create Tests",
         "",
         f"- Selected: {test_to_run}",
         f"- Total: {len(results)}",
@@ -147,6 +221,21 @@ def _load_working_module():
     module = module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _write_pdf(path, text):
+    c = canvas.Canvas(str(path), pagesize=A4)
+    c.setFont("Helvetica", 12)
+    c.drawString(72, A4[1] - 72, text)
+    c.showPage()
+    c.save()
+
+
+def _page_text(page):
+    try:
+        return page.extract_text() or ""
+    except Exception:
+        return ""
 
 
 def _write_text(path, content):
@@ -231,7 +320,7 @@ def main():
     if len(sys.argv) > 1:
         test_to_run = sys.argv[1]
     ok = test(test_to_run=test_to_run)
-    print(f"roboclick_action_file_copy tests complete. selected={test_to_run} passed={ok}")
+    print(f"roboclick_action_pdf_create tests complete. selected={test_to_run} passed={ok}")
     return 0 if ok else 1
 
 

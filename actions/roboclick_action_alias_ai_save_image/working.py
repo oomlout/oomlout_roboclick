@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -50,7 +51,7 @@ def save_image_generated(**kwargs):
     return _dispatch_action("save_image_generated", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_ai_save_image", old, **kwargs)
 
 def old(**kwargs):
     """Save AI-generated image (alias)."""

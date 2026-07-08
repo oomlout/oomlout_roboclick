@@ -1,3 +1,4 @@
+import robo_roboclick
 d = {}
 
 def describe():
@@ -49,7 +50,7 @@ def ai_new_chat(**kwargs):
     return _dispatch_action("ai_new_chat", **kwargs)
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_alias_new_chat", old, **kwargs)
 
 def old(**kwargs):
     """RETIRED - use ai_new_chat instead."""

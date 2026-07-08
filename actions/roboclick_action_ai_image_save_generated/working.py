@@ -53,7 +53,7 @@ def define():
     return defined_variable
 
 def action(**kwargs):
-    return new(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_image_save_generated", new, **kwargs)
 
 def _retry_count(value, default=1):
     if value in (None, ""):
@@ -107,10 +107,35 @@ def _send_retry_prompt():
     robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
     print(f".:retrying image generation:. {retry_prompt}")
 
+def _delete_bad_image(file_name_absolute):
+    try:
+        os.remove(file_name_absolute)
+        print(f".:deleted invalid image file {file_name_absolute}[:60]:.")
+    except FileNotFoundError:
+        pass
+    except Exception as e:
+        print(f".:failed to delete invalid image file {file_name_absolute}[:60]:. {e}")
+
+def _is_valid_png(file_name_absolute):
+    if not os.path.exists(file_name_absolute):
+        return False
+    try:
+        with Image.open(file_name_absolute) as img:
+            if img.format != "PNG":
+                return False
+            img.verify()
+        return True
+    except Exception:
+        return False
+
 def _save_image_once(kwargs, file_name_absolute):
     robo_roboclick.ai_check_for_too_many_requests()
     robo_roboclick.ai_save_image(**kwargs)
     if os.path.exists(file_name_absolute):
+        if not _is_valid_png(file_name_absolute):
+            print(f".:image file is not a valid png:.")
+            _delete_bad_image(file_name_absolute)
+            return False
         print("")
         print(f".:image saved to {file_name_absolute}[:60]:.")
         clean_png(file_name_absolute)

@@ -1,4 +1,5 @@
 import os
+import robo_roboclick
 
 d = {}
 
@@ -30,6 +31,8 @@ def describe():
     if True:
         v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
+        v.append({'name': 'exit_on_missing', 'description': 'Exit the current roboclick when the source file is missing.', 'type': 'boolean', 'default': False})
+        v.append({'name': 'delete_before_copy', 'description': 'Delete the destination first so a missing source leaves it absent rather than stale.', 'type': 'boolean', 'default': True})
     d["variables"] = v
     return d
 
@@ -47,8 +50,23 @@ def _check_key_pressed():
 def _scroll_lock_toggled():
     return False
 
+def _as_bool(value, default=False):
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value != 0
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in ("1", "true", "yes", "y", "on"):
+            return True
+        if normalized in ("0", "false", "no", "n", "off", ""):
+            return False
+    return bool(value)
+
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_file_copy", old, **kwargs)
 
 def old(**kwargs):
     """Copy file from source to destination"""
@@ -56,15 +74,26 @@ def old(**kwargs):
     action = kwargs.get("action", {})
     file_source = action.get("file_source", "")
     file_destination = action.get("file_destination", "")
+    exit_on_missing = _as_bool(action.get("exit_on_missing", False), False)
+    delete_before_copy = _as_bool(action.get("delete_before_copy", True), True)
     directory = kwargs.get("directory", "")
     file_destination = os.path.join(directory, file_destination)
-    
+
     return_value = ""
 
     if file_source == "" or file_destination == "":
         print("file_source or file_destination not set, skipping file copy")
         return
-    
+
+    # Delete the destination first (default) so the copy always reflects the
+    # current source: if the source is missing the destination ends up ABSENT
+    # rather than a stale leftover from an earlier run.
+    if delete_before_copy and os.path.isfile(file_destination):
+        try:
+            os.remove(file_destination)
+        except Exception as e:
+            print(f"Error deleting destination before copy: {e}")
+
     if os.path.isfile(file_source):
         print(f"copying {file_source} to {file_destination}")
         #use shutil to copy the file
@@ -79,7 +108,8 @@ def old(**kwargs):
             time.sleep(1)
     else:
         print(f"file {file_source} does not exist")
-        return_value = "exit_no_tab"
+        if exit_on_missing:
+            return_value = "exit_no_tab"
 
     return return_value
 

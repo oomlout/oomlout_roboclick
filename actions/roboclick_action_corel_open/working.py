@@ -50,6 +50,9 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_corel_open", _action_impl, **kwargs)
+
+def _action_impl(**kwargs):
     """Open file in CorelDRAW."""
     action = kwargs.get("action", {})
     # Use file_source when available

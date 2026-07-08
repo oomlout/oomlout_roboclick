@@ -1,5 +1,6 @@
 import os
 import time
+import robo_roboclick
 
 d = {}
 
@@ -56,7 +57,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_wait_for_file", old, **kwargs)
 
 def old(**kwargs):
     """Wait until one of the specified files exists."""

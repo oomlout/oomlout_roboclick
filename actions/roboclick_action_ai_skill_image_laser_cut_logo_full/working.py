@@ -1,6 +1,7 @@
 import oomlout_roboclick
 import copy
 from pathlib import Path
+import robo_roboclick
 
 d = {}
 
@@ -61,7 +62,7 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
-    return old(**kwargs)
+    return robo_roboclick.robo_action_run("roboclick_action_ai_skill_image_laser_cut_logo_full", old, **kwargs)
 
 def old(**kwargs):
     """ make a laser cut logo image using AI."""

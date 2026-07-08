@@ -49,6 +49,9 @@ def _scroll_lock_toggled():
     return False
 
 def action(**kwargs):
+    return robo_roboclick.robo_action_run("roboclick_action_affinity_open", _action_impl, **kwargs)
+
+def _action_impl(**kwargs):
     """Open file in Affinity."""
     action = kwargs.get("action", {})
     # Use file_source when available
