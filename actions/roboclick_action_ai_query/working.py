@@ -166,7 +166,7 @@ def new(**kwargs):
         query_texts = [query_texts]
 
     for query_text in query_texts:
-        robo_roboclick.ai_check_for_too_many_requests()#clear text box
+        robo_roboclick.ai_check_for_too_many_requests(**kwargs)#clear text box
         if True:
             print(".:clearing:.")
             #select all
@@ -206,11 +206,11 @@ def new(**kwargs):
             #ctrl enter
             robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
             #check for too many requests
-            robo_roboclick.ai_check_for_too_many_requests()
+            robo_roboclick.ai_check_for_too_many_requests(**kwargs)
         elif "fast" in mode_ai: 
             #robo_roboclick.robo_keyboard_press_enter(delay=1)
             robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
-            robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
+            robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai, **kwargs)
 
 
 def old(**kwargs):
@@ -302,7 +302,7 @@ def old(**kwargs):
     elif "fast" in mode_ai: 
         #robo_roboclick.robo_keyboard_press_enter(delay=1)
         robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
-        ai_wait_mode_fast_check(mode_ai_wait=mode_ai)
+        robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai, **kwargs)
 
 def test(**kwargs):
     try:

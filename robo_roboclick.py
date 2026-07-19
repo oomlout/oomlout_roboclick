@@ -1503,25 +1503,53 @@ def check_key_pressed():
         pass
     return None
 
+def _as_float(value, default=1.0):
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+def _config_delay_multiplier():
+    path = os.path.abspath("config_runtime.yaml")
+    if not os.path.exists(path):
+        return 1.0
+    try:
+        import yaml
+
+        with open(path, "r", encoding="utf-8") as file:
+            data = yaml.safe_load(file) or {}
+        pacing = data.get("pacing", {}) if isinstance(data, dict) else {}
+        return _as_float(pacing.get("delay_multiplier", 1), 1.0)
+    except Exception:
+        return 1.0
+
+def _delay_multiplier(kwargs):
+    value = kwargs.get("multiplier", None)
+    if value in (None, ""):
+        value = _config_delay_multiplier()
+    return max(0.0, _as_float(value, 1.0))
+
 def robo_delay(**kwargs):
     delay = kwargs.get('delay', 1)
-    #if delay is a string turn it into an int
-    if isinstance(delay, str):
-        delay = int(delay)
+    delay = _as_float(delay, 1.0)
     rand = kwargs.get('rand', 0)
     if rand == 0:
         rand = kwargs.get('random', 0)
         if rand == 0:
             rand = kwargs.get('randomize', 0)
+    rand = int(_as_float(rand, 0.0))
     message = kwargs.get('message', f"")
     if message != "":
         print(f"message")
     if rand > 0:
         rand_amount = random.randint(0, rand)
         delay = delay + rand_amount
+    delay = delay * _delay_multiplier(kwargs)
+    delay = int(delay)
     if delay <= 1:
         time.sleep(delay)
-    elif delay > 5:
+    elif delay > 10:
+        
         print("")
         print(f"<<<<<>>>>> {delay} ")
     
@@ -1989,7 +2017,42 @@ def robo_pdf_merge(**kwargs):
 
 ###### ai utilities
 
-def ai_check_for_too_many_requests():
+def _ai_provider_from_kwargs(kwargs):
+    action = kwargs.get("action", {})
+    if not isinstance(action, dict):
+        action = {}
+    workings = kwargs.get("workings", {})
+    if not isinstance(workings, dict):
+        workings = {}
+
+    provider = kwargs.get("base_ai_provider", workings.get("base_ai_provider", action.get("base_ai_provider", "open_ai")))
+    if provider in (None, ""):
+        provider = "open_ai"
+    provider = str(provider).strip().lower().replace("-", "_")
+    aliases = {
+        "openai": "open_ai",
+        "chatgpt": "open_ai",
+        "open_webui": "open_web_ui",
+        "openwebui": "open_web_ui",
+    }
+    return aliases.get(provider, provider)
+
+
+def ai_check_for_too_many_requests(**kwargs):
+    provider = _ai_provider_from_kwargs(kwargs)
+    if provider == "open_ai":
+        return ai_check_for_too_many_requests_open_ai(**kwargs)
+    if provider == "claude":
+        return ai_check_for_too_many_requests_claude(**kwargs)
+    if provider == "gemini":
+        return ai_check_for_too_many_requests_gemini(**kwargs)
+    if provider == "open_web_ui":
+        return ai_check_for_too_many_requests_open_web_ui(**kwargs)
+    print(f"ai_check_for_too_many_requests -- unknown base_ai_provider '{provider}', defaulting to open_ai")
+    return ai_check_for_too_many_requests_open_ai(**kwargs)
+
+
+def ai_check_for_too_many_requests_open_ai(**kwargs):
     #robo copy
     text = robo_keyboard_copy()
     if "making requests too quickly" in text.lower():
@@ -2021,19 +2084,31 @@ def ai_check_for_too_many_requests():
     #send backspace
     robo_keyboard_press_backspace(delay=1)
     #send backspace
-    
+
     robo_delay(delay=2)
 
 
+def ai_check_for_too_many_requests_claude(**kwargs):
+    return ""
 
 
-def ai_wait_mode_fast_check(mode_ai_wait="fast_button_state"):  
+def ai_check_for_too_many_requests_gemini(**kwargs):
+    return ""
+
+
+def ai_check_for_too_many_requests_open_web_ui(**kwargs):
+    return ""
+
+
+
+
+def ai_wait_mode_fast_check(mode_ai_wait="fast_button_state", **kwargs):
     if mode_ai_wait == "fast_button_state" or mode_ai_wait == "fast":
-        return ai_wait_mode_fast_check_state_of_submit_button_approach()
+        return ai_wait_mode_fast_check_state_of_submit_button_approach(**kwargs)
     elif mode_ai_wait == "fast_clipboard_state":
         return ai_wait_mode_fast_clipboard_creating_image_approach()
 
-def ai_wait_mode_fast_check_state_of_submit_button_approach():  
+def ai_wait_mode_fast_check_state_of_submit_button_approach(**kwargs):
     print("Waiting for AI to finish responding (fast mode)...")
     count = 0
     count_max = 100
@@ -2044,7 +2119,7 @@ def ai_wait_mode_fast_check_state_of_submit_button_approach():
     color_expecting = (236,236,236)
 
     while running and count < count_max:
-        ai_check_for_too_many_requests()
+        ai_check_for_too_many_requests(**kwargs)
         robo_delay(delay=10)
         pixel_color = pyautogui.screenshot().getpixel((point_check_color[0], point_check_color[1]))
         print(f"    Pixel color at {point_check_color}: {pixel_color} ")
@@ -2081,6 +2156,64 @@ def ai_wait_mode_fast_clipboard_creating_image_approach():
             print("    AI appears to be creating an image, waiting for it to finish...")
             
 
+def _png_file_snapshot(file_path):
+    if not os.path.exists(file_path):
+        return None
+    stat = os.stat(file_path)
+    return {
+        "size": stat.st_size,
+        "mtime_ns": stat.st_mtime_ns,
+    }
+
+
+def _png_file_was_corrected(before_snapshot, after_snapshot):
+    if after_snapshot is None:
+        return False
+    if before_snapshot is None:
+        return True
+    return (
+        before_snapshot.get("size") != after_snapshot.get("size")
+        or before_snapshot.get("mtime_ns") != after_snapshot.get("mtime_ns")
+    )
+
+
+def _is_valid_png(file_path):
+    if not os.path.exists(file_path):
+        return False, "file does not exist"
+
+    try:
+        with open(file_path, "rb") as handle:
+            data = handle.read(33)
+    except Exception as exc:
+        return False, f"could not read file ({exc})"
+
+    if len(data) < 33:
+        return False, "file is too small to be a valid PNG"
+
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        return False, "missing PNG signature"
+
+    if data[12:16] != b"IHDR":
+        return False, "missing IHDR chunk"
+
+    width = int.from_bytes(data[16:20], "big")
+    height = int.from_bytes(data[20:24], "big")
+    if width <= 0 or height <= 0:
+        return False, "invalid image dimensions in IHDR"
+
+    return True, "ok"
+
+
+def _save_image_from_position(position, file_name_absolute):
+    robo_mouse_click(position=position, delay=2, button="right")  # Click on the image to focus
+    robo_keyboard_press_down(delay=1, repeat=2)
+    robo_keyboard_press_enter(delay=5)
+    robo_keyboard_send(string=file_name_absolute, delay=5)
+    robo_keyboard_press_enter(delay=5)
+    robo_keyboard_send(string="y", delay=5)
+    robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+
+
 def ai_save_image(**kwargs):
     #position_click = kwargs.get("position_click", [960, 500])
     #position_click = kwargs.get("position_click", [960, 360])
@@ -2088,7 +2221,7 @@ def ai_save_image(**kwargs):
     #also set in kwags
     #position_click = kwargs.get("position_click", [960, 455])
     position_click = kwargs.get("position_click", [960, 600])
-    
+    position_click_low = kwargs.get("position_click_low", [960, 725])
     action = kwargs.get("action", {})
     file_name = action.get("file_name", "working.png")   
     directory_absolute = kwargs.get("directory_absolute", "")
@@ -2096,13 +2229,35 @@ def ai_save_image(**kwargs):
     print(f"Saving image as {file_name}")
     print(f"Resolved image save path: {file_name_absolute}")
     os.makedirs(os.path.dirname(file_name_absolute), exist_ok=True)
-    #save the image
-    robo_mouse_click(position=position_click, delay=2, button="right")  # Click on the image to focus
-    #press down twice
-    robo_keyboard_press_down(delay=1, repeat=2)
-    robo_keyboard_press_enter(delay=5)
-    robo_keyboard_send(string=file_name_absolute, delay=5)
-    robo_keyboard_press_enter(delay=5)
-    robo_keyboard_send(string="y", delay=5)
-    robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
+
+    snapshot_before = _png_file_snapshot(file_name_absolute)
+    _save_image_from_position(position_click, file_name_absolute)
+
+    snapshot_after = _png_file_snapshot(file_name_absolute)
+    was_corrected = _png_file_was_corrected(snapshot_before, snapshot_after)
+    is_valid, validation_reason = _is_valid_png(file_name_absolute)
+
+    if not was_corrected or not is_valid:
+        reason = []
+        if not was_corrected:
+            reason.append("file was not corrected/updated")
+        if not is_valid:
+            reason.append(f"PNG invalid: {validation_reason}")
+        reason_text = "; ".join(reason)
+        print(f"Primary save may have failed ({reason_text}); retrying from low position {position_click_low}.")
+
+        _save_image_from_position(position_click_low, file_name_absolute)
+        snapshot_after_retry = _png_file_snapshot(file_name_absolute)
+        was_corrected_retry = _png_file_was_corrected(snapshot_after, snapshot_after_retry)
+        is_valid_retry, validation_reason_retry = _is_valid_png(file_name_absolute)
+
+        if not was_corrected_retry or not is_valid_retry:
+            retry_reason = []
+            if not was_corrected_retry:
+                retry_reason.append("file still not corrected/updated")
+            if not is_valid_retry:
+                retry_reason.append(f"PNG still invalid: {validation_reason_retry}")
+            print(f"Warning: low-position retry did not fully recover save ({'; '.join(retry_reason)}).")
+
     print(f"Image saved as {file_name}")
+    

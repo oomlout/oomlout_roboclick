@@ -71,6 +71,45 @@ def scroll_lock_toggled() -> bool:
         return False
 
 
+def clear_scroll_lock() -> None:
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+
+        if (ctypes.windll.user32.GetKeyState(0x91) & 1) == 1:
+            ctypes.windll.user32.keybd_event(0x91, 0x45, 0, 0)
+            ctypes.windll.user32.keybd_event(0x91, 0x45, 2, 0)
+    except Exception:
+        return
+
+
+def _as_float(value: Any, default: float = 1.0) -> float:
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+
+def _config_delay_multiplier() -> float:
+    path = Path("config_runtime.yaml").resolve()
+    if not path.exists():
+        return 1.0
+    try:
+        data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        pacing = data.get("pacing", {}) if isinstance(data, dict) else {}
+        return _as_float(pacing.get("delay_multiplier", 1), 1.0)
+    except Exception:
+        return 1.0
+
+
+def _delay_multiplier(kwargs: dict[str, Any]) -> float:
+    value = kwargs.get("multiplier", None)
+    if value in (None, ""):
+        value = _config_delay_multiplier()
+    return max(0.0, _as_float(value, 1.0))
+
+
 def delay(**kwargs: Any) -> str:
     delay_seconds = kwargs.get("delay", 1)
     rand_seconds = kwargs.get("rand", 0)
@@ -91,6 +130,7 @@ def delay(**kwargs: Any) -> str:
         print(message)
     if rand_seconds > 0:
         delay_seconds += random.randint(0, rand_seconds)
+    delay_seconds *= _delay_multiplier(kwargs)
 
     if delay_seconds <= 1.0:
         time.sleep(delay_seconds)
@@ -109,6 +149,7 @@ def delay(**kwargs: Any) -> str:
                     return ""
                 if mode_scroll_lock_skip and scroll_lock_toggled():
                     print("\nScroll Lock toggled; skipping delay")
+                    clear_scroll_lock()
                     time.sleep(1)
                     return ""
                 time.sleep(1)
@@ -121,6 +162,11 @@ def delay(**kwargs: Any) -> str:
         print(".", end="", flush=True)
         if mode_skip_key and check_key_pressed() == "s":
             print("\nDelay skipped by 's'")
+            time.sleep(1)
+            return ""
+        if mode_scroll_lock_skip and scroll_lock_toggled():
+            print("\nScroll Lock toggled; skipping delay")
+            clear_scroll_lock()
             time.sleep(1)
             return ""
         time.sleep(1)
@@ -656,6 +702,69 @@ def run_action(**kwargs: Any) -> Any:
     return action_module.action_fn(**kwargs)
 
 
+def _as_int(value: Any, default: int = 0) -> int:
+    try:
+        return int(float(value))
+    except Exception:
+        return default
+
+
+def _file_test_items(file_test: Any) -> list[str]:
+    if file_test in (None, ""):
+        return []
+    if isinstance(file_test, (list, tuple)):
+        return [str(item) for item in file_test if item not in (None, "")]
+    return [str(file_test)]
+
+
+def _file_test_absolute(directory_absolute: str, file_test: str) -> str:
+    if os.path.isabs(file_test):
+        return file_test
+    return os.path.join(directory_absolute, file_test)
+
+
+def _file_tests_complete(base: dict[str, Any], directory_absolute: str) -> bool:
+    file_tests = _file_test_items(base.get("file_test", ""))
+    if not file_tests:
+        return True
+    file_test_mode = base.get("file_test_mode", "exists")
+    existing = [
+        os.path.exists(_file_test_absolute(directory_absolute, file_test))
+        for file_test in file_tests
+    ]
+    if file_test_mode == "exists":
+        return all(existing)
+    return not any(existing)
+
+
+def _file_tests_allow_run(base: dict[str, Any], directory_absolute: str) -> bool:
+    file_tests = _file_test_items(base.get("file_test", ""))
+    if not file_tests:
+        return True
+
+    file_test_mode = base.get("file_test_mode", "exists")
+    absolute_tests = [
+        _file_test_absolute(directory_absolute, file_test)
+        for file_test in file_tests
+    ]
+    print(f"file test mode {file_test_mode} on {absolute_tests}")
+
+    if file_test_mode == "exists":
+        missing = [path for path in absolute_tests if not os.path.exists(path)]
+        if not missing:
+            print(f"File test(s) {absolute_tests} complete, skipping actions.")
+            return False
+        print(f"File test(s) missing {missing}; running actions.")
+        return True
+
+    existing = [path for path in absolute_tests if os.path.exists(path)]
+    if existing:
+        print(f"File test(s) {existing} exist, skipping actions.")
+        return False
+    print(f"File test(s) {absolute_tests} do not exist; running actions.")
+    return True
+
+
 def run_single(**kwargs: Any) -> Any:
     #print a dot
     print(".", end="", flush=True)
@@ -673,21 +782,9 @@ def run_single(**kwargs: Any) -> Any:
     if not isinstance(actions, list) or not actions:
         return ""
 
-    file_test = base.get("file_test", "")
-    file_test_mode = base.get("file_test_mode", "exists")
-    file_test_absolute = ""
-    if file_test:
-        file_test_absolute = os.path.join(kwargs.get("directory_absolute", ""), file_test)
-        print(f"file test mode {file_test_mode} on {file_test_absolute}")
-        if file_test_mode == "exists" and os.path.exists(file_test_absolute):
-            print(f"File test {file_test_absolute} exists, skipping actions.")
-            return ""
-        if file_test_mode != "exists" and not os.path.exists(file_test_absolute):
-            print(f"File test {file_test_absolute} does not exist, skipping actions.")
-            return ""
-
-    if "p_g_o_calendar_297_210_3_calendar_month_a4_landscape_2026_month_01_variant_image_topic_unicorn_fairy_importance_10_border_15_mm_stylesheet_rainbow_vibrant" in file_test_absolute:
-        pass
+    directory_absolute = kwargs.get("directory_absolute", "")
+    if not _file_tests_allow_run(base, directory_absolute):
+        return ""
 
     discovered = kwargs.get("_discovered_actions")
     if discovered is None:
@@ -699,14 +796,25 @@ def run_single(**kwargs: Any) -> Any:
     run_kwargs["_discovered_actions"] = discovered
 
     result: Any = ""
-    for action_cfg in actions:
-        run_kwargs["action"] = action_cfg
-        result = run_action(**run_kwargs)
+    retries_until_complete = max(0, _as_int(base.get("retries_until_complete", 0), 0))
+    attempts = retries_until_complete + 1
+    for attempt in range(attempts):
+        if attempt > 0:
+            print(f"Retrying action block for missing file_test output(s): attempt {attempt + 1} of {attempts}")
+        for action_cfg in actions:
+            run_kwargs["action"] = action_cfg
+            result = run_action(**run_kwargs)
+            if result in ("exit", "exit_no_tab"):
+                print("Exiting due to exit command.")
+                break
+            if isinstance(result, dict):
+                _persist_result_dict(file_action=file_action, result=result)
         if result in ("exit", "exit_no_tab"):
-            print("Exiting due to exit command.")
             break
-        if isinstance(result, dict):
-            _persist_result_dict(file_action=file_action, result=result)
+        if _file_tests_complete(base, directory_absolute):
+            break
+        if attempt < retries_until_complete:
+            print("Action block did not complete all file_test output(s).")
     return result
 
 def run_single_action(**kwargs: Any) -> Any:
@@ -909,6 +1017,7 @@ def add_action(**kwargs):
     action_name = kwargs.get("action_name", "")
     action_type = kwargs.get("action_type", "ai")
     file_test = kwargs.get("file_test", "tag")
+    retries_until_complete = kwargs.get("retries_until_complete", 0)
 
     #get largest existing index for this action_type
     count = 1
@@ -936,6 +1045,7 @@ def add_action(**kwargs):
     base = {}
     base["actions"] = actions
     base["file_test"] = file_test
+    base["retries_until_complete"] = max(0, _as_int(retries_until_complete, 0))
     part[action_id] = base
 
 ################################ utility routines

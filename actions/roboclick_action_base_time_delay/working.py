@@ -1,5 +1,7 @@
 import random
 
+import os
+
 import sys
 
 import time
@@ -76,6 +78,20 @@ def _scroll_lock_toggled():
     except Exception:
         return False
 
+def _clear_scroll_lock():
+    if sys.platform != "win32":
+        return
+    try:
+        import ctypes
+
+        if (ctypes.windll.user32.GetKeyState(0x91) & 1) == 1:
+            # Press and release Scroll Lock so one skip does not arm every
+            # later delay.
+            ctypes.windll.user32.keybd_event(0x91, 0x45, 0, 0)
+            ctypes.windll.user32.keybd_event(0x91, 0x45, 2, 0)
+    except Exception:
+        return
+
 def _as_bool(value, default):
     if isinstance(value, bool):
         return value
@@ -88,6 +104,31 @@ def _as_bool(value, default):
         if lowered in {"0", "false", "no", "off"}:
             return False
     return bool(value)
+
+def _as_float(value, default):
+    try:
+        return float(value)
+    except Exception:
+        return default
+
+def _config_delay_multiplier():
+    path = os.path.abspath("config_runtime.yaml")
+    if not os.path.exists(path):
+        return 1.0
+    try:
+        import yaml
+
+        data = yaml.safe_load(open(path, "r", encoding="utf-8")) or {}
+        pacing = data.get("pacing", {}) if isinstance(data, dict) else {}
+        return _as_float(pacing.get("delay_multiplier", 1), 1.0)
+    except Exception:
+        return 1.0
+
+def _delay_multiplier(action_cfg, kwargs):
+    value = action_cfg.get("multiplier", kwargs.get("multiplier", None))
+    if value in (None, ""):
+        value = _config_delay_multiplier()
+    return max(0.0, _as_float(value, 1.0))
 
 def action(**kwargs):
     return robo_roboclick.robo_action_run("roboclick_action_base_time_delay", old, **kwargs)
@@ -117,10 +158,12 @@ def old(**kwargs):
     except Exception:
         rand = 0
 
+    multiplier = _delay_multiplier(action_cfg, kwargs)
     if message:
         print(message)
     if rand > 0:
         delay += random.randint(0, rand)
+    delay *= multiplier
 
     if delay <= 1.0:
         time.sleep(delay)
@@ -139,6 +182,7 @@ def old(**kwargs):
                     return ""
                 if mode_scroll_lock_skip and _scroll_lock_toggled():
                     print("\nScroll Lock toggled; skipping delay")
+                    _clear_scroll_lock()
                     time.sleep(1)
                     return ""
                 time.sleep(1)
@@ -151,6 +195,11 @@ def old(**kwargs):
         print(".", end="", flush=True)
         if mode_skip_key and _check_key_pressed() == "s":
             print("\nDelay skipped by 's'")
+            time.sleep(1)
+            return ""
+        if mode_scroll_lock_skip and _scroll_lock_toggled():
+            print("\nScroll Lock toggled; skipping delay")
+            _clear_scroll_lock()
             time.sleep(1)
             return ""
         time.sleep(1)

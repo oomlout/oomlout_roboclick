@@ -56,6 +56,86 @@ def test_3(**kwargs):
     }
 
 
+def test_4(**kwargs):
+    """Test 4: define() exposes base_ai_provider with open_ai default."""
+    working = _load_working_module()
+    metadata = working.define()
+    variables = metadata.get("variables", [])
+    provider_variable = None
+    for variable in variables:
+        if variable.get("name") == "base_ai_provider":
+            provider_variable = variable
+            break
+    passed = bool(provider_variable) and provider_variable.get("default") == "open_ai"
+    return {
+        "passed": passed,
+        "details": f"base_ai_provider={provider_variable!r}",
+    }
+
+
+def test_5(**kwargs):
+    """Test 5: provider normalization supports kwargs, action config, and aliases."""
+    working = _load_working_module()
+    cases = [
+        ({}, "open_ai"),
+        ({"action": {"base_ai_provider": "claude"}}, "claude"),
+        ({"action": {"base_ai_provider": "open_ai"}, "base_ai_provider": "gemini"}, "gemini"),
+        ({"action": {"base_ai_provider": "open-webui"}}, "open_web_ui"),
+        ({"action": {"base_ai_provider": "chatgpt"}}, "open_ai"),
+    ]
+    results = [working._get_base_ai_provider(case_kwargs) for case_kwargs, _ in cases]
+    expected = [expected_provider for _, expected_provider in cases]
+    return {
+        "passed": results == expected,
+        "details": f"results={results}, expected={expected}",
+    }
+
+
+def test_6(**kwargs):
+    """Test 6: action() routes through new() and dispatches to provider handlers."""
+    working = _load_working_module()
+    captured = []
+    original_run = working.robo_roboclick.robo_action_run
+    original_open_ai = working.action_open_ai
+    original_claude = working.action_claude
+    original_gemini = working.action_gemini
+    original_open_web_ui = working.action_open_web_ui
+
+    def fake_run(action_name, action_callable, **call_kwargs):
+        captured.append((action_name, getattr(action_callable, "__name__", "")))
+        return action_callable(**call_kwargs)
+
+    try:
+        working.robo_roboclick.robo_action_run = fake_run
+        working.action_open_ai = lambda **call_kwargs: "open_ai"
+        working.action_claude = lambda **call_kwargs: "claude"
+        working.action_gemini = lambda **call_kwargs: "gemini"
+        working.action_open_web_ui = lambda **call_kwargs: "open_web_ui"
+
+        results = [
+            working.action(action={}),
+            working.action(action={"base_ai_provider": "claude"}),
+            working.action(base_ai_provider="gemini", action={"base_ai_provider": "open_ai"}),
+            working.action(action={"base_ai_provider": "open-webui"}),
+            working.old(action={}),
+        ]
+    finally:
+        working.robo_roboclick.robo_action_run = original_run
+        working.action_open_ai = original_open_ai
+        working.action_claude = original_claude
+        working.action_gemini = original_gemini
+        working.action_open_web_ui = original_open_web_ui
+
+    passed = (
+        captured == [("roboclick_action_ai_new_chat", "new")] * 4
+        and results == ["open_ai", "claude", "gemini", "open_web_ui", "open_ai"]
+    )
+    return {
+        "passed": passed,
+        "details": f"captured={captured}, results={results}",
+    }
+
+
 def test(test_to_run="all", **kwargs):
     selected = _resolve_selected_tests(test_to_run)
     if not selected:

@@ -2,6 +2,7 @@
 import io
 import re
 import sys
+import tempfile
 import time
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -54,6 +55,69 @@ def test_3(**kwargs):
         "passed": passed,
         "details": f"working_test_result={result!r}",
     }
+
+
+def test_4(**kwargs):
+    """Test 4: background_remove_all is exposed and defaults to true."""
+    working = _load_working_module()
+    variables = working.define().get("variables", [])
+    setting = next((item for item in variables if item.get("name") == "background_remove_all"), None)
+    passed = setting is not None and setting.get("default") is True
+    return {
+        "passed": passed,
+        "details": f"setting={setting!r}",
+    }
+
+
+def test_5(**kwargs):
+    """Test 5: default mode removes key colour inside an enclosed subject gap."""
+    import numpy as np
+    from PIL import Image
+
+    working = _load_working_module()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        image_path = Path(temp_dir) / "enclosed.png"
+        pixels = np.zeros((9, 9, 4), dtype=np.uint8)
+        pixels[:] = [255, 0, 255, 255]
+        pixels[2:7, 2:7] = [20, 20, 20, 255]
+        pixels[4, 4] = [255, 0, 255, 255]
+        Image.fromarray(pixels, "RGBA").save(image_path)
+        working.old(action={"file_name": image_path.name, "color_key": "magenta"}, directory=temp_dir)
+        result = np.array(Image.open(image_path).convert("RGBA"))
+        passed = result[4, 4, 3] == 0 and result[3, 3, 3] == 255
+        return {
+            "passed": bool(passed),
+            "details": f"enclosed_alpha={result[4, 4, 3]}, subject_alpha={result[3, 3, 3]}",
+        }
+
+
+def test_6(**kwargs):
+    """Test 6: background_remove_all=false preserves enclosed key-coloured details."""
+    import numpy as np
+    from PIL import Image
+
+    working = _load_working_module()
+    with tempfile.TemporaryDirectory() as temp_dir:
+        image_path = Path(temp_dir) / "enclosed_opt_out.png"
+        pixels = np.zeros((9, 9, 4), dtype=np.uint8)
+        pixels[:] = [255, 0, 255, 255]
+        pixels[2:7, 2:7] = [20, 20, 20, 255]
+        pixels[4, 4] = [255, 0, 255, 255]
+        Image.fromarray(pixels, "RGBA").save(image_path)
+        working.old(
+            action={
+                "file_name": image_path.name,
+                "color_key": "magenta",
+                "background_remove_all": False,
+            },
+            directory=temp_dir,
+        )
+        result = np.array(Image.open(image_path).convert("RGBA"))
+        passed = result[4, 4, 3] == 255 and result[0, 0, 3] == 0
+        return {
+            "passed": bool(passed),
+            "details": f"enclosed_alpha={result[4, 4, 3]}, border_alpha={result[0, 0, 3]}",
+        }
 
 
 def test(test_to_run="all", **kwargs):

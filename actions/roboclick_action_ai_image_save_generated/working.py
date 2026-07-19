@@ -74,7 +74,8 @@ def _retry_count(value, default=1):
             return default
     return default
 
-def _wait_for_image(mode_ai_wait):
+def _wait_for_image(mode_ai_wait, kwargs=None):
+    kwargs = kwargs or {}
     if mode_ai_wait is None:
         mode_ai_wait = "slow"
     if mode_ai_wait == "slow":
@@ -82,25 +83,27 @@ def _wait_for_image(mode_ai_wait):
         delay = random.randint(100, 300)
         robo_roboclick.robo_delay(delay=delay)  # Wait for the image to be generated
     elif "fast" in mode_ai_wait:
-        robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state")
+        robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state", **kwargs)
 
-def _prepare_to_save_image():
+def _prepare_to_save_image(kwargs=None):
+    kwargs = kwargs or {}
     #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
     #click on the image to focus
     #reload
     robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
     #click on the image to focus
     #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
-    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
     #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
     robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
-    robo_roboclick.ai_check_for_too_many_requests()
-    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
+    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
 
-def _send_retry_prompt():
+def _send_retry_prompt(kwargs=None):
+    kwargs = kwargs or {}
     retry_prompt = "oops the image seems to have not generated please try again"
-    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
     robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
     robo_roboclick.robo_keyboard_paste(text=retry_prompt, delay=2)
@@ -129,7 +132,7 @@ def _is_valid_png(file_name_absolute):
         return False
 
 def _save_image_once(kwargs, file_name_absolute):
-    robo_roboclick.ai_check_for_too_many_requests()
+    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     robo_roboclick.ai_save_image(**kwargs)
     if os.path.exists(file_name_absolute):
         if not _is_valid_png(file_name_absolute):
@@ -153,9 +156,9 @@ def new(**kwargs):
     
     for attempt in range(retry_if_failed + 1):
         if attempt > 0:
-            _send_retry_prompt()
-        _wait_for_image(mode_ai_wait)
-        _prepare_to_save_image()
+            _send_retry_prompt(kwargs)
+        _wait_for_image(mode_ai_wait, kwargs)
+        _prepare_to_save_image(kwargs)
         if _save_image_once(kwargs, file_name_absolute):
             return ""
         if attempt < retry_if_failed:
