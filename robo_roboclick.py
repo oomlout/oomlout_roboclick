@@ -1664,7 +1664,12 @@ def robo_text_jinja_template(**kwargs):
         directory_part = kwargs.get("directory", "")
         file_template = os.path.join(directory_part, file_template)
 #C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_oomlout_76_2_mm_50_8_mm\
-#C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_76_2_mm_width_50_8_mm_height         
+#C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_76_2_mm_width_50_8_mm_height
+        #if the file doesn't exist         
+        if not os.path.isfile(file_template):
+           #look in project base plus source_file\template_jinja\ and the file_template
+            project_base = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+            file_template = os.path.join(project_base, "source_file", "template_jinja", file_template)  
 
         
         try:
