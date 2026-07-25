@@ -1,0 +1,232 @@
+bip_39_2_word_array:
+- chat
+- taxi
+bip_39_2_word_no_space: chattaxi
+bip_39_2_word_space: chat taxi
+bip_39_2_word_underscore: chat_taxi
+bip_39_3_word_array:
+- chat
+- taxi
+- junior
+bip_39_3_word_no_space: chattaxijunior
+bip_39_3_word_space: chat taxi junior
+bip_39_3_word_underscore: chat_taxi_junior
+bip_39_full_array:
+- chat
+- taxi
+- junior
+- mom
+- horn
+- strategy
+- heavy
+- tenant
+- human
+- once
+- leisure
+- arrange
+bip_39_full_no_space: chattaxijuniormomhornstrategyheavytenanthumanonceleisurearrange
+bip_39_full_space: chat taxi junior mom horn strategy heavy tenant human once leisure
+    arrange
+bip_39_full_underscore: chat_taxi_junior_mom_horn_strategy_heavy_tenant_human_once_leisure_arrange
+description: conductor_cat
+directory: parts/megacity_mascot_conductor_cat_description_whiskers_name
+generate_stl: false
+id: megacity_mascot_conductor_cat_description_whiskers_name
+id_no_class: megacity_mascot_conductor_cat_description_whiskers_name
+id_no_size: megacity_mascot_conductor_cat_description_whiskers_name
+id_no_type: megacity_mascot_conductor_cat_description_whiskers_name
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_conductor_cat_description_whiskers_name
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_conductor_cat_description_whiskers_name
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_conductor_cat_description_whiskers_name
+md5: 26dbcde4c766d9ad9a9ef86ed351fe86
+md5_10: 26dbcde4c7
+md5_10_upper: 26DBCDE4C7
+md5_5: 26dbc
+md5_5_upper: 26DBC
+md5_6: 26dbcd
+md5_6_alpha: 1ikzx
+md5_6_alpha_upper: 1IKZX
+md5_6_upper: 26DBCD
+name: Megacity Mascot Conductor Cat Description Whiskers Name
+name_no_class: Megacity Mascot Conductor Cat Description Whiskers Name
+name_no_size: Megacity Mascot Conductor Cat Description Whiskers Name
+name_no_type: Megacity Mascot Conductor Cat Description Whiskers Name
+name_proper: Megacity Mascot Conductor Cat Description Whiskers Name
+name_space: megacity mascot conductor cat description whiskers name
+name_upper: MEGACITY MASCOT CONDUCTOR CAT DESCRIPTION WHISKERS NAME
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: conductor_cat
+            directory: parts\megacity_mascot_conductor_cat_description_whiskers_name
+            name: megacity_mascot_conductor_cat_description_whiskers_name
+            name_proper: Megacity Mascot Conductor Cat Description Whiskers Name
+            name_space: megacity mascot conductor cat description whiskers name
+            name_upper: MEGACITY MASCOT CONDUCTOR CAT DESCRIPTION WHISKERS NAME
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: conductor_cat_description
+            taxonomy_4: whiskers_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: label_oomp.svg
+        file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: conductor_cat
+            directory: parts\megacity_mascot_conductor_cat_description_whiskers_name
+            name: megacity_mascot_conductor_cat_description_whiskers_name
+            name_proper: Megacity Mascot Conductor Cat Description Whiskers Name
+            name_space: megacity mascot conductor cat description whiskers name
+            name_upper: MEGACITY MASCOT CONDUCTOR CAT DESCRIPTION WHISKERS NAME
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: text_jinja_template
+                    convert_to_pdf: true
+                    convert_to_png: false
+                    dict_data:
+                        description: conductor_cat
+                        directory: parts\megacity_mascot_conductor_cat_description_whiskers_name
+                        name: megacity_mascot_conductor_cat_description_whiskers_name
+                        name_proper: Megacity Mascot Conductor Cat Description Whiskers
+                            Name
+                        name_space: megacity mascot conductor cat description whiskers
+                            name
+                        name_upper: MEGACITY MASCOT CONDUCTOR CAT DESCRIPTION WHISKERS
+                            NAME
+                        taxonomy_1: megacity
+                        taxonomy_10: ''
+                        taxonomy_11: ''
+                        taxonomy_12: ''
+                        taxonomy_13: ''
+                        taxonomy_14: ''
+                        taxonomy_15: ''
+                        taxonomy_2: mascot
+                        taxonomy_3: conductor_cat_description
+                        taxonomy_4: whiskers_name
+                        taxonomy_5: ''
+                        taxonomy_6: ''
+                        taxonomy_7: ''
+                        taxonomy_8: ''
+                        taxonomy_9: ''
+                        url_chat: ''
+                    file_output: label_oomp.svg
+                    file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+                    search_and_replace: []
+                file_test: label_oomp.pdf
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: conductor_cat_description
+            taxonomy_4: whiskers_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: character_summary_a4.svg
+        file_template: source_file\template_jinja\megacity_mascot_character_summary_a4\working.svg.j2
+        search_and_replace: []
+    file_test: character_summary_a4.pdf
+oomp_key: oomp_megacity_mascot_conductor_cat_description_whiskers_name
+run_action: true
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: megacity
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Megacity
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: me
+taxonomy_1_length_3: meg
+taxonomy_1_length_4: mega
+taxonomy_1_length_5: megac
+taxonomy_1_upper: MEGACITY
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: ME
+taxonomy_1_upper_length_3: MEG
+taxonomy_1_upper_length_4: MEGA
+taxonomy_1_upper_length_5: MEGAC
+taxonomy_2: mascot
+taxonomy_2_capital: Mascot
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: ma
+taxonomy_2_length_3: mas
+taxonomy_2_length_4: masc
+taxonomy_2_length_5: masco
+taxonomy_2_upper: MASCOT
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MA
+taxonomy_2_upper_length_3: MAS
+taxonomy_2_upper_length_4: MASC
+taxonomy_2_upper_length_5: MASCO
+taxonomy_3: conductor_cat_description
+taxonomy_3_capital: Conductor Cat Description
+taxonomy_3_first_letter: c
+taxonomy_3_first_letter_upper: C
+taxonomy_3_length_1: c
+taxonomy_3_length_2: co
+taxonomy_3_length_3: con
+taxonomy_3_length_4: cond
+taxonomy_3_length_5: condu
+taxonomy_3_upper: CONDUCTOR_CAT_DESCRIPTION
+taxonomy_3_upper_length_1: C
+taxonomy_3_upper_length_2: CO
+taxonomy_3_upper_length_3: CON
+taxonomy_3_upper_length_4: COND
+taxonomy_3_upper_length_5: CONDU
+taxonomy_4: whiskers_name
+taxonomy_4_capital: Whiskers Name
+taxonomy_4_first_letter: w
+taxonomy_4_first_letter_upper: W
+taxonomy_4_length_1: w
+taxonomy_4_length_2: wh
+taxonomy_4_length_3: whi
+taxonomy_4_length_4: whis
+taxonomy_4_length_5: whisk
+taxonomy_4_upper: WHISKERS_NAME
+taxonomy_4_upper_length_1: W
+taxonomy_4_upper_length_2: WH
+taxonomy_4_upper_length_3: WHI
+taxonomy_4_upper_length_4: WHIS
+taxonomy_4_upper_length_5: WHISK
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+url_chat: ''

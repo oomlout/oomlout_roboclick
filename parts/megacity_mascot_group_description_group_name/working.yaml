@@ -1,0 +1,229 @@
+bip_39_2_word_array:
+- about
+- system
+bip_39_2_word_no_space: aboutsystem
+bip_39_2_word_space: about system
+bip_39_2_word_underscore: about_system
+bip_39_3_word_array:
+- about
+- system
+- echo
+bip_39_3_word_no_space: aboutsystemecho
+bip_39_3_word_space: about system echo
+bip_39_3_word_underscore: about_system_echo
+bip_39_full_array:
+- about
+- system
+- echo
+- tomorrow
+- jacket
+- body
+- cereal
+- math
+- party
+- night
+- execute
+- essence
+bip_39_full_no_space: aboutsystemechotomorrowjacketbodycerealmathpartynightexecuteessence
+bip_39_full_space: about system echo tomorrow jacket body cereal math party night
+    execute essence
+bip_39_full_underscore: about_system_echo_tomorrow_jacket_body_cereal_math_party_night_execute_essence
+description: group
+directory: parts/megacity_mascot_group_description_group_name
+generate_stl: false
+id: megacity_mascot_group_description_group_name
+id_no_class: megacity_mascot_group_description_group_name
+id_no_size: megacity_mascot_group_description_group_name
+id_no_type: megacity_mascot_group_description_group_name
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_group_description_group_name
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_group_description_group_name
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_group_description_group_name
+md5: 007b9917f2177031c96448a092b13ca6
+md5_10: 007b9917f2
+md5_10_upper: 007B9917F2
+md5_5: 007b9
+md5_5_upper: 007B9
+md5_6: 007b99
+md5_6_alpha: oex
+md5_6_alpha_upper: OEX
+md5_6_upper: 007B99
+name: Megacity Mascot Group Description Group Name
+name_no_class: Megacity Mascot Group Description Group Name
+name_no_size: Megacity Mascot Group Description Group Name
+name_no_type: Megacity Mascot Group Description Group Name
+name_proper: Megacity Mascot Group Description Group Name
+name_space: megacity mascot group description group name
+name_upper: MEGACITY MASCOT GROUP DESCRIPTION GROUP NAME
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: group
+            directory: parts\megacity_mascot_group_description_group_name
+            name: megacity_mascot_group_description_group_name
+            name_proper: Megacity Mascot Group Description Group Name
+            name_space: megacity mascot group description group name
+            name_upper: MEGACITY MASCOT GROUP DESCRIPTION GROUP NAME
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: group_description
+            taxonomy_4: group_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: label_oomp.svg
+        file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: group
+            directory: parts\megacity_mascot_group_description_group_name
+            name: megacity_mascot_group_description_group_name
+            name_proper: Megacity Mascot Group Description Group Name
+            name_space: megacity mascot group description group name
+            name_upper: MEGACITY MASCOT GROUP DESCRIPTION GROUP NAME
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: text_jinja_template
+                    convert_to_pdf: true
+                    convert_to_png: false
+                    dict_data:
+                        description: group
+                        directory: parts\megacity_mascot_group_description_group_name
+                        name: megacity_mascot_group_description_group_name
+                        name_proper: Megacity Mascot Group Description Group Name
+                        name_space: megacity mascot group description group name
+                        name_upper: MEGACITY MASCOT GROUP DESCRIPTION GROUP NAME
+                        taxonomy_1: megacity
+                        taxonomy_10: ''
+                        taxonomy_11: ''
+                        taxonomy_12: ''
+                        taxonomy_13: ''
+                        taxonomy_14: ''
+                        taxonomy_15: ''
+                        taxonomy_2: mascot
+                        taxonomy_3: group_description
+                        taxonomy_4: group_name
+                        taxonomy_5: ''
+                        taxonomy_6: ''
+                        taxonomy_7: ''
+                        taxonomy_8: ''
+                        taxonomy_9: ''
+                        url_chat: ''
+                    file_output: label_oomp.svg
+                    file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+                    search_and_replace: []
+                file_test: label_oomp.pdf
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: group_description
+            taxonomy_4: group_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: character_summary_a4.svg
+        file_template: source_file\template_jinja\megacity_mascot_character_summary_a4\working.svg.j2
+        search_and_replace: []
+    file_test: character_summary_a4.pdf
+oomp_key: oomp_megacity_mascot_group_description_group_name
+run_action: true
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: megacity
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Megacity
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: me
+taxonomy_1_length_3: meg
+taxonomy_1_length_4: mega
+taxonomy_1_length_5: megac
+taxonomy_1_upper: MEGACITY
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: ME
+taxonomy_1_upper_length_3: MEG
+taxonomy_1_upper_length_4: MEGA
+taxonomy_1_upper_length_5: MEGAC
+taxonomy_2: mascot
+taxonomy_2_capital: Mascot
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: ma
+taxonomy_2_length_3: mas
+taxonomy_2_length_4: masc
+taxonomy_2_length_5: masco
+taxonomy_2_upper: MASCOT
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MA
+taxonomy_2_upper_length_3: MAS
+taxonomy_2_upper_length_4: MASC
+taxonomy_2_upper_length_5: MASCO
+taxonomy_3: group_description
+taxonomy_3_capital: Group Description
+taxonomy_3_first_letter: g
+taxonomy_3_first_letter_upper: G
+taxonomy_3_length_1: g
+taxonomy_3_length_2: gr
+taxonomy_3_length_3: gro
+taxonomy_3_length_4: grou
+taxonomy_3_length_5: group
+taxonomy_3_upper: GROUP_DESCRIPTION
+taxonomy_3_upper_length_1: G
+taxonomy_3_upper_length_2: GR
+taxonomy_3_upper_length_3: GRO
+taxonomy_3_upper_length_4: GROU
+taxonomy_3_upper_length_5: GROUP
+taxonomy_4: group_name
+taxonomy_4_capital: Group Name
+taxonomy_4_first_letter: g
+taxonomy_4_first_letter_upper: G
+taxonomy_4_length_1: g
+taxonomy_4_length_2: gr
+taxonomy_4_length_3: gro
+taxonomy_4_length_4: grou
+taxonomy_4_length_5: group
+taxonomy_4_upper: GROUP_NAME
+taxonomy_4_upper_length_1: G
+taxonomy_4_upper_length_2: GR
+taxonomy_4_upper_length_3: GRO
+taxonomy_4_upper_length_4: GROU
+taxonomy_4_upper_length_5: GROUP
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+url_chat: ''

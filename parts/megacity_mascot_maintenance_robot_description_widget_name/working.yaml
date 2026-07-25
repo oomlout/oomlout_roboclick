@@ -1,0 +1,232 @@
+bip_39_2_word_array:
+- supreme
+- wear
+bip_39_2_word_no_space: supremewear
+bip_39_2_word_space: supreme wear
+bip_39_2_word_underscore: supreme_wear
+bip_39_3_word_array:
+- supreme
+- wear
+- input
+bip_39_3_word_no_space: supremewearinput
+bip_39_3_word_space: supreme wear input
+bip_39_3_word_underscore: supreme_wear_input
+bip_39_full_array:
+- supreme
+- wear
+- input
+- just
+- water
+- digital
+- work
+- bacon
+- habit
+- truly
+- alley
+- jar
+bip_39_full_no_space: supremewearinputjustwaterdigitalworkbaconhabittrulyalleyjar
+bip_39_full_space: supreme wear input just water digital work bacon habit truly alley
+    jar
+bip_39_full_underscore: supreme_wear_input_just_water_digital_work_bacon_habit_truly_alley_jar
+description: maintenance_robot
+directory: parts/megacity_mascot_maintenance_robot_description_widget_name
+generate_stl: false
+id: megacity_mascot_maintenance_robot_description_widget_name
+id_no_class: megacity_mascot_maintenance_robot_description_widget_name
+id_no_size: megacity_mascot_maintenance_robot_description_widget_name
+id_no_type: megacity_mascot_maintenance_robot_description_widget_name
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_maintenance_robot_description_widget_name
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_maintenance_robot_description_widget_name
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_maintenance_robot_description_widget_name
+md5: d9ff0dd2bcbf7c7bff608a683d2c1a3b
+md5_10: d9ff0dd2bc
+md5_10_upper: D9FF0DD2BC
+md5_5: d9ff0
+md5_5_upper: D9FF0
+md5_6: d9ff0d
+md5_6_alpha: 8i7m5
+md5_6_alpha_upper: 8I7M5
+md5_6_upper: D9FF0D
+name: Megacity Mascot Maintenance Robot Description Widget Name
+name_no_class: Megacity Mascot Maintenance Robot Description Widget Name
+name_no_size: Megacity Mascot Maintenance Robot Description Widget Name
+name_no_type: Megacity Mascot Maintenance Robot Description Widget Name
+name_proper: Megacity Mascot Maintenance Robot Description Widget Name
+name_space: megacity mascot maintenance robot description widget name
+name_upper: MEGACITY MASCOT MAINTENANCE ROBOT DESCRIPTION WIDGET NAME
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: maintenance_robot
+            directory: parts\megacity_mascot_maintenance_robot_description_widget_name
+            name: megacity_mascot_maintenance_robot_description_widget_name
+            name_proper: Megacity Mascot Maintenance Robot Description Widget Name
+            name_space: megacity mascot maintenance robot description widget name
+            name_upper: MEGACITY MASCOT MAINTENANCE ROBOT DESCRIPTION WIDGET NAME
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: maintenance_robot_description
+            taxonomy_4: widget_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: label_oomp.svg
+        file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: maintenance_robot
+            directory: parts\megacity_mascot_maintenance_robot_description_widget_name
+            name: megacity_mascot_maintenance_robot_description_widget_name
+            name_proper: Megacity Mascot Maintenance Robot Description Widget Name
+            name_space: megacity mascot maintenance robot description widget name
+            name_upper: MEGACITY MASCOT MAINTENANCE ROBOT DESCRIPTION WIDGET NAME
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: text_jinja_template
+                    convert_to_pdf: true
+                    convert_to_png: false
+                    dict_data:
+                        description: maintenance_robot
+                        directory: parts\megacity_mascot_maintenance_robot_description_widget_name
+                        name: megacity_mascot_maintenance_robot_description_widget_name
+                        name_proper: Megacity Mascot Maintenance Robot Description
+                            Widget Name
+                        name_space: megacity mascot maintenance robot description
+                            widget name
+                        name_upper: MEGACITY MASCOT MAINTENANCE ROBOT DESCRIPTION
+                            WIDGET NAME
+                        taxonomy_1: megacity
+                        taxonomy_10: ''
+                        taxonomy_11: ''
+                        taxonomy_12: ''
+                        taxonomy_13: ''
+                        taxonomy_14: ''
+                        taxonomy_15: ''
+                        taxonomy_2: mascot
+                        taxonomy_3: maintenance_robot_description
+                        taxonomy_4: widget_name
+                        taxonomy_5: ''
+                        taxonomy_6: ''
+                        taxonomy_7: ''
+                        taxonomy_8: ''
+                        taxonomy_9: ''
+                        url_chat: ''
+                    file_output: label_oomp.svg
+                    file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+                    search_and_replace: []
+                file_test: label_oomp.pdf
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: maintenance_robot_description
+            taxonomy_4: widget_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: character_summary_a4.svg
+        file_template: source_file\template_jinja\megacity_mascot_character_summary_a4\working.svg.j2
+        search_and_replace: []
+    file_test: character_summary_a4.pdf
+oomp_key: oomp_megacity_mascot_maintenance_robot_description_widget_name
+run_action: true
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: megacity
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Megacity
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: me
+taxonomy_1_length_3: meg
+taxonomy_1_length_4: mega
+taxonomy_1_length_5: megac
+taxonomy_1_upper: MEGACITY
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: ME
+taxonomy_1_upper_length_3: MEG
+taxonomy_1_upper_length_4: MEGA
+taxonomy_1_upper_length_5: MEGAC
+taxonomy_2: mascot
+taxonomy_2_capital: Mascot
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: ma
+taxonomy_2_length_3: mas
+taxonomy_2_length_4: masc
+taxonomy_2_length_5: masco
+taxonomy_2_upper: MASCOT
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MA
+taxonomy_2_upper_length_3: MAS
+taxonomy_2_upper_length_4: MASC
+taxonomy_2_upper_length_5: MASCO
+taxonomy_3: maintenance_robot_description
+taxonomy_3_capital: Maintenance Robot Description
+taxonomy_3_first_letter: m
+taxonomy_3_first_letter_upper: M
+taxonomy_3_length_1: m
+taxonomy_3_length_2: ma
+taxonomy_3_length_3: mai
+taxonomy_3_length_4: main
+taxonomy_3_length_5: maint
+taxonomy_3_upper: MAINTENANCE_ROBOT_DESCRIPTION
+taxonomy_3_upper_length_1: M
+taxonomy_3_upper_length_2: MA
+taxonomy_3_upper_length_3: MAI
+taxonomy_3_upper_length_4: MAIN
+taxonomy_3_upper_length_5: MAINT
+taxonomy_4: widget_name
+taxonomy_4_capital: Widget Name
+taxonomy_4_first_letter: w
+taxonomy_4_first_letter_upper: W
+taxonomy_4_length_1: w
+taxonomy_4_length_2: wi
+taxonomy_4_length_3: wid
+taxonomy_4_length_4: widg
+taxonomy_4_length_5: widge
+taxonomy_4_upper: WIDGET_NAME
+taxonomy_4_upper_length_1: W
+taxonomy_4_upper_length_2: WI
+taxonomy_4_upper_length_3: WID
+taxonomy_4_upper_length_4: WIDG
+taxonomy_4_upper_length_5: WIDGE
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+url_chat: ''

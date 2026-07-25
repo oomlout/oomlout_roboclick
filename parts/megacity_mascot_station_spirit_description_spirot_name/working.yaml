@@ -1,0 +1,232 @@
+bip_39_2_word_array:
+- obscure
+- sing
+bip_39_2_word_no_space: obscuresing
+bip_39_2_word_space: obscure sing
+bip_39_2_word_underscore: obscure_sing
+bip_39_3_word_array:
+- obscure
+- sing
+- brave
+bip_39_3_word_no_space: obscuresingbrave
+bip_39_3_word_space: obscure sing brave
+bip_39_3_word_underscore: obscure_sing_brave
+bip_39_full_array:
+- obscure
+- sing
+- brave
+- protect
+- reveal
+- double
+- scrap
+- horn
+- shed
+- waste
+- again
+- kitten
+bip_39_full_no_space: obscuresingbraveprotectrevealdoublescraphornshedwasteagainkitten
+bip_39_full_space: obscure sing brave protect reveal double scrap horn shed waste
+    again kitten
+bip_39_full_underscore: obscure_sing_brave_protect_reveal_double_scrap_horn_shed_waste_again_kitten
+description: station_spirit
+directory: parts/megacity_mascot_station_spirit_description_spirot_name
+generate_stl: false
+id: megacity_mascot_station_spirit_description_spirot_name
+id_no_class: megacity_mascot_station_spirit_description_spirot_name
+id_no_size: megacity_mascot_station_spirit_description_spirot_name
+id_no_type: megacity_mascot_station_spirit_description_spirot_name
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_station_spirit_description_spirot_name
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_station_spirit_description_spirot_name
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/megacity_mascot_station_spirit_description_spirot_name
+md5: 9859286d565b8683705b6cc55ef412bd
+md5_10: 9859286d56
+md5_10_upper: 9859286D56
+md5_5: '98592'
+md5_5_upper: '98592'
+md5_6: '985928'
+md5_6_alpha: 5xzxk
+md5_6_alpha_upper: 5XZXK
+md5_6_upper: '985928'
+name: Megacity Mascot Station Spirit Description Spirot Name
+name_no_class: Megacity Mascot Station Spirit Description Spirot Name
+name_no_size: Megacity Mascot Station Spirit Description Spirot Name
+name_no_type: Megacity Mascot Station Spirit Description Spirot Name
+name_proper: Megacity Mascot Station Spirit Description Spirot Name
+name_space: megacity mascot station spirit description spirot name
+name_upper: MEGACITY MASCOT STATION SPIRIT DESCRIPTION SPIROT NAME
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: station_spirit
+            directory: parts\megacity_mascot_station_spirit_description_spirot_name
+            name: megacity_mascot_station_spirit_description_spirot_name
+            name_proper: Megacity Mascot Station Spirit Description Spirot Name
+            name_space: megacity mascot station spirit description spirot name
+            name_upper: MEGACITY MASCOT STATION SPIRIT DESCRIPTION SPIROT NAME
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: station_spirit_description
+            taxonomy_4: spirot_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: label_oomp.svg
+        file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: true
+        convert_to_png: false
+        dict_data:
+            description: station_spirit
+            directory: parts\megacity_mascot_station_spirit_description_spirot_name
+            name: megacity_mascot_station_spirit_description_spirot_name
+            name_proper: Megacity Mascot Station Spirit Description Spirot Name
+            name_space: megacity mascot station spirit description spirot name
+            name_upper: MEGACITY MASCOT STATION SPIRIT DESCRIPTION SPIROT NAME
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: text_jinja_template
+                    convert_to_pdf: true
+                    convert_to_png: false
+                    dict_data:
+                        description: station_spirit
+                        directory: parts\megacity_mascot_station_spirit_description_spirot_name
+                        name: megacity_mascot_station_spirit_description_spirot_name
+                        name_proper: Megacity Mascot Station Spirit Description Spirot
+                            Name
+                        name_space: megacity mascot station spirit description spirot
+                            name
+                        name_upper: MEGACITY MASCOT STATION SPIRIT DESCRIPTION SPIROT
+                            NAME
+                        taxonomy_1: megacity
+                        taxonomy_10: ''
+                        taxonomy_11: ''
+                        taxonomy_12: ''
+                        taxonomy_13: ''
+                        taxonomy_14: ''
+                        taxonomy_15: ''
+                        taxonomy_2: mascot
+                        taxonomy_3: station_spirit_description
+                        taxonomy_4: spirot_name
+                        taxonomy_5: ''
+                        taxonomy_6: ''
+                        taxonomy_7: ''
+                        taxonomy_8: ''
+                        taxonomy_9: ''
+                        url_chat: ''
+                    file_output: label_oomp.svg
+                    file_template: source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+                    search_and_replace: []
+                file_test: label_oomp.pdf
+            taxonomy_1: megacity
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: mascot
+            taxonomy_3: station_spirit_description
+            taxonomy_4: spirot_name
+            taxonomy_5: ''
+            taxonomy_6: ''
+            taxonomy_7: ''
+            taxonomy_8: ''
+            taxonomy_9: ''
+            url_chat: ''
+        file_output: character_summary_a4.svg
+        file_template: source_file\template_jinja\megacity_mascot_character_summary_a4\working.svg.j2
+        search_and_replace: []
+    file_test: character_summary_a4.pdf
+oomp_key: oomp_megacity_mascot_station_spirit_description_spirot_name
+run_action: true
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: megacity
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Megacity
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: me
+taxonomy_1_length_3: meg
+taxonomy_1_length_4: mega
+taxonomy_1_length_5: megac
+taxonomy_1_upper: MEGACITY
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: ME
+taxonomy_1_upper_length_3: MEG
+taxonomy_1_upper_length_4: MEGA
+taxonomy_1_upper_length_5: MEGAC
+taxonomy_2: mascot
+taxonomy_2_capital: Mascot
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: ma
+taxonomy_2_length_3: mas
+taxonomy_2_length_4: masc
+taxonomy_2_length_5: masco
+taxonomy_2_upper: MASCOT
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MA
+taxonomy_2_upper_length_3: MAS
+taxonomy_2_upper_length_4: MASC
+taxonomy_2_upper_length_5: MASCO
+taxonomy_3: station_spirit_description
+taxonomy_3_capital: Station Spirit Description
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: sta
+taxonomy_3_length_4: stat
+taxonomy_3_length_5: stati
+taxonomy_3_upper: STATION_SPIRIT_DESCRIPTION
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STA
+taxonomy_3_upper_length_4: STAT
+taxonomy_3_upper_length_5: STATI
+taxonomy_4: spirot_name
+taxonomy_4_capital: Spirot Name
+taxonomy_4_first_letter: s
+taxonomy_4_first_letter_upper: S
+taxonomy_4_length_1: s
+taxonomy_4_length_2: sp
+taxonomy_4_length_3: spi
+taxonomy_4_length_4: spir
+taxonomy_4_length_5: spiro
+taxonomy_4_upper: SPIROT_NAME
+taxonomy_4_upper_length_1: S
+taxonomy_4_upper_length_2: SP
+taxonomy_4_upper_length_3: SPI
+taxonomy_4_upper_length_4: SPIR
+taxonomy_4_upper_length_5: SPIRO
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+url_chat: ''
