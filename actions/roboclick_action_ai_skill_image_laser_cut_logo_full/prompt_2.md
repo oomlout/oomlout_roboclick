@@ -21,3 +21,5 @@ Response style:
 - It is good to be expansive here; do not compress the thinking prematurely.
 - Structured notes, comparisons, bullets, and short sections are welcome if they help clarity.
 - The final prompt should explicitly say the image is square and black on white.
+
+You have not yet been given the topic this is about researching what type of things are great so do that you will be given the topic pater
