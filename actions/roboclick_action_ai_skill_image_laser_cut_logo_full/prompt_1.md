@@ -36,3 +36,6 @@ Response style:
 - Explain your reasoning clearly and include all useful detail.
 - It is fine to use structure, bullets, short sections, and comparisons if that helps clarity.
 - The final prompt should explicitly say the image is square and black on white.
+
+
+You have not yet been given the topic this is about researching what type of things are great so do that you will be given the topic pater
