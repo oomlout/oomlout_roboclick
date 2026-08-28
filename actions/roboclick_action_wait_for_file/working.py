@@ -69,9 +69,9 @@ def old(**kwargs):
         if key in action and action.get(key):
             files.append(os.path.join(directory, action.get(key)))
     try:
-        timeout = float(action.get("timeout", 300))
+        timeout = float(action.get("timeout", 1))
     except Exception:
-        timeout = 300.0
+        timeout = 1
     try:
         interval = float(action.get("interval", 2))
     except Exception:

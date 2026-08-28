@@ -1,5 +1,6 @@
 import os
 
+from pyautogui import click
 import yaml
 
 import robo_roboclick
@@ -102,6 +103,10 @@ def action_open_ai(**kwargs):
     print("new_chat -- opening up a new chat")
     robo_roboclick.robo_chrome_open_url(url="https://chat.openai.com/chat", delay=15, message=".:action -- opening a new chat:.")    
     #check for hitting limit
+    #press enter to skip the weird limit at the begining
+    if True:
+        pass
+        #robo_roboclick.robo_keyboard_press_enter(delay=2)
     if True:
         print(".:check message limit:.")
         clip = robo_roboclick.robo_keyboard_copy(delay=5, position=[300, 300])  # Copy some text to check for limit
@@ -135,7 +140,12 @@ def action_open_ai(**kwargs):
 
     #robo_roboclick.robo_keyboard_press_enter(delay=40)
     #control enter
-    robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=40)
+    if False:
+        #opens in background now
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=40)
+    if True:
+        #press enter
+        robo_roboclick.robo_keyboard_press_enter(delay=40)
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     if log_url:
         return _log_current_url(kwargs)

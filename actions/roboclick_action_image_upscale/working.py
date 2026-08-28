@@ -26,7 +26,7 @@ def describe():
     d["name_long"] = 'roboclick_action_image_upscale'
     d["name_short"] = ['image_upscale', 'upscale']
     d["name_short_options"] = ['image_upscale', 'upscale']
-    d["description"] = 'Image upscale.'
+    d["description"] = 'Resize an image by a scale factor or to exact pixel dimensions.'
     d["returns"] = 'Pass-through action result.'
     d["category"] = 'Image'
     v = []
@@ -34,6 +34,9 @@ def describe():
         v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
         v.append({'name': 'scale', 'description': 'Scale multiplier applied during image upscaling.', 'type': 'string', 'default': ''})
+        v.append({'name': 'width', 'description': 'Exact output width in pixels; may be used with height instead of scale.', 'type': 'integer', 'default': ''})
+        v.append({'name': 'height', 'description': 'Exact output height in pixels; may be used with width instead of scale.', 'type': 'integer', 'default': ''})
+        v.append({'name': 'resample', 'description': 'Pillow resampling mode for exact resizing: nearest, lanczos, bicubic, or bilinear.', 'type': 'string', 'default': 'lanczos'})
         v.append({'name': 'crop', 'description': 'Crop box or crop mode applied to the image.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
@@ -74,11 +77,14 @@ def old(**kwargs):
     file_output_base = file_output
     if directory not in file_output:
         file_output = os.path.join(directory, file_output)
+    target_width = action.get("width", action.get("width_pixels", ""))
+    target_height = action.get("height", action.get("height_pixels", ""))
+    exact_size_requested = target_width not in (None, "") or target_height not in (None, "")
     upscale_factor = action.get("scale", "")
-                                      
-    if upscale_factor == "":
-        upscale_factor = float(action.get("upscale_factor", 2))
-    upscale_factor = float(upscale_factor)
+    if not exact_size_requested:
+        if upscale_factor == "":
+            upscale_factor = float(action.get("upscale_factor", 2))
+        upscale_factor = float(upscale_factor)
     crop = action.get("crop", "")
     if os.path.isfile(file_input):
         from PIL import Image
@@ -87,10 +93,29 @@ def old(**kwargs):
                 os.remove(file_output)
                 print(f"Removed existing output file {file_output}")
             with Image.open(file_input_full) as img:
-                new_size = (int(img.width * upscale_factor), int(img.height * upscale_factor))
-                img = img.resize(new_size, Image.NEAREST)
+                if exact_size_requested:
+                    if target_width in (None, ""):
+                        target_width = round(img.width * (float(target_height) / img.height))
+                    if target_height in (None, ""):
+                        target_height = round(img.height * (float(target_width) / img.width))
+                    new_size = (int(target_width), int(target_height))
+                    resampling = getattr(Image, "Resampling", Image)
+                    resample_modes = {
+                        "nearest": resampling.NEAREST,
+                        "lanczos": resampling.LANCZOS,
+                        "bicubic": resampling.BICUBIC,
+                        "bilinear": resampling.BILINEAR,
+                    }
+                    resample = resample_modes.get(
+                        str(action.get("resample", "lanczos")).lower(),
+                        resampling.LANCZOS,
+                    )
+                else:
+                    new_size = (int(img.width * upscale_factor), int(img.height * upscale_factor))
+                    resample = Image.NEAREST
+                img = img.resize(new_size, resample)
                 img.save(file_output)
-                print(f"Image upscaled and saved to {file_output}")
+                print(f"Image resized to {new_size[0]} x {new_size[1]} and saved to {file_output}")
         except Exception as e:
             print(f"Error upscaling image {file_input_full}: {e}")
             return

@@ -1,4 +1,5 @@
 import os
+import subprocess
 import robo_roboclick
 
 d = {}
@@ -32,6 +33,7 @@ def describe():
         v.append({'name': 'file_source', 'description': 'Path to the source input file.', 'type': 'string', 'default': ''})
         v.append({'name': 'file_destination', 'description': 'Path to the output file to create or update.', 'type': 'string', 'default': ''})
         v.append({'name': 'render_type', 'description': 'Rendering mode passed to the OpenSCAD render step.', 'type': 'string', 'default': ''})
+        v.append({'name': 'stl_format', 'description': 'OpenSCAD STL export format: asciistl or binstl.', 'type': 'string', 'default': 'asciistl'})
         v.append({'name': 'delay', 'description': 'Delay duration in seconds.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
@@ -70,24 +72,38 @@ def old(**kwargs):
     render_type = action.get("render_type", "stl")  # stl, png, svg, etc.
     delay = action.get("delay", 5)
     print(f"Rendering OpenSCAD file {file_input} to {render_type} and saving to {file_output}")
-    #use os not subprocess in line system call to run openscad wait for it to finish
-    
     try:
         if render_type == "stl":
-            cmd = ["openscad", "-o", file_output, file_input_full]
+            stl_format = str(action.get("stl_format", "asciistl")).lower()
+            if stl_format not in ("asciistl", "binstl"):
+                print(f"Unsupported STL format {stl_format}")
+                return "exit_no_tab"
+            cmd = ["openscad", "--export-format", stl_format, "-o", file_output, file_input_full]
         elif render_type == "png":
             cmd = ["openscad", "-o", file_output, "--imgsize=800,600", file_input_full]
         elif render_type == "svg":
             cmd = ["openscad", "-o", file_output, "--export-format=svg", file_input_full]
         else:
             print(f"Unsupported render type {render_type}, skipping OpenSCAD render")
-            return
-        os.system(" ".join(cmd))      
-
-        
+            return "exit_no_tab"
+        # Remove an older mesh first so a failed render can never look complete.
+        if os.path.exists(file_output):
+            os.remove(file_output)
+        completed = subprocess.run(cmd, capture_output=True, text=True)
+        if completed.stdout.strip():
+            print(completed.stdout.strip())
+        if completed.stderr.strip():
+            print(completed.stderr.strip())
+        if completed.returncode != 0 or not os.path.isfile(file_output) or os.path.getsize(file_output) == 0:
+            print(
+                f"Error rendering OpenSCAD file {file_input_full}: "
+                f"exit code {completed.returncode}, output created={os.path.isfile(file_output)}"
+            )
+            return "exit_no_tab"
         print(f"OpenSCAD file rendered and saved to {file_output}")
     except Exception as e:
         print(f"Error rendering OpenSCAD file {file_input_full}: {e}")
+        return "exit_no_tab"
 
 def test(**kwargs):
     try:

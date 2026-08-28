@@ -1389,6 +1389,11 @@ def robo_keyboard_press_right(**kwargs):
     kwargs["string"] = "right"
     robo_keyboard_press_generic(**kwargs)
 
+#press end
+def robo_keyboard_press_end(**kwargs):
+    kwargs["string"] = "end"
+    robo_keyboard_press_generic(**kwargs)
+
 #delete
 def robo_keyboard_press_delete(**kwargs):
     kwargs["string"] = "delete"
@@ -2061,13 +2066,26 @@ def ai_check_for_too_many_requests_open_ai(**kwargs):
     #robo copy
     text = robo_keyboard_copy()
     if "making requests too quickly" in text.lower():
-        print("     Detected 'too many requests' in AI response. Waiting for 60 seconds before retrying...")
-        robo_delay(delay=1800, randomize=1800)
-        #press tab once
-        robo_keyboard_press_tab(delay=2)
-        #press enter once
-        robo_keyboard_press_enter(delay=10)
-        pass
+        if "Please wait a few minutes before trying again.".lower() in text.lower():
+            #wait 10 seconds then press enter
+            print("     Detected 'too many requests' in AI response.  But think it's an error, Waiting for 10 seconds before retrying...")
+            robo_delay(delay=10)
+            #click at 300,300
+            robo_mouse_click(position=[300, 300], delay=2, button="left")
+            #press tab
+            robo_keyboard_press_tab(delay=2)
+            #press enter
+            robo_keyboard_press_enter(delay=10)
+        else:    
+            print("     Detected 'too many requests' in AI response. Waiting for 60 seconds before retrying...")
+            robo_delay(delay=1800, randomize=1800)
+            #press tab once
+            robo_keyboard_press_tab(delay=2)
+            #press tab once
+            
+            #press enter once
+            robo_keyboard_press_enter(delay=10)
+            pass
     if True:
         clip = text
         if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   

@@ -96,7 +96,8 @@ def _prepare_to_save_image(kwargs=None):
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
     #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
-    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down ten times to select the file input
+    robo_roboclick.robo_keyboard_press_end(delay=1)
+    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down forty times to select the file input
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
 

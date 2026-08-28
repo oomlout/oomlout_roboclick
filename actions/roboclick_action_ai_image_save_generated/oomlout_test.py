@@ -226,6 +226,23 @@ def test_11(**kwargs):
     }
 
 
+def test_12(**kwargs):
+    """Test 12: reload preparation clicks, presses End, then presses Down forty times."""
+    working = _load_working_module()
+    calls = _stub_robo(working)
+    working._prepare_to_save_image()
+    expected = [
+        ("click", {"position": [330, 360], "delay": 2}),
+        ("end", {"delay": 1}),
+        ("down", {"delay": 1, "repeat": 40}),
+    ]
+    passed = calls["prepare_sequence"] == expected
+    return {
+        "passed": passed,
+        "details": f"prepare_sequence={calls['prepare_sequence']!r}",
+    }
+
+
 def test(test_to_run="all", **kwargs):
     selected = _resolve_selected_tests(test_to_run)
     if not selected:
@@ -314,6 +331,7 @@ def _stub_robo(working, create_on_calls=None, invalid_on_calls=None):
         "save_count": 0,
         "pasted": [],
         "ctrl": [],
+        "prepare_sequence": [],
     }
 
     def no_op(*args, **kwargs):
@@ -324,6 +342,15 @@ def _stub_robo(working, create_on_calls=None, invalid_on_calls=None):
 
     def paste(**kwargs):
         calls["pasted"].append(kwargs.get("text", ""))
+
+    def mouse_click(**kwargs):
+        calls["prepare_sequence"].append(("click", kwargs))
+
+    def press_end(**kwargs):
+        calls["prepare_sequence"].append(("end", kwargs))
+
+    def press_down(**kwargs):
+        calls["prepare_sequence"].append(("down", kwargs))
 
     def save_image(**kwargs):
         calls["save_count"] += 1
@@ -341,8 +368,9 @@ def _stub_robo(working, create_on_calls=None, invalid_on_calls=None):
     working.robo_roboclick.robo_delay = no_op
     working.robo_roboclick.ai_wait_mode_fast_check = no_op
     working.robo_roboclick.ai_check_for_too_many_requests = no_op
-    working.robo_roboclick.robo_mouse_click = no_op
-    working.robo_roboclick.robo_keyboard_press_down = no_op
+    working.robo_roboclick.robo_mouse_click = mouse_click
+    working.robo_roboclick.robo_keyboard_press_end = press_end
+    working.robo_roboclick.robo_keyboard_press_down = press_down
     working.robo_roboclick.robo_keyboard_press_backspace = no_op
     working.robo_roboclick.robo_keyboard_press_ctrl_generic = ctrl_generic
     working.robo_roboclick.robo_keyboard_paste = paste
