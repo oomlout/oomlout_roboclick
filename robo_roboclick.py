@@ -2088,7 +2088,7 @@ def ai_check_for_too_many_requests_open_ai(**kwargs):
             pass
     if True:
         clip = text
-        if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower():   
+        if "you've hit the plus plan limit" in clip.lower() or "you have reached your free image generation limit" in clip.lower() or "you've reached your image creation limit" in clip.lower() or "re out of images".lower() in clip.lower():   
             #get text bewteen "resets in" and  minutes
             time_out = clip.lower().split("resets in")[-1].split("minutes")[0].strip()
             #check to make sure it worked
