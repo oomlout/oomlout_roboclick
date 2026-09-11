@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import concurrent.futures
 import copy
 import datetime
 import json
@@ -28,6 +29,9 @@ __all__ = [
     "cli",
     "run_single",
     "run_folder",
+    "run_folder_recursive",
+    "run_folder_recursive_linear",
+    "run_folder_recursive_threaded",
     "run_action",
     "discover_actions",
     "build_action_lookup",
@@ -598,10 +602,217 @@ def _discover_oomp_modes(workings: dict[str, Any]) -> list[str]:
 
 
 
-def run_folder_recursive(**kwargs: Any) -> None:
-    directory = kwargs.get("directory", "")    
 
-    #get folders in directory but do not recurse into them yet
+def _resolve_mode_names(workings: dict[str, Any], mode_arg: Any) -> list[str]:
+    if mode_arg in ("all", "", None):
+        return _discover_oomp_modes(workings)
+
+    # A mode such as ``ai`` expands to 101 possible names for compatibility,
+    # but only real action blocks should become jobs.  Queuing all of the
+    # missing variants once per folder made large recursive runs spend most of
+    # their time processing no-ops.
+    requested_modes = _expand_numbered_variants(_normalize_mode_list(mode_arg))
+    return [
+        mode_name
+        for mode_name in requested_modes
+        if isinstance(workings.get(mode_name), dict)
+        and isinstance(workings[mode_name].get("actions"), list)
+        and bool(workings[mode_name]["actions"])
+    ]
+
+
+def _resolve_file_action(folder_abs: str, file_action_arg: str) -> str:
+    candidate_files: list[str] = []
+    if file_action_arg:
+        candidate_files.append(file_action_arg)
+    candidate_files.extend(["working.oomp", "working.yaml"])
+
+    for candidate in candidate_files:
+        candidate_path = candidate if os.path.isabs(candidate) else os.path.join(folder_abs, candidate)
+        if os.path.exists(candidate_path):
+            return candidate_path
+    return ""
+
+
+def _build_folder_mode_jobs(**kwargs: Any) -> list[dict[str, Any]]:
+    folder = kwargs.get("folder", "")
+    if not folder:
+        print("Error: folder is required for run_folder")
+        return []
+
+    folder_abs = os.path.abspath(folder)
+    if not os.path.isdir(folder_abs):
+        print(f"Error: folder does not exist: {folder_abs}")
+        return []
+
+    file_action = _resolve_file_action(folder_abs, kwargs.get("file_action", ""))
+    if not file_action:
+        print(f"Error: no working file found in {folder_abs}. Expected working.oomp or working.yaml")
+        return []
+
+    workings = _load_yaml_file(file_action)
+    if not workings:
+        print(f"Warning: no workings loaded from {file_action}")
+        return []
+
+    modes = _resolve_mode_names(workings, kwargs.get("mode", "all"))
+    quiet_queue_build = bool(kwargs.get("_quiet_queue_build", False))
+    if not modes:
+        if quiet_queue_build:
+            return []
+        print(
+            "Warning: no runnable modes found. "
+            "Expected keys like oomlout_ai_roboclick_1..100 or oomlout_corel_roboclick_1..100"
+        )
+        return []
+
+    if not quiet_queue_build:
+        print(f"Running {len(modes)} mode(s) from {file_action}")
+    jobs: list[dict[str, Any]] = []
+    for mode_name in modes:
+        run_kwargs = copy.deepcopy(kwargs)
+        run_kwargs.pop("_quiet_queue_build", None)
+        run_kwargs["directory"] = folder_abs
+        run_kwargs["directory_absolute"] = folder_abs
+        run_kwargs["file_action"] = file_action
+        run_kwargs["workings"] = workings
+        run_kwargs["mode"] = mode_name
+        jobs.append(run_kwargs)
+    return jobs
+
+
+_UI_ACTION_HINTS = [
+    "mouse",
+    "click",
+    "cursor",
+    "drag",
+    "scroll",
+    "key",
+    "keyboard",
+    "hotkey",
+    "tab",
+    "window",
+    "browser",
+    "corel",
+    "pyautogui",
+    "clipboard",
+    "focus",
+    "select",
+    "affinity",
+    "google_doc",
+]
+
+_UI_ACTION_NAMES = {
+    "add_file",
+    "add_image",
+    "ai_save_image",
+    "close_tab",
+    "new_chat",
+    "query",
+    "save_image_search_result",
+}
+
+_UI_ACTION_CATEGORIES = {"ai", "browser", "corel", "coreldraw", "google docs"}
+
+
+def _action_is_thread_safe(
+    action_cfg: dict[str, Any],
+    discovered: dict[str, DiscoveredAction],
+    allow_subprocess: bool = False,
+) -> bool:
+    if not isinstance(action_cfg, dict):
+        return False
+
+    if action_cfg.get("thread_safe") is True:
+        return True
+    if action_cfg.get("thread_safe") is False:
+        return False
+    if action_cfg.get("requires_ui") is True:
+        return False
+
+    command_name = str(action_cfg.get("command", "")).strip()
+    if command_name == "":
+        return False
+
+    # Subprocess actions are safe for this repository's per-part scripts, but
+    # other callers may use them to drive shared applications or files.  Keep
+    # those actions linear unless the caller explicitly opts in.
+    if command_name in {"run_python", "run_command"} and not allow_subprocess:
+        return False
+
+    normalized_command = command_name.lower()
+    if normalized_command.startswith("roboclick_action_"):
+        normalized_command = normalized_command[len("roboclick_action_"):]
+
+    # Aliases can dispatch to arbitrary legacy actions, so keep them on the
+    # serial path unless their YAML explicitly declares thread_safe: true.
+    if normalized_command.startswith("alias_"):
+        return False
+    if normalized_command in _UI_ACTION_NAMES:
+        return False
+    if any(token in normalized_command for token in _UI_ACTION_HINTS):
+        return False
+
+    discovered_action = discovered.get(command_name)
+    if discovered_action is not None:
+        metadata = discovered_action.metadata if isinstance(discovered_action.metadata, dict) else {}
+        category = str(metadata.get("category", "")).strip().lower()
+        if category in _UI_ACTION_CATEGORIES:
+            return False
+    return True
+
+
+def _job_is_thread_safe(
+    job_kwargs: dict[str, Any],
+    discovered: dict[str, DiscoveredAction],
+    allow_subprocess: bool = False,
+) -> bool:
+    workings = job_kwargs.get("workings", {})
+    mode_name = job_kwargs.get("mode", "")
+    mode_cfg = workings.get(mode_name, {}) if isinstance(workings, dict) else {}
+    if not isinstance(mode_cfg, dict):
+        return False
+
+    actions = mode_cfg.get("actions", [])
+    if not isinstance(actions, list) or not actions:
+        return False
+
+    return all(
+        _action_is_thread_safe(action_cfg, discovered, allow_subprocess=allow_subprocess)
+        for action_cfg in actions
+    )
+
+
+def _job_action_count(job: dict[str, Any]) -> int:
+    workings = job.get("workings", {})
+    mode = job.get("mode", "")
+    mode_cfg = workings.get(mode, {}) if isinstance(workings, dict) else {}
+    actions = mode_cfg.get("actions", []) if isinstance(mode_cfg, dict) else []
+    return len(actions) if isinstance(actions, list) else 0
+
+
+def _run_job_group(jobs: list[dict[str, Any]]) -> str:
+    """Run one folder's modes in order while other folders run concurrently."""
+    for job in jobs:
+        result = run_single(**job)
+        if result in ("exit", "exit_no_tab"):
+            return result
+    return ""
+
+
+def run_folder_recursive(**kwargs: Any) -> None:
+    if kwargs.get("recursive_threaded", False):
+        run_folder_recursive_threaded(**kwargs)
+        return
+    run_folder_recursive_linear(**kwargs)
+
+
+def run_folder_recursive_linear(**kwargs: Any) -> None:
+    directory = kwargs.get("directory", "")
+    if not directory:
+        print("Error: directory is required for run_folder_recursive_linear")
+        return
+
     entries = sorted(os.listdir(directory))
     for entry in entries:
         run_dir = os.path.join(directory, entry)
@@ -609,67 +820,108 @@ def run_folder_recursive(**kwargs: Any) -> None:
             continue
         print(f"Processing folder: {run_dir}")
         run_kwargs = copy.deepcopy(kwargs)
-        #pop directory from kwargs and set folder for run_folder
         run_kwargs.pop("directory", None)
-        run_kwargs["folder"] = run_dir        
+        run_kwargs["folder"] = run_dir
         run_folder(**run_kwargs)
 
+
+def run_folder_recursive_threaded(**kwargs: Any) -> None:
+    directory = kwargs.get("directory", "")
+    if not directory:
+        print("Error: directory is required for run_folder_recursive_threaded")
+        return
+
+    entries = sorted(os.listdir(directory))
+    discovered = build_action_lookup(actions_root=kwargs.get("actions_root"))
+    allow_subprocess = bool(kwargs.get("threaded_subprocess_actions", False))
+
+    linear_job_groups: list[list[dict[str, Any]]] = []
+    threaded_job_groups: list[list[dict[str, Any]]] = []
+
+    for entry in entries:
+        run_dir = os.path.join(directory, entry)
+        if not os.path.isdir(run_dir):
+            continue
+        run_kwargs = copy.deepcopy(kwargs)
+        run_kwargs.pop("directory", None)
+        run_kwargs["folder"] = run_dir
+        run_kwargs["_quiet_queue_build"] = True
+        jobs = _build_folder_mode_jobs(**run_kwargs)
+        if not jobs:
+            continue
+        for job in jobs:
+            job["_discovered_actions"] = discovered
+        # Modes within a folder can depend on outputs from earlier modes, so a
+        # folder is one ordered unit of work.  Different folders are independent
+        # and can safely be consumed by the worker pool.
+        if all(
+            _job_is_thread_safe(job, discovered, allow_subprocess=allow_subprocess)
+            for job in jobs
+        ):
+            threaded_job_groups.append(jobs)
+        else:
+            linear_job_groups.append(jobs)
+
+    threaded_mode_count = sum(len(group) for group in threaded_job_groups)
+    linear_mode_count = sum(len(group) for group in linear_job_groups)
+    action_count = sum(
+        _job_action_count(job)
+        for group in threaded_job_groups + linear_job_groups
+        for job in group
+    )
+    print(
+        "Job queue prepared: "
+        f"{action_count} action(s), "
+        f"{threaded_mode_count} mode(s) in "
+        f"{len(threaded_job_groups)} threaded folder job(s), "
+        f"{linear_mode_count} mode(s) in "
+        f"{len(linear_job_groups)} linear folder job(s)."
+    )
+
+    worker_count = _as_int(kwargs.get("threaded_workers", 6), 6)
+    if worker_count <= 0:
+        worker_count = 6
+
+    failures: list[str] = []
+    if threaded_job_groups:
+        print(f"Running threaded queue with {worker_count} worker(s)")
+        with concurrent.futures.ThreadPoolExecutor(
+            max_workers=worker_count,
+            thread_name_prefix="roboclick",
+        ) as executor:
+            futures = {
+                executor.submit(_run_job_group, group): group[0]["folder"]
+                for group in threaded_job_groups
+            }
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    result = future.result()
+                    if result in ("exit", "exit_no_tab"):
+                        failures.append(f"{futures[future]} returned {result}")
+                except Exception as exc:
+                    failures.append(f"{futures[future]} raised {type(exc).__name__}: {exc}")
+
+    if linear_job_groups:
+        print("Running linear queue for UI/interactive actions")
+        for group in linear_job_groups:
+            try:
+                result = _run_job_group(group)
+                if result in ("exit", "exit_no_tab"):
+                    failures.append(f"{group[0]['folder']} returned {result}")
+            except Exception as exc:
+                failures.append(f"{group[0]['folder']} raised {type(exc).__name__}: {exc}")
+
+    if failures:
+        preview = "; ".join(failures[:10])
+        if len(failures) > 10:
+            preview += f"; ... and {len(failures) - 10} more"
+        raise RuntimeError(f"{len(failures)} recursive folder job(s) failed: {preview}")
+
+
 def run_folder(**kwargs: Any) -> None:
-    folder = kwargs.get("folder", "")
-    if not folder:
-        print("Error: folder is required for run_folder")
-        return
-
-    folder_abs = os.path.abspath(folder)
-    if not os.path.isdir(folder_abs):
-        print(f"Error: folder does not exist: {folder_abs}")
-        return
-
-    file_action_arg = kwargs.get("file_action", "")
-    candidate_files: list[str] = []
-    if file_action_arg:
-        candidate_files.append(file_action_arg)
-    candidate_files.extend(["working.oomp", "working.yaml"])
-
-    file_action = ""
-    for candidate in candidate_files:
-        candidate_path = candidate if os.path.isabs(candidate) else os.path.join(folder_abs, candidate)
-        if os.path.exists(candidate_path):
-            file_action = candidate_path
-            break
-    if not file_action:
-        print(f"Error: no working file found in {folder_abs}. Expected working.oomp or working.yaml")
-        return
-
-    workings = _load_yaml_file(file_action)
-    if not workings:
-        print(f"Warning: no workings loaded from {file_action}")
-        return
-
-    mode_arg = kwargs.get("mode", "all")
-    if mode_arg not in ("all", "", None):
-        mode_list = _normalize_mode_list(mode_arg)
-        modes = _expand_numbered_variants(mode_list)
-    else:
-        modes = _discover_oomp_modes(workings)
-
-    if not modes:
-        print(
-            "Warning: no runnable modes found. "
-            "Expected keys like oomlout_ai_roboclick_1..100 or oomlout_corel_roboclick_1..100"
-        )
-        return
-
-    run_kwargs = copy.deepcopy(kwargs)
-    run_kwargs["directory"] = folder_abs
-    run_kwargs["directory_absolute"] = folder_abs
-    run_kwargs["file_action"] = file_action
-    run_kwargs["workings"] = workings
-
-    print(f"Running {len(modes)} mode(s) from {file_action}")
-    for mode_name in modes:
-        run_kwargs["mode"] = mode_name
-        run_single(**run_kwargs)
+    jobs = _build_folder_mode_jobs(**kwargs)
+    for job in jobs:
+        run_single(**job)
 
 
 def _directory_matches_filters(directory_name: str, kwargs: dict[str, Any]) -> bool:
@@ -931,6 +1183,9 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--file-action", default="working.yaml")
     parser.add_argument("--folder", default="")
     parser.add_argument("--directory", default="")
+    parser.add_argument("--recursive-threaded", action="store_true")
+    parser.add_argument("--threaded-workers", type=int, default=6)
+    parser.add_argument("--threaded-subprocess-actions", action="store_true")
     parser.add_argument("--actions-root", default=None)
     parser.add_argument("--docs-json", default="")
     parser.add_argument("--docs-html-template", default="")
@@ -956,6 +1211,9 @@ def cli() -> None:
             file_action=args.file_action,
             folder=args.folder,
             directory=args.directory,
+            recursive_threaded=args.recursive_threaded,
+            threaded_workers=args.threaded_workers,
+            threaded_subprocess_actions=args.threaded_subprocess_actions,
             actions_root=args.actions_root,
         )
 

@@ -36,6 +36,12 @@
       "summary": "Add image.",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "file_source",
           "description": "Path to the source input file.",
           "type": "string",
@@ -55,6 +61,7 @@
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "file_source",
         "position_click",
         "mode -- source_files from source_files directory"
@@ -2075,6 +2082,72 @@
       ]
     },
     {
+      "command": "roboclick_action_file_verify_structured",
+      "name_long": "roboclick_action_file_verify_structured",
+      "name_short_options": [
+        "verify_structured",
+        "verify_yaml_json",
+        "repair_yaml_json",
+        "verify_files"
+      ],
+      "description": "Validate a YAML or JSON file. If malformed, write an error report, back up the original, ask AI to repair it, validate the repair, and retry.",
+      "summary": "Validate a YAML or JSON file.",
+      "variables": [
+        {
+          "name": "file_name",
+          "description": "YAML/JSON file to validate or repair.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "file_source",
+          "description": "Alias for file_name.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "retries",
+          "description": "Number of AI repair attempts after the initial validation failure.",
+          "type": "number",
+          "default": 1
+        },
+        {
+          "name": "mode_ai_wait",
+          "description": "AI wait strategy for the repair prompt.",
+          "type": "string",
+          "default": "slow"
+        },
+        {
+          "name": "repair",
+          "description": "Whether to attempt AI repair when invalid.",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "dry_run",
+          "description": "Validate and report to stdout only; do not write reports, backups, repairs, or open AI.",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "variable_names": [
+        "file_name",
+        "file_source",
+        "retries",
+        "mode_ai_wait",
+        "repair",
+        "dry_run"
+      ],
+      "category": "File",
+      "returns": "None on valid or repaired files; keeps moving on failure.",
+      "aliases": [
+        "verify_structured",
+        "verify_yaml_json",
+        "repair_yaml_json",
+        "verify_files"
+      ]
+    },
+    {
       "command": "roboclick_action_google_doc_add_text",
       "name_long": "roboclick_action_google_doc_add_text",
       "name_short_options": [
@@ -2274,6 +2347,7 @@
       "name_long": "roboclick_action_image_remove_background",
       "name_short_options": [
         "image_remove_background",
+        "image_remove_background_keyed",
         "remove_background"
       ],
       "description": "Key a flat chroma screen background (green or magenta) out of an image, replacing it with real transparency, in place.",
@@ -2302,19 +2376,162 @@
           "description": "Keyness treated as pure background.",
           "type": "string",
           "default": "90"
+        },
+        {
+          "name": "background_remove_all",
+          "description": "Remove matching key-coloured pixels everywhere in the image. Set false to remove only the border-connected screen.",
+          "type": "boolean",
+          "default": true
         }
       ],
       "variable_names": [
         "file_name",
         "color_key",
         "threshold_low",
-        "threshold_high"
+        "threshold_high",
+        "background_remove_all"
       ],
       "category": "Image",
       "returns": "Pass-through action result.",
       "aliases": [
         "image_remove_background",
+        "image_remove_background_keyed",
         "remove_background"
+      ]
+    },
+    {
+      "command": "roboclick_action_image_resize",
+      "name_long": "roboclick_action_image_resize",
+      "name_short_options": [
+        "image_resize",
+        "resize_image",
+        "image_thumbnail"
+      ],
+      "description": "Resize an image proportionally so its largest side is at most the requested pixel size.",
+      "summary": "Resize an image proportionally so its largest side is at most the requested pixel size.",
+      "variables": [
+        {
+          "name": "file_source",
+          "description": "Path to the source image.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "file_destination",
+          "description": "Path to the resized image.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "maximum_dimension",
+          "description": "Maximum width or height in pixels.",
+          "type": "integer",
+          "default": 300
+        },
+        {
+          "name": "allow_upscale",
+          "description": "Whether images smaller than the limit may be enlarged.",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "name": "resample",
+          "description": "Pillow resampling mode: nearest, lanczos, bicubic, or bilinear.",
+          "type": "string",
+          "default": "lanczos"
+        }
+      ],
+      "variable_names": [
+        "file_source",
+        "file_destination",
+        "maximum_dimension",
+        "allow_upscale",
+        "resample"
+      ],
+      "category": "Image",
+      "returns": "The destination image path, or an empty string when the source cannot be resized.",
+      "aliases": [
+        "image_resize",
+        "resize_image",
+        "image_thumbnail"
+      ]
+    },
+    {
+      "command": "roboclick_action_image_trace_vector",
+      "name_long": "roboclick_action_image_trace_vector",
+      "name_short_options": [
+        "image_trace_vector",
+        "trace_vector",
+        "png_to_bezier_svg"
+      ],
+      "description": "Trace a black-and-white raster image into closed cubic Bezier SVG paths. The SVG contains one clean compound path on one layer, with nested contours retained as holes.",
+      "summary": "Trace a black-and-white raster image into closed cubic Bezier SVG paths.",
+      "variables": [
+        {
+          "name": "file_source",
+          "description": "Black-and-white PNG/JPG source image.",
+          "type": "string",
+          "default": ""
+        },
+        {
+          "name": "file_destination",
+          "description": "Destination SVG path.",
+          "type": "string",
+          "default": "trace.svg"
+        },
+        {
+          "name": "threshold",
+          "description": "0-255 black/white threshold.",
+          "type": "number",
+          "default": 128
+        },
+        {
+          "name": "invert",
+          "description": "true, false, or auto based on border colour.",
+          "type": "string",
+          "default": "auto"
+        },
+        {
+          "name": "simplify_tolerance_px",
+          "description": "Contour simplification tolerance in source pixels.",
+          "type": "number",
+          "default": 1.5
+        },
+        {
+          "name": "curve_smoothing",
+          "description": "Catmull-Rom to cubic Bezier smoothing strength, 0-1.",
+          "type": "number",
+          "default": 0.75
+        },
+        {
+          "name": "minimum_area_px",
+          "description": "Discard contours smaller than this pixel area.",
+          "type": "number",
+          "default": 16
+        },
+        {
+          "name": "output_width_mm",
+          "description": "Physical SVG width in millimetres.",
+          "type": "number",
+          "default": 50
+        }
+      ],
+      "variable_names": [
+        "file_source",
+        "file_destination",
+        "threshold",
+        "invert",
+        "simplify_tolerance_px",
+        "curve_smoothing",
+        "minimum_area_px",
+        "output_width_mm"
+      ],
+      "category": "Image",
+      "returns": "Creates a structured vector SVG suitable for display, fabrication, and laser cutting.",
+      "aliases": [
+        "image_trace_vector",
+        "trace_vector",
+        "png_to_bezier_svg"
       ]
     },
     {
@@ -2324,8 +2541,8 @@
         "image_upscale",
         "upscale"
       ],
-      "description": "Image upscale.",
-      "summary": "Image upscale.",
+      "description": "Resize an image by a scale factor or to exact pixel dimensions.",
+      "summary": "Resize an image by a scale factor or to exact pixel dimensions.",
       "variables": [
         {
           "name": "file_source",
@@ -2346,6 +2563,24 @@
           "default": ""
         },
         {
+          "name": "width",
+          "description": "Exact output width in pixels; may be used with height instead of scale.",
+          "type": "integer",
+          "default": ""
+        },
+        {
+          "name": "height",
+          "description": "Exact output height in pixels; may be used with width instead of scale.",
+          "type": "integer",
+          "default": ""
+        },
+        {
+          "name": "resample",
+          "description": "Pillow resampling mode for exact resizing: nearest, lanczos, bicubic, or bilinear.",
+          "type": "string",
+          "default": "lanczos"
+        },
+        {
           "name": "crop",
           "description": "Crop box or crop mode applied to the image.",
           "type": "string",
@@ -2356,6 +2591,9 @@
         "file_source",
         "file_destination",
         "scale",
+        "width",
+        "height",
+        "resample",
         "crop"
       ],
       "category": "Image",
@@ -2393,6 +2631,12 @@
           "default": ""
         },
         {
+          "name": "stl_format",
+          "description": "OpenSCAD STL export format: asciistl or binstl.",
+          "type": "string",
+          "default": "asciistl"
+        },
+        {
           "name": "delay",
           "description": "Delay duration in seconds.",
           "type": "string",
@@ -2403,6 +2647,7 @@
         "file_source",
         "file_destination",
         "render_type",
+        "stl_format",
         "delay"
       ],
       "category": "OpenSCAD",
@@ -2701,6 +2946,6 @@
       ]
     }
   ],
-  "generated_date": "2026-07-08",
-  "total_actions": 65
+  "generated_date": "2026-08-30",
+  "total_actions": 68
 }
