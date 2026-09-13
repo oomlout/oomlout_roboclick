@@ -1670,11 +1670,16 @@ def robo_text_jinja_template(**kwargs):
         file_template_relative = file_template
 #C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_oomlout_76_2_mm_50_8_mm\
 #C:\od\OneDrive\docs\oomp_category\source_file\template_jinja\oomp_category\template_jinja_label_76_2_mm_width_50_8_mm_height
-        #if the file doesn't exist         
+        # If the template path is relative, allow a part-specific template to
+        # override the project-wide one.  Fall back to the project base when
+        # the part does not provide that template.
+        file_template_part = os.path.join(directory_part, file_template_relative)
         project_base = os.path.abspath(os.getcwd())
-        file_template = os.path.join(project_base, file_template_relative)
-        if not os.path.isfile(file_template):
-            file_template = os.path.join(directory_part, file_template_relative)
+        file_template_project = os.path.join(project_base, file_template_relative)
+        if os.path.isfile(file_template_part):
+            file_template = file_template_part
+        else:
+            file_template = file_template_project
 
         
         try:
