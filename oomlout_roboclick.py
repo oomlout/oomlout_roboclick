@@ -915,7 +915,10 @@ def run_folder_recursive_threaded(**kwargs: Any) -> None:
         preview = "; ".join(failures[:10])
         if len(failures) > 10:
             preview += f"; ... and {len(failures) - 10} more"
-        raise RuntimeError(f"{len(failures)} recursive folder job(s) failed: {preview}")
+        #raise RuntimeError(f"{len(failures)} recursive folder job(s) failed: {preview}")
+        #print errors to the terminal
+        print(f"{len(failures)} recursive folder job(s) failed: {preview}")
+        
 
 
 def run_folder(**kwargs: Any) -> None:
