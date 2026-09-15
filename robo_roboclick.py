@@ -2236,7 +2236,37 @@ def _save_image_from_position(position, file_name_absolute):
     robo_mouse_click(position=position, delay=2, button="right")  # Click on the image to focus
     robo_keyboard_press_down(delay=1, repeat=2)
     robo_keyboard_press_enter(delay=5)
-    robo_keyboard_send(string=file_name_absolute, delay=5)
+    #failing if file name is too long so need to split into smaller chunks split at fodler to navigate to the folder first
+    length_max = 250  # Maximum length of each chunk for the file name
+    if len(file_name_absolute) < length_max:
+        #unchanged
+        robo_keyboard_send(string=file_name_absolute, delay=5)
+    else:
+        # Split the file name into smaller chunks navigate through folders make each string as long as possible then always end with just the filename but make it as few chinks as possible so join the folders together when possible
+        parts = file_name_absolute.split(os.sep)
+        current_path = ""
+        #remember to add the \ after the driver letter if on Windows
+        if os.name == "nt" and len(parts[0]) == 2 and parts[0][1] == ":":
+            parts[0] += "\\"
+        for i in range(len(parts) - 1):  # Navigate through folders
+            part_current = parts[i]            
+            if current_path:
+                current_path = os.path.join(current_path, part_current)
+            else:
+                current_path = part_current
+            if (len(current_path) + len(parts[i+1])) > length_max:
+                robo_keyboard_send(string=current_path, delay=1)
+                robo_keyboard_press_enter(delay=1)        
+                current_path = ""  # Reset the current path after sending it
+            i += 1
+        # Send the final file name
+        #send current_path
+        if current_path:
+            robo_keyboard_send(string=current_path, delay=5)
+            robo_keyboard_press_enter(delay=1)
+        final_string = parts[-1]
+        robo_keyboard_send(string=final_string, delay=5)
+        
     robo_keyboard_press_enter(delay=5)
     robo_keyboard_send(string="y", delay=5)
     robo_keyboard_press_escape(delay=5, repeat=5)  # Escape to close any dialogs
