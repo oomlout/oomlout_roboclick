@@ -2265,6 +2265,9 @@ def _save_image_from_position(position, file_name_absolute):
             robo_keyboard_send(string=current_path, delay=5)
             robo_keyboard_press_enter(delay=1)
         final_string = parts[-1]
+        #select all backspace before typing
+        robo_keyboard_press_ctrl_generic(key="a", delay=1)  # Select all text
+        robo_keyboard_press_backspace(delay=1)  # Delete selected text
         robo_keyboard_send(string=final_string, delay=5)
         
     robo_keyboard_press_enter(delay=5)
