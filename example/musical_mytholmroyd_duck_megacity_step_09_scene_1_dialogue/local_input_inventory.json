@@ -1,0 +1,80 @@
+[
+  {
+    "context_name": "settings_basic.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\source\\settings_basic.yaml",
+    "sha256": "f71fa7b27930b26e2fc85e2ac64c4fdfbf456f9146c7e38bea4cd906cf4db410",
+    "bytes": 12759
+  },
+  {
+    "context_name": "show_config.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_03_canon_1\\show_config.yaml",
+    "sha256": "cab42bd7a4d66b5126580cae0070c8b0b57b08f18e69bf2830e966887d1dc5a0",
+    "bytes": 852
+  },
+  {
+    "context_name": "canon_bible.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_03_canon_1\\canon_bible.md",
+    "sha256": "4f18f88e644b2cd8aa6bab10a77562077862218583188af2aeaeeabcb77f3751",
+    "bytes": 8454
+  },
+  {
+    "context_name": "character_voices.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_voices.md",
+    "sha256": "044d27d4e388bcdd570988d9aeb2fcac89c3b4e72571c4cb99f65bde8c2f62e6",
+    "bytes": 9933
+  },
+  {
+    "context_name": "character_list.csv",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_list.csv",
+    "sha256": "a8183e29b5b34ff15d9148c52475c17858afb668beb1e86540b7527c7617a06f",
+    "bytes": 918
+  },
+  {
+    "context_name": "character_registry.json",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_registry.json",
+    "sha256": "020b2ed25f6c691166b6c068ed8e240c79604f56475ff0e99d1b63850f265f14",
+    "bytes": 3231
+  },
+  {
+    "context_name": "dialogue_guide.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_08_dialogue_director_1\\dialogue_guide.md",
+    "sha256": "32be7d4ace5e3d108a4553efc4b1a54a0c2ba45fb64ac934703cc464b64756af",
+    "bytes": 5795
+  },
+  {
+    "context_name": "scene_list.csv",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_02_story_structure_1\\scene_list.csv",
+    "sha256": "8e993cdfd71105ba6b8077ee766a79a6778c0f1169ea8c3c05aa6e030f53f2a2",
+    "bytes": 3589
+  },
+  {
+    "context_name": "scene_song_ledger.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_02_story_structure_1\\scene_song_ledger.md",
+    "sha256": "d81810c06f9476e42e5f94fa8c498645d8914259574a52b79fb6fd8d04f8d187",
+    "bytes": 15890
+  },
+  {
+    "context_name": "scene_direction.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_05_director_1\\scene_direction_S01.md",
+    "sha256": "04470d29a8d187649c4a98edbe27fda498833df46ef1fdc606b2c304eb7c4e37",
+    "bytes": 5038
+  },
+  {
+    "context_name": "dialogue_direction.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_08_dialogue_director_1\\dialogue_direction_S01.md",
+    "sha256": "6ea0e3c261f64b0fe8bec6bcb86df00edc2f2df2ad9cb5fdc7bff660260ecdcf",
+    "bytes": 3093
+  },
+  {
+    "context_name": "this_scene.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue\\this_scene.md",
+    "sha256": "c2febda3eaa2ffd28678005baa582eef70aa7d121d8d72050314a805f2ed9361",
+    "bytes": 185
+  },
+  {
+    "context_name": "song_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07a_song_N01_final\\lyrics.md",
+    "sha256": "f9fdf52760e5d516e69254ebb167d155351a5eb27da2dafcf4bd058cdeffa3cf",
+    "bytes": 1324
+  }
+]

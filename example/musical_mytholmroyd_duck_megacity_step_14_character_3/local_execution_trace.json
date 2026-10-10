@@ -1,0 +1,15 @@
+{
+  "status": "DRAFT",
+  "input_files": [
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\character_description.md",
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\elevenlabs_voice_prompt.md",
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\suno_voice_description.yaml",
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\image_prompt.md",
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\character.yaml"
+  ],
+  "source_claims": "Fixed step_04a compatibility publication.",
+  "assumptions": "No new character design approval.",
+  "changes_made": "Five declared files copied byte-for-byte.",
+  "open_questions": [],
+  "verification_notes": "Source/destination byte equality verified; no ZIP read."
+}

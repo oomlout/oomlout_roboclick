@@ -84,6 +84,12 @@
       "summary": "Continue chat.",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "url_chat",
           "description": "Chat URL to continue an existing conversation.",
           "type": "string",
@@ -97,6 +103,7 @@
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "url_chat",
         "log_url"
       ],
@@ -118,6 +125,12 @@
       "summary": "Add a file (alias for add_image).",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "file_source",
           "description": "path of the file, referenced to current directory",
           "type": "string",
@@ -125,6 +138,7 @@
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "file_source"
       ],
       "category": "ai",
@@ -179,6 +193,12 @@
       "summary": "Save image generated.",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "file_name",
           "description": "File name to read or write for this action.",
           "type": "string",
@@ -204,6 +224,7 @@
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "file_name",
         "position_click",
         "mode_ai_wait",
@@ -268,6 +289,12 @@
       "summary": "Ai query.",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "text",
           "description": "Text content used by this action.",
           "type": "string",
@@ -296,14 +323,22 @@
           "description": "Query input method (typing or paste).",
           "type": "string",
           "default": ""
+        },
+        {
+          "name": "position_click",
+          "description": "Screen position to click before executing the step.",
+          "type": "string",
+          "default": ""
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "text",
         "file_name",
         "delay",
         "mode_ai_wait",
-        "method"
+        "method",
+        "position_click"
       ],
       "category": "AI",
       "returns": "Pass-through action result.",
@@ -323,6 +358,12 @@
       "description": "Save text.",
       "summary": "Save text.",
       "variables": [
+        {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
         {
           "name": "file_name",
           "description": "File name to save captured or extracted content.",
@@ -370,9 +411,16 @@
           "description": "Whether repeated line breaks should be reduced by half so accidental doubles become singles and four line breaks become two.",
           "type": "boolean",
           "default": true
+        },
+        {
+          "name": "position_click",
+          "description": "Screen position to click before executing text copy.",
+          "type": "string",
+          "default": ""
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "file_name",
         "file_name_full",
         "file_name_clip",
@@ -380,7 +428,8 @@
         "tag_close",
         "clip",
         "sanitize_text",
-        "sanitize_double_linebreaks"
+        "sanitize_double_linebreaks",
+        "position_click"
       ],
       "category": "AI",
       "returns": "Pass-through action result.",
@@ -402,6 +451,12 @@
       "summary": "Set mode.",
       "variables": [
         {
+          "name": "base_ai_provider",
+          "description": "AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.",
+          "type": "string",
+          "default": "open_ai"
+        },
+        {
           "name": "mode",
           "description": "Mode selector controlling action behavior.",
           "type": "string",
@@ -409,6 +464,7 @@
         }
       ],
       "variable_names": [
+        "base_ai_provider",
         "mode"
       ],
       "category": "AI",
@@ -2439,6 +2495,12 @@
           "description": "Pillow resampling mode: nearest, lanczos, bicubic, or bilinear.",
           "type": "string",
           "default": "lanczos"
+        },
+        {
+          "name": "regenerate_pngs",
+          "description": "Replace the destination when it already exists.",
+          "type": "boolean",
+          "default": false
         }
       ],
       "variable_names": [
@@ -2446,7 +2508,8 @@
         "file_destination",
         "maximum_dimension",
         "allow_upscale",
-        "resample"
+        "resample",
+        "regenerate_pngs"
       ],
       "category": "Image",
       "returns": "The destination image path, or an empty string when the source cannot be resized.",
@@ -2946,6 +3009,6 @@
       ]
     }
   ],
-  "generated_date": "2026-08-30",
+  "generated_date": "2026-09-16",
   "total_actions": 68
 }

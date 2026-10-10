@@ -1,0 +1,14 @@
+{
+  "status": "DRAFT",
+  "input_files": [
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_09a_scene_2_dialogue_final\\direction_final.json",
+    "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_10_scene_2_line_001\\working.yaml"
+  ],
+  "source_claims": "Exact final spoken text, voice ID and opening/closing block from the OOMP line fan-out.",
+  "assumptions": "Audio is generated separately by the declared ElevenLabs action.",
+  "changes_made": "Executed declared create_text_file actions only.",
+  "open_questions": [
+    "External line.mp3 has not been generated."
+  ],
+  "verification_notes": "YAML text matches the indexed final direction cue."
+}

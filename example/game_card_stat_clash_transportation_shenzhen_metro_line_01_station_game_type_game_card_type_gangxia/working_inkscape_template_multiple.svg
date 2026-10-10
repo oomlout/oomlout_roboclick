@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  Shenzhen Metro 2-up postcard master.
+  Page: 152.4 x 101.6 mm (6 x 4 inches).
+  Finished cards: 72 x 96 mm.
+  Bleed canvases: 76 x 100 mm (2 mm bleed on every edge).
+  Bleed canvases: x=0.2 / 76.2 mm, y=0.8 mm.
+  Trim edges: card 1 x=2.2..74.2 mm; card 2 x=78.2..150.2 mm;
+  both y=2.8..98.8 mm. The two centre bleeds meet at x=76.2 mm.
+-->
+{% set official = '#0A9B4B' %}
+{% set accent = '#56B681' %}
+{% set ink = '#FFFFFF' %}
+{% set panel = '#10212A' %}
+{% set hero = p.card_hero_image_href|default('initial_generated_cgi.png') %}
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="152.4mm" height="101.6mm" viewBox="0 0 15240 10160"
+     data-card-1-trim-left-mm="2.2" data-card-2-trim-left-mm="78.2"
+     data-card-trim-top-mm="2.8" version="1.1">
+  <defs>
+    <!--
+      The complete card is inline SVG, not an external image. Inkscape can
+      therefore retain text, paths, fills and crop marks as vector PDF objects.
+    -->
+    <symbol id="inlineCard" viewBox="0 0 7600 10000">
+<defs>
+    <clipPath id="stationBadgeClip">
+      <circle cx="720" cy="620" r="280"/>
+    </clipPath>
+    <clipPath id="heroClip">
+      <rect x="300" y="1190" width="4400" height="4400" rx="170"/>
+    </clipPath>
+    <linearGradient id="heroShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.68" stop-color="#061016" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061016" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="pageSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="0.48" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.13"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The official line colour extends through the full 2 mm bleed. -->
+  <rect width="7600" height="10000" fill="{{ official }}"/>
+
+  <!-- Finished 72 x 96 mm card begins at (2 mm, 2 mm). -->
+  <g transform="translate(200,200)">
+  <!-- Official line-colour background, fixed in this line's own template. -->
+  <rect width="7200" height="9600" fill="{{ official }}"/>
+  <rect width="7200" height="9600" fill="url(#pageSheen)"/>
+
+  <!-- Quiet metro-map motif: one line, four stations and a branch. -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="90">
+    <path d="M-300 8500 C1600 7900 1750 6900 3550 6260 S6050 5350 7500 4300"/>
+    <path d="M3550 6260 C4070 5680 4450 5410 4930 5040"/>
+  </g>
+  <g fill="{{ official }}" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="70">
+    <circle cx="860" cy="8140" r="135"/><circle cx="2300" cy="7300" r="135"/>
+    <circle cx="3550" cy="6260" r="135"/><circle cx="5520" cy="5140" r="135"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="230" y="220" width="6740" height="800" rx="210" fill="{{ official }}"/>
+  <rect x="230" y="220" width="6740" height="800" rx="210"
+        fill="#FFFFFF" fill-opacity="0.22"/>
+  <circle cx="720" cy="620" r="280" fill="{{ panel }}"/>
+  <rect x="440" y="620" width="560" height="280" fill="#FFFFFF"
+        fill-opacity="0.14" clip-path="url(#stationBadgeClip)"/>
+  <path d="M485 620 H955" stroke="#FFFFFF" stroke-opacity="0.72"
+        stroke-width="20"/>
+  {% set badge_line = p.line_badge_number|default((p.line_short_name|default('L1'))|replace('L','')) %}
+  {% set badge_station = p.station_number_on_line_display|default('%02d'|format(p.station_sequence|default(0)|int)) %}
+  <text x="720" y="575" text-anchor="middle"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="{% if badge_line|length > 1 %}185{% else %}220{% endif %}"
+        font-weight="900" fill="#FFFFFF">{{ badge_line }}</text>
+  <text x="720" y="825" text-anchor="middle"
+        font-family="'Segoe UI',Arial,sans-serif" font-size="220"
+        font-weight="900" fill="#FFFFFF">{{ badge_station }}</text>
+
+  {% set tname = (p.name_proper_upper|default('STATION'))|trim %}
+  {% set tlen = [(tname|length), 1]|max %}
+  {% set title_size = [[(4050/(tlen*0.58))|round|int, 420]|min, 220]|max %}
+  <text x="1120" y="610" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="{{ title_size }}" font-weight="900" letter-spacing="4"
+        fill="{{ ink }}"{% if tlen*0.58*title_size > 4050 %} textLength="4050" lengthAdjust="spacingAndGlyphs"{% endif %}>{{ tname }}</text>
+  <text x="1120" y="865"
+        font-family="'Microsoft YaHei','Noto Sans CJK SC','Segoe UI',Arial,sans-serif"
+        font-size="210" font-weight="700" fill="{{ ink }}" fill-opacity="0.78">
+    {{ p.station_name_zh|default('') }} · {{ p.station_line_name_en|default('Line 1') }}
+  </text>
+
+  <!-- Overall -->
+  <g transform="translate(5900,310)">
+    <rect width="880" height="620" rx="170" fill="{{ panel }}"/>
+    <text x="440" y="205" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="128"
+          font-weight="800" letter-spacing="4" fill="#FFFFFF" fill-opacity="0.78">OVERALL</text>
+    <text x="440" y="525" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="360"
+          font-weight="900" fill="#FFFFFF">{{ p.score_category_6|default('—') }}</text>
+  </g>
+
+  <!--
+    Station character: the generated artwork is square, so this panel is a
+    true 1:1 viewport. "meet" guarantees that the complete generated image is
+    visible instead of cropping it into a landscape banner.
+  -->
+  <rect x="250" y="1140" width="4500" height="4500" rx="220" fill="#FFFFFF"/>
+  <g clip-path="url(#heroClip)">
+    <rect x="300" y="1190" width="4400" height="4400" fill="#DDE6EA"/>
+    <image href="{{ hero }}" xlink:href="{{ hero }}" x="300" y="1190"
+           width="4400" height="4400" preserveAspectRatio="xMidYMid meet"/>
+    <rect x="300" y="1190" width="4400" height="4400" fill="url(#heroShade)"/>
+  </g>
+
+  <!-- Sourced station facts sit beside the square artwork. -->
+  <rect x="4840" y="1140" width="2110" height="4500" rx="220"
+        fill="{{ panel }}" fill-opacity="0.93"/>
+
+  <!-- Four sourced station facts -->
+  {% set facts = [
+    ('FROM START', p.distance_from_line_start_display|default('—')),
+    ('TO END', p.distance_to_line_end_display|default('—')),
+    ('OPENED', p.opened_year|default('—')),
+    ('BUS ROUTES', p.nearby_bus_route_count|default('—'))
+  ] %}
+  {% for fact in facts %}
+    <g transform="translate(4990,{{ 1320 + loop.index0*720 }})">
+      <rect width="1810" height="650" rx="135" fill="#FFFFFF" fill-opacity="0.10"
+            stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="14"/>
+      <rect x="0" y="0" width="145" height="650" rx="72" fill="{{ official }}"/>
+      <text x="975" y="240" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="135"
+            font-weight="800" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.70">{{ fact[0] }}</text>
+      <text x="975" y="520" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="255"
+            font-weight="900" fill="#FFFFFF">{{ fact[1] }}</text>
+    </g>
+  {% endfor %}
+
+  <!--
+    Connection status is anchored to the bottom of the sidebar. Stations
+    without an interchange therefore read as intentionally complete instead
+    of leaving an empty block at the top.
+  -->
+  <text x="5050" y="4490" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="165" font-weight="850" letter-spacing="4" fill="#FFFFFF">
+    {% if p.interchange_lines|default([])|length %}CONNECTS{% else %}ON THIS LINE{% endif %}
+  </text>
+  <g>
+    {% for connection in p.interchange_lines|default([]) %}
+      <g transform="translate({{ 4990 + ((loop.index0 % 2) * 930) }},{{ 4620 + ((loop.index0 // 2) * 470) }})">
+        <rect width="810" height="390" rx="195" fill="{{ connection.colour_hex|default('#394A52') }}"
+              stroke="#FFFFFF" stroke-width="24"/>
+        <text x="405" y="266" text-anchor="middle"
+              font-family="'Segoe UI',Arial,sans-serif" font-size="210"
+              font-weight="900" fill="{{ connection.text_colour|default('#FFFFFF') }}">
+          {{ connection.short_name }}
+        </text>
+      </g>
+    {% else %}
+      <rect x="4990" y="4620" width="1810" height="390" rx="195"
+            fill="#FFFFFF" fill-opacity="0.20" stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="18"/>
+      <text x="5895" y="4882" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="170"
+            font-weight="800" fill="#FFFFFF">NO INTERCHANGE</text>
+    {% endfor %}
+  </g>
+
+  <!-- Stat rows -->
+  {% set row_w = 6600 %}{% set row_h = 485 %}{% set pitch = 555 %}{% set top = 5860 %}
+  {% for i in range(1, 6) %}
+    {% set y = top + (i-1)*pitch %}
+    <g transform="translate(300,{{ y }})">
+      <rect width="{{ row_w }}" height="{{ row_h }}" rx="125" fill="{{ panel }}" fill-opacity="0.96"/>
+      <rect width="135" height="{{ row_h }}" rx="67" fill="{{ official }}"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        {{ (p['category_name_' ~ i]|default(''))|upper }}
+      </text>
+      <rect x="5660" width="940" height="{{ row_h }}" rx="125" fill="{{ accent }}"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">{{ p['score_category_' ~ i]|default('—') }}</text>
+    </g>
+  {% endfor %}
+
+  <!-- One punchy, research-derived station line. -->
+  {% set writeup = p.card_writeup|default(p.description|default('A Shenzhen station with unmistakable character.')) %}
+  {% set writeup_len = [(writeup|length), 1]|max %}
+  {% set writeup_size = 180 %}
+  <rect x="300" y="8720" width="6600" height="430" rx="120"
+        fill="#FFFFFF" fill-opacity="0.88"/>
+  <text x="500" y="9000" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="{{ writeup_size }}" font-weight="800"
+        fill="#000000"{% if writeup_len*0.55*writeup_size > 6000 %} textLength="6000" lengthAdjust="spacingAndGlyphs"{% endif %}>{{ writeup }}</text>
+
+  <text x="360" y="9440" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="155" font-weight="800" letter-spacing="5"
+        fill="{{ ink }}" fill-opacity="0.76">STAT CLASH · SHENZHEN METRO · Line 1</text>
+  </g>
+    </symbol>
+  </defs>
+
+  <!-- Line-colour underlay prevents renderer hairlines where bleed canvases meet. -->
+  <rect width="15240" height="10160" fill="#0A9B4B"/>
+  <use href="#inlineCard" xlink:href="#inlineCard" x="20" y="80"
+       width="7600" height="10000"/>
+  <use href="#inlineCard" xlink:href="#inlineCard" x="7620" y="80"
+       width="7600" height="10000"/>
+
+  <!-- Crop ticks mark the 72 x 96 mm trim, not the bleed canvas. -->
+  <g stroke="#172027" stroke-width="16">
+    <path d="M40 280 H190 M220 100 V250 M7420 100 V250 M7450 280 H7590"/>
+    <path d="M40 9880 H190 M220 9910 V10060 M7420 9910 V10060 M7450 9880 H7590"/>
+    <path d="M7650 280 H7790 M7820 100 V250 M15020 100 V250 M15050 280 H15200"/>
+    <path d="M7650 9880 H7790 M7820 9910 V10060 M15020 9910 V10060 M15050 9880 H15200"/>
+  </g>
+</svg>

@@ -1,8 +1,14 @@
 import os
-
 import random
+from pathlib import Path
+import shutil
 
 import robo_roboclick
+
+try:
+    from PIL import Image
+except Exception:
+    Image = None
 
 try:
     import pyautogui  # type: ignore
@@ -37,6 +43,7 @@ def describe():
     d["category"] = 'AI Image'
     v = []
     if True:
+        v.append({'name': 'base_ai_provider', 'description': 'AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.', 'type': 'string', 'default': 'open_ai'})
         v.append({'name': 'file_name', 'description': 'File name to read or write for this action.', 'type': 'string', 'default': ''})
         v.append({'name': 'position_click', 'description': 'Screen position used to open the generated image context menu.', 'type': 'string', 'default': ''})
         v.append({'name': 'mode_ai_wait', 'description': 'AI wait strategy (slow, fast_button_state, or fast_clipboard_state).', 'type': 'string', 'default': ''})
@@ -54,6 +61,29 @@ def define():
 
 def action(**kwargs):
     return robo_roboclick.robo_action_run("roboclick_action_ai_image_save_generated", new, **kwargs)
+
+def _get_action(kwargs):
+    action = kwargs.get("action", {})
+    if not isinstance(action, dict):
+        action = {}
+    return action
+
+def _get_base_ai_provider(kwargs):
+    action = _get_action(kwargs)
+    workings = kwargs.get("workings", {})
+    if not isinstance(workings, dict):
+        workings = {}
+    provider = kwargs.get("base_ai_provider", workings.get("base_ai_provider", action.get("base_ai_provider", "open_ai")))
+    if provider in (None, ""):
+        provider = "open_ai"
+    provider = str(provider).strip().lower().replace("-", "_")
+    aliases = {
+        "openai": "open_ai",
+        "chatgpt": "open_ai",
+        "open_webui": "open_web_ui",
+        "openwebui": "open_web_ui",
+    }
+    return aliases.get(provider, provider)
 
 def _retry_count(value, default=1):
     if value in (None, ""):
@@ -79,26 +109,18 @@ def _wait_for_image(mode_ai_wait, kwargs=None):
     if mode_ai_wait is None:
         mode_ai_wait = "slow"
     if mode_ai_wait == "slow":
-        robo_roboclick.robo_delay(delay=300)
-        delay = random.randint(100, 300)
-        robo_roboclick.robo_delay(delay=delay)  # Wait for the image to be generated
+        delay = random.randint(110, 140)
+        robo_roboclick.robo_delay(delay=delay)
     elif "fast" in mode_ai_wait:
         robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait="fast_clipboard_state", **kwargs)
 
 def _prepare_to_save_image(kwargs=None):
     kwargs = kwargs or {}
-    #send ctrl rrobo_roboclick.robo_keyboard_press_ctrl_r(delay=20)
-    #click on the image to focus
-    #reload
     robo_roboclick.robo_keyboard_press_ctrl_generic(string="r", delay=20)
-    #click on the image to focus
-    #robo_roboclick.robo_mouse_click(position=[330,480], delay=2)  # Click on the white space
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
-    robo_roboclick.robo_mouse_click(position=[330,360], delay=2)  # Click on the white space
-    #robo_roboclick.robo_mouse_click(position=[330,280], delay=2)  # Click on the white space
+    robo_roboclick.robo_mouse_click(position=[330,360], delay=2)
     robo_roboclick.robo_keyboard_press_end(delay=1)
-    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)  # Press down forty times to select the file input
-    robo_roboclick.ai_check_for_too_many_requests(**kwargs)
+    robo_roboclick.robo_keyboard_press_down(delay=1, repeat=40)
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
 
 def _send_retry_prompt(kwargs=None):
@@ -114,15 +136,17 @@ def _send_retry_prompt(kwargs=None):
 def _delete_bad_image(file_name_absolute):
     try:
         os.remove(file_name_absolute)
-        print(f".:deleted invalid image file {file_name_absolute}[:60]:.")
+        print(f".:deleted invalid image file {file_name_absolute[:60]}:.")
     except FileNotFoundError:
         pass
     except Exception as e:
-        print(f".:failed to delete invalid image file {file_name_absolute}[:60]:. {e}")
+        print(f".:failed to delete invalid image file {file_name_absolute[:60]}:. {e}")
 
 def _is_valid_png(file_name_absolute):
     if not os.path.exists(file_name_absolute):
         return False
+    if Image is None:
+        return os.path.getsize(file_name_absolute) > 0
     try:
         with Image.open(file_name_absolute) as img:
             if img.format != "PNG":
@@ -131,6 +155,23 @@ def _is_valid_png(file_name_absolute):
         return True
     except Exception:
         return False
+
+def clean_png(file_name):
+    if Image is None:
+        return
+    path = Path(file_name)
+    try:
+        with Image.open(path) as img:
+            if img.mode in ("RGBA", "LA", "P"):
+                img = img.convert("RGBA")
+            else:
+                img = img.convert("RGB")
+            temp_path = path.with_suffix(".tmp.png")
+            img.save(temp_path, format="PNG", optimize=False, compress_level=6)
+            temp_path.replace(path)
+            print(f"[OK] {path}")
+    except Exception as e:
+        print(f"[FAIL] {path} -> {e}")
 
 def _save_image_once(kwargs, file_name_absolute):
     robo_roboclick.ai_check_for_too_many_requests(**kwargs)
@@ -141,14 +182,30 @@ def _save_image_once(kwargs, file_name_absolute):
             _delete_bad_image(file_name_absolute)
             return False
         print("")
-        print(f".:image saved to {file_name_absolute}[:60]:.")
+        print(f".:image saved to {file_name_absolute[:60]}:.")
         clean_png(file_name_absolute)
         return True
     print(f".:image not saved:.")
     return False
 
 def new(**kwargs):
-    action = kwargs.get("action", {})
+    provider = _get_base_ai_provider(kwargs)
+    if provider == "open_ai":
+        return action_open_ai(**kwargs)
+    if provider == "claude":
+        return action_claude(**kwargs)
+    if provider == "gemini":
+        return action_gemini(**kwargs)
+    if provider == "open_web_ui":
+        return action_open_web_ui(**kwargs)
+    print(f"save_image_generated -- unknown base_ai_provider '{provider}', defaulting to open_ai")
+    return action_open_ai(**kwargs)
+
+def old(**kwargs):
+    return action_open_ai(**kwargs)
+
+def _save_generated_loop(kwargs):
+    action = _get_action(kwargs)
     mode_ai_wait = action.get("mode_ai_wait", "slow")
     retry_value = kwargs.get("retry_if_failed", action.get("retry_if_failed", 1))
     retry_if_failed = _retry_count(retry_value, 1)
@@ -165,49 +222,52 @@ def new(**kwargs):
         if attempt < retry_if_failed:
             print(f".:image save retry {attempt + 1} of {retry_if_failed}:.")
 
-import os
-from pathlib import Path
-import shutil
-from PIL import Image
+    print(
+        f"Image save failed after {retry_if_failed + 1} attempt(s): "
+        f"{file_name_absolute}. Stopping this action sequence; "
+        "no valid image was saved."
+    )
+    return "exit_no_tab"
 
-def clean_png(file_name):
-    path = Path(file_name)
-    try:
-        with Image.open(path) as img:
-            # Force clean RGBA/RGB conversion
-            if img.mode in ("RGBA", "LA", "P"):
-                img = img.convert("RGBA")
-            else:
-                img = img.convert("RGB")
+def action_open_ai(**kwargs):
+    """Save generated image from OpenAI"""
+    print("save_image_generated -- saving generated image from open_ai")
+    return _save_generated_loop(kwargs)
 
-            temp_path = path.with_suffix(".tmp.png")
+def action_claude(**kwargs):
+    """Save generated image from Claude"""
+    print("save_image_generated -- saving generated image from claude")
+    return _save_generated_loop(kwargs)
 
-            # Save clean stripped PNG
-            img.save(
-                temp_path,
-                format="PNG",
-                optimize=False,
-                compress_level=6
-            )
+def action_gemini(**kwargs):
+    """Save generated image from Google Gemini"""
+    print("save_image_generated -- saving generated image from gemini")
+    return _save_generated_loop(kwargs)
 
-            temp_path.replace(path)
-
-            print(f"[OK] {path}")
-
-    except Exception as e:
-        print(f"[FAIL] {path} -> {e}")
+def action_open_web_ui(**kwargs):
+    """Save generated image from Open WebUI"""
+    print("save_image_generated -- saving generated image from open_web_ui")
+    return _save_generated_loop(kwargs)
 
 def test(**kwargs):
-    try:
-        import oomlout_test
-    except Exception:
-        return callable(new)
-
-    test_fn = getattr(oomlout_test, "test", None)
-    if not callable(test_fn):
-        return callable(new)
-
-    try:
-        return bool(test_fn(**kwargs))
-    except Exception:
-        return callable(new)
+    test_file = os.path.join(os.path.dirname(__file__), "oomlout_test.py")
+    if os.path.exists(test_file):
+        import importlib.util
+        import sys
+        dir_path = os.path.dirname(__file__)
+        added_to_path = False
+        if dir_path not in sys.path:
+            sys.path.insert(0, dir_path)
+            added_to_path = True
+        try:
+            spec = importlib.util.spec_from_file_location(f"test_module_{abs(hash(test_file))}", test_file)
+            if spec and spec.loader:
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                test_fn = getattr(mod, "test", None)
+                if callable(test_fn):
+                    return test_fn(**kwargs)
+        finally:
+            if added_to_path and dir_path in sys.path:
+                sys.path.remove(dir_path)
+    return callable(old) and callable(new)

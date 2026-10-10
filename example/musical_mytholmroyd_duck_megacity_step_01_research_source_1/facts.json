@@ -1,0 +1,170 @@
+[
+  {
+    "fact": "Mytholmroyd is a village in the Calder Valley, West Yorkshire, and the Rochdale Canal passes through it",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/mytholmroyd_geography.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified; bonus: the village name is Old Norse for 'clearing where two rivers meet'"
+  },
+  {
+    "fact": "The River Calder runs close alongside the Rochdale Canal through Mytholmroyd ('the river is right next door')",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/mytholmroyd_geography.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — the adjacent river IS the Calder; the inciting logic is literally true"
+  },
+  {
+    "fact": "The Calder Valley sits on the corridor between Leeds and Manchester",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/mytholmroyd_geography.md + research/rochdale_canal_heritage.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified via the trans-Pennine canal route (Sowerby Bridge–Manchester) and Upper Calder Valley geography"
+  },
+  {
+    "fact": "The Rochdale Canal runs the length of the upper Calder Valley (the 'entire length' the linear park would replace)",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/rochdale_canal_heritage.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — ~32 miles Sowerby Bridge to Manchester, 91 locks, opened 1804, closed 1952, reopened 2002 after volunteer restoration"
+  },
+  {
+    "fact": "Shenzhen and Hong Kong operate high-speed, high-capacity express metro systems",
+    "category": "technology",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/metro_precedent.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — Shenzhen ~641 km/17 lines today, ~1,142 km planned by 2035 incl. 8 express lines. 'Double-stacked' has NO rail precedent — it is this story's own signature invention (hard_lock regardless)"
+  },
+  {
+    "fact": "Singapore and Hong Kong have large-scale, high-rise, affordable public housing models",
+    "category": "technology",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/density_and_housing.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — Singapore HDB heartland towns are the 'nice, not cramped' template (≈68% more space per resident than Hong Kong)"
+  },
+  {
+    "fact": "~100,000 people per square km is an achievable residential density (with 40+ storey estates)",
+    "category": "technology",
+    "confidence": "medium",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_open_questions_session"
+    ],
+    "verification": "research/density_and_housing.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "CALIBRATED: within real precedent at block scale (Mong Kok >130,000/km² peak blocks); heroic at district scale (HK densest districts 40-50k). Recommended framing: attach the figure to the estate blocks, not the whole valley. IN-STORY STATUS (CANON-031, open-questions session rank 11): the figures are FLAVOUR, not canon — generators may vary or omit them; never validate them as required numbers"
+  },
+  {
+    "fact": "Leeds and Manchester were central to the Industrial Revolution ('the centre of the world')",
+    "category": "timeline",
+    "confidence": "medium",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": null,
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "partially supported (the Rochdale Canal is documented as 'the Industrial Revolution's motorway' — research/rochdale_canal_heritage.md); Cottonopolis/wool centrality itself not yet directly sourced — see research_index.md follow-ups"
+  },
+  {
+    "fact": "Hawker centres are an affordable communal food-hall format (Singapore-style)",
+    "category": "culture",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/hawker_centres.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — UNESCO Intangible Cultural Heritage (2020); 110+ centres; documented social-equalizer role"
+  },
+  {
+    "fact": "The UK is strong at high-tech research, and its cement/steel/rail infrastructure-building capacity could be made world-class and exported",
+    "category": "economics",
+    "confidence": "low",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_open_questions_session"
+    ],
+    "verification": null,
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "RETIRED AS STORY MATERIAL (CANON-034, open-questions session rank 16): the export-capacity texture is dropped from ALL outputs — do not use this claim in generation. Entry retained as evidence only; supersession logged in conflicts.json. (High-tech-research strength survives only as the hawker/light-industrial texture in places.json, which is unaffected)"
+  },
+  {
+    "fact": "The Rochdale Canal is a heritage/navigation asset with existing users (boats, wildlife, towpath users)",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "verification": "research/rochdale_canal_heritage.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "verified — and WEIGHTIER than assumed: restored by volunteers over decades, reopened 2002 (£23.8M); in dereliction it became a wildlife haven. The enthusiast's attachment carries real freight"
+  },
+  {
+    "fact": "Calder Valley housing stock includes expensive, damp houses with poor transit links",
+    "category": "geography",
+    "confidence": "low",
+    "sources": [
+      "20260705_intake_interview"
+    ],
+    "verification": null,
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "producer characterization; requires verification / careful framing — real residents live there. See research_index.md follow-ups"
+  },
+  {
+    "fact": "Many people who love living in the Calder Valley need to move away for education, jobs, and housing, and many want to come back",
+    "category": "economics",
+    "confidence": "low",
+    "sources": [
+      "20260705_intake_interview"
+    ],
+    "verification": null,
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "producer claim; verification via out-migration data would strengthen the young-returner thread. See research_index.md follow-ups"
+  },
+  {
+    "fact": "Mytholmroyd suffered its highest recorded flood on Boxing Day 2015 (~300 homes, 70 businesses) and gained £41M of flood defences opened in 2021",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "research",
+      "20260719_improvement_session"
+    ],
+    "verification": "research/mytholmroyd_geography.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "STORY-EXCLUDED (CANON-048, stumbling-blocks addendum): the story NEVER references the flood — no beat, lyric, or image; the former 'available as communal-memory texture' status is superseded (logged in conflicts.json). Entry retained as verified real-world evidence and as the basis of the pure-protection sensitivity in guardrails.md — do NOT use in generation"
+  },
+  {
+    "fact": "Mytholmroyd's name is Old Norse for 'clearing where two rivers meet' (confluence of the River Calder and Elphin Brook); Ted Hughes was born there",
+    "category": "geography",
+    "confidence": "high",
+    "sources": [
+      "research"
+    ],
+    "verification": "research/mytholmroyd_geography.md",
+    "verification_status": "inherited source assessment, not independently reverified in this run",
+    "source_note": "research-discovered gift — the village name already contains the story's water question"
+  }
+]

@@ -1,13 +1,13 @@
 # RoboClick Test Results
 
-- Timestamp (UTC): 2026-07-02T15:34:45.052458+00:00
-- Total: 66
-- Passed: 64
+- Timestamp (UTC): 2026-09-26T11:30:34.875886+00:00
+- Total: 69
+- Passed: 67
 - Failed: 2
 
 | Test | Kind | Status | Duration (s) | Definition | Log |
 |---|---|---|---:|---|---|
-| Action audit: all action folders | audit | failed | 0.046 | run_tests.py | test_result\action_audit_all_action_folders.log |
+| Action audit: all action folders | audit | failed | 0.093 | run_tests.py | test_result\action_audit_all_action_folders.log |
 | Action test: roboclick_action_affinity_open | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_affinity_open.log |
 | Action test: roboclick_action_ai_add_image | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_add_image.log |
 | Action test: roboclick_action_ai_continue_chat | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_continue_chat.log |
@@ -22,7 +22,7 @@
 | Action test: roboclick_action_ai_skill_image_prompt_full | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_skill_image_prompt_full.log |
 | Action test: roboclick_action_ai_skill_text_to_speech | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_skill_text_to_speech.log |
 | Action test: roboclick_action_ai_skill_validate_json | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_skill_validate_json.log |
-| Action test: roboclick_action_ai_text_fix_yaml_copy_paste | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_text_fix_yaml_copy_paste.log |
+| Action test: roboclick_action_ai_text_fix_yaml_copy_paste | action | passed | 0.016 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_ai_text_fix_yaml_copy_paste.log |
 | Action test: roboclick_action_alias_add_file | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_alias_add_file.log |
 | Action test: roboclick_action_alias_add_image | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_alias_add_image.log |
 | Action test: roboclick_action_alias_ai_save_image | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_alias_ai_save_image.log |
@@ -31,7 +31,7 @@
 | Action test: roboclick_action_alias_openscad_render_file | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_alias_openscad_render_file.log |
 | Action test: roboclick_action_alias_query | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_alias_query.log |
 | Action test: roboclick_action_base_time_delay | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_base_time_delay.log |
-| Action test: roboclick_action_browser_close_tab | action | passed | 0.016 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_browser_close_tab.log |
+| Action test: roboclick_action_browser_close_tab | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_browser_close_tab.log |
 | Action test: roboclick_action_browser_open_url | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_browser_open_url.log |
 | Action test: roboclick_action_browser_save_url | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_browser_save_url.log |
 | Action test: roboclick_action_convert_svg_to_pdf | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_convert_svg_to_pdf.log |
@@ -45,7 +45,6 @@
 | Action test: roboclick_action_corel_group | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_group.log |
 | Action test: roboclick_action_corel_import | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_import.log |
 | Action test: roboclick_action_corel_object_order | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_object_order.log |
-| Action test: roboclick_action_corel_open | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_open.log |
 | Action test: roboclick_action_corel_page_add | action | failed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_page_add.log |
 | Action test: roboclick_action_corel_page_goto | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_page_goto.log |
 | Action test: roboclick_action_corel_paste | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_corel_paste.log |
@@ -60,16 +59,20 @@
 | Action test: roboclick_action_file_create_text_file | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_file_create_text_file.log |
 | Action test: roboclick_action_file_create_zip | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_file_create_zip.log |
 | Action test: roboclick_action_file_text_yaml_fix | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_file_text_yaml_fix.log |
+| Action test: roboclick_action_file_verify_structured | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_file_verify_structured.log |
 | Action test: roboclick_action_google_doc_add_text | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_google_doc_add_text.log |
 | Action test: roboclick_action_google_doc_new | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_google_doc_new.log |
 | Action test: roboclick_action_image_crop | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_crop.log |
 | Action test: roboclick_action_image_png_transparent_to_white | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_png_transparent_to_white.log |
 | Action test: roboclick_action_image_quad_swap_for_tile | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_quad_swap_for_tile.log |
 | Action test: roboclick_action_image_remove_background | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_remove_background.log |
+| Action test: roboclick_action_image_resize | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_resize.log |
+| Action test: roboclick_action_image_trace_vector | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_trace_vector.log |
 | Action test: roboclick_action_image_upscale | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_image_upscale.log |
 | Action test: roboclick_action_openscad_render | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_openscad_render.log |
+| Action test: roboclick_action_pdf_create | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_pdf_create.log |
 | Action test: roboclick_action_run_python | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_run_python.log |
 | Action test: roboclick_action_save_image_search_result | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_save_image_search_result.log |
 | Action test: roboclick_action_text_jinja_template | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_text_jinja_template.log |
 | Action test: roboclick_action_wait_for_file | action | passed | 0.000 | tests\100_run_all_action_tests\working.yaml | test_result\action_test_roboclick_action_wait_for_file.log |
-| Integration (python): run folder test_data/example_duirectory | integration | passed | 0.250 | tests\working.py | test_result\integration_python_run_folder_test_data_example_duirectory.log |
+| Integration (python): run folder test_data/example_duirectory | integration | passed | 0.266 | tests\working.py | test_result\integration_python_run_folder_test_data_example_duirectory.log |

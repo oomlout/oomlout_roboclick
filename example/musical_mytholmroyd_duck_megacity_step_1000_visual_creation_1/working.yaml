@@ -1,0 +1,196 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- throw
+- load
+bip_39_2_word_no_space: throwload
+bip_39_2_word_space: throw load
+bip_39_2_word_underscore: throw_load
+bip_39_3_word_array:
+- throw
+- load
+- stick
+bip_39_3_word_no_space: throwloadstick
+bip_39_3_word_space: throw load stick
+bip_39_3_word_underscore: throw_load_stick
+bip_39_full_array:
+- throw
+- load
+- stick
+- shy
+- bundle
+- album
+- change
+- biology
+- stone
+- sphere
+- thing
+- athlete
+bip_39_full_no_space: throwloadstickshybundlealbumchangebiologystonespherethingathlete
+bip_39_full_space: throw load stick shy bundle album change biology stone sphere thing
+    athlete
+bip_39_full_underscore: throw_load_stick_shy_bundle_album_change_biology_stone_sphere_thing_athlete
+directory: parts/musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+id_no_class: musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+id_no_size: musical_mytholmroyd_duck_megacity_step_1000_1
+id_no_type: musical_mytholmroyd_duck_megacity_step_1000_1
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+md5: e1505f56e3c1e40bc988b3d65a2f8287
+md5_10: e1505f56e3
+md5_10_upper: E1505F56E3
+md5_5: e1505
+md5_5_upper: E1505
+md5_6: e1505f
+md5_6_alpha: 8shnj
+md5_6_alpha_upper: 8SHNJ
+md5_6_upper: E1505F
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 1000 Visual Creation 1
+name_no_class: Musical Mytholmroyd Duck Megacity Step 1000 Visual Creation 1
+name_no_size: Musical Mytholmroyd Duck Megacity Step 1000 1
+name_no_type: Musical Mytholmroyd Duck Megacity Step 1000 1
+name_proper: Musical Mytholmroyd Duck Megacity Step 1000 Visual Creation 1
+name_space: musical mytholmroyd duck megacity step 1000 visual creation 1
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 1000 VISUAL CREATION 1
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_text_file
+        content: No canonical image_prompt*.md files found in parts/.
+        file_name: visual_generation_done.txt
+    file_test: visual_generation_done.txt
+    retries_until_complete: 3
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_1000_visual_creation_1
+page_size: a4_facing_text_left_image_right
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_1000
+taxonomy_3_capital: Step 1000
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_1000
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: visual_creation_1
+taxonomy_4_capital: Visual Creation 1
+taxonomy_4_first_letter: v
+taxonomy_4_first_letter_upper: V
+taxonomy_4_length_1: v
+taxonomy_4_length_2: vi
+taxonomy_4_length_3: vis
+taxonomy_4_length_4: visu
+taxonomy_4_length_5: visua
+taxonomy_4_upper: VISUAL_CREATION_1
+taxonomy_4_upper_length_1: V
+taxonomy_4_upper_length_2: VI
+taxonomy_4_upper_length_3: VIS
+taxonomy_4_upper_length_4: VISU
+taxonomy_4_upper_length_5: VISUA
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: visual_creation
+url_chat: ''

@@ -1,0 +1,18 @@
+﻿id: google_test_02_query
+enabled: false
+name: "Google Gemini Test 02 - Query"
+directory: test/google/parts/02_query
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini query test
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Reply with exactly the word PONG and nothing else.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: ''
+    retries_until_complete: 0

@@ -1,0 +1,116 @@
+[
+  {
+    "context_name": "settings_basic.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\source\\settings_basic.yaml",
+    "sha256": "f71fa7b27930b26e2fc85e2ac64c4fdfbf456f9146c7e38bea4cd906cf4db410",
+    "bytes": 12759
+  },
+  {
+    "context_name": "show_config.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_03_canon_1\\show_config.yaml",
+    "sha256": "cab42bd7a4d66b5126580cae0070c8b0b57b08f18e69bf2830e966887d1dc5a0",
+    "bytes": 852
+  },
+  {
+    "context_name": "canon_bible.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_03_canon_1\\canon_bible.md",
+    "sha256": "4f18f88e644b2cd8aa6bab10a77562077862218583188af2aeaeeabcb77f3751",
+    "bytes": 8454
+  },
+  {
+    "context_name": "character_list.csv",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_list.csv",
+    "sha256": "a8183e29b5b34ff15d9148c52475c17858afb668beb1e86540b7527c7617a06f",
+    "bytes": 918
+  },
+  {
+    "context_name": "character_registry.json",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_registry.json",
+    "sha256": "020b2ed25f6c691166b6c068ed8e240c79604f56475ff0e99d1b63850f265f14",
+    "bytes": 3231
+  },
+  {
+    "context_name": "character_voices.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04_character_bible_1\\character_voices.md",
+    "sha256": "044d27d4e388bcdd570988d9aeb2fcac89c3b4e72571c4cb99f65bde8c2f62e6",
+    "bytes": 9933
+  },
+  {
+    "context_name": "scene_song_ledger.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_02_story_structure_1\\scene_song_ledger.md",
+    "sha256": "d81810c06f9476e42e5f94fa8c498645d8914259574a52b79fb6fd8d04f8d187",
+    "bytes": 15890
+  },
+  {
+    "context_name": "musical_style_guide.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_06_music_director_1\\musical_style_guide.md",
+    "sha256": "283340bc701f9c74e87edd329b8db42f91d6812186bf47501c197867a689de78",
+    "bytes": 11628
+  },
+  {
+    "context_name": "character_assets/canal_duck/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_1\\suno_voice_description.yaml",
+    "sha256": "84e49181ca8bfc6be9f5b0c006d2f9078c2dd38f1c0059c80631c4d14b4cabdb",
+    "bytes": 693
+  },
+  {
+    "context_name": "character_assets/mabel_lockwood/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_2\\suno_voice_description.yaml",
+    "sha256": "4aed81bcf8e052ec39e5e1cc9340ecd7e292da09235daae06bfb8d9f6af77a8e",
+    "bytes": 680
+  },
+  {
+    "context_name": "character_assets/nora_greenwood/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_3\\suno_voice_description.yaml",
+    "sha256": "ac93d3e74787a29692bbe415213fba835ca326ebeabfa0df68cf65249c0d2a45",
+    "bytes": 694
+  },
+  {
+    "context_name": "character_assets/asha_rahman/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_4\\suno_voice_description.yaml",
+    "sha256": "7b1ad633b206cc6d89ad7d79bcdd3f5fc2564a696f3a3cb8de276086fe7c6e52",
+    "bytes": 684
+  },
+  {
+    "context_name": "character_assets/elsie_sutcliffe/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_5\\suno_voice_description.yaml",
+    "sha256": "4be1c6bd5169626b2eb3cac53bbd47797332fb933f1e7acf93575ca0a6fde41f",
+    "bytes": 717
+  },
+  {
+    "context_name": "character_assets/miriam_vale/suno_voice_description.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_04a_character_6\\suno_voice_description.yaml",
+    "sha256": "76635aa3b77c99bf9beae02f34f12a396a12971972e8ead2c0d677f1a8b56cc7",
+    "bytes": 686
+  },
+  {
+    "context_name": "song_guidance.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_06_music_director_1\\song_guidance_N05.md",
+    "sha256": "9ca4bfb6975ad0655eff4cd4fd2377736ea340f12837178565bef9f9b10e16f5",
+    "bytes": 5590
+  },
+  {
+    "context_name": "previous_lyrics/N01_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07_song_N01\\lyrics_draft.md",
+    "sha256": "4a66c23b76172d64e50c07c08b34bb3a9f950179d73ab56025217559f4ca40a5",
+    "bytes": 1318
+  },
+  {
+    "context_name": "previous_lyrics/N02_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07_song_N02\\lyrics_draft.md",
+    "sha256": "65c390d115694509c7ce5524e3ab014a5df82676581b83f92b1963c22bc5f6ec",
+    "bytes": 843
+  },
+  {
+    "context_name": "previous_lyrics/N03_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07_song_N03\\lyrics_draft.md",
+    "sha256": "961d9c993958296b2512d051576a627a1e10289095ffc8feefbe1f48557b09be",
+    "bytes": 1493
+  },
+  {
+    "context_name": "previous_lyrics/N04_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07_song_N04\\lyrics_draft.md",
+    "sha256": "c056b62185e35470c07dd0642a0865e0237e56524933d5d8092d3d9b8143e62b",
+    "bytes": 1263
+  }
+]

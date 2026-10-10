@@ -1,0 +1,295 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- pear
+- brave
+bip_39_2_word_no_space: pearbrave
+bip_39_2_word_space: pear brave
+bip_39_2_word_underscore: pear_brave
+bip_39_3_word_array:
+- pear
+- brave
+- purity
+bip_39_3_word_no_space: pearbravepurity
+bip_39_3_word_space: pear brave purity
+bip_39_3_word_underscore: pear_brave_purity
+bip_39_full_array:
+- pear
+- brave
+- purity
+- outdoor
+- baby
+- potato
+- that
+- vicious
+- tissue
+- broccoli
+- gaze
+- pen
+bip_39_full_no_space: pearbravepurityoutdoorbabypotatothatvicioustissuebroccoligazepen
+bip_39_full_space: pear brave purity outdoor baby potato that vicious tissue broccoli
+    gaze pen
+bip_39_full_underscore: pear_brave_purity_outdoor_baby_potato_that_vicious_tissue_broccoli_gaze_pen
+directory: parts/musical_mytholmroyd_duck_megacity_step_07_song_N05
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_07_song_N05
+id_no_class: musical_mytholmroyd_duck_megacity_step_07_song_N05
+id_no_size: musical_mytholmroyd_duck_megacity_step_07_N05
+id_no_type: musical_mytholmroyd_duck_megacity_step_07_N05
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_07_song_N05
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_07_song_N05
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_07_song_N05
+md5: a2036ab94e911151b7ff9ce2c38d82d1
+md5_10: a2036ab94e
+md5_10_upper: A2036AB94E
+md5_5: a2036
+md5_5_upper: A2036
+md5_6: a2036a
+md5_6_alpha: 6bkoa
+md5_6_alpha_upper: 6BKOA
+md5_6_upper: A2036A
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 07 Song N05
+name_no_class: Musical Mytholmroyd Duck Megacity Step 07 Song N05
+name_no_size: Musical Mytholmroyd Duck Megacity Step 07 N05
+name_no_type: Musical Mytholmroyd Duck Megacity Step 07 N05
+name_proper: Musical Mytholmroyd Duck Megacity Step 07 Song N05
+name_space: musical mytholmroyd duck megacity step 07 song N05
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 07 SONG N05
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_zip
+        files: &id001
+        -   arcname: settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        -   arcname: show_config.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/show_config.yaml
+        -   arcname: canon_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/canon_bible.md
+        -   arcname: character_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_list.csv
+        -   arcname: character_registry.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_registry.json
+        -   arcname: character_voices.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_voices.md
+        -   arcname: scene_song_ledger.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_song_ledger.md
+        -   arcname: musical_style_guide.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1/musical_style_guide.md
+        -   arcname: character_assets/canal_duck/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/suno_voice_description.yaml
+        -   arcname: character_assets/mabel_lockwood/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_2/suno_voice_description.yaml
+        -   arcname: character_assets/nora_greenwood/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_3/suno_voice_description.yaml
+        -   arcname: character_assets/asha_rahman/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_4/suno_voice_description.yaml
+        -   arcname: character_assets/elsie_sutcliffe/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_5/suno_voice_description.yaml
+        -   arcname: character_assets/miriam_vale/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_6/suno_voice_description.yaml
+        -   arcname: song_guidance.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1/song_guidance_N05.md
+        -   arcname: previous_lyrics/N01_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07_song_N01/lyrics_draft.md
+        -   arcname: previous_lyrics/N02_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07_song_N02/lyrics_draft.md
+        -   arcname: previous_lyrics/N03_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07_song_N03/lyrics_draft.md
+        -   arcname: previous_lyrics/N04_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07_song_N04/lyrics_draft.md
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_07_N05\nstep_name: Song N05\ndescription: Draft lyrics,\
+            \ Suno prompt, and metadata for song N05.\nfiles:\n  - name: suno_draft.yaml\n\
+            \    destination: production/05_songs/song_N05/suno_draft.yaml\n    description:\
+            \ Draft song metadata before blind-read revision\n  - name: lyrics_draft.md\n\
+            \    destination: production/05_songs/song_N05/lyrics_draft.md\n    description:\
+            \ Draft full song lyrics before blind-read revision\n  - name: suno_prompt_draft.md\n\
+            \    destination: production/05_songs/song_N05/suno_prompt_draft.md\n\
+            \    description: Draft style and generation prompt for Suno\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_07_N05\nstep_name: Song N05\ndescription: Draft lyrics,\
+            \ Suno prompt, and metadata for song N05.\nfiles:\n  - name: suno_draft.yaml\n\
+            \    destination: production/05_songs/song_N05/suno_draft.yaml\n    description:\
+            \ Draft song metadata before blind-read revision\n  - name: lyrics_draft.md\n\
+            \    destination: production/05_songs/song_N05/lyrics_draft.md\n    description:\
+            \ Draft full song lyrics before blind-read revision\n  - name: suno_prompt_draft.md\n\
+            \    destination: production/05_songs/song_N05/suno_prompt_draft.md\n\
+            \    description: Draft style and generation prompt for Suno\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_N05'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: Song N05
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_07_song
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test:
+    - suno_draft.yaml
+    - lyrics_draft.md
+    - suno_prompt_draft.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: file_text_yaml_fix
+        file_name: suno_draft.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_4:
+    actions:
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_07_song_n05\suno_draft.yaml
+        mode_ai_wait: slow
+        retries: 1
+    file_test: ''
+    retries_until_complete: 0
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_07_song_N05
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_07_song
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+song_number: N05
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_07
+taxonomy_3_capital: Step 07
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_07
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: song_N05
+taxonomy_4_capital: Song N05
+taxonomy_4_first_letter: s
+taxonomy_4_first_letter_upper: S
+taxonomy_4_length_1: s
+taxonomy_4_length_2: so
+taxonomy_4_length_3: son
+taxonomy_4_length_4: song
+taxonomy_4_length_5: song_
+taxonomy_4_upper: SONG_N05
+taxonomy_4_upper_length_1: S
+taxonomy_4_upper_length_2: SO
+taxonomy_4_upper_length_3: SON
+taxonomy_4_upper_length_4: SONG
+taxonomy_4_upper_length_5: SONG_
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: song
+url_chat: ''
+zip_sources: *id001

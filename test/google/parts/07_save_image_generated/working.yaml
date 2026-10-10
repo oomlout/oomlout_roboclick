@@ -1,0 +1,22 @@
+﻿id: google_test_07_save_image_generated
+enabled: false
+name: "Google Gemini Test 07 - Save Generated Image"
+directory: test/google/parts/07_save_image_generated
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini save generated image test
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Generate an image of a simple red circle on a white background.
+        delay: '60'
+        mode_ai_wait: slow
+    -   command: save_image_generated
+        base_ai_provider: gemini
+        file_name: generated_circle.png
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: generated_circle.png
+    retries_until_complete: 1

@@ -921,10 +921,10 @@ def run_folder_recursive_threaded(**kwargs: Any) -> None:
         
 
 
-def run_folder(**kwargs: Any) -> None:
+def run_folder(**kwargs: Any) -> str:
     jobs = _build_folder_mode_jobs(**kwargs)
-    for job in jobs:
-        run_single(**job)
+    # Honour stop signals between blocks, as the threaded runner already does.
+    return _run_job_group(jobs)
 
 
 def _directory_matches_filters(directory_name: str, kwargs: dict[str, Any]) -> bool:

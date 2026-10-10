@@ -1,0 +1,34 @@
+{
+  "status": "DRAFT",
+  "input_files": [
+    "this_character.md",
+    "character_registry.json",
+    "character_bible.md",
+    "character_voices.md",
+    "canon_bible.md",
+    "settings_basic.yaml",
+    "source/foundation/guardrails.md",
+    "source/foundation/style_preferences.md"
+  ],
+  "source_claims": [
+    "CANON-023",
+    "CANON-035",
+    "CANON-044",
+    "CANON-046",
+    "CANON-017",
+    "CANON-020"
+  ],
+  "assumptions": [
+    "Visual specifics are production choices, not producer-ratified canon"
+  ],
+  "changes_made": [
+    "Five declared outputs in order"
+  ],
+  "open_questions": [
+    "Persona and spoken voice not yet generated"
+  ],
+  "verification_notes": [
+    "Voice and prompt length checks pass",
+    "Registry fields copied exactly"
+  ]
+}

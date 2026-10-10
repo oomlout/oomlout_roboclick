@@ -1,0 +1,1 @@
+All 29 canonical image destinations are populated. 22 distinct selected images from built-in imagegen; 7 exact reusable-prop copies. Declared magenta keying completed for 6 characters and 10 prop occurrences. See visual_generation_inventory.json.

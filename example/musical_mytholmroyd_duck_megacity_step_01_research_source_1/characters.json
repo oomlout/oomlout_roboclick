@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Canal Duck",
+    "aliases": [],
+    "want": "drain the redundant Rochdale Canal and replace it with a linear park, buried double-stacked express metro, and ultra-dense affordable housing, making the Calder Valley the spine of a new northern England megacity",
+    "obstacle": "people's attachment to the way things are; the failed first presentation (beats c/d: people upset and angry, the duck nervous — a setback); the sheer scale of the vision",
+    "arc": "beats a-b: realizes he is 'just a canal duck' but feels he and Mytholmroyd could be so much more, and spots the wasteful canal beside the river; beats c-d: authors the plan, suffers the post-presentation setback, and pivots to hearing concerns one by one — which turn out to be well addressed by the plan as it stands; beats e-h: wins each principal in an individual vignette; beats i-j: builds lock by lock and stands in the finished city. Personal arc unchanged: he realizes he can live anywhere — the river is nicer, and the city's accessibility lets him live well and visit nicer canals elsewhere",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "name": "Mabel Lockwood",
+    "aliases": [
+      "the canal enthusiast"
+    ],
+    "want": "keep the canal she loves and champions — canal life as it is",
+    "obstacle": "the plan removes the canal; she is worried about losing it",
+    "arc": "angry at the meeting (beat d); in her vignette (beat e) she is shown that losing this canal gives access to more canals further away, and gives resources and respect to other canals — the metro means MORE canal, not less",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "name": "Nora Greenwood",
+    "aliases": [
+      "the village-house lover"
+    ],
+    "want": "keep small-town local life and familiarity; likes her house for being in a small village",
+    "obstacle": "the house is expensive, damp, with poor transit links; the plan looks like it takes her familiar life away",
+    "arc": "angry at the meeting (beat d); in her vignette (beat f) she is helped to see the plan builds MORE community — easier access to things closer, far less dependence on cars, the linear park as more outdoor space — and she stays linked to village life from a modern connected flat",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "name": "Asha Rahman",
+    "aliases": [
+      "the young returner"
+    ],
+    "want": "to live in the Calder Valley she loves; worried her childhood home won't remain",
+    "obstacle": "no local opportunity or affordable housing before the transformation; the plan seems to erase the home she'd come back to",
+    "arc": "angry/worried at the meeting (beat d); in her vignette (beat g) she sees the plan lets her go away and, when she is ready, come back and thrive — bringing the skills the new city needs. During the scenes 9→10 time-jump (a few years) she HAS left — and she RETURNS ON THE FIRST DOUBLE-STACKED TRAIN: her homecoming is part of the scene-10 reveal, fusing beat g's promise into the CANON-028 first-train moment (CANON-042)",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "name": "Elsie Sutcliffe",
+    "aliases": [
+      "the elder"
+    ],
+    "want": "to stay independent; she just doesn't want change",
+    "obstacle": "the old housing and poor accessibility make independent ageing hard; change itself feels like a threat",
+    "arc": "resistant at the meeting (beat d); in her vignette (beat h) the advent of a warm insulated flat with lift access and accessible transit means she can be independent longer",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "name": "Miriam Vale",
+    "aliases": [
+      "the mayor",
+      "the mayor figure"
+    ],
+    "want": "to see the valley she left believe in itself and succeed — and to come back and publicly recognize that success once the project proves itself (want reworded as an actual want — audit tidy-up, 2026-07-19; her belief in Canal Duck is the backstory that feeds it, CANON-014)",
+    "obstacle": "her more important job keeps her elsewhere at the start",
+    "arc": "backstory (CANON-014): she left the valley for a bigger job elsewhere, and the confidence she gave Canal Duck motivates the start of the campaign; she returns in the finale — scene 10 ONLY (CANON-027) — and her public recognition confirms the community's achievement without claiming ownership of it",
+    "confidence": "high",
+    "sources": [
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260718_open_questions_session",
+      "20260719_improvement_session"
+    ]
+  }
+]

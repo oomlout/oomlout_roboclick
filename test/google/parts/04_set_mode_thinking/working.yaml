@@ -1,0 +1,24 @@
+﻿id: google_test_04_set_mode_thinking
+enabled: false
+name: "Google Gemini Test 04 - Set Mode (Thinking)"
+directory: test/google/parts/04_set_mode_thinking
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini set mode thinking test
+        log_url: true
+    -   command: set_mode
+        base_ai_provider: gemini
+        mode: thinking
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: What is 12 multiplied by 13? Show your working.
+        delay: '45'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: thinking_response.txt
+    -   command: close_tab
+    file_test: thinking_response.txt
+    retries_until_complete: 0

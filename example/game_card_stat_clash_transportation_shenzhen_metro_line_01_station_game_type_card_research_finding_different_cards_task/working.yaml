@@ -1,0 +1,291 @@
+bip_39_2_word_array:
+- remind
+- option
+bip_39_2_word_no_space: remindoption
+bip_39_2_word_space: remind option
+bip_39_2_word_underscore: remind_option
+bip_39_3_word_array:
+- remind
+- option
+- banana
+bip_39_3_word_no_space: remindoptionbanana
+bip_39_3_word_space: remind option banana
+bip_39_3_word_underscore: remind_option_banana
+bip_39_full_array:
+- remind
+- option
+- banana
+- sport
+- hollow
+- hole
+- dice
+- skin
+- diary
+- zebra
+- turtle
+- frame
+bip_39_full_no_space: remindoptionbananasporthollowholediceskindiaryzebraturtleframe
+bip_39_full_space: remind option banana sport hollow hole dice skin diary zebra turtle
+    frame
+bip_39_full_underscore: remind_option_banana_sport_hollow_hole_dice_skin_diary_zebra_turtle_frame
+card_artwork_height_mm: 100.0
+card_artwork_width_mm: 76.0
+card_bleed_mm: 2.0
+card_cut_bottom_remaining_mm: 96.0
+card_cut_bottom_removed_mm: 2.8
+card_cut_first_card_remaining_mm: 78.2
+card_cut_first_card_removed_mm: 72.0
+card_cut_gutter_remaining_mm: 74.2
+card_cut_gutter_removed_mm: 4.0
+card_cut_left_remaining_mm: 150.2
+card_cut_left_removed_mm: 2.2
+card_cut_right_remaining_mm: 72.0
+card_cut_right_removed_mm: 2.2
+card_cut_top_remaining_mm: 98.8
+card_cut_top_removed_mm: 2.8
+card_finished_height_mm: 96.0
+card_finished_width_mm: 72.0
+card_template_source: source_files\shenzhen_metro_line_templates\line_01\working_inkscape_template.svg
+directory: parts/game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+directory_old: parts\game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+id: game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+id_no_class: game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+id_no_size: game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+id_no_type: game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+line_id: line_01
+line_short_name: L1
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+md5: b5d37448e956ced94f5e543d5ff3abae
+md5_10: b5d37448e9
+md5_10_upper: B5D37448E9
+md5_5: b5d37
+md5_5_upper: B5D37
+md5_6: b5d374
+md5_6_alpha: 73ek4
+md5_6_alpha_upper: 73EK4
+md5_6_upper: B5D374
+name: Game Card Stat Clash Transportation Shenzhen Metro Line 01 Station Game Type
+    Card Research Finding Different Cards Task
+name_no_class: Game Card Stat Clash Transportation Shenzhen Metro Line 01 Station
+    Game Type Card Research Finding Different Cards Task
+name_no_size: Game Card Stat Clash Transportation Shenzhen Metro Line 01 Station Game
+    Type Card Research Finding Different Cards Task
+name_no_type: Game Card Stat Clash Transportation Shenzhen Metro Line 01 Station Game
+    Type Card Research Finding Different Cards Task
+official_line_colour: '#0A9B4B'
+official_line_colour_css_selector: .line1 .xl_name_c
+official_line_colour_source: https://www.szmc.net/styles/index/css/all.css
+official_line_colour_text: '#FFFFFF'
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        description: type research
+    -   command: query
+        delay: 600
+        text: "create a researched shortlist for Stat Clash (Top/ Trumps style): using\
+            \ web browsing, pick 30 distinct and well-known shenzhen_metro_line_01_station\
+            \ entries (or subtypes/categories of Shenzhen Metro Line 1 stations if\
+            \ broader variety helps), verify each is a legitimate, good-fit topic\
+            \ with at least 2 credible sources, prefer \u201Ccomplete list\u201D sources\
+            \ (e.g., Wikipedia list pages) when they exist to ensure coverage, then\
+            \ output (1) the final numbered list, (2) a 1-2 sentence \u201Cwhy it''s\
+            \ fun/interesting\u201D hook per entry, and (3) the sources used per entry;\
+            \ enforce variety (no near-duplicates), avoid obscure items unless they\
+            \ add unique gameplay/stat potential, and if the chosen set seems weak\
+            \ propose a better alternative set before finalizing;  Also design the\
+            \ set for game balance: this is a Top Trumps style game where a player\
+            \ picks one stat and the higher value wins, so every entry must be a SPECIALIST,\
+            \ not good at everything. Using only these stat categories (connections,\
+            \ journey_reach, station_scale, urban_energy, heritage), give each entry\
+            \ exactly 2 STRONG categories (it clearly excels at these) and 2 WEAK\
+            \ categories (it is clearly poor at these); any others are middling. Spread\
+            \ the strong and weak categories as EVENLY as possible across the whole\
+            \ list so each category is the strength of about the same number of entries\
+            \ and the weakness of about the same number - never let most entries be\
+            \ strong in the same category. Prefer entries whose real nature genuinely\
+            \ fits their assigned strong categories."
+    -   command: query
+        delay: 300
+        text: 'Convert the provided list of Stat Clash entries into ASCII-only YAML
+            that matches this exact schema per card: name, name_proper, description,
+            card_writeup, description_proper, region, category; do not add extra nicknames
+            or bracketed aliases in name fields; output YAML with a top-level key
+            cards containing a simple list (not a dict/map); wrap the entire YAML
+            output between &&&tag for copy&&& and &&&tag for copy&&&; make description
+            fun and zippy and 120 characters including spaces (hard max 130); make
+            card_writeup one punchy, personality-rich sentence of 55 to 84 characters
+            that works as printed card copy; use only ASCII-safe characters and standard
+            keyboard punctuation, with no new lines in description or card_writeup.
+            take all the time you need. Also add, per card, the balance profile you
+            assigned: fields strong_1, strong_2, weak_1, weak_2, each set to one of
+            the exact category names (connections, journey_reach, station_scale, urban_energy,
+            heritage) with no repeats within a card; keep the strengths and weaknesses
+            spread evenly across the whole list.'
+    -   clip: '&&&tag for copy&&&'
+        command: ai_save_text
+        file_name_clip: card_details.yaml
+        file_name_full: full_text.txt
+    -   command: verify_structured
+        file_name: card_details.yaml
+        mode_ai_wait: slow
+        repair: true
+        retries: 2
+    -   command: ai_fix_yaml_copy_paste
+        file_input: card_details.yaml
+        file_output: card_details_manual.yaml
+        new_item_name: name
+        remove_top_level:
+        - cards
+    -   command: verify_structured
+        file_name: card_details_manual.yaml
+        mode_ai_wait: slow
+        repair: true
+        retries: 2
+    -   command: close_tab
+    file_test: card_details_manual.yaml
+oomp_key: oomp_game_card_stat_clash_transportation_shenzhen_metro_line_01_station_game_type_card_research_finding_different_cards_task
+postcard_card_1_left_mm: 2.2
+postcard_card_2_left_mm: 78.2
+postcard_card_trim_top_mm: 2.8
+postcard_page_height_mm: 101.6
+postcard_page_width_mm: 152.4
+postcard_template_source: source_files\shenzhen_metro_line_templates\line_01\working_inkscape_template_multiple.svg
+summaries_filters:
+-   - transportation_shenzhen_metro_line_01_station_game_type
+    - shenzhen_metro_line_01_station
+-   - transportation_shenzhen_metro_line_02_station_game_type
+    - shenzhen_metro_line_02_station
+-   - transportation_shenzhen_metro_line_03_station_game_type
+    - shenzhen_metro_line_03_station
+-   - transportation_shenzhen_metro_line_04_station_game_type
+    - shenzhen_metro_line_04_station
+-   - transportation_shenzhen_metro_line_05_station_game_type
+    - shenzhen_metro_line_05_station
+-   - transportation_shenzhen_metro_line_06_station_game_type
+    - shenzhen_metro_line_06_station
+-   - transportation_shenzhen_metro_line_06_branch_station_game_type
+    - shenzhen_metro_line_06_branch_station
+-   - transportation_shenzhen_metro_line_07_station_game_type
+    - shenzhen_metro_line_07_station
+-   - transportation_shenzhen_metro_line_08_station_game_type
+    - shenzhen_metro_line_08_station
+-   - transportation_shenzhen_metro_line_09_station_game_type
+    - shenzhen_metro_line_09_station
+-   - transportation_shenzhen_metro_line_10_station_game_type
+    - shenzhen_metro_line_10_station
+-   - transportation_shenzhen_metro_line_11_station_game_type
+    - shenzhen_metro_line_11_station
+-   - transportation_shenzhen_metro_line_12_station_game_type
+    - shenzhen_metro_line_12_station
+-   - transportation_shenzhen_metro_line_13_station_game_type
+    - shenzhen_metro_line_13_station
+-   - transportation_shenzhen_metro_line_14_station_game_type
+    - shenzhen_metro_line_14_station
+-   - transportation_shenzhen_metro_line_16_station_game_type
+    - shenzhen_metro_line_16_station
+-   - transportation_shenzhen_metro_line_20_station_game_type
+    - shenzhen_metro_line_20_station
+-   - transportation_shenzhen_metro_train_type_game_type
+    - shenzhen_metro_train_type
+taxonomy_1: game
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_1_capital: Game
+taxonomy_1_first_letter: g
+taxonomy_1_first_letter_upper: G
+taxonomy_1_length_1: g
+taxonomy_1_length_2: ga
+taxonomy_1_length_3: gam
+taxonomy_1_length_4: game
+taxonomy_1_length_5: game
+taxonomy_1_upper: GAME
+taxonomy_1_upper_length_1: G
+taxonomy_1_upper_length_2: GA
+taxonomy_1_upper_length_3: GAM
+taxonomy_1_upper_length_4: GAME
+taxonomy_1_upper_length_5: GAME
+taxonomy_2: card
+taxonomy_2_capital: Card
+taxonomy_2_first_letter: c
+taxonomy_2_first_letter_upper: C
+taxonomy_2_length_1: c
+taxonomy_2_length_2: ca
+taxonomy_2_length_3: car
+taxonomy_2_length_4: card
+taxonomy_2_length_5: card
+taxonomy_2_upper: CARD
+taxonomy_2_upper_length_1: C
+taxonomy_2_upper_length_2: CA
+taxonomy_2_upper_length_3: CAR
+taxonomy_2_upper_length_4: CARD
+taxonomy_2_upper_length_5: CARD
+taxonomy_3: stat_clash
+taxonomy_3_capital: Stat Clash
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: sta
+taxonomy_3_length_4: stat
+taxonomy_3_length_5: stat_
+taxonomy_3_upper: STAT_CLASH
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STA
+taxonomy_3_upper_length_4: STAT
+taxonomy_3_upper_length_5: STAT_
+taxonomy_4: transportation_shenzhen_metro_line_01_station_game_type
+taxonomy_4_capital: Transportation Shenzhen Metro Line 01 Station Game Type
+taxonomy_4_first_letter: t
+taxonomy_4_first_letter_upper: T
+taxonomy_4_length_1: t
+taxonomy_4_length_2: tr
+taxonomy_4_length_3: tra
+taxonomy_4_length_4: tran
+taxonomy_4_length_5: trans
+taxonomy_4_upper: TRANSPORTATION_SHENZHEN_METRO_LINE_01_STATION_GAME_TYPE
+taxonomy_4_upper_length_1: T
+taxonomy_4_upper_length_2: TR
+taxonomy_4_upper_length_3: TRA
+taxonomy_4_upper_length_4: TRAN
+taxonomy_4_upper_length_5: TRANS
+taxonomy_5: card_research
+taxonomy_5_capital: Card Research
+taxonomy_5_first_letter: c
+taxonomy_5_first_letter_upper: C
+taxonomy_5_length_1: c
+taxonomy_5_length_2: ca
+taxonomy_5_length_3: car
+taxonomy_5_length_4: card
+taxonomy_5_length_5: card_
+taxonomy_5_upper: CARD_RESEARCH
+taxonomy_5_upper_length_1: C
+taxonomy_5_upper_length_2: CA
+taxonomy_5_upper_length_3: CAR
+taxonomy_5_upper_length_4: CARD
+taxonomy_5_upper_length_5: CARD_
+taxonomy_6: finding_different_cards_task
+taxonomy_6_capital: Finding Different Cards Task
+taxonomy_6_first_letter: f
+taxonomy_6_first_letter_upper: F
+taxonomy_6_length_1: f
+taxonomy_6_length_2: fi
+taxonomy_6_length_3: fin
+taxonomy_6_length_4: find
+taxonomy_6_length_5: findi
+taxonomy_6_upper: FINDING_DIFFERENT_CARDS_TASK
+taxonomy_6_upper_length_1: F
+taxonomy_6_upper_length_2: FI
+taxonomy_6_upper_length_3: FIN
+taxonomy_6_upper_length_4: FIND
+taxonomy_6_upper_length_5: FINDI
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+theme_accent: '#56B681'
+theme_main: '#0A9B4B'

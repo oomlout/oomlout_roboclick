@@ -1,0 +1,86 @@
+[
+  {
+    "thread": "the producer-authored 10-beat spine",
+    "want": "PRODUCER-AUTHORED (20260718_feedback_run2, authority note) — replaces any prior AI-defined beat structure. Written for the 10-scene musical; the storybook follows the same 10-beat run in order plus the two AUTHORED extra beats (CANON-043: name-meaning discovery beside beat b, hawker-hall meal beside the finale — 12 total). Beats c/d ordering is the producer's — formalize as given, don't 'fix'; the failed presentation is witnessed as a sung flashback inside the scene-3 number (CANON-036). Scene locations fixed per CANON-039 (see places.json); scenes 1-3 solo focus with living background (CANON-040). Backgrounds: scenes 1-8 present-day Mytholmroyd, scene 9 the only construction scene, scene 10 the only metro/new-city scene (CHANGE-2) — staged as ONE sectioned mega-finale (CANON-037). ABSORBS the former 'one-by-one hearings' thread (merged 2026-07-19, audit fix): each vignette (beats e-h) is duck-plus-ONE and each is a candidate song (musical) or spread (storybook); the principals share the stage only at the meeting (beat d) and in scenes 9-10; all converted BEFORE the build",
+    "stations": [
+      "a — Just a canal duck: Canal Duck realizes he is just a canal duck, but feels he and Mytholmroyd could be so much more",
+      "b — Two waterways: the river gives him everything a duck needs; the canal beside it is a bit wasteful — maybe it could be used for something else",
+      "c — The plan, and the sting: the canal could be a transporter and economic engine again; he makes the plan — and the scene lands AFTER the failed presentation, people upset, the duck nervous; a setback",
+      "d — Hearing them one by one: the angry meeting; he pivots to hearing concerns one by one — which turn out to be well addressed by the plan as it stands, looked at carefully",
+      "e — Mabel Lockwood vignette: losing this canal gives access to more canals further away, and resources and respect to other canals",
+      "f — Nora Greenwood vignette: the plan builds MORE community — things closer, less car dependence, the linear park as outdoor space",
+      "g — Asha Rahman vignette: she can go away and, when ready, come back and thrive",
+      "h — Elsie Sutcliffe vignette: a warm insulated flat with lift access and accessible transit means independence for longer",
+      "i — Lock by lock: everyone comes together and starts work, lock by lock, turning the canal into a metro with the park on top",
+      "j — Built, and beginning: it's all built; triumphant — and there's so much more to discover and become"
+    ],
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "thread": "the one-by-one hearings (formerly the conversion cascade) — SUPERSEDED, merged into the spine thread",
+    "want": "SUPERSEDED (audit fix accepted with 20260719_improvement_session): this thread duplicated beats d-i of the producer-authored spine. Its content — the one-by-one pivot, the four vignette conversions, all-converted-before-the-build, and the per-vignette candidate-song/spread note — now lives in the spine thread's arc_note. Retained as history; do not generate from this entry. See conflicts.json",
+    "stations": [],
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "thread": "Canal Duck's name",
+    "want": "the personal arc that mirrors the civic one: the valley isn't bound by its past either. Landing placement now producer canon (run-2 addendum, CANON-029): confirmed scene 10, alongside the first-train reveal, mirroring beat a's 'just a canal duck' — the arc-landing SECTION of the ONE sectioned mega-finale (CANON-037), between the recognition and the open button",
+    "stations": [
+      "called Canal Duck because he's always lived on the canal — 'just a canal duck' (beat a)",
+      "questions the canal itself (beat b)",
+      "realizes the name doesn't bind him — he can live anywhere",
+      "the river and the new city serve him better: family, friends, education, jobs",
+      "visits nicer canals elsewhere thanks to the city's accessibility",
+      "the arc LANDS in scene 10, alongside the reveal, mirroring beat a (CANON-029)"
+    ],
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "thread": "the ones who left come back",
+    "want": "two homecomings at different scales — Miriam Vale's return rhymes with Asha Rahman's, and both land inside the scene-10 mega-finale (CANON-037): Asha in the reveal section, Miriam in the recognition section. Setup discipline: the mayor exists only as a ROLE in song until she walks on",
+    "stations": [
+      "Miriam Vale leaves the valley for a bigger job elsewhere (backstory, CANON-014)",
+      "the confidence the departed mayor gave Canal Duck motivates the start of the campaign — sung about by ROLE only, 'the mayor who left', never by name before scene 10 (CANON-038)",
+      "Asha Rahman can go away, learn, and come back to thrive (beat g)",
+      "during the scenes 9→10 time-jump (a few years) Asha leaves — and RETURNS ON THE FIRST DOUBLE-STACKED TRAIN, her homecoming part of the scene-10 reveal (CANON-042)",
+      "Miriam Vale returns in scene 10 — her ONLY appearance (CANON-027), named at last (CANON-038); her public recognition confirms the community's achievement without claiming ownership of it"
+    ],
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview",
+      "20260705_improvement_session",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "thread": "second fiddle to centre of the world",
+    "want": "the emotional/regional-pride throughline; ties the duck's frustration to the industrial-revolution heritage theme. Visually the payoff is confined to scene 10 (CHANGE-2)",
+    "stations": [
+      "the valley has always played second fiddle to Leeds and Manchester",
+      "the duck feels he and Mytholmroyd 'could be so much more' (beat a)",
+      "the transformation makes Mytholmroyd the megacity's centre (scene 10 only)",
+      "Leeds and Manchester become the centre of the world again, like in the industrial revolution"
+    ],
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_feedback_run2"
+    ]
+  }
+]

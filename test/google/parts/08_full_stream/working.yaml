@@ -1,0 +1,36 @@
+﻿id: google_test_08_full_stream
+enabled: false
+name: "Google Gemini Test 08 - Full Stream"
+directory: test/google/parts/08_full_stream
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini full workflow test
+        log_url: true
+    -   command: set_mode
+        base_ai_provider: gemini
+        mode: thinking
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: "Write a short haiku about artificial intelligence. Format: three lines, no title."
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: haiku.txt
+    -   command: continue_chat
+        base_ai_provider: gemini
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Now write a second haiku about the ocean. Same format.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: haiku_ocean.txt
+    -   command: close_tab
+    file_test:
+    - haiku.txt
+    - haiku_ocean.txt
+    retries_until_complete: 1

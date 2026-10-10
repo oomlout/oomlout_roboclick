@@ -9,6 +9,8 @@ import jinja2
 import pickle
 import copy
 
+position_text_box = [917, 1008]
+
 _ACTION_LOG_IMPORTANT_KEYS = (
     "file_name",
     "file_destination",
@@ -313,7 +315,7 @@ def robo_chrome_save_url(**kwargs):
         robo_keyboard_press_enter(delay=20)
     if "txt" in save_modes:
         #mouse click 300,300
-        robo_mouse_click(position=[300, 300], delay=2)
+        robo_mouse_click(position=position_text_box, delay=2)
         #ctrl a ctrl c then save to text file
         file_path = os.path.join(url_path, file_name_txt)
         robo_keyboard_select_all(delay=2)
@@ -348,7 +350,7 @@ def robo_corel_add_text(**kwargs):
         #press f8 to select the text tool
         robo_keyboard_press_generic(string='f8', delay=2)
         #click at position x, y
-        robo_mouse_click(position=[300, 300], delay=2)
+        robo_mouse_click(position=[300,300], delay=2)
         #type the text
         pyautogui.typewrite(str(text), interval=0.25)
         time.sleep(1)
@@ -2112,7 +2114,8 @@ def ai_check_for_too_many_requests_open_ai(**kwargs):
     #send backspace
     robo_keyboard_press_backspace(delay=1)
     #send backspace
-
+    #click text box
+    robo_mouse_click(position=position_text_box, delay=2, button="left")
     robo_delay(delay=2)
 
 

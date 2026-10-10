@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  Shenzhen Metro 2-up postcard master.
+  Page: 152.4 x 101.6 mm (6 x 4 inches).
+  Finished cards: 72 x 96 mm.
+  Bleed canvases: 76 x 100 mm (2 mm bleed on every edge).
+  Bleed canvases: x=0.2 / 76.2 mm, y=0.8 mm.
+  Trim edges: card 1 x=2.2..74.2 mm; card 2 x=78.2..150.2 mm;
+  both y=2.8..98.8 mm. The two centre bleeds meet at x=76.2 mm.
+-->
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="152.4mm" height="101.6mm" viewBox="0 0 15240 10160"
+     data-card-1-trim-left-mm="2.2" data-card-2-trim-left-mm="78.2"
+     data-card-trim-top-mm="2.8" version="1.1">
+  <defs>
+    <!--
+      The complete card is inline SVG, not an external image. Inkscape can
+      therefore retain text, paths, fills and crop marks as vector PDF objects.
+    -->
+    <symbol id="inlineCard" viewBox="0 0 7600 10000">
+<defs>
+    <clipPath id="stationBadgeClip">
+      <circle cx="720" cy="620" r="280"/>
+    </clipPath>
+    <clipPath id="heroClip">
+      <rect x="300" y="1190" width="4400" height="4400" rx="170"/>
+    </clipPath>
+    <linearGradient id="heroShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.68" stop-color="#061016" stop-opacity="0"/>
+      <stop offset="1" stop-color="#061016" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="pageSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.24"/>
+      <stop offset="0.48" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.13"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The official line colour extends through the full 2 mm bleed. -->
+  <rect width="7600" height="10000" fill="#0A9B4B"/>
+
+  <!-- Finished 72 x 96 mm card begins at (2 mm, 2 mm). -->
+  <g transform="translate(200,200)">
+  <!-- Official line-colour background, fixed in this line's own template. -->
+  <rect width="7200" height="9600" fill="#0A9B4B"/>
+  <rect width="7200" height="9600" fill="url(#pageSheen)"/>
+
+  <!-- Quiet metro-map motif: one line, four stations and a branch. -->
+  <g fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="90">
+    <path d="M-300 8500 C1600 7900 1750 6900 3550 6260 S6050 5350 7500 4300"/>
+    <path d="M3550 6260 C4070 5680 4450 5410 4930 5040"/>
+  </g>
+  <g fill="#0A9B4B" stroke="#FFFFFF" stroke-opacity="0.34" stroke-width="70">
+    <circle cx="860" cy="8140" r="135"/><circle cx="2300" cy="7300" r="135"/>
+    <circle cx="3550" cy="6260" r="135"/><circle cx="5520" cy="5140" r="135"/>
+  </g>
+
+  <!-- Header -->
+  <rect x="230" y="220" width="6740" height="800" rx="210" fill="#0A9B4B"/>
+  <rect x="230" y="220" width="6740" height="800" rx="210"
+        fill="#FFFFFF" fill-opacity="0.22"/>
+  <circle cx="720" cy="620" r="280" fill="#10212A"/>
+  <rect x="440" y="620" width="560" height="280" fill="#FFFFFF"
+        fill-opacity="0.14" clip-path="url(#stationBadgeClip)"/>
+  <path d="M485 620 H955" stroke="#FFFFFF" stroke-opacity="0.72"
+        stroke-width="20"/>
+  
+  
+  <text x="720" y="575" text-anchor="middle"
+        font-family="'Segoe UI',Arial,sans-serif"
+        font-size="220"
+        font-weight="900" fill="#FFFFFF">1</text>
+  <text x="720" y="825" text-anchor="middle"
+        font-family="'Segoe UI',Arial,sans-serif" font-size="220"
+        font-weight="900" fill="#FFFFFF">07</text>
+
+  
+  
+  
+  <text x="1120" y="610" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="420" font-weight="900" letter-spacing="4"
+        fill="#FFFFFF">GANGXIA</text>
+  <text x="1120" y="865"
+        font-family="'Microsoft YaHei','Noto Sans CJK SC','Segoe UI',Arial,sans-serif"
+        font-size="210" font-weight="700" fill="#FFFFFF" fill-opacity="0.78">
+    &#x5C97;&#x53A6; · Line 1
+  </text>
+
+  <!-- Overall -->
+  <g transform="translate(5900,310)">
+    <rect width="880" height="620" rx="170" fill="#10212A"/>
+    <text x="440" y="205" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="128"
+          font-weight="800" letter-spacing="4" fill="#FFFFFF" fill-opacity="0.78">OVERALL</text>
+    <text x="440" y="525" text-anchor="middle"
+          font-family="'Segoe UI',Arial,sans-serif" font-size="360"
+          font-weight="900" fill="#FFFFFF">62</text>
+  </g>
+
+  <!--
+    Station character: the generated artwork is square, so this panel is a
+    true 1:1 viewport. "meet" guarantees that the complete generated image is
+    visible instead of cropping it into a landscape banner.
+  -->
+  <rect x="250" y="1140" width="4500" height="4500" rx="220" fill="#FFFFFF"/>
+  <g clip-path="url(#heroClip)">
+    <rect x="300" y="1190" width="4400" height="4400" fill="#DDE6EA"/>
+    <image href="initial_generated_cgi.png" xlink:href="initial_generated_cgi.png" x="300" y="1190"
+           width="4400" height="4400" preserveAspectRatio="xMidYMid meet"/>
+    <rect x="300" y="1190" width="4400" height="4400" fill="url(#heroShade)"/>
+  </g>
+
+  <!-- Sourced station facts sit beside the square artwork. -->
+  <rect x="4840" y="1140" width="2110" height="4500" rx="220"
+        fill="#10212A" fill-opacity="0.93"/>
+
+  <!-- Four sourced station facts -->
+  
+  
+    <g transform="translate(4990,1320)">
+      <rect width="1810" height="650" rx="135" fill="#FFFFFF" fill-opacity="0.10"
+            stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="14"/>
+      <rect x="0" y="0" width="145" height="650" rx="72" fill="#0A9B4B"/>
+      <text x="975" y="240" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="135"
+            font-weight="800" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.70">FROM START</text>
+      <text x="975" y="520" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="255"
+            font-weight="900" fill="#FFFFFF">6.83 km</text>
+    </g>
+  
+    <g transform="translate(4990,2040)">
+      <rect width="1810" height="650" rx="135" fill="#FFFFFF" fill-opacity="0.10"
+            stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="14"/>
+      <rect x="0" y="0" width="145" height="650" rx="72" fill="#0A9B4B"/>
+      <text x="975" y="240" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="135"
+            font-weight="800" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.70">TO END</text>
+      <text x="975" y="520" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="255"
+            font-weight="900" fill="#FFFFFF">33.78 km</text>
+    </g>
+  
+    <g transform="translate(4990,2760)">
+      <rect width="1810" height="650" rx="135" fill="#FFFFFF" fill-opacity="0.10"
+            stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="14"/>
+      <rect x="0" y="0" width="145" height="650" rx="72" fill="#0A9B4B"/>
+      <text x="975" y="240" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="135"
+            font-weight="800" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.70">OPENED</text>
+      <text x="975" y="520" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="255"
+            font-weight="900" fill="#FFFFFF">2004</text>
+    </g>
+  
+    <g transform="translate(4990,3480)">
+      <rect width="1810" height="650" rx="135" fill="#FFFFFF" fill-opacity="0.10"
+            stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="14"/>
+      <rect x="0" y="0" width="145" height="650" rx="72" fill="#0A9B4B"/>
+      <text x="975" y="240" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="135"
+            font-weight="800" letter-spacing="3" fill="#FFFFFF" fill-opacity="0.70">BUS ROUTES</text>
+      <text x="975" y="520" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="255"
+            font-weight="900" fill="#FFFFFF">48</text>
+    </g>
+  
+
+  <!--
+    Connection status is anchored to the bottom of the sidebar. Stations
+    without an interchange therefore read as intentionally complete instead
+    of leaving an empty block at the top.
+  -->
+  <text x="5050" y="4490" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="165" font-weight="850" letter-spacing="4" fill="#FFFFFF">
+    CONNECTS
+  </text>
+  <g>
+    
+      <g transform="translate(4990,4620)">
+        <rect width="810" height="390" rx="195" fill="#F97C9C"
+              stroke="#FFFFFF" stroke-width="24"/>
+        <text x="405" y="266" text-anchor="middle"
+              font-family="'Segoe UI',Arial,sans-serif" font-size="210"
+              font-weight="900" fill="#FFFFFF">
+          L10
+        </text>
+      </g>
+    
+  </g>
+
+  <!-- Stat rows -->
+  
+  
+    
+    <g transform="translate(300,5860)">
+      <rect width="6600" height="485" rx="125" fill="#10212A" fill-opacity="0.96"/>
+      <rect width="135" height="485" rx="67" fill="#0A9B4B"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        CONNECTIONS
+      </text>
+      <rect x="5660" width="940" height="485" rx="125" fill="#56B681"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">27</text>
+    </g>
+  
+    
+    <g transform="translate(300,6415)">
+      <rect width="6600" height="485" rx="125" fill="#10212A" fill-opacity="0.96"/>
+      <rect width="135" height="485" rx="67" fill="#0A9B4B"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        JOURNEY REACH
+      </text>
+      <rect x="5660" width="940" height="485" rx="125" fill="#56B681"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">84</text>
+    </g>
+  
+    
+    <g transform="translate(300,6970)">
+      <rect width="6600" height="485" rx="125" fill="#10212A" fill-opacity="0.96"/>
+      <rect width="135" height="485" rx="67" fill="#0A9B4B"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        STATION SCALE
+      </text>
+      <rect x="5660" width="940" height="485" rx="125" fill="#56B681"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">29</text>
+    </g>
+  
+    
+    <g transform="translate(300,7525)">
+      <rect width="6600" height="485" rx="125" fill="#10212A" fill-opacity="0.96"/>
+      <rect width="135" height="485" rx="67" fill="#0A9B4B"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        URBAN ENERGY
+      </text>
+      <rect x="5660" width="940" height="485" rx="125" fill="#56B681"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">63</text>
+    </g>
+  
+    
+    <g transform="translate(300,8080)">
+      <rect width="6600" height="485" rx="125" fill="#10212A" fill-opacity="0.96"/>
+      <rect width="135" height="485" rx="67" fill="#0A9B4B"/>
+      <text x="330" y="322" font-family="'Segoe UI',Arial,sans-serif"
+            font-size="205" font-weight="800" letter-spacing="2" fill="#FFFFFF">
+        HERITAGE
+      </text>
+      <rect x="5660" width="940" height="485" rx="125" fill="#56B681"/>
+      <text x="6130" y="344" text-anchor="middle"
+            font-family="'Segoe UI',Arial,sans-serif" font-size="300"
+            font-weight="900" fill="#FFFFFF">92</text>
+    </g>
+  
+
+  <!-- One punchy, research-derived station line. -->
+  
+  
+  
+  <rect x="300" y="8720" width="6600" height="430" rx="120"
+        fill="#FFFFFF" fill-opacity="0.88"/>
+  <text x="500" y="9000" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="180" font-weight="800"
+        fill="#000000" textLength="6000" lengthAdjust="spacingAndGlyphs">A seasoned metro pioneer wearing early-network heritage with pride.</text>
+
+  <text x="360" y="9440" font-family="'Segoe UI',Arial,sans-serif"
+        font-size="155" font-weight="800" letter-spacing="5"
+        fill="#FFFFFF" fill-opacity="0.76">STAT CLASH · SHENZHEN METRO · Line 1</text>
+  </g>
+    </symbol>
+  </defs>
+
+  <!-- Line-colour underlay prevents renderer hairlines where bleed canvases meet. -->
+  <rect width="15240" height="10160" fill="#0A9B4B"/>
+  <use href="#inlineCard" xlink:href="#inlineCard" x="20" y="80"
+       width="7600" height="10000"/>
+  <use href="#inlineCard" xlink:href="#inlineCard" x="7620" y="80"
+       width="7600" height="10000"/>
+
+  <!-- Crop ticks mark the 72 x 96 mm trim, not the bleed canvas. -->
+  <g stroke="#172027" stroke-width="16">
+    <path d="M40 280 H190 M220 100 V250 M7420 100 V250 M7450 280 H7590"/>
+    <path d="M40 9880 H190 M220 9910 V10060 M7420 9910 V10060 M7450 9880 H7590"/>
+    <path d="M7650 280 H7790 M7820 100 V250 M15020 100 V250 M15050 280 H15200"/>
+    <path d="M7650 9880 H7790 M7820 9910 V10060 M15020 9910 V10060 M15050 9880 H15200"/>
+  </g>
+</svg>

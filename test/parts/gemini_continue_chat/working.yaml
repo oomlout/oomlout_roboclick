@@ -1,0 +1,25 @@
+﻿id: gemini_continue_chat
+enabled: false
+name: Gemini Test Continue Chat
+directory: test/parts/gemini_continue_chat
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini continue chat test setup
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Remember the word BANANA.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: continue_chat
+        base_ai_provider: gemini
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: What word did I ask you to remember? Reply with one word only.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: ''
+    retries_until_complete: 0

@@ -1,0 +1,327 @@
+[
+  {
+    "note": "BEAT SPINE IS PRODUCER-AUTHORED (20260718_feedback_run2, authority note — supersedes any AI-defined beat structure): 10 beats = the 10 scenes of the musical (a just-a-canal-duck, b two-waterways, c the-plan-and-the-sting, d hearing-them-one-by-one, e-h the four principal vignettes, i lock-by-lock construction, j built-and-beginning). The storybook follows the same 10-beat run IN ORDER plus two extra beats — now AUTHORED (CANON-043, superseding 'of its own choosing'): extra beat A (name-meaning discovery) beside beat b, extra beat B (hawker-hall family meal) beside the finale — 12 beats total. 'the story starts great but struggles because the beat is defined in the ai generation'.",
+    "applies_to": "structure",
+    "sources": [
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Beats c/d ordering is the producer's and must be formalized AS GIVEN, not 'fixed': (c) climaxes in the plan and lands on the POST-presentation aftermath (people upset, duck nervous — the setback); (d) then shows the angry meeting itself and pivots Canal Duck to one-by-one listening. ADDITION (CANON-036, improvement session 2): the failed presentation itself IS witnessed — as a SUNG FLASHBACK inside the scene-3 number; the c/d ordering stays exactly as authored.",
+    "applies_to": "structure",
+    "sources": [
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "DUCK-PLUS-ONE (hard rule, CHANGE-3): interactions are Canal Duck and ONE person — principals together at the meeting (beat d), then each only in their own vignette with the duck (beats e-h), then all together in scenes 9-10. The previous each-convert-'gets in line'-and-stays-on structure made staging and music too heavy; it is superseded.",
+    "applies_to": "stagecraft",
+    "sources": [
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "BACKGROUND REVEAL TIMING (hard rule, CHANGE-2): scenes 1-8 backgrounds are Mytholmroyd as it is today; scene 9 is the start of construction (the ONLY construction scene); scene 10 is the ONLY scene showing the metro and the new city — buildings there must be massive, truly Singapore/Hong Kong-style public housing. Supersedes any note allowing transformation visuals before scene 9.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "NAMED CAST IS CANON (KEEP-1, forever): Canal Duck, Mabel Lockwood, Nora Greenwood, Asha Rahman, Elsie Sutcliffe, Miriam Vale — with their run-2 roles. These replace the generic placeholder roles everywhere; future generations must NOT re-invent names.",
+    "applies_to": "naming",
+    "sources": [
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "HARD VISUAL RULE: whenever the metro appears it is double-stacked — two levels of trains in the buried tunnel. Producer: 'this always needs to be depicted as double stacked'. Under CHANGE-2 the metro appears only in scene 10.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "Core visual contrasts: the canal 'slices the valley in two' vs the linear park stitching it together; wild river beside engineered corridor; a small duck against 40+ storey towers; Yorkshire stone valley meets Shenzhen/Singapore urbanism. CAUTION (run-1 lesson): the Yorkshire-stone half belongs to the LANDFORM and old village only — never on the metro or new buildings (CANON-021/022). CAUTION (run-2 lesson): the transformed half of the contrast may only be SHOWN in scenes 9-10 (CHANGE-2).",
+    "applies_to": "illustration",
+    "sources": [
+      "20260705_brain_dump",
+      "20260706_feedback_run1",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "STYLE + COMPOSITION RULE (producer-confirmed, CANON-017/020): fun chibi vector, simple bold colours; simple compositions favouring INTIMATE CHARACTER-TO-CHARACTER CONVERSATION SHOTS over wide detailed vistas. Run 1's wide-scale, very detailed images are what this corrects. Converges naturally with duck-plus-one staging (CHANGE-3): most scenes are two-character conversations.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260705_improvement_session",
+      "20260706_feedback_run1",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "METRO TREATMENT (hard lock, CANON-021): clean modern unadorned MTR-style underground stations, tunnels, and trains — speedy and clean-cut, never historical sandstone/brickwork, never 'busy English'. Double-stacking (CANON-011) unchanged.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260706_feedback_run1"
+    ]
+  },
+  {
+    "note": "FINISHED-CITY LOOK (hard lock, CANON-022 + run-2 reconfirmation): Calder Valley landform (hills, river) with massive, truly Singapore/Hong Kong-style public-housing towers — never twee brickwork and sandstone. HDB heartland template per stop: hawker centre + clinic + green space around the transit hub (research/density_and_housing.md). Shown ONLY in scene 10 (CHANGE-2).",
+    "applies_to": "illustration",
+    "sources": [
+      "20260706_feedback_run1",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "Double-stacked train legibility suggestion (not producer canon): give the two decks distinct liveries/light colours (upper express, lower stopping) so the stacking reads instantly.",
+    "applies_to": "illustration",
+    "sources": [
+      "research"
+    ]
+  },
+  {
+    "note": "The draining-as-celebration spirit (CANON-016: lock by lock, wildlife welcomed into the river, honouring the volunteer-restoration sensitivity in guardrails.md) now lives INSIDE beat i (scene 9, the only construction scene) — it is no longer a separate mid-cascade set-piece. However the draining is staged, the respect ('more canal, not less', the protection fund) stays front-and-centre. The first-double-stacked-train showpiece is SETTLED (CANON-028, run-2 addendum): it OPENS scene 10 — the first train arriving IS the reveal moment.",
+    "applies_to": "stagecraft",
+    "sources": [
+      "20260705_improvement_session",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "Real waterway organizations appear by ROLE only — 'the waterways trust', 'the canal folk' — never by name (guardrails.md; research/rochdale_canal_heritage.md).",
+    "applies_to": "naming",
+    "sources": [
+      "research"
+    ]
+  },
+  {
+    "note": "STORY-EXCLUDED (CANON-048, stumbling-blocks addendum — supersedes this note's former 'usable as warm communal memory' guidance; logged in conflicts.json): the 2015 Boxing Day flood is NEVER referenced — no beat, lyric, or image invokes it, in either pipeline. The underlying sensitivity stands as pure protection: the flood is real, recent communal trauma (~300 homes); if any material accidentally brushes it, it must never read as a joke or disaster beat, and must be removed (guardrails.md; research/mytholmroyd_geography.md).",
+    "applies_to": "sensitivity",
+    "sources": [
+      "research",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Succession, not demolition: the canal was 'the Industrial Revolution's motorway' — yesterday's metro. The transformation is one era's link making way for the next's, not the destruction of heritage (research/rochdale_canal_heritage.md). Strong spine for beat c's plan (transporter and economic engine again) and Mabel Lockwood's beat-e vignette.",
+    "applies_to": "framing",
+    "sources": [
+      "research",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "SETTLED: earnest utopian with comic edges — the vision is sincere and inspiring; comedy from the duck, the campaigning, Yorkshire texture, never from mocking the idea. Run-2 amendment: the middle now carries one real setback (beats c/d) — nerves and frustration are allowed there; after beat d the rise is unbroken and the finale is triumphant but open-ended ('so much more to discover and become').",
+    "applies_to": "tone",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "AMENDED (was 'no crisis/low point at all'): exactly ONE producer-authored setback — the failed presentation at beats c/d, resolved by one-by-one listening. Generators must NOT insert any additional failure beat, and must NOT remove or move this one. No villain unchanged. (Former absolute no-low-point rule superseded by 20260718_feedback_run2 — see conflicts.json.)",
+    "applies_to": "structure",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "Ending SETTLED, scene 10 architecture now fully producer canon: scene 10 is ONE SECTIONED MEGA-FINALE (CANON-037) — a single continuous number, never split into separate songs. Sections in order: (1) the first double-stacked train arrives — the reveal moment (CANON-028), Asha Rahman stepping off it (CANON-042); (2) recognition — Miriam Vale returns, named at last (CANON-027/038); (3) Canal Duck's arc landing, mirroring beat a (CANON-029); (4) the open-ended 'so much more to discover and become' button. Everyone together; the only scene showing the metro and the new city. The five former scene-10 song seeds are sections/candidates within this one number (song_seeds.json annotated).",
+    "applies_to": "structure",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Cast shape: Canal Duck + four named principals (Mabel Lockwood, Nora Greenwood, Asha Rahman, Elsie Sutcliffe) + Miriam Vale (supporting) + ensemble (family members, other animals). Under duck-plus-one staging the ensemble belongs to the meeting (beat d) and scenes 9-10 only. CAST COUNT CONFIRMED (CANON-044): base_number_of_characters = 6 — Miriam Vale counts as a full named character despite being finale-only; closes open question rank 21.",
+    "applies_to": "casting",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Palette SETTLED: modern driving pop/electronic — Shenzhen-futurism energy: beats, synths, momentum — 'the sound of the metro itself'. VIGNETTE NUANCE (CANON-045, improvement session 2): scenes 5-8 are CHARACTER-FLAVOURED OVER A METRO SPINE — each vignette tints toward its character (e.g. Mabel canal-folk-tinged, Elsie gentler) while keeping the electronic pulse underneath; the score's identity stays the metro sound. FORM SETTLED (CANON-030): SUNG-THROUGH — 'sung through only a few lines of dialogue to link' (producer verbatim). LINKING LINES (CANON-041): the few spoken lines come from WHOEVER IS IN THE SCENE — naturalistic, never a single narrator voice. Staging note: duck-plus-one means most numbers are duets or solos until the full-company scenes 9-10.",
+    "applies_to": "music",
+    "sources": [
+      "20260705_intake_interview",
+      "20260718_feedback_run2",
+      "20260718_open_questions_session",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "EXPORT-CAPACITY TEXTURE DROPPED (hard rule, CANON-034, open-questions session): no cement/steel/rail export-capacity material in ANY output — musical or storybook. The finale's economic note stays at 'transporter and economic engine' (beat-c wording) plus wonder/discovery. Hawker halls, light industrial, families linked, elders independent all stand.",
+    "applies_to": "content",
+    "sources": [
+      "20260718_open_questions_session"
+    ]
+  },
+  {
+    "note": "DENSITY FIGURES ARE FLAVOUR (CANON-031, open-questions session): '40+ storeys' and '~100,000 people/km²' may be varied or omitted and are never validation targets. The hard lock is the LOOK — massive, truly Singapore/Hong Kong-style public-housing towers in scene 10 (CANON-022/025).",
+    "applies_to": "illustration",
+    "sources": [
+      "20260718_open_questions_session"
+    ]
+  },
+  {
+    "note": "TITLE SETTLED (CANON-032, open-questions session): the working title is 'Mytholmroyd Duck Megacity'. 'Canal Duck' is retired as a title and survives only as the protagonist's name. NAMING SCOPE SETTLED (CANON-033): real place names stay real through publication; de-naming applies only to real people and companies.",
+    "applies_to": "naming",
+    "sources": [
+      "20260718_open_questions_session"
+    ]
+  },
+  {
+    "note": "Both pipelines (musical + storybook). Storybook age band 6-10 — slightly older, can carry more 'how cities work' substance.",
+    "applies_to": "audience",
+    "sources": [
+      "20260705_intake_interview"
+    ]
+  },
+  {
+    "note": "Reference palette is explicitly East Asian urbanism transplanted to a Yorkshire valley: Shenzhen/Hong Kong express metro, Singapore/Hong Kong public housing, hawker centres. Visible only in scenes 9-10 per CHANGE-2.",
+    "applies_to": "worldbuilding",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_feedback_run2"
+    ]
+  },
+  {
+    "note": "PRINCIPAL VOICE SKETCHES ARE CANON (CANON-035, producer verbatim sketches): Mabel Lockwood — mid-50s, local, detail-orientated; Nora Greenwood — friendly and flighty; Asha Rahman — serious and soft-spoken; Elsie Sutcliffe — deep Yorkshire accent, deliberately very cliché. COMPLETED by the addendum (CANON-046): Canal Duck — CARTOON-STYLE voice, GENERIC BRITISH accent, NOT regional/Yorkshire — he contrasts Elsie's cliché Yorkshire rather than matching it. Scenes 5-8 duets are carried by these voices; generators flesh them out but must NOT contradict them.",
+    "applies_to": "casting",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "NO RECURRING PLAN PROP (CANON-047, stumbling-blocks addendum): the plan is deliberately NOT given a defined visual object — never design or track a consistent plan drawing/model/poster across scenes; image-generation consistency risk outweighs the benefit (producer ruling). The plan lives in words and song. The scene-3 'posters askew' (CANON-039) stay one-off incidental scene dressing whose design never recurs.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "NAMED VOICES ONLY (CANON-049, stumbling-blocks addendum): every sung line belongs to one of the 6 named characters; unnamed villagers/ensemble NEVER sing — no chorus vocals, no crowd singing at the meeting or in scenes 9-10; the full-company scenes are carried vocally by the named six. Aligns with the musical pipeline's one-singer-per-lyric-section constraint (Suno sings each section in a single voice). The living background (CANON-003/040) is seen, not heard.",
+    "applies_to": "music",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "SEASON AND LIGHT (CANON-050, stumbling-blocks addendum): scenes 1-8 share ONE consistent season — LATE SPRING/SUMMER — across every image and lyric; no autumn/winter drift, no season change as story content. Scene 10 opens on a NEW DAWN mirroring scene 1's canal bank at dawn — the dawn bookend frames the show visually. Scene 9's season/light was left unspecified: keep it unremarkable, don't invent a season beat.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "STORYBOOK PACING (CANON-051, stumbling-blocks addendum): the scene-10 reveal gets a DOUBLE-PAGE SPREAD — the single exception to CANON-019's never-spreads page rule; every other page keeps A4 one-side-text / one-side-image with single-page portrait images. Page allocation across the 12 beats is otherwise the pipeline's own choice.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "CANON SCENE LOCATIONS (CANON-039, approved as-is): 1 — the canal bank at dawn; 2 — the strip of land between river and canal; 3 — outside the village hall, posters askew; 4 — inside the village hall; 5 — a lock gate (Mabel); 6 — Nora's lane/doorstep; 7 — the station platform (Asha); 8 — Elsie's front room; 9 — the locks, drained one by one; 10 — the revealed metro + new city (per CANON-025/028). Full sensory detail per location in places.json.",
+    "applies_to": "stagecraft",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "SCENES 1-3 STAGING (CANON-040): Canal Duck is SOLO FOCUS WITH LIVING BACKGROUND — unnamed villagers and animals (the CANON-003 mixed world) go about life behind him; NO named interactions before the meeting (scene 4). The world reads alive, not empty, without breaking the solo focus.",
+    "applies_to": "stagecraft",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "TIME-JUMP SCENES 9→10 (CANON-042): a few years pass; NO character visibly ages; Asha Rahman has done her leave-and-return during the jump and RETURNS ON THE FIRST DOUBLE-STACKED TRAIN — her homecoming is part of the scene-10 reveal, fusing beat g's promise into the CANON-028 first-train moment.",
+    "applies_to": "structure",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "MIRIAM VALE SETUP BY ROLE (CANON-038): she is sung about earlier as 'the mayor who left' (beats a/b territory) and is NEVER named before her scene-10 entrance. Backstory texture (CANON-014) is delivered via role reference only.",
+    "applies_to": "naming",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "STORYBOOK-ONLY (CANON-043): the storybook's two extra beats are AUTHORED, positions fixed — extra beat A beside beat b: Canal Duck discovers 'Mytholmroyd' means 'clearing where two rivers meet' (verified, research/mytholmroyd_geography.md); extra beat B beside the finale: a Yorkshire hawker-hall family meal — Yorkshire puddings, curry, dim sum, parkin under one roof. 12 beats total; the 'of its own choosing' freedom is retired. These beats do NOT enter the musical's 10 scenes.",
+    "applies_to": "structure",
+    "sources": [
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Hawker-hall scene sketch (research gift, now load-bearing for the CANON-043 storybook beat and the finale texture): cross-generation tables — the elder and the young returner sharing a table; hawker master-to-apprentice craft as skills-come-home rhyme; affordability as social equalizer — food and flats are one promise in two formats; Yorkshire menu under one roof (puddings, curry, dim sum, parkin). Model documented at research/hawker_centres.md (UNESCO-listed hawker culture, 110+ centres).",
+    "applies_to": "illustration",
+    "sources": [
+      "research",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "Lock-flight imagery bank for beat i (research gift): the Rochdale Canal climbs 600 feet over the Pennines through 91 LOCKS — wonderful counting material for the lock-by-lock construction number/spread; Tuel Lane Lock (1996), Britain's deepest at 6 m, is a set-piece image. Source: research/rochdale_canal_heritage.md.",
+    "applies_to": "illustration",
+    "sources": [
+      "research",
+      "20260719_improvement_session"
+    ]
+  },
+  {
+    "note": "DIALOGUE BUDGET REFLECTS SUNG-THROUGH (CANON-055, settings-keys session): base_dialogue_lines_min/max = 2/4 per scene, tightened from run-1's 3/6 which predated the sung-through ruling. The story is carried in song (CANON-030); spoken lines exist ONLY to link numbers and come from whoever is in the scene, naturalistic, never a narrator (CANON-041). Treat 4 as a ceiling to respect, not a target to fill — a scene that needs no spoken line should have none beyond the minimum.",
+    "applies_to": "pacing",
+    "sources": [
+      "20260720_settings_keys_session"
+    ]
+  },
+  {
+    "note": "LEAN PROP BUDGET (CANON-054, settings-keys session): base_number_of_props = 2, down from run-1's 3 — the fewer recurring objects, the more consistent the generated images. CANON-047 continues to bind: THE PLAN IS NEVER ONE OF THE PROPS (no recurring plan drawing, model, or poster). objects.json indexes exactly two story props — the Rochdale Canal as plot object and the double-stacked express metro — which matches the ruled budget.",
+    "applies_to": "illustration",
+    "sources": [
+      "20260720_settings_keys_session"
+    ]
+  },
+  {
+    "note": "SONG-STYLE KEY BOUND TO CANON (CANON-053, settings-keys session): base_song_style now carries the canon metro palette wording — modern driving pop/electronic, beats/synths/momentum, 'the sound of the metro itself', with scenes 5-8 character-flavoured over that spine (Mabel canal-folk-tinged, Elsie gentler) and the electronic pulse kept underneath. Run-1's 'hiphop rock extravaganza' is SUPERSEDED: it contradicted CANON-010/045 and was used verbatim by the generator (see conflicts.json). CANON-010/045 are unchanged — this only binds the settings key to them.",
+    "applies_to": "music",
+    "sources": [
+      "20260720_settings_keys_session"
+    ]
+  },
+  {
+    "note": "REQUIRED-KEY CONTRACT (CANON-056, settings-keys session): the eight musical-generator keys — musical_title, base_length, base_song_style, base_number_of_props, base_dialogue_lines_min, base_dialogue_lines_max, base_song_words_max, base_suno_style_chars_max — are a CONTRACT with the pipeline, not creative content. Populate aborts before any generation if one is missing, and prompts reference them as {key}, so an absent key reaches the AI as literal placeholder text. No packaging pass may drop a previously present key; diff against the last-known key set (or the run archive) before rewriting settings_basic.yaml. The list is recorded in settings_basic.yaml's contract block and in README.md.",
+    "applies_to": "process",
+    "sources": [
+      "20260720_settings_keys_session"
+    ]
+  },
+  {
+    "note": "TITLE KEY SET (CANON-052, settings-keys session): musical_title = 'Mytholmroyd Duck Megacity', matching base_story_name and the CANON-032 working title. Run-1's 'Duck Megacity: The Musical' is superseded. 'Canal Duck' is the protagonist's name and is never used as the title in either pipeline.",
+    "applies_to": "naming",
+    "sources": [
+      "20260720_settings_keys_session"
+    ]
+  },
+  {
+    "note": "Current settings allocate 2–4 opening lines AND 2–4 closing lines, with the song between. Closing lines carry intention, not the next outcome.",
+    "applies_to": "structure",
+    "sources": [
+      "source/settings_basic.yaml",
+      "AGENTS.md"
+    ]
+  }
+]

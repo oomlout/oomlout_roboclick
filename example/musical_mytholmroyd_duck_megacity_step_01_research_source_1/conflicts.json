@@ -1,0 +1,353 @@
+[
+  {
+    "issue": "canal removal vs canal protection",
+    "position_a": "20260705_brain_dump",
+    "position_b": "20260705_brain_dump",
+    "sources_a": [
+      "20260705_brain_dump"
+    ],
+    "sources_b": [
+      "20260705_brain_dump"
+    ],
+    "resolution": "RESOLVED by interview: intentional nuance. This canal is the redundant exception (the river runs beside it); canals in general are treasured — the canal enthusiast's conversion is precisely realizing the metro gives access to MORE canal, not less.",
+    "detail": "Internal tension, not a capture contradiction: the plan drains the Rochdale Canal while the money it creates 'helps protect other canals'."
+  },
+  {
+    "issue": "when the valley is convinced",
+    "position_a": "20260705_brain_dump",
+    "position_b": "20260705_intake_interview",
+    "sources_a": [
+      "20260705_brain_dump"
+    ],
+    "sources_b": [
+      "20260705_intake_interview"
+    ],
+    "resolution": "Interview was canon at the time (conversions during the build). NOTE: this resolution has itself been superseded — see the 'conversion timing vs the 10-beat spine' entry (20260718_feedback_run2).",
+    "detail": "The brain dump reads as 'everyone convinced, then the canal is drained'; the interview says the turn happens slowly, one at a time, AS the project progresses."
+  },
+  {
+    "issue": "base_illustration_style DEFAULT vs producer-confirmed style",
+    "position_a": "packager default (settings_basic.yaml)",
+    "position_b": "20260705_improvement_session + 20260706_feedback_run1",
+    "sources_a": [
+      "packager default (settings_basic.yaml)"
+    ],
+    "sources_b": [
+      "20260705_improvement_session + 20260706_feedback_run1"
+    ],
+    "resolution": "SUPERSEDED by producer decisions CANON-017 + CANON-020: fun chibi vector, simple bold colours, simple compositions favouring intimate character-to-character conversation shots over wide detailed vistas; plus visual locks CANON-021 (clean MTR metro) and CANON-022 (HDB-style finished city). settings_basic.yaml, style_preferences.md, guardrails.md, craft_notes.json all updated.",
+    "detail": "The packager DEFAULT ('warm Yorkshire millstone-grit valley textures meeting crisp optimistic Singapore/Shenzhen futurism; … glowing double-stacked metro tunnel cutaways …') ran verbatim in storybook run 1 and produced wide-scale, very detailed, heritage-textured images."
+  },
+  {
+    "issue": "compressed build event vs draining-celebration decision",
+    "position_a": "20260705_brain_dump",
+    "position_b": "20260705_improvement_session",
+    "sources_a": [
+      "20260705_brain_dump"
+    ],
+    "sources_b": [
+      "20260705_improvement_session"
+    ],
+    "resolution": "SPLIT per CANON-016 into draining celebration + first-train showpiece + rest-of-build. NOTE: this resolution has itself been superseded — see the 'CANON-016 set-pieces vs the 10-beat spine' entry (20260718_feedback_run2).",
+    "detail": "The timeline compressed draining + park + metro + towers into one event, leaving the emotionally loaded draining without its own beat (flagged by the 2026-07-05 audit against guardrails.md sensitivity)."
+  },
+  {
+    "issue": "generic placeholder roles vs the named cast",
+    "position_a": "20260705_intake_interview + 20260705_improvement_session (naming deferred, CANON-008)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_intake_interview + 20260705_improvement_session (naming deferred, CANON-008)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (authority note): the named cast is canon for all future generations; placeholder roles retained only as aliases in characters.json. Future generations must NOT re-invent names.",
+    "detail": "Prior canon deferred character naming and carried placeholder roles: 'the canal enthusiast', 'the village-house lover', 'the young returner', 'the elder', 'the mayor'. Run 2 generated names, and the producer confirmed them (KEEP-1): Mabel Lockwood, Nora Greenwood, Asha Rahman, Elsie Sutcliffe, Miriam Vale (Canal Duck unchanged)."
+  },
+  {
+    "issue": "prior beat structure vs the producer-authored 10-beat spine",
+    "position_a": "20260705_brain_dump + 20260705_intake_interview + 20260705_improvement_session (derived beat structure)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_brain_dump + 20260705_intake_interview + 20260705_improvement_session (derived beat structure)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (authority note): timeline.json and narrative_threads.json rebuilt on the 10-beat spine. The two placements initially left open were SETTLED by the same-session addendum: Miriam Vale appears in scene 10 only (CANON-027) and the first-train showpiece opens scene 10 as the reveal moment (CANON-028) — history preserved here, not deleted.",
+    "detail": "The earlier timeline/threads carried an allies-gather-and-launch beat, a conversions-during-the-build cascade, the draining celebration and first-double-stacked-train showpiece as separate mid-cascade set-pieces, and Miriam Vale's mid-cascade return beat. CHANGE-1 replaces the beat structure wholesale with the producer's ten beats (a-j), including the beats c/d setback ordering to be formalized as given."
+  },
+  {
+    "issue": "'no low point' hard lock vs the authored setback at beats c/d",
+    "position_a": "20260705_intake_interview (no-crisis hard lock)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_intake_interview (no-crisis hard lock)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (authority note): exactly ONE setback exists, fixed at beats c/d and resolved by one-by-one listening. No villain and everyone-converts unchanged; generators still must not insert ADDITIONAL failure beats. world_rules.json, timeline.json, craft_notes.json amended.",
+    "detail": "Intake canon: 'the story never has a low point or reversal; generators must not insert a failure/crisis beat' (hard_lock). The producer's new spine explicitly authors a setback: beat c ends after the failed presentation with people upset and frustrated and Canal Duck nervous ('its a set back'); beat d shows the angry meeting."
+  },
+  {
+    "issue": "conversion timing vs the 10-beat spine",
+    "position_a": "20260705_intake_interview ('the turn happens slowly, one at a time, AS the project progresses')",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_intake_interview ('the turn happens slowly, one at a time, AS the project progresses')"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (authority note): conversions complete one-by-one before the build; construction is beat i (scene 9) only. The one-at-a-time spirit survives in the vignette structure.",
+    "detail": "Intake canon placed the conversions DURING the build with no vote-then-build moment. The new spine places all four principal conversions (beats e-h) BEFORE construction: beat i is 'everyone comes together and starts work on the project'."
+  },
+  {
+    "issue": "accumulating 'gets in line' ensemble vs duck-plus-one staging",
+    "position_a": "prior structure (each converted person joins every subsequent scene)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "prior structure (each converted person joins every subsequent scene)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (CHANGE-3): interactions are Canal Duck plus ONE person; principals together only at the meeting (beat d) and in scenes 9-10. relationships.json, narrative_threads.json, world_rules.json, craft_notes.json amended.",
+    "detail": "The run-2 build had each person encountered 'getting in line and being in the next scene'. Producer: this does not work for the musical — staging and music get too heavy."
+  },
+  {
+    "issue": "transformation imagery through the middle vs the scene-9/10-only reveal",
+    "position_a": "20260705_improvement_session + 20260706_feedback_run1 (build imagery interleaved through the middle)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_improvement_session + 20260706_feedback_run1 (build imagery interleaved through the middle)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded by 20260718_feedback_run2 (authority note): reveal timing is now a hard lock in world_rules.json and craft_notes.json. Tower style reconfirms CANON-022; metro treatment CANON-021 unchanged but only ever shown in scene 10.",
+    "detail": "Earlier craft allowed build visuals (draining celebration, first train, towers rising) interleaved through the cascade. CHANGE-2: scenes 1-8 backgrounds are Mytholmroyd as it is today; scene 9 is the only construction scene; scene 10 is the only scene showing the metro and the new city, with massive, truly Singapore/Hong Kong-style public-housing towers."
+  },
+  {
+    "issue": "CANON-016 set-pieces vs the 10-beat spine",
+    "position_a": "20260705_improvement_session (draining celebration + first-train showpiece as separate beats)",
+    "position_b": "20260718_feedback_run2",
+    "sources_a": [
+      "20260705_improvement_session (draining celebration + first-train showpiece as separate beats)"
+    ],
+    "sources_b": [
+      "20260718_feedback_run2"
+    ],
+    "resolution": "Superseded in PLACEMENT by 20260718_feedback_run2: the lock-by-lock celebration spirit folds into beat i; the volunteer-restoration sensitivity (guardrails.md) still governs however the draining is staged. The first-train showpiece's home was then SETTLED by the same-session addendum (CANON-028): it OPENS scene 10 — the first train arriving IS the reveal moment.",
+    "detail": "CANON-016 made the draining a celebratory lock-by-lock event and the first double-stacked train a separate showpiece milestone, both mid-cascade. The new spine has one construction beat (i, scene 9, 'lock by lock') and one finished-city beat (j, scene 10, the only metro scene)."
+  },
+  {
+    "issue": "sung-through vs undecided show form",
+    "position_a": "20260705_improvement_session (form explicitly left open, CANON-018)",
+    "position_b": "20260718_open_questions_session",
+    "sources_a": [
+      "20260705_improvement_session (form explicitly left open, CANON-018)"
+    ],
+    "sources_b": [
+      "20260718_open_questions_session"
+    ],
+    "resolution": "SETTLED by the producer (CANON-030, verbatim 'sung through only a few lines of dialogue to link'): the musical is sung-through; spoken dialogue exists only as a few linking lines. settings_basic.yaml base_show_shape, world_rules.json, craft_notes.json, style_preferences.md, foundation.md amended.",
+    "detail": "CANON-018 made the ~10-song count canon but explicitly left sung-through vs book musical OPEN (round 2 dismissed; structured notes said 'do not infer a form')."
+  },
+  {
+    "issue": "density figures as default rule vs flavour",
+    "position_a": "20260705_brain_dump (40+ storeys, ~100,000/km² carried as a default world rule)",
+    "position_b": "20260718_open_questions_session",
+    "sources_a": [
+      "20260705_brain_dump (40+ storeys, ~100,000/km² carried as a default world rule)"
+    ],
+    "sources_b": [
+      "20260718_open_questions_session"
+    ],
+    "resolution": "SETTLED by the producer (CANON-031): the figures are FLAVOUR, not canon — generators may vary or omit them and they are never validated as required numbers. The massive Singapore/HK tower LOOK (CANON-022/025) remains hard-locked. world_rules.json rigidity demoted to flexible; facts.json, places.json, craft_notes.json, guardrails.md annotated.",
+    "detail": "The housing world rule carried the figures at rigidity 'default' pending a hardness ruling (open question rank 11); research had calibrated them as within block-scale precedent."
+  },
+  {
+    "issue": "'Canal Duck' working title vs 'Mytholmroyd Duck Megacity'",
+    "position_a": "20260705 captures (informal working title 'Canal Duck')",
+    "position_b": "20260718_open_questions_session",
+    "sources_a": [
+      "20260705 captures (informal working title 'Canal Duck')"
+    ],
+    "sources_b": [
+      "20260718_open_questions_session"
+    ],
+    "resolution": "SETTLED by the producer (CANON-032): the working title is 'Mytholmroyd Duck Megacity' (matches the slug and base_story_name). 'Canal Duck' is retired as a title and survives only as the protagonist's name. README.md and foundation.md retitled.",
+    "detail": "README.md and foundation.md were headed '*Canal Duck* (working title)'; open question rank 12 had no answer on file."
+  },
+  {
+    "issue": "export-capacity texture vs its retirement",
+    "position_a": "20260705_brain_dump (cement/steel/rail export-capacity epilogue texture)",
+    "position_b": "20260718_open_questions_session",
+    "sources_a": [
+      "20260705_brain_dump (cement/steel/rail export-capacity epilogue texture)"
+    ],
+    "sources_b": [
+      "20260718_open_questions_session"
+    ],
+    "resolution": "SETTLED by the producer, stronger than the audit proposal (CANON-034): DROPPED EVERYWHERE — musical and storybook. The finale's economic note stays at 'transporter and economic engine' plus wonder/discovery. Entries retired-not-deleted: themes.json note amended, timeline.json finale-texture event cleaned, facts.json claim marked retired-as-story-material; ban added to guardrails.md (Content bans) and world_rules.json.",
+    "detail": "The texture lived in themes.json ('industrial-revolution heritage reborn' export clause), timeline.json (finale-texture entry), and facts.json (low-confidence economic thesis). The 2026-07-05 audit had proposed downweighting it for the age-6-10 storybook (open question rank 16)."
+  },
+  {
+    "issue": "five scene-10 song seeds vs the ~1-song-per-scene budget",
+    "position_a": "song_seeds.json (five seeds targeting scene 10: first train, so-much-more-to-discover, the link, the sound of the metro itself, identity reprise)",
+    "position_b": "20260719_improvement_session",
+    "sources_a": [
+      "song_seeds.json (five seeds targeting scene 10: first train, so-much-more-to-discover, the link, the sound of the metro itself, identity reprise)"
+    ],
+    "sources_b": [
+      "20260719_improvement_session"
+    ],
+    "resolution": "SETTLED by the producer (CANON-037): scene 10 is ONE sectioned mega-finale — first-train reveal → recognition → arc landing → open button; the seeds become sections/candidates WITHIN it. 'The sound of the metro itself' is SUPERSEDED as a standalone seed and merged into the finale seed (its title-energy drives the whole number; the palette phrase itself stays canon per CANON-010/045). song_seeds.json annotated; no seed deleted.",
+    "detail": "The seed layer implied up to five finale numbers against a ~10-song budget on a 10-scene spine. The auditor surfaced the tension; the producer ruled."
+  },
+  {
+    "issue": "duplicate finale-texture timeline entry vs beat j",
+    "position_a": "timeline.json (standalone 'finale texture within scene 10' entry)",
+    "position_b": "20260719_improvement_session (audit housekeeping accepted)",
+    "sources_a": [
+      "timeline.json (standalone 'finale texture within scene 10' entry)"
+    ],
+    "sources_b": [
+      "20260719_improvement_session (audit housekeeping accepted)"
+    ],
+    "resolution": "FOLDED into the beat-j entry (2026-07-19): the texture and the arc-landing wording now live inside the single mega-finale event; the standalone entry is retired. Content preserved verbatim in beat j; raw evidence untouched.",
+    "detail": "The finale texture (hawker halls, light industrial, elders independent, families linked, arc landing) lived both inside beat j and as a separate scene-10 entry — a duplication the audit flagged, made redundant once CANON-037 fixed scene 10 as one number."
+  },
+  {
+    "issue": "duplicated 'one-by-one hearings' thread vs the spine thread",
+    "position_a": "narrative_threads.json ('the one-by-one hearings (formerly the conversion cascade)' thread)",
+    "position_b": "20260719_improvement_session (audit housekeeping accepted)",
+    "sources_a": [
+      "narrative_threads.json ('the one-by-one hearings (formerly the conversion cascade)' thread)"
+    ],
+    "sources_b": [
+      "20260719_improvement_session (audit housekeeping accepted)"
+    ],
+    "resolution": "MERGED into the spine thread (2026-07-19): the candidate-song/spread note and the converted-before-the-build wording now live in the spine thread's arc_note; the old thread entry is marked SUPERSEDED and retained as history (beats emptied, do-not-generate note).",
+    "detail": "The thread duplicated beats d-i of the producer-authored spine thread beat-for-beat; only its per-vignette candidate-song/spread note was unique."
+  },
+  {
+    "issue": "storybook extra beats 'of its own choosing' vs authored beats",
+    "position_a": "20260718_feedback_run2 (CANON-024: two extra beats of the storybook pipeline's own choosing)",
+    "position_b": "20260719_improvement_session",
+    "sources_a": [
+      "20260718_feedback_run2 (CANON-024: two extra beats of the storybook pipeline's own choosing)"
+    ],
+    "sources_b": [
+      "20260719_improvement_session"
+    ],
+    "resolution": "SETTLED by the producer (CANON-043): both beats are AUTHORED with fixed positions — extra beat A (Mytholmroyd name-meaning discovery) beside beat b; extra beat B (Yorkshire hawker-hall family meal) beside the finale. The free-choice clause of CANON-024 is superseded; timeline.json carries both as STORYBOOK-ONLY entries.",
+    "detail": "CANON-024 left the storybook's two extra beats to the pipeline. The auditor asked whether to leave free, constrain placement, or author now."
+  },
+  {
+    "issue": "flood as usable warm communal memory vs never referenced",
+    "position_a": "research + prior guardrail ('usable as warm communal memory — we rebuilt once, we can build again')",
+    "position_b": "20260719_improvement_session (stumbling-blocks addendum, A3)",
+    "sources_a": [
+      "research + prior guardrail ('usable as warm communal memory — we rebuilt once, we can build again')"
+    ],
+    "sources_b": [
+      "20260719_improvement_session (stumbling-blocks addendum, A3)"
+    ],
+    "resolution": "SUPERSEDED by the producer (CANON-048): the story NEVER references the flood — no beat, lyric, or image, in either pipeline. The warmth guardrail survives as PURE PROTECTION only (if material accidentally brushes the flood it must never read as joke or disaster beat, and must be removed). facts.json entry marked STORY-EXCLUDED and retained as verified evidence; craft_notes.json sensitivity mirror amended; guardrails.md Content bans + Sensitivity amended. History retained — nothing deleted.",
+    "detail": "The research-discovered 2015 Boxing Day flood fact was carried as available communal-memory texture in guardrails.md (Sensitivity), craft_notes.json (sensitivity mirror), and facts.json. Addendum question A3 asked where the memory could safely surface; the producer ruled: nowhere."
+  },
+  {
+    "issue": "CANON-019 'never spreads' vs the storybook scene-10 reveal double-page spread",
+    "position_a": "20260706_feedback_run1 (CANON-019: A4 one side text / one side image, images single-page portrait, NEVER spreads)",
+    "position_b": "20260719_improvement_session (stumbling-blocks addendum, A6)",
+    "sources_a": [
+      "20260706_feedback_run1 (CANON-019: A4 one side text / one side image, images single-page portrait, NEVER spreads)"
+    ],
+    "sources_b": [
+      "20260719_improvement_session (stumbling-blocks addendum, A6)"
+    ],
+    "resolution": "PARTIALLY SUPERSEDED by the producer (CANON-051): the scene-10 reveal is the SINGLE exception — a deliberate double-page spread; every other page keeps the CANON-019 layout (A4 text/image facing pages, single-page portrait images). settings_basic.yaml page_size comment and base_story_style annotated; foundation.md Pipelines amended.",
+    "detail": "CANON-019 banned spread images outright after run 1 rendered A4 spreads everywhere. Addendum question A6 asked how the storybook should pace the scene-10 reveal; the producer ruled it a double-page spread, page allocation otherwise free."
+  },
+  {
+    "issue": "run-1 musical_title vs the CANON-032 working title",
+    "position_a": "run-1 archive settings_basic.yaml (musical_title: 'Duck Megacity: The Musical')",
+    "position_b": "20260720_settings_keys_session",
+    "sources_a": [
+      "run-1 archive settings_basic.yaml (musical_title: 'Duck Megacity: The Musical')"
+    ],
+    "sources_b": [
+      "20260720_settings_keys_session"
+    ],
+    "resolution": "SUPERSEDED by the producer (CANON-052): musical_title = 'Mytholmroyd Duck Megacity' — the CANON-032 working title, matching base_story_name. 'Canal Duck' remains the protagonist's name and is never the title. settings_basic.yaml, foundation.md Title, README.md updated.",
+    "detail": "Restoring the dropped required keys surfaced the run-1 value 'Duck Megacity: The Musical', which predated the CANON-032 title ruling and did not match base_story_name."
+  },
+  {
+    "issue": "run-1 base_song_style vs the canon metro palette",
+    "position_a": "run-1 archive settings_basic.yaml (base_song_style: 'hiphop rock extravaganza')",
+    "position_b": "20260720_settings_keys_session",
+    "sources_a": [
+      "run-1 archive settings_basic.yaml (base_song_style: 'hiphop rock extravaganza')"
+    ],
+    "sources_b": [
+      "20260720_settings_keys_session"
+    ],
+    "resolution": "SUPERSEDED by the producer (CANON-053): base_song_style now carries the canon palette wording (driving pop/electronic; the sound of the metro itself; scenes 5-8 character-flavoured over that spine with the electronic pulse underneath). The run-1 value was an unconfirmed value used verbatim by the generator — the failure mode already recorded in foundation/lessons.md. CANON-010/045 are unchanged; the key is simply bound to them. settings_basic.yaml, craft_notes.json, foundation.md Music, style-facing README notes updated.",
+    "detail": "Run 1 carried base_song_style = 'hiphop rock extravaganza', flatly contradicting the canon music palette (modern driving pop/electronic, 'the sound of the metro itself', CANON-010, refined by CANON-045). Because base_song_style was one of the dropped keys, the contradiction only surfaced when the producer restored it. Asked directly which wins, the producer ruled."
+  },
+  {
+    "issue": "run-1 prop count 3 vs the leaner budget of 2",
+    "position_a": "run-1 archive settings_basic.yaml (base_number_of_props: 3)",
+    "position_b": "20260720_settings_keys_session",
+    "sources_a": [
+      "run-1 archive settings_basic.yaml (base_number_of_props: 3)"
+    ],
+    "sources_b": [
+      "20260720_settings_keys_session"
+    ],
+    "resolution": "SUPERSEDED by the producer (CANON-054): base_number_of_props = 2 — fewer objects to keep consistent across generated images, continuing the CANON-047 image-consistency reasoning. The plan is NEVER one of the two. objects.json (which indexes exactly two story props) annotated; world_rules.json and craft_notes.json carry the budget.",
+    "detail": "The run-1 prop budget of 3 was set before CANON-047 ruled the plan out as a recurring visual object, so one of the three slots had effectively been reserved for a plan prop that no longer exists."
+  },
+  {
+    "issue": "run-1 dialogue budget 3/6 vs the sung-through budget 2/4",
+    "position_a": "run-1 archive settings_basic.yaml (base_dialogue_lines_min/max: 3/6)",
+    "position_b": "20260720_settings_keys_session",
+    "sources_a": [
+      "run-1 archive settings_basic.yaml (base_dialogue_lines_min/max: 3/6)"
+    ],
+    "sources_b": [
+      "20260720_settings_keys_session"
+    ],
+    "resolution": "SUPERSEDED by the producer (CANON-055): 2/4 — tight enough to enforce 'only a few lines of dialogue to link' without starving scene transitions. The lines stay naturalistic and come from whoever is in the scene (CANON-041); 4 is a ceiling to respect, not a target to fill. settings_basic.yaml, world_rules.json, craft_notes.json updated.",
+    "detail": "The 3/6 spoken-line budget predated CANON-030's sung-through ruling and CANON-041's linking-line refinement; it allowed up to six spoken lines per scene in a show that is carried in song."
+  },
+  {
+    "issue": "bundle settings_basic.yaml vs the run-1 archive key set",
+    "position_a": "a post-run-1 packaging pass (rebuilt settings_basic.yaml around the storybook keys + base_show_shape/base_music_palette)",
+    "position_b": "20260720_settings_keys_session",
+    "sources_a": [
+      "a post-run-1 packaging pass (rebuilt settings_basic.yaml around the storybook keys + base_show_shape/base_music_palette)"
+    ],
+    "sources_b": [
+      "20260720_settings_keys_session"
+    ],
+    "resolution": "RESOLVED by restoration + a durable contract (CANON-056): all eight keys restored and re-ruled; the required-key list is now recorded as a commented contract block in settings_basic.yaml and in README.md, and guardrails.md forbids any packaging pass from dropping a previously present key. Detectable inside this bundle rather than only at pipeline runtime. Process lesson recorded in foundation/lessons.md.",
+    "detail": "All eight musical-generator REQUIRED keys existed in the run-1 archive copy of settings_basic.yaml but were dropped from this bundle when a later packaging pass rebuilt the file. Nothing in the bundle recorded them as required, so no validation caught the loss and the musical pipeline's populate step aborted before generating anything."
+  },
+  {
+    "issue": "Historical foundation prose describes 2–4 lines for the whole scene",
+    "position_a": "Earlier foundation CANON-055 prose",
+    "position_b": "2026-07-26 settings clarification and current pipeline",
+    "sources_a": [
+      "source/foundation/foundation.md"
+    ],
+    "sources_b": [
+      "source/settings_basic.yaml",
+      "AGENTS.md"
+    ],
+    "resolution": "Use 2–4 opening plus 2–4 closing; current explicitly dated setting wins. Source originals unchanged."
+  }
+]

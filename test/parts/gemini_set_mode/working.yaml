@@ -1,0 +1,21 @@
+﻿id: gemini_set_mode
+enabled: false
+name: Gemini Test Set Mode
+directory: test/parts/gemini_set_mode
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini set mode test setup
+        log_url: true
+    -   command: set_mode
+        base_ai_provider: gemini
+        mode: thinking
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: What mode are you currently in? Reply with one sentence.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: ''
+    retries_until_complete: 0

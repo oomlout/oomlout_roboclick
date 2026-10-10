@@ -1,0 +1,18 @@
+﻿id: gemini_query
+enabled: false
+name: Gemini Test Query
+directory: test/parts/gemini_query
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini query test setup
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Hello from Gemini roboclick test. Please reply with a single word OK.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: ''
+    retries_until_complete: 0

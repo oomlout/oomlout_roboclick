@@ -1,0 +1,292 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- ostrich
+- blossom
+bip_39_2_word_no_space: ostrichblossom
+bip_39_2_word_space: ostrich blossom
+bip_39_2_word_underscore: ostrich_blossom
+bip_39_3_word_array:
+- ostrich
+- blossom
+- armor
+bip_39_3_word_no_space: ostrichblossomarmor
+bip_39_3_word_space: ostrich blossom armor
+bip_39_3_word_underscore: ostrich_blossom_armor
+bip_39_full_array:
+- ostrich
+- blossom
+- armor
+- course
+- coffee
+- orbit
+- few
+- horror
+- doll
+- amazing
+- knock
+- accident
+bip_39_full_no_space: ostrichblossomarmorcoursecoffeeorbitfewhorrordollamazingknockaccident
+bip_39_full_space: ostrich blossom armor course coffee orbit few horror doll amazing
+    knock accident
+bip_39_full_underscore: ostrich_blossom_armor_course_coffee_orbit_few_horror_doll_amazing_knock_accident
+directory: parts/musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+id_no_class: musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+id_no_size: musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+id_no_type: musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+md5: 9ce3002f98a2d337d5636d40a0f9ef00
+md5_10: 9ce3002f98
+md5_10_upper: 9CE3002F98
+md5_5: 9ce30
+md5_5_upper: 9CE30
+md5_6: 9ce300
+md5_6_alpha: 64dfk
+md5_6_alpha_upper: 64DFK
+md5_6_upper: 9CE300
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 09 Scene 1 Dialogue
+name_no_class: Musical Mytholmroyd Duck Megacity Step 09 Scene 1 Dialogue
+name_no_size: Musical Mytholmroyd Duck Megacity Step 09 Scene 1 Dialogue
+name_no_type: Musical Mytholmroyd Duck Megacity Step 09 Scene 1 Dialogue
+name_proper: Musical Mytholmroyd Duck Megacity Step 09 Scene 1 Dialogue
+name_space: musical mytholmroyd duck megacity step 09 scene 1 dialogue
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 09 SCENE 1 DIALOGUE
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_text_file
+        content: '# This Scene
+
+            scene_id: scene_1
+
+            work_focus: dialogue
+
+            song_number: N01
+
+            song_folder: song_N01
+
+
+            Use scene_id exactly as written above in every audioFile path
+
+            inside direction.json.
+
+            '
+        file_name: this_scene.md
+    -   command: create_zip
+        files: &id001
+        -   arcname: settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        -   arcname: show_config.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/show_config.yaml
+        -   arcname: canon_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/canon_bible.md
+        -   arcname: character_voices.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_voices.md
+        -   arcname: character_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_list.csv
+        -   arcname: character_registry.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_registry.json
+        -   arcname: dialogue_guide.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_08_dialogue_director_1/dialogue_guide.md
+        -   arcname: scene_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_list.csv
+        -   arcname: scene_song_ledger.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_song_ledger.md
+        -   arcname: scene_direction.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S01.md
+        -   arcname: dialogue_direction.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_08_dialogue_director_1/dialogue_direction_S01.md
+        -   arcname: this_scene.md
+            source: this_scene.md
+        -   arcname: song_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07a_song_N01_final/lyrics.md
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_09_scene_1_dialogue\nstep_name: Dialogue scene_1\n\
+            description: Spoken dialogue and cue list for scene_1.\nfiles:\n  - name:\
+            \ dialogue.md\n    destination: production/08b_scenes/scene_1/dialogue_draft.md\n\
+            \    description: Draft spoken dialogue for the scene before blind-read\
+            \ revision\n  - name: direction.json\n    destination: production/08b_scenes/scene_1/direction_draft.json\n\
+            \    description: Draft cue list before blind-read revision\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_09_scene_1_dialogue\nstep_name: Dialogue scene_1\n\
+            description: Spoken dialogue and cue list for scene_1.\nfiles:\n  - name:\
+            \ dialogue.md\n    destination: production/08b_scenes/scene_1/dialogue_draft.md\n\
+            \    description: Draft spoken dialogue for the scene before blind-read\
+            \ revision\n  - name: direction.json\n    destination: production/08b_scenes/scene_1/direction_draft.json\n\
+            \    description: Draft cue list before blind-read revision\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block dialogue_scene_1_dialogue'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: Dialogue scene_1
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_09_dialogue
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test:
+    - dialogue.md
+    - direction.json
+    retries_until_complete: 3
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue\direction.json
+        mode_ai_wait: slow
+        retries: 1
+    file_test: ''
+    retries_until_complete: 0
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_09_scene_1_dialogue
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_09_dialogue
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+scene_id: scene_1
+song_number: N01
+step_focus: dialogue
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_09
+taxonomy_3_capital: Step 09
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_09
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: scene_1_dialogue
+taxonomy_4_capital: Scene 1 Dialogue
+taxonomy_4_first_letter: s
+taxonomy_4_first_letter_upper: S
+taxonomy_4_length_1: s
+taxonomy_4_length_2: sc
+taxonomy_4_length_3: sce
+taxonomy_4_length_4: scen
+taxonomy_4_length_5: scene
+taxonomy_4_upper: SCENE_1_DIALOGUE
+taxonomy_4_upper_length_1: S
+taxonomy_4_upper_length_2: SC
+taxonomy_4_upper_length_3: SCE
+taxonomy_4_upper_length_4: SCEN
+taxonomy_4_upper_length_5: SCENE
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: dialogue
+url_chat: ''
+zip_sources: *id001

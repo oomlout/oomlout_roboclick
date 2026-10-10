@@ -1,0 +1,21 @@
+﻿id: gemini_save_text
+enabled: false
+name: Gemini Test Save Text
+directory: test/parts/gemini_save_text
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini save text test setup
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Write the single word HELLO.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: gemini_response.txt
+    -   command: close_tab
+    file_test: gemini_response.txt
+    retries_until_complete: 0

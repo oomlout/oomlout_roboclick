@@ -1,0 +1,275 @@
+[
+  {
+    "name": "Mytholmroyd",
+    "type": "other",
+    "sensory_details": [
+      "canal water at the doorstep; millstone-grit valley walls; stone terraces stacked on the hillsides; moorland above the narrow valley floor; lovely-but-overlooked (verified palette: research/mytholmroyd_geography.md)"
+    ],
+    "story_role": "home base, epicentre of the transformation, finale showpiece. REVEAL TIMING (CHANGE-2, hard lock): scenes 1-8 show Mytholmroyd AS IT IS TODAY; scene 9 construction only; the transformed city appears ONLY in scene 10, with massive, truly Singapore/Hong Kong-style public-housing towers. SEASON AND LIGHT (CANON-050): scenes 1-8 one consistent late-spring/summer season; scene 10 opens on a NEW DAWN mirroring scene 1's canal bank at dawn",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview",
+      "20260706_feedback_run1",
+      "20260718_feedback_run2"
+    ],
+    "source_note": "real Mytholmroyd in the Calder Valley; Canal Duck's home village on the Rochdale Canal; talking animals live openly alongside humans and nobody finds it odd; in the finale it is the thriving centre of the northern megacity — the valley landform (hills, river) kept, the buildings HK/Singapore public-housing style, never twee brick and sandstone (CANON-022); the village name is Old Norse for 'clearing where two rivers meet' (research/mytholmroyd_geography.md)"
+  },
+  {
+    "name": "Rochdale Canal",
+    "type": "other",
+    "sensory_details": [
+      "still water paralleling the living river"
+    ],
+    "story_role": "the thing to be removed — inciting object of the plot and the protagonist's namesake",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview"
+    ],
+    "source_note": "where Canal Duck lives and what he is named for; 'it slices the valley in two'; redundant next to the river; to be drained and replaced"
+  },
+  {
+    "name": "River Calder",
+    "type": "other",
+    "sensory_details": [
+      "moving wild water beside the engineered corridor"
+    ],
+    "story_role": "the counterweight that answers objections — nature is kept; also where the duck actually belongs",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview"
+    ],
+    "source_note": "runs right next to the canal; 'the real wilderness'; preserved untouched by the transformation; 'the river is nicer' — Canal Duck's better home once the name stops binding him; identification as the Calder verified (facts.json, research/mytholmroyd_geography.md)"
+  },
+  {
+    "name": "Calder Valley",
+    "type": "other",
+    "sensory_details": [
+      "green valley walls, water, rail-and-canal corridor"
+    ],
+    "story_role": "the overlooked place that becomes the spine of the megacity",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview"
+    ],
+    "source_note": "lovely, but 'has always played second fiddle to Leeds and Manchester'; the duck knows it is 'where the future could happen'; people who love it have had to move away for education, jobs, housing"
+  },
+  {
+    "name": "the linear park",
+    "type": "other",
+    "sensory_details": [
+      "green ribbon where the water was; walkers, cyclists"
+    ],
+    "story_role": "the green promise of the plan; visually stitches the valley the canal sliced in two; talked about in Nora Greenwood's vignette (beat f: 'the linear park more outdoor space') but SHOWN only from scene 9 (construction) / scene 10 (finished) per CHANGE-2",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260718_feedback_run2"
+    ],
+    "source_note": "replaces the drained canal, running its entire length; 'far more useful for walking, cycling and recreation'"
+  },
+  {
+    "name": "the buried express metro",
+    "type": "other",
+    "sensory_details": [
+      "two trains stacked in a clean-cut modern tunnel under the park; speedy, bright, unadorned MTR-style stations — smooth surfaces, clear signage, no heritage masonry (research/metro_precedent.md)"
+    ],
+    "story_role": "the connective 'link' — families see each other quickly, the valley becomes commutable. SHOWN ONLY IN SCENE 10 (CHANGE-2)",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260706_feedback_run1",
+      "20260718_feedback_run2"
+    ],
+    "source_note": "high-speed Chinese-style express metro (Shenzhen/Hong Kong reference) buried beneath the corridor; ALWAYS depicted double-stacked (CANON-011); visual treatment locked (CANON-021): clean modern unadorned MTR-style underground — never historical sandstone/brickwork or 'busy English' styling"
+  },
+  {
+    "name": "the housing estates / the modern connected flats",
+    "type": "other",
+    "sensory_details": [
+      "HDB-heartland-style towers rising from the green valley floor above the park; each metro-stop neighbourhood on the heartland template — hawker centre + clinic + green space around the transit hub; lifts and level routes for elders (research/density_and_housing.md, research/hawker_centres.md)"
+    ],
+    "story_role": "affordability engine and the housing promise made personal — Nora Greenwood's connected flat, Elsie Sutcliffe's warm insulated flat with lift access. Talked about in the vignettes; SHOWN only in scene 10, as massive, truly Singapore/Hong Kong-style public-housing towers (CHANGE-2)",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump",
+      "20260705_intake_interview",
+      "20260706_feedback_run1",
+      "20260718_feedback_run2",
+      "20260718_open_questions_session"
+    ],
+    "source_note": "exceedingly affordable Singapore/Hong Kong-style high-density estates and public housing; small but efficient, modern, connected flats replacing expensive damp houses with poor transit links; let elders remain independent longer; look locked (CANON-022): HDB-estate-style towers, never twee brickwork and sandstone. Figures ('40+ storeys, ~100,000 people per square km') are FLAVOUR only (CANON-031, open-questions session) — may vary or be omitted, never validated"
+  },
+  {
+    "name": "the small village (village life)",
+    "type": "other",
+    "sensory_details": [
+      "stone cottages, lanes, the life the valley already loves"
+    ],
+    "story_role": "conversion payoff — link, don't lose",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview"
+    ],
+    "source_note": "what the village-house lover fears losing; stays reachable via the metro from a modern connected flat"
+  },
+  {
+    "name": "nicer, better canals elsewhere",
+    "type": "other",
+    "sensory_details": [
+      "restored waterways, working locks, visited rather than lived beside"
+    ],
+    "story_role": "the conversion payoff that resolves the canal paradox",
+    "confidence": "high",
+    "sources": [
+      "20260705_intake_interview"
+    ],
+    "source_note": "reachable because of the new city's accessibility and economic power; the canal enthusiast and Canal Duck both gain access to more canal, not less"
+  },
+  {
+    "name": "hawker-centre-style food halls and light industrial",
+    "type": "other",
+    "sensory_details": [
+      "steam, stalls, workshops"
+    ],
+    "story_role": "texture of the flourishing megacity finale",
+    "confidence": "medium",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "source_note": "culture and food in new formats similar to hawker centres; easily rentable light industrial space for companies using UK high-tech research"
+  },
+  {
+    "name": "Leeds and Manchester",
+    "type": "other",
+    "sensory_details": [
+      null
+    ],
+    "story_role": "the poles the new spine connects and elevates; offstage scale reference",
+    "confidence": "high",
+    "sources": [
+      "20260705_brain_dump"
+    ],
+    "source_note": "the big cities the valley plays second fiddle to; the megacity helps them 'become the centre of the world again like they were in the industrial revolution'"
+  },
+  {
+    "name": "the canal bank at dawn (scene 1 setting)",
+    "type": "other",
+    "sensory_details": [
+      "first light on still canal water; late-spring/summer morning; the sleeping village; present-day Mytholmroyd (CANON-025)"
+    ],
+    "story_role": "scene 1 setting — 'just a canal duck' sung where he has always lived; solo focus with living unnamed background (CANON-040); its dawn light is mirrored by the scene-10 opening (CANON-050)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): where beat a opens — Canal Duck on his home water as the day starts. SEASON (CANON-050): late spring/summer — the one consistent season of scenes 1-8. DAWN BOOKEND (CANON-050): scene 10 opens on a NEW DAWN mirroring this dawn"
+  },
+  {
+    "name": "the strip of land between river and canal (scene 2 setting)",
+    "type": "other",
+    "sensory_details": [
+      "wild river on one side, still canal on the other, the duck between them"
+    ],
+    "story_role": "scene 2 setting — the two-waterways observation staged literally; solo focus with living background (CANON-040)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the sliver of ground where both waterways are visible at once. SEASON (CANON-050): late spring/summer"
+  },
+  {
+    "name": "outside the village hall, posters askew (scene 3 setting)",
+    "type": "other",
+    "sensory_details": [
+      "evening outside the hall; crooked posters of the plan; the crowd gone home upset"
+    ],
+    "story_role": "scene 3 setting — the plan and the sting; the sung flashback to the failed presentation happens within this scene's number (CANON-036)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the post-presentation aftermath — his plan posters hanging crooked. SEASON (CANON-050): late spring/summer. NOTE (CANON-047): the posters are one-off incidental dressing — no consistent plan-object design recurs in any other scene"
+  },
+  {
+    "name": "inside the village hall (scene 4 setting)",
+    "type": "other",
+    "sensory_details": [
+      "hall chairs, raised voices, the principals face the duck together"
+    ],
+    "story_role": "scene 4 setting — the meeting and the one-by-one pivot; the only pre-finale scene with all principals (CANON-026)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the angry meeting room. SEASON (CANON-050): late spring/summer"
+  },
+  {
+    "name": "a lock gate (scene 5 setting)",
+    "type": "other",
+    "sensory_details": [
+      "black-and-white lock beams, dripping gates, working heritage"
+    ],
+    "story_role": "scene 5 setting — Mabel's duck-plus-one vignette on the thing she loves; canal-folk-tinged number (CANON-045)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): Mabel Lockwood's ground — the canal machinery she knows in detail. SEASON (CANON-050): late spring/summer"
+  },
+  {
+    "name": "Nora's lane / doorstep (scene 6 setting)",
+    "type": "other",
+    "sensory_details": [
+      "stone lane, doorstep chat, hanging baskets — the small-village texture itself"
+    ],
+    "story_role": "scene 6 setting — Nora's duck-plus-one vignette at home (CANON-045 character-flavoured number)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the village-house life Nora fears losing, seen from her own door. SEASON (CANON-050): late spring/summer"
+  },
+  {
+    "name": "the station platform (scene 7 setting)",
+    "type": "other",
+    "sensory_details": [
+      "the existing valley railway platform; departure boards; suitcases"
+    ],
+    "story_role": "scene 7 setting — Asha's duck-plus-one vignette staged on the leave-and-return threshold; rhymes with her scene-10 arrival on the first train (CANON-042)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): Asha Rahman's threshold place — where leaving and returning both happen. SEASON (CANON-050): late spring/summer"
+  },
+  {
+    "name": "Elsie's front room (scene 8 setting)",
+    "type": "other",
+    "sensory_details": [
+      "tea, coal-fire warmth against a damp house, doilies and framed photos — deliberately cliché Yorkshire comfort (matches her CANON-035 voice)"
+    ],
+    "story_role": "scene 8 setting — Elsie's duck-plus-one vignette in the home she won't leave; gentler number (CANON-045)",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the independent elder's own parlour. SEASON (CANON-050): late spring/summer (the coal-fire-against-damp warmth is texture, not a winter cue)"
+  },
+  {
+    "name": "the locks, drained one by one (scene 9 setting)",
+    "type": "other",
+    "sensory_details": [
+      "locks emptying in order down the valley; the whole community at work; 91 locks climbing 600 feet as counting imagery (research/rochdale_canal_heritage.md)"
+    ],
+    "story_role": "scene 9 setting — lock-by-lock construction (the ONLY construction scene, CANON-025); the volunteer-restoration sensitivity in guardrails.md governs the staging",
+    "confidence": "high",
+    "sources": [
+      "20260719_improvement_session"
+    ],
+    "source_note": "CANON SCENE LOCATION (CANON-039): the construction scene's ground — the lock flight emptying in sequence. SEASON: unspecified by CANON-050 (which locks scenes 1-8 to late spring/summer) — keep it unremarkable, no season beat"
+  }
+]

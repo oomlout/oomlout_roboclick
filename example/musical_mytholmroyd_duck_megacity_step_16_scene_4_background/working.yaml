@@ -1,0 +1,277 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- chief
+- large
+bip_39_2_word_no_space: chieflarge
+bip_39_2_word_space: chief large
+bip_39_2_word_underscore: chief_large
+bip_39_3_word_array:
+- chief
+- large
+- behind
+bip_39_3_word_no_space: chieflargebehind
+bip_39_3_word_space: chief large behind
+bip_39_3_word_underscore: chief_large_behind
+bip_39_full_array:
+- chief
+- large
+- behind
+- dash
+- bubble
+- bring
+- hole
+- walk
+- lend
+- impulse
+- mystery
+- popular
+bip_39_full_no_space: chieflargebehinddashbubblebringholewalklendimpulsemysterypopular
+bip_39_full_space: chief large behind dash bubble bring hole walk lend impulse mystery
+    popular
+bip_39_full_underscore: chief_large_behind_dash_bubble_bring_hole_walk_lend_impulse_mystery_popular
+directory: parts/musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+id_no_class: musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+id_no_size: musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+id_no_type: musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+md5: 27cfa4521bd1d4385b2fb47fee4649d4
+md5_10: 27cfa4521b
+md5_10_upper: 27CFA4521B
+md5_5: 27cfa
+md5_5_upper: 27CFA
+md5_6: 27cfa4
+md5_6_alpha: 1jx5w
+md5_6_alpha_upper: 1JX5W
+md5_6_upper: 27CFA4
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 16 Scene 4 Background
+name_no_class: Musical Mytholmroyd Duck Megacity Step 16 Scene 4 Background
+name_no_size: Musical Mytholmroyd Duck Megacity Step 16 Scene 4 Background
+name_no_type: Musical Mytholmroyd Duck Megacity Step 16 Scene 4 Background
+name_proper: Musical Mytholmroyd Duck Megacity Step 16 Scene 4 Background
+name_space: musical mytholmroyd duck megacity step 16 scene 4 background
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 16 SCENE 4 BACKGROUND
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_text_file
+        content: '# This Scene
+
+            scene_id: scene_4
+
+            work_focus: background
+
+
+            Write the background image prompt for this scene only. Find its
+
+            canonical background description in image_visual_guide.md and its
+
+            prop placements in staging_guide.json (match scene_id).
+
+            The BACKGROUND prompt is a normal opaque stage backdrop. Props are
+
+            handled separately by step_17, so do not describe prop cut-outs here.
+
+            Write the prompt only - the image itself is generated later by step_1000.
+
+            '
+        file_name: this_scene.md
+    -   command: create_zip
+        files: &id001
+        -   arcname: settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        -   arcname: show_config.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/show_config.yaml
+        -   arcname: image_visual_guide.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_15_image_director_1/image_visual_guide.md
+        -   arcname: staging_guide.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_11_stage_director_1/staging_guide.md
+        -   arcname: staging_guide.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_11_stage_director_1/staging_guide.json
+        -   arcname: scene_direction.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S04.md
+        -   arcname: this_scene.md
+            source: this_scene.md
+        -   arcname: song_guidance.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1/song_guidance_N04.md
+        -   arcname: song_lyrics.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_07a_song_N04_final/lyrics.md
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_16_scene_4_background\nstep_name: Scene Background\
+            \ Image Prompt scene_4\ndescription: Background image prompt for scene_4.\n\
+            files:\n  - name: image_prompt.md\n    destination: production/08b_scenes/scene_4/image_prompt.md\n\
+            \    description: Complete background image prompt - full style block\
+            \ plus all content details\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_16_scene_4_background\nstep_name: Scene Background\
+            \ Image Prompt scene_4\ndescription: Background image prompt for scene_4.\n\
+            files:\n  - name: image_prompt.md\n    destination: production/08b_scenes/scene_4/image_prompt.md\n\
+            \    description: Complete background image prompt - full style block\
+            \ plus all content details\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block scene_image_scene_4_background'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: Scene background image prompt scene_4
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_16_scene_image
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test:
+    - image_prompt.md
+    retries_until_complete: 3
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_16_scene_4_background
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_16_scene_image
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+scene_id: scene_4
+song_number: N04
+step_focus: background
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_16
+taxonomy_3_capital: Step 16
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_16
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: scene_4_background
+taxonomy_4_capital: Scene 4 Background
+taxonomy_4_first_letter: s
+taxonomy_4_first_letter_upper: S
+taxonomy_4_length_1: s
+taxonomy_4_length_2: sc
+taxonomy_4_length_3: sce
+taxonomy_4_length_4: scen
+taxonomy_4_length_5: scene
+taxonomy_4_upper: SCENE_4_BACKGROUND
+taxonomy_4_upper_length_1: S
+taxonomy_4_upper_length_2: SC
+taxonomy_4_upper_length_3: SCE
+taxonomy_4_upper_length_4: SCEN
+taxonomy_4_upper_length_5: SCENE
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: scene_image
+url_chat: ''
+zip_sources: *id001

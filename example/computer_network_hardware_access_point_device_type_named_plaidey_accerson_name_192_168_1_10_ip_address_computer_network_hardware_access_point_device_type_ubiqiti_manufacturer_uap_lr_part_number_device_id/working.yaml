@@ -1,0 +1,930 @@
+bip_39_2_word_array:
+- upgrade
+- supply
+bip_39_2_word_no_space: upgradesupply
+bip_39_2_word_space: upgrade supply
+bip_39_2_word_underscore: upgrade_supply
+bip_39_3_word_array:
+- upgrade
+- supply
+- avocado
+bip_39_3_word_no_space: upgradesupplyavocado
+bip_39_3_word_space: upgrade supply avocado
+bip_39_3_word_underscore: upgrade_supply_avocado
+bip_39_full_array:
+- upgrade
+- supply
+- avocado
+- start
+- girl
+- scrub
+- digital
+- box
+- quarter
+- canal
+- crazy
+- cup
+bip_39_full_no_space: upgradesupplyavocadostartgirlscrubdigitalboxquartercanalcrazycup
+bip_39_full_space: upgrade supply avocado start girl scrub digital box quarter canal
+    crazy cup
+bip_39_full_underscore: upgrade_supply_avocado_start_girl_scrub_digital_box_quarter_canal_crazy_cup
+device_id: computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number
+device_type: access_point
+directory: parts/computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+id: computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+id_no_class: computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+id_no_size: computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+id_no_type: computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+ip_address: 192.168.1.10
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+md5: eebb383fea5625838f78d4af6420cb1a
+md5_10: eebb383fea
+md5_10_upper: EEBB383FEA
+md5_5: eebb3
+md5_5_upper: EEBB3
+md5_6: eebb38
+md5_6_alpha: 9bc54
+md5_6_alpha_upper: 9BC54
+md5_6_upper: EEBB38
+name: Computer Network Hardware Access Point Device Type Named Plaidey Accerson Name
+    192 168 1 10 Ip Address Computer Network Hardware Access Point Device Type Ubiqiti
+    Manufacturer Uap Lr Part Number Device Id
+name_no_class: Computer Network Hardware Access Point Device Type Named Plaidey Accerson
+    Name 192 168 1 10 Ip Address Computer Network Hardware Access Point Device Type
+    Ubiqiti Manufacturer Uap Lr Part Number Device Id
+name_no_size: Computer Network Hardware Access Point Device Type Named Plaidey Accerson
+    Name 192 168 1 10 Ip Address Computer Network Hardware Access Point Device Type
+    Ubiqiti Manufacturer Uap Lr Part Number Device Id
+name_no_type: Computer Network Hardware Access Point Device Type Named Plaidey Accerson
+    Name 192 168 1 10 Ip Address Computer Network Hardware Access Point Device Type
+    Ubiqiti Manufacturer Uap Lr Part Number Device Id
+name_proper: Computer Network Hardware Access Point Device Type Named Plaidey Accerson
+    Name 192 168 1 10 Ip Address Computer Network Hardware Access Point Device Type
+    Ubiqiti Manufacturer Uap Lr Part Number Device Id
+name_space: computer network hardware access point device type named plaidey accerson
+    name 192 168 1 10 ip address computer network hardware access point device type
+    ubiqiti manufacturer uap lr part number device id
+name_upper: COMPUTER NETWORK HARDWARE ACCESS POINT DEVICE TYPE NAMED PLAIDEY ACCERSON
+    NAME 192 168 1 10 IP ADDRESS COMPUTER NETWORK HARDWARE ACCESS POINT DEVICE TYPE
+    UBIQITI MANUFACTURER UAP LR PART NUMBER DEVICE ID
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        description: step_1_create_icon
+    -   command: ai_query
+        delay: '240'
+        mode_ai_wait: slow
+        text: "## READ THIS FIRST \u2014 no theme is coming in this message, and that\
+            \ is correct\n\nThis is **step 1 of 2**. It is deliberately theme-free.\
+            \ You are building a reusable house style, not designing a specific logo.\n\
+            \nThe theme arrives in step 2. Do **not** ask what the theme is. Do **not**\
+            \ ask any clarifying questions. Do **not** write a final image-generation\
+            \ prompt yet \u2014 you cannot, and attempting one is a failure of this\
+            \ step. Do **not** invent a placeholder theme and design for it. If you\
+            \ feel information is missing, that is expected: the missing information\
+            \ is the theme, it is coming next, and nothing in this step requires it.\n\
+            \nYour entire output for this step is a **house style guide** that will\
+            \ be applied to whatever theme arrives next.\n\n---\n\n## The product\
+            \ this style serves\n\n**Intended use:** a square, single-colour, pure-black-on-pure-white\
+            \ mascot logo, generated as a raster image, then **auto-traced to vector\
+            \ and cut/engraved on a laser cutter**. The trace step is unforgiving\
+            \ \u2014 it is the hardest constraint in this brief and should shape most\
+            \ of your recommendations.\n\n**Target feel:** charming, original, cute,\
+            \ polished, instantly readable at ~20 mm. A designed branded icon, not\
+            \ a doodle page and not generic kawaii clip art.\n\n---\n\n## What to\
+            \ produce\n\nWrite these six sections. **Budget: about 900 words total,\
+            \ 1,100 hard ceiling.** That is roughly 100\u2013150 words per section,\
+            \ with section 6 allowed the most. This is a working reference, not an\
+            \ essay \u2014 every line should be a rule someone could check a drawing\
+            \ against. Prefer tight bullets over prose paragraphs, and cut any sentence\
+            \ that only restates the brief back at me.\n\n**1. Line language menu**\n\
+            Exactly three distinct black-on-white line-art approaches (e.g. uniform\
+            \ monoline, weight-varied outline with sparse interior, chunky sticker-outline,\
+            \ geometric constructed line). One or two lines each: what it does for\
+            \ charm, how it survives auto-tracing, what it costs.\n\n**2. Cuteness\
+            \ that isn't generic**\nThe handful of levers that make a line mascot\
+            \ lovable \u2014 eye shape and spacing, head-to-body ratio, pose energy,\
+            \ mouth simplicity, restraint on blush marks \u2014 each as a one-line\
+            \ rule with a number where a number applies. Then a short do-not list\
+            \ of the clich\xE9s that make an AI mascot look stock (dead-centre symmetrical\
+            \ stare, sparkle confetti, floating hearts, blob bodies), each with its\
+            \ one-line replacement.\n\n**3. Trace-safety rules**\nA flat list of concrete,\
+            \ checkable rules for the auto-trace-to-cut pipeline \u2014 one line each,\
+            \ no explanatory paragraphs:\n- minimum stroke thickness relative to the\
+            \ square's width, stated as a fraction (so it scales)\n- minimum gap between\
+            \ two adjacent strokes before they blur into one traced blob\n- why every\
+            \ shape should read as a closed path, and how to spot one that won't\n\
+            - island/floating-part handling and where to add connective bridges\n\
+            - what to do about interior detail that a tracer will turn into noise\
+            \ (crosshatching, stippling, tapering hairlines, single stray dots)\n\
+            - why large solid black fills are avoided here, and the acceptable exceptions\
+            \ (small eyes, pupils, a tiny accent shape)\n\n**4. Composition and hierarchy**\n\
+            Bulleted rules only: square framing, margin as a fraction of the square,\
+            \ centre of visual mass, minimum negative space, the mascot-leads / props-support\
+            \ / text-reinforces hierarchy, and the shared traits that make it read\
+            \ as one illustrator's hand (same stroke weight, same corner radius, same\
+            \ eye style, same spacing rhythm).\n\n**5. Text and badge treatments**\n\
+            Text is allowed and okay to include. Briefly: when a word helps versus\
+            \ clutters, a maximum letter count that stays cuttable, how to specify\
+            \ literal text so it renders verbatim (quotes, exact casing), the letterform\
+            \ to ask for, and when a badge ring earns its place versus just boxing\
+            \ the mark in. Six bullets is plenty.\n\n**6. Prompt architecture for\
+            \ step 2**\nThe most important section, so spend your words here. Specify\
+            \ the exact template the step-2 final prompt must follow \u2014 and state\
+            \ that the finished prompt should land at **180\u2013250 words**, long\
+            \ enough to carry the spec, short enough that no single instruction gets\
+            \ diluted. Order it to match how the image model weights a prompt:\n\n\
+            1. **Medium and style up front** \u2014 the first sentence states it is\
+            \ a square black-and-white line-art mascot logo, because opening words\
+            \ set the mode for everything after.\n2. **Subject** \u2014 the mascot,\
+            \ its identity, expression, pose.\n3. **Key details** \u2014 props, supporting\
+            \ motifs, any literal text in quotes.\n4. **Layout** \u2014 centring,\
+            \ margins, hierarchy, where each element sits.\n5. **Line and manufacturing\
+            \ spec** \u2014 stroke weight, closed paths, interior-detail limits.\n\
+            6. **Exclusions last** \u2014 negatives go at the very end, after every\
+            \ positive descriptor, because a model reading them early tends to treat\
+            \ them as things to compose rather than things to omit.\n\nGive the canonical\
+            \ exclusion list to close with (no grey, no shading, no gradients, no\
+            \ halftone, no dithering, no texture, no colour, no transparency, no background\
+            \ scene, no drop shadow, no outer glow, no frame border unless specified,\
+            \ no watermark, no signature, no extra text beyond what is quoted).\n\n\
+            Also state the two facts the prompt must say in plain words no matter\
+            \ what: the image is **square**, and it is **pure black on a pure white\
+            \ background**.\n\n---\n\n## Response style and length\n\n**About 900\
+            \ words, 1,100 absolute maximum.** Bullets over prose. Concrete and checkable\
+            \ over abstract and aspirational \u2014 \"stroke no thinner than 1/100\
+            \ of the square's width\" beats \"confident lines\". No preamble, no restating\
+            \ this brief back at me, no summary of what you are about to do. Skip\
+            \ the caveats and the reasoning behind each rule; just state the rule.\n\
+            \nClose with a checklist of the rules, 12 lines at most, so step 2 can\
+            \ be graded against it.\n\nThen stop. No final image prompt, no questions,\
+            \ no theme.\n"
+    -   command: ai_query
+        delay: '240'
+        mode_ai_wait: slow
+        text: "## Step 2 of 2 \u2014 the theme\n\nThe theme is: **an image of computer\
+            \ network hardware access point device type named plaidey accerson name\
+            \ 192 168 1 10 ip address computer network hardware access point device\
+            \ type ubiqiti manufacturer uap lr part number device id make Computer\
+            \ Network Hardware Access Point Device Type Named Plaidey Accerson Name\
+            \ 192 168 1 10 Ip Address Computer Network Hardware Access Point Device\
+            \ Type Ubiqiti Manufacturer Uap Lr Part Number Device Id cute, but a bit\
+            \ different thatnm others it is going to be used in a networkj diagram\
+            \ so it needs to be low detail but high impact.**\n\nApply the house style\
+            \ you just wrote to this theme. Everything you need is now in hand \u2014\
+            \ do not ask questions, just work.\n\n---\n\n## Part A \u2014 exploration\n\
+            \n**Budget: about 450 words, 600 hard ceiling.** Push past the theme's\
+            \ first obvious reading, but do it briskly. No preamble, no restating\
+            \ the theme back at me.\n\n- **Angles:** exactly four mascot interpretations,\
+            \ **one or two sentences each**. Include at least one that anthropomorphises\
+            \ an object or concept from the theme rather than reaching for the obvious\
+            \ animal, and at least one built on a visual pun. Then name your pick\
+            \ in a single sentence saying why it beats the other three \u2014 no full\
+            \ comparison table.\n- **The chosen design:** one short paragraph fixing\
+            \ the pose, expression, props, and line strategy. Prefer gesture or a\
+            \ moment of character over a static front-on stare. Cut any prop that\
+            \ is decoration rather than signal.\n- **Text:** one line \u2014 the exact\
+            \ string in quotes with exact casing, or \"no text\". Text is allowed\
+            \ and okay to include when it improves identification.\n- **Trace and\
+            \ small-size check:** a short bullet list of fixes only \u2014 every stroke\
+            \ to thicken, gap to widen, island to bridge, detail to delete. Just the\
+            \ fixes, not the reasoning, and not a description of what the design looks\
+            \ like at size.\n\nSkip anything not on that list: no tradeoff essays,\
+            \ no runner-up post-mortems, no notes on your own process.\n\n## Part\
+            \ B \u2014 the final prompt\n\nEnd your response with the final image-generation\
+            \ prompt for the chosen direction, and nothing after it.\n\nFormat it\
+            \ as a single fenced code block labelled `FINAL IMAGE PROMPT`, so it can\
+            \ be copied cleanly. Follow the six-part architecture from step 1 exactly,\
+            \ in order: medium and style \u2192 subject \u2192 key details \u2192\
+            \ layout \u2192 line and manufacturing spec \u2192 exclusions last.\n\n\
+            **Length: 180\u2013250 words.** Long enough to carry the full spec, short\
+            \ enough that no single instruction gets diluted. If you are over, cut\
+            \ adjectives and repeated style words before you cut any manufacturing\
+            \ rule.\n\nHard requirements for that prompt:\n\n- It opens by stating\
+            \ it is a **square black-and-white line-art mascot logo**.\n- It says\
+            \ in plain words that the image is **square** and **pure black on a pure\
+            \ white background**.\n- It states stroke weight as a fraction of the\
+            \ image width, and requires every shape to be a **closed path** with **no\
+            \ floating disconnected islands**.\n- It caps interior detail explicitly\
+            \ and forbids crosshatching, stippling, and hairline tapers.\n- Any literal\
+            \ text appears in quotes with exact casing, spelled out character by character\
+            \ if it is unusual.\n- The exclusion list comes **last**, after every\
+            \ positive descriptor.\n- It is self-contained: someone pasting it cold,\
+            \ with no memory of this conversation, gets the same image. No \"as discussed\
+            \ above\", no \"the mascot from earlier\".\n- One prompt only. No variants,\
+            \ no alternates, no commentary after the code block.\n"
+    -   command: ai_query
+        delay: '300'
+        mode_ai_wait: slow
+        text: Generate the image take all the time you need
+    -   command: save_image_generated
+        file_name: initial_generated_icon.png
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: initial_generated_icon.png
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: new_chat
+        description: step_2_create_image_chibi
+    -   command: ai_query
+        delay: '240'
+        mode_ai_wait: slow
+        text: "## READ THIS FIRST \u2014 no theme is coming in this message, and that\
+            \ is correct\n\nThis is **step 1 of 2**. It is deliberately theme-free.\
+            \ You are building a reusable house style, not designing a specific character.\n\
+            \nThe theme arrives in step 2. Do **not** ask what the theme is. Do **not**\
+            \ ask any clarifying questions. Do **not** write a final image-generation\
+            \ prompt yet \u2014 you cannot, and attempting one is a failure of this\
+            \ step. Do **not** invent a placeholder theme and design for it. If you\
+            \ feel information is missing, that is expected: the missing information\
+            \ is the theme, it is coming next, and nothing in this step requires it.\n\
+            \nYour entire output for this step is a **house style guide** that will\
+            \ be applied to whatever theme arrives next.\n\n---\n\n## The product\
+            \ this style serves\n\n**Intended use:** a single hero image of one chibi\
+            \ character, rendered to look like a **premium art-directed 3D collectible**\
+            \ \u2014 the polish of a designer vinyl figure or a high-end animated\
+            \ feature, not a flat illustration and not a photoreal creature.\n\n**Target\
+            \ feel:** huggable, joyful, a little mischievous. Instantly readable at\
+            \ thumbnail size. Full colour, clean studio-style presentation, character\
+            \ as the unmistakable focus.\n\n**The failure mode to design against:**\
+            \ generic stock mascot \u2014 a symmetrical smiling blob standing front-on\
+            \ against a gradient, with plastic-looking everything and no idea of its\
+            \ own.\n\n---\n\n## What to produce\n\nSix sections. **Budget: about 900\
+            \ words total, 1,100 hard ceiling** \u2014 roughly 100\u2013150 words\
+            \ each, section 6 allowed the most. This is a working reference, not an\
+            \ essay. Tight bullets, numbers wherever a number applies, and cut any\
+            \ sentence that restates this brief back at me.\n\n**1. Chibi proportion\
+            \ system**\nThe specific numbers that make chibi read as cute rather than\
+            \ deformed: head-to-body ratio range, eye size and spacing as a fraction\
+            \ of head width, limb length and thickness, hand and foot simplification\
+            \ level, where the centre of mass sits. State the ranges that work and\
+            \ the ones that tip into uncanny.\n\n**2. Face and expression**\nThe small\
+            \ set of levers that carry emotional appeal \u2014 eye shape and highlight\
+            \ placement, brow presence, mouth simplicity, cheek and blush restraint,\
+            \ head tilt. One line each. Then a short do-not list: dead-eyed symmetrical\
+            \ stares, over-detailed irises, realistic teeth, aggressive or smug expressions,\
+            \ and the fix for each.\n\n**3. Pose and silhouette**\nHow to get a pose\
+            \ that feels alive rather than catalogued: weight shift, gesture line,\
+            \ asymmetry, one clear action beat, a prop held rather than floated. Plus\
+            \ the silhouette test \u2014 what to check so major forms stay separate\
+            \ and readable when the image is 100 px wide.\n\n**4. Material and lighting\
+            \ menu**\nThis is the main lever for premium CGI feel, so be concrete.\
+            \ Give a named menu of surfaces worth calling for \u2014 soft-touch matte\
+            \ vinyl, glossy PVC, satin fabric, brushed metal, rubberised accents,\
+            \ soft translucent resin, flocked or felted texture \u2014 and note what\
+            \ each contributes and where it goes wrong. Then the lighting recipe:\
+            \ soft key, gentle fill, subtle rim separation, clean controlled speculars,\
+            \ soft contact shadow to ground the figure. Say why hard shadows, heavy\
+            \ grain, and dramatic contrast all cheapen this style.\n\nAlso flag the\
+            \ vocabulary trap: words like *photorealistic*, *real photograph*, and\
+            \ *taken on a real camera* engage the model's photoreal mode and will\
+            \ drag the character toward unsettling realism. The cues that actually\
+            \ land this style are **stylized 3D render**, **premium designer vinyl\
+            \ collectible**, **soft studio lighting**, and named materials.\n\n**5.\
+            \ Colour and background**\nPalette discipline \u2014 a dominant colour,\
+            \ one or two supports, one accent for the eye to land on. Value separation\
+            \ between character and background. Background stays a clean studio sweep\
+            \ or soft gradient with nothing competing. Say how much colour saturation\
+            \ is joyful versus garish.\n\n**6. Prompt architecture for step 2**\n\
+            The most important section, so spend your words here. Specify the exact\
+            \ template the step-2 final prompt must follow. Use **short labelled blocks**,\
+            \ not one long paragraph \u2014 that is the shape that holds up for character\
+            \ work:\n\n```\nConcept:      one line on the idea and the mood\nCharacter:\
+            \    species/subject, proportions, face, expression, pose, costume or\
+            \ markings\nDetails:      props and supporting motifs, kept few\nStyle:\
+            \        stylized 3D render, named materials, surface finishes\nCamera:\
+            \       framing, aspect, angle, focal feel, character centred\nLighting:\
+            \     key, fill, rim, contact shadow\nBackground:   clean studio treatment\n\
+            Constraints:  exclusions, LAST\n```\n\nState that the finished prompt\
+            \ should land at **180\u2013250 words**, and that exclusions always come\
+            \ last, after every positive descriptor \u2014 a model reading negatives\
+            \ early tends to treat them as things to compose rather than things to\
+            \ omit.\n\nGive the canonical exclusion list to close with: no photorealism,\
+            \ no realistic human anatomy, no creepy or uncanny facial proportions,\
+            \ no harsh shadows, no heavy film grain or noise, no busy scenery, no\
+            \ clutter, no tiny unreadable detail, no muddy or muddled textures, no\
+            \ watermark, no signature, no logos or trademarks, no extra characters.\n\
+            \nAlso state the two things the prompt must say in plain words no matter\
+            \ what: it is a **fun chibi CGI-style render**, and the result should\
+            \ read as **polished and premium**.\n\n---\n\n## Response style and length\n\
+            \n**About 900 words, 1,100 absolute maximum.** Bullets over prose. Concrete\
+            \ over aspirational \u2014 \"head roughly 1/2 the total height\" beats\
+            \ \"oversized head\". No preamble, no restating this brief, no summary\
+            \ of what you are about to do. Skip the reasoning behind each rule; just\
+            \ state the rule.\n\nClose with a checklist of the rules, 12 lines at\
+            \ most, so step 2 can be graded against it.\n\nThen stop. No final image\
+            \ prompt, no questions, no theme.\n"
+    -   command: ai_query
+        delay: '240'
+        mode_ai_wait: slow
+        text: "## Step 2 of 2 \u2014 the theme\n\nThe theme is: **a fun chibi CGI\
+            \ inspired picture of computer network hardware access point device type\
+            \ named plaidey accerson name 192 168 1 10 ip address computer network\
+            \ hardware access point device type ubiqiti manufacturer uap lr part number\
+            \ device id make Computer Network Hardware Access Point Device Type Named\
+            \ Plaidey Accerson Name 192 168 1 10 Ip Address Computer Network Hardware\
+            \ Access Point Device Type Ubiqiti Manufacturer Uap Lr Part Number Device\
+            \ Id cute**\n\nApply the house style you just wrote to this theme. If\
+            \ the theme above already arrives wrapped in wording like \"a fun chibi\
+            \ CGI inspired picture of\u2026\", treat only the subject inside it as\
+            \ the theme \u2014 the chibi CGI part is already covered by your style\
+            \ guide. Everything you need is now in hand, so do not ask questions,\
+            \ just work.\n\n---\n\n## Part A \u2014 exploration\n\n**Budget: about\
+            \ 450 words, 600 hard ceiling.** Push past the theme's first obvious reading,\
+            \ but do it briskly. No preamble, no restating the theme back at me.\n\
+            \n- **Angles:** exactly four character interpretations, **one or two sentences\
+            \ each**. Include at least one that anthropomorphises an object or concept\
+            \ from the theme rather than reaching for the obvious animal, and at least\
+            \ one built on a small joke or a story beat. Then name your pick in a\
+            \ single sentence saying why it beats the other three \u2014 no full comparison\
+            \ table.\n- **The chosen character:** one short paragraph fixing proportions,\
+            \ face and expression, pose and gesture, costume or markings, and the\
+            \ one or two props that earn their place. Give it a personality in a few\
+            \ words, not a description of a shape.\n- **Materials and palette:** a\
+            \ short bullet list \u2014 which named surface goes on which part of the\
+            \ character, the dominant colour, the supports, and the single accent.\
+            \ This is the premium-feel lever, so be specific.\n- **Readability fixes:**\
+            \ a short bullet list only \u2014 every form to enlarge, separate, simplify,\
+            \ or delete so the silhouette holds at thumbnail size. Just the fixes,\
+            \ not the reasoning.\n\nSkip anything not on that list: no tradeoff essays,\
+            \ no runner-up post-mortems, no notes on your own process.\n\n## Part\
+            \ B \u2014 the final prompt\n\nEnd your response with the final image-generation\
+            \ prompt for the chosen character, and nothing after it.\n\nFormat it\
+            \ as a single fenced code block labelled `FINAL IMAGE PROMPT`, so it can\
+            \ be copied cleanly. Use the labelled-block template from step 1 in order:\
+            \ Concept \u2192 Character \u2192 Details \u2192 Style \u2192 Camera \u2192\
+            \ Lighting \u2192 Background \u2192 Constraints last.\n\n**Length: 180\u2013\
+            250 words.** Long enough to carry the full spec, short enough that no\
+            \ single instruction gets diluted. If you are over, cut adjectives and\
+            \ repeated style words before you cut any material, lighting, or framing\
+            \ rule.\n\nHard requirements for that prompt:\n\n- It states plainly that\
+            \ this is a **fun chibi CGI-style render**, **polished and premium**.\n\
+            - It gives the head-to-body ratio and the framing and aspect explicitly,\
+            \ with the character **centred as the hero**.\n- It names **specific materials\
+            \ and finishes** per part rather than saying \"3D style\", and gives the\
+            \ lighting recipe \u2014 soft key, gentle fill, rim separation, soft contact\
+            \ shadow.\n- It avoids the photoreal trigger words entirely \u2014 no\
+            \ *photorealistic*, no *real photograph*, no *shot on camera*.\n- It specifies\
+            \ a clean studio background with nothing competing for attention.\n- The\
+            \ exclusion list comes **last**, after every positive descriptor, and\
+            \ includes no text and no watermark.\n- It is self-contained: someone\
+            \ pasting it cold, with no memory of this conversation, gets the same\
+            \ image. No \"as described above\", no \"the character from earlier\"\
+            .\n- One prompt only. No variants, no alternates, no commentary after\
+            \ the code block.\n"
+    -   command: ai_query
+        delay: '300'
+        mode_ai_wait: slow
+        text: Generate the image take all the time you need
+    -   command: save_image_generated
+        file_name: initial_generated_chibi.png
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: initial_generated_chibi.png
+    retries_until_complete: 0
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: text_jinja_template
+        convert_to_pdf: false
+        convert_to_png: false
+        dict_data:
+            device_id: computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number
+            device_type: access_point
+            directory: parts\computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+            ip_address: 192.168.1.10
+            name: computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+            name_proper: Computer Network Hardware Access Point Device Type Named
+                Plaidey Accerson Name 192 168 1 10 Ip Address Computer Network Hardware
+                Access Point Device Type Ubiqiti Manufacturer Uap Lr Part Number Device
+                Id
+            name_space: computer network hardware access point device type named plaidey
+                accerson name 192 168 1 10 ip address computer network hardware access
+                point device type ubiqiti manufacturer uap lr part number device id
+            name_upper: COMPUTER NETWORK HARDWARE ACCESS POINT DEVICE TYPE NAMED PLAIDEY
+                ACCERSON NAME 192 168 1 10 IP ADDRESS COMPUTER NETWORK HARDWARE ACCESS
+                POINT DEVICE TYPE UBIQITI MANUFACTURER UAP LR PART NUMBER DEVICE ID
+            oomlout_ai_roboclick_1:
+                actions:
+                -   command: new_chat
+                    description: step_1_create_icon
+                -   command: ai_query
+                    delay: '240'
+                    mode_ai_wait: slow
+                    text: "## READ THIS FIRST \u2014 no theme is coming in this message,\
+                        \ and that is correct\n\nThis is **step 1 of 2**. It is deliberately\
+                        \ theme-free. You are building a reusable house style, not\
+                        \ designing a specific logo.\n\nThe theme arrives in step\
+                        \ 2. Do **not** ask what the theme is. Do **not** ask any\
+                        \ clarifying questions. Do **not** write a final image-generation\
+                        \ prompt yet \u2014 you cannot, and attempting one is a failure\
+                        \ of this step. Do **not** invent a placeholder theme and\
+                        \ design for it. If you feel information is missing, that\
+                        \ is expected: the missing information is the theme, it is\
+                        \ coming next, and nothing in this step requires it.\n\nYour\
+                        \ entire output for this step is a **house style guide** that\
+                        \ will be applied to whatever theme arrives next.\n\n---\n\
+                        \n## The product this style serves\n\n**Intended use:** a\
+                        \ square, single-colour, pure-black-on-pure-white mascot logo,\
+                        \ generated as a raster image, then **auto-traced to vector\
+                        \ and cut/engraved on a laser cutter**. The trace step is\
+                        \ unforgiving \u2014 it is the hardest constraint in this\
+                        \ brief and should shape most of your recommendations.\n\n\
+                        **Target feel:** charming, original, cute, polished, instantly\
+                        \ readable at ~20 mm. A designed branded icon, not a doodle\
+                        \ page and not generic kawaii clip art.\n\n---\n\n## What\
+                        \ to produce\n\nWrite these six sections. **Budget: about\
+                        \ 900 words total, 1,100 hard ceiling.** That is roughly 100\u2013\
+                        150 words per section, with section 6 allowed the most. This\
+                        \ is a working reference, not an essay \u2014 every line should\
+                        \ be a rule someone could check a drawing against. Prefer\
+                        \ tight bullets over prose paragraphs, and cut any sentence\
+                        \ that only restates the brief back at me.\n\n**1. Line language\
+                        \ menu**\nExactly three distinct black-on-white line-art approaches\
+                        \ (e.g. uniform monoline, weight-varied outline with sparse\
+                        \ interior, chunky sticker-outline, geometric constructed\
+                        \ line). One or two lines each: what it does for charm, how\
+                        \ it survives auto-tracing, what it costs.\n\n**2. Cuteness\
+                        \ that isn't generic**\nThe handful of levers that make a\
+                        \ line mascot lovable \u2014 eye shape and spacing, head-to-body\
+                        \ ratio, pose energy, mouth simplicity, restraint on blush\
+                        \ marks \u2014 each as a one-line rule with a number where\
+                        \ a number applies. Then a short do-not list of the clich\xE9\
+                        s that make an AI mascot look stock (dead-centre symmetrical\
+                        \ stare, sparkle confetti, floating hearts, blob bodies),\
+                        \ each with its one-line replacement.\n\n**3. Trace-safety\
+                        \ rules**\nA flat list of concrete, checkable rules for the\
+                        \ auto-trace-to-cut pipeline \u2014 one line each, no explanatory\
+                        \ paragraphs:\n- minimum stroke thickness relative to the\
+                        \ square's width, stated as a fraction (so it scales)\n- minimum\
+                        \ gap between two adjacent strokes before they blur into one\
+                        \ traced blob\n- why every shape should read as a closed path,\
+                        \ and how to spot one that won't\n- island/floating-part handling\
+                        \ and where to add connective bridges\n- what to do about\
+                        \ interior detail that a tracer will turn into noise (crosshatching,\
+                        \ stippling, tapering hairlines, single stray dots)\n- why\
+                        \ large solid black fills are avoided here, and the acceptable\
+                        \ exceptions (small eyes, pupils, a tiny accent shape)\n\n\
+                        **4. Composition and hierarchy**\nBulleted rules only: square\
+                        \ framing, margin as a fraction of the square, centre of visual\
+                        \ mass, minimum negative space, the mascot-leads / props-support\
+                        \ / text-reinforces hierarchy, and the shared traits that\
+                        \ make it read as one illustrator's hand (same stroke weight,\
+                        \ same corner radius, same eye style, same spacing rhythm).\n\
+                        \n**5. Text and badge treatments**\nText is allowed and okay\
+                        \ to include. Briefly: when a word helps versus clutters,\
+                        \ a maximum letter count that stays cuttable, how to specify\
+                        \ literal text so it renders verbatim (quotes, exact casing),\
+                        \ the letterform to ask for, and when a badge ring earns its\
+                        \ place versus just boxing the mark in. Six bullets is plenty.\n\
+                        \n**6. Prompt architecture for step 2**\nThe most important\
+                        \ section, so spend your words here. Specify the exact template\
+                        \ the step-2 final prompt must follow \u2014 and state that\
+                        \ the finished prompt should land at **180\u2013250 words**,\
+                        \ long enough to carry the spec, short enough that no single\
+                        \ instruction gets diluted. Order it to match how the image\
+                        \ model weights a prompt:\n\n1. **Medium and style up front**\
+                        \ \u2014 the first sentence states it is a square black-and-white\
+                        \ line-art mascot logo, because opening words set the mode\
+                        \ for everything after.\n2. **Subject** \u2014 the mascot,\
+                        \ its identity, expression, pose.\n3. **Key details** \u2014\
+                        \ props, supporting motifs, any literal text in quotes.\n\
+                        4. **Layout** \u2014 centring, margins, hierarchy, where each\
+                        \ element sits.\n5. **Line and manufacturing spec** \u2014\
+                        \ stroke weight, closed paths, interior-detail limits.\n6.\
+                        \ **Exclusions last** \u2014 negatives go at the very end,\
+                        \ after every positive descriptor, because a model reading\
+                        \ them early tends to treat them as things to compose rather\
+                        \ than things to omit.\n\nGive the canonical exclusion list\
+                        \ to close with (no grey, no shading, no gradients, no halftone,\
+                        \ no dithering, no texture, no colour, no transparency, no\
+                        \ background scene, no drop shadow, no outer glow, no frame\
+                        \ border unless specified, no watermark, no signature, no\
+                        \ extra text beyond what is quoted).\n\nAlso state the two\
+                        \ facts the prompt must say in plain words no matter what:\
+                        \ the image is **square**, and it is **pure black on a pure\
+                        \ white background**.\n\n---\n\n## Response style and length\n\
+                        \n**About 900 words, 1,100 absolute maximum.** Bullets over\
+                        \ prose. Concrete and checkable over abstract and aspirational\
+                        \ \u2014 \"stroke no thinner than 1/100 of the square's width\"\
+                        \ beats \"confident lines\". No preamble, no restating this\
+                        \ brief back at me, no summary of what you are about to do.\
+                        \ Skip the caveats and the reasoning behind each rule; just\
+                        \ state the rule.\n\nClose with a checklist of the rules,\
+                        \ 12 lines at most, so step 2 can be graded against it.\n\n\
+                        Then stop. No final image prompt, no questions, no theme.\n"
+                -   command: ai_query
+                    delay: '240'
+                    mode_ai_wait: slow
+                    text: "## Step 2 of 2 \u2014 the theme\n\nThe theme is: **an image\
+                        \ of computer network hardware access point device type named\
+                        \ plaidey accerson name 192 168 1 10 ip address computer network\
+                        \ hardware access point device type ubiqiti manufacturer uap\
+                        \ lr part number device id make Computer Network Hardware\
+                        \ Access Point Device Type Named Plaidey Accerson Name 192\
+                        \ 168 1 10 Ip Address Computer Network Hardware Access Point\
+                        \ Device Type Ubiqiti Manufacturer Uap Lr Part Number Device\
+                        \ Id cute, but a bit different thatnm others it is going to\
+                        \ be used in a networkj diagram so it needs to be low detail\
+                        \ but high impact.**\n\nApply the house style you just wrote\
+                        \ to this theme. Everything you need is now in hand \u2014\
+                        \ do not ask questions, just work.\n\n---\n\n## Part A \u2014\
+                        \ exploration\n\n**Budget: about 450 words, 600 hard ceiling.**\
+                        \ Push past the theme's first obvious reading, but do it briskly.\
+                        \ No preamble, no restating the theme back at me.\n\n- **Angles:**\
+                        \ exactly four mascot interpretations, **one or two sentences\
+                        \ each**. Include at least one that anthropomorphises an object\
+                        \ or concept from the theme rather than reaching for the obvious\
+                        \ animal, and at least one built on a visual pun. Then name\
+                        \ your pick in a single sentence saying why it beats the other\
+                        \ three \u2014 no full comparison table.\n- **The chosen design:**\
+                        \ one short paragraph fixing the pose, expression, props,\
+                        \ and line strategy. Prefer gesture or a moment of character\
+                        \ over a static front-on stare. Cut any prop that is decoration\
+                        \ rather than signal.\n- **Text:** one line \u2014 the exact\
+                        \ string in quotes with exact casing, or \"no text\". Text\
+                        \ is allowed and okay to include when it improves identification.\n\
+                        - **Trace and small-size check:** a short bullet list of fixes\
+                        \ only \u2014 every stroke to thicken, gap to widen, island\
+                        \ to bridge, detail to delete. Just the fixes, not the reasoning,\
+                        \ and not a description of what the design looks like at size.\n\
+                        \nSkip anything not on that list: no tradeoff essays, no runner-up\
+                        \ post-mortems, no notes on your own process.\n\n## Part B\
+                        \ \u2014 the final prompt\n\nEnd your response with the final\
+                        \ image-generation prompt for the chosen direction, and nothing\
+                        \ after it.\n\nFormat it as a single fenced code block labelled\
+                        \ `FINAL IMAGE PROMPT`, so it can be copied cleanly. Follow\
+                        \ the six-part architecture from step 1 exactly, in order:\
+                        \ medium and style \u2192 subject \u2192 key details \u2192\
+                        \ layout \u2192 line and manufacturing spec \u2192 exclusions\
+                        \ last.\n\n**Length: 180\u2013250 words.** Long enough to\
+                        \ carry the full spec, short enough that no single instruction\
+                        \ gets diluted. If you are over, cut adjectives and repeated\
+                        \ style words before you cut any manufacturing rule.\n\nHard\
+                        \ requirements for that prompt:\n\n- It opens by stating it\
+                        \ is a **square black-and-white line-art mascot logo**.\n\
+                        - It says in plain words that the image is **square** and\
+                        \ **pure black on a pure white background**.\n- It states\
+                        \ stroke weight as a fraction of the image width, and requires\
+                        \ every shape to be a **closed path** with **no floating disconnected\
+                        \ islands**.\n- It caps interior detail explicitly and forbids\
+                        \ crosshatching, stippling, and hairline tapers.\n- Any literal\
+                        \ text appears in quotes with exact casing, spelled out character\
+                        \ by character if it is unusual.\n- The exclusion list comes\
+                        \ **last**, after every positive descriptor.\n- It is self-contained:\
+                        \ someone pasting it cold, with no memory of this conversation,\
+                        \ gets the same image. No \"as discussed above\", no \"the\
+                        \ mascot from earlier\".\n- One prompt only. No variants,\
+                        \ no alternates, no commentary after the code block.\n"
+                -   command: ai_query
+                    delay: '300'
+                    mode_ai_wait: slow
+                    text: Generate the image take all the time you need
+                -   command: save_image_generated
+                    file_name: initial_generated_icon.png
+                    mode_ai_wait: slow
+                -   command: close_tab
+                file_test: initial_generated_icon.png
+                retries_until_complete: 0
+            oomlout_ai_roboclick_2:
+                actions:
+                -   command: new_chat
+                    description: step_2_create_image_chibi
+                -   command: ai_query
+                    delay: '240'
+                    mode_ai_wait: slow
+                    text: "## READ THIS FIRST \u2014 no theme is coming in this message,\
+                        \ and that is correct\n\nThis is **step 1 of 2**. It is deliberately\
+                        \ theme-free. You are building a reusable house style, not\
+                        \ designing a specific character.\n\nThe theme arrives in\
+                        \ step 2. Do **not** ask what the theme is. Do **not** ask\
+                        \ any clarifying questions. Do **not** write a final image-generation\
+                        \ prompt yet \u2014 you cannot, and attempting one is a failure\
+                        \ of this step. Do **not** invent a placeholder theme and\
+                        \ design for it. If you feel information is missing, that\
+                        \ is expected: the missing information is the theme, it is\
+                        \ coming next, and nothing in this step requires it.\n\nYour\
+                        \ entire output for this step is a **house style guide** that\
+                        \ will be applied to whatever theme arrives next.\n\n---\n\
+                        \n## The product this style serves\n\n**Intended use:** a\
+                        \ single hero image of one chibi character, rendered to look\
+                        \ like a **premium art-directed 3D collectible** \u2014 the\
+                        \ polish of a designer vinyl figure or a high-end animated\
+                        \ feature, not a flat illustration and not a photoreal creature.\n\
+                        \n**Target feel:** huggable, joyful, a little mischievous.\
+                        \ Instantly readable at thumbnail size. Full colour, clean\
+                        \ studio-style presentation, character as the unmistakable\
+                        \ focus.\n\n**The failure mode to design against:** generic\
+                        \ stock mascot \u2014 a symmetrical smiling blob standing\
+                        \ front-on against a gradient, with plastic-looking everything\
+                        \ and no idea of its own.\n\n---\n\n## What to produce\n\n\
+                        Six sections. **Budget: about 900 words total, 1,100 hard\
+                        \ ceiling** \u2014 roughly 100\u2013150 words each, section\
+                        \ 6 allowed the most. This is a working reference, not an\
+                        \ essay. Tight bullets, numbers wherever a number applies,\
+                        \ and cut any sentence that restates this brief back at me.\n\
+                        \n**1. Chibi proportion system**\nThe specific numbers that\
+                        \ make chibi read as cute rather than deformed: head-to-body\
+                        \ ratio range, eye size and spacing as a fraction of head\
+                        \ width, limb length and thickness, hand and foot simplification\
+                        \ level, where the centre of mass sits. State the ranges that\
+                        \ work and the ones that tip into uncanny.\n\n**2. Face and\
+                        \ expression**\nThe small set of levers that carry emotional\
+                        \ appeal \u2014 eye shape and highlight placement, brow presence,\
+                        \ mouth simplicity, cheek and blush restraint, head tilt.\
+                        \ One line each. Then a short do-not list: dead-eyed symmetrical\
+                        \ stares, over-detailed irises, realistic teeth, aggressive\
+                        \ or smug expressions, and the fix for each.\n\n**3. Pose\
+                        \ and silhouette**\nHow to get a pose that feels alive rather\
+                        \ than catalogued: weight shift, gesture line, asymmetry,\
+                        \ one clear action beat, a prop held rather than floated.\
+                        \ Plus the silhouette test \u2014 what to check so major forms\
+                        \ stay separate and readable when the image is 100 px wide.\n\
+                        \n**4. Material and lighting menu**\nThis is the main lever\
+                        \ for premium CGI feel, so be concrete. Give a named menu\
+                        \ of surfaces worth calling for \u2014 soft-touch matte vinyl,\
+                        \ glossy PVC, satin fabric, brushed metal, rubberised accents,\
+                        \ soft translucent resin, flocked or felted texture \u2014\
+                        \ and note what each contributes and where it goes wrong.\
+                        \ Then the lighting recipe: soft key, gentle fill, subtle\
+                        \ rim separation, clean controlled speculars, soft contact\
+                        \ shadow to ground the figure. Say why hard shadows, heavy\
+                        \ grain, and dramatic contrast all cheapen this style.\n\n\
+                        Also flag the vocabulary trap: words like *photorealistic*,\
+                        \ *real photograph*, and *taken on a real camera* engage the\
+                        \ model's photoreal mode and will drag the character toward\
+                        \ unsettling realism. The cues that actually land this style\
+                        \ are **stylized 3D render**, **premium designer vinyl collectible**,\
+                        \ **soft studio lighting**, and named materials.\n\n**5. Colour\
+                        \ and background**\nPalette discipline \u2014 a dominant colour,\
+                        \ one or two supports, one accent for the eye to land on.\
+                        \ Value separation between character and background. Background\
+                        \ stays a clean studio sweep or soft gradient with nothing\
+                        \ competing. Say how much colour saturation is joyful versus\
+                        \ garish.\n\n**6. Prompt architecture for step 2**\nThe most\
+                        \ important section, so spend your words here. Specify the\
+                        \ exact template the step-2 final prompt must follow. Use\
+                        \ **short labelled blocks**, not one long paragraph \u2014\
+                        \ that is the shape that holds up for character work:\n\n\
+                        ```\nConcept:      one line on the idea and the mood\nCharacter:\
+                        \    species/subject, proportions, face, expression, pose,\
+                        \ costume or markings\nDetails:      props and supporting\
+                        \ motifs, kept few\nStyle:        stylized 3D render, named\
+                        \ materials, surface finishes\nCamera:       framing, aspect,\
+                        \ angle, focal feel, character centred\nLighting:     key,\
+                        \ fill, rim, contact shadow\nBackground:   clean studio treatment\n\
+                        Constraints:  exclusions, LAST\n```\n\nState that the finished\
+                        \ prompt should land at **180\u2013250 words**, and that exclusions\
+                        \ always come last, after every positive descriptor \u2014\
+                        \ a model reading negatives early tends to treat them as things\
+                        \ to compose rather than things to omit.\n\nGive the canonical\
+                        \ exclusion list to close with: no photorealism, no realistic\
+                        \ human anatomy, no creepy or uncanny facial proportions,\
+                        \ no harsh shadows, no heavy film grain or noise, no busy\
+                        \ scenery, no clutter, no tiny unreadable detail, no muddy\
+                        \ or muddled textures, no watermark, no signature, no logos\
+                        \ or trademarks, no extra characters.\n\nAlso state the two\
+                        \ things the prompt must say in plain words no matter what:\
+                        \ it is a **fun chibi CGI-style render**, and the result should\
+                        \ read as **polished and premium**.\n\n---\n\n## Response\
+                        \ style and length\n\n**About 900 words, 1,100 absolute maximum.**\
+                        \ Bullets over prose. Concrete over aspirational \u2014 \"\
+                        head roughly 1/2 the total height\" beats \"oversized head\"\
+                        . No preamble, no restating this brief, no summary of what\
+                        \ you are about to do. Skip the reasoning behind each rule;\
+                        \ just state the rule.\n\nClose with a checklist of the rules,\
+                        \ 12 lines at most, so step 2 can be graded against it.\n\n\
+                        Then stop. No final image prompt, no questions, no theme.\n"
+                -   command: ai_query
+                    delay: '240'
+                    mode_ai_wait: slow
+                    text: "## Step 2 of 2 \u2014 the theme\n\nThe theme is: **a fun\
+                        \ chibi CGI inspired picture of computer network hardware\
+                        \ access point device type named plaidey accerson name 192\
+                        \ 168 1 10 ip address computer network hardware access point\
+                        \ device type ubiqiti manufacturer uap lr part number device\
+                        \ id make Computer Network Hardware Access Point Device Type\
+                        \ Named Plaidey Accerson Name 192 168 1 10 Ip Address Computer\
+                        \ Network Hardware Access Point Device Type Ubiqiti Manufacturer\
+                        \ Uap Lr Part Number Device Id cute**\n\nApply the house style\
+                        \ you just wrote to this theme. If the theme above already\
+                        \ arrives wrapped in wording like \"a fun chibi CGI inspired\
+                        \ picture of\u2026\", treat only the subject inside it as\
+                        \ the theme \u2014 the chibi CGI part is already covered by\
+                        \ your style guide. Everything you need is now in hand, so\
+                        \ do not ask questions, just work.\n\n---\n\n## Part A \u2014\
+                        \ exploration\n\n**Budget: about 450 words, 600 hard ceiling.**\
+                        \ Push past the theme's first obvious reading, but do it briskly.\
+                        \ No preamble, no restating the theme back at me.\n\n- **Angles:**\
+                        \ exactly four character interpretations, **one or two sentences\
+                        \ each**. Include at least one that anthropomorphises an object\
+                        \ or concept from the theme rather than reaching for the obvious\
+                        \ animal, and at least one built on a small joke or a story\
+                        \ beat. Then name your pick in a single sentence saying why\
+                        \ it beats the other three \u2014 no full comparison table.\n\
+                        - **The chosen character:** one short paragraph fixing proportions,\
+                        \ face and expression, pose and gesture, costume or markings,\
+                        \ and the one or two props that earn their place. Give it\
+                        \ a personality in a few words, not a description of a shape.\n\
+                        - **Materials and palette:** a short bullet list \u2014 which\
+                        \ named surface goes on which part of the character, the dominant\
+                        \ colour, the supports, and the single accent. This is the\
+                        \ premium-feel lever, so be specific.\n- **Readability fixes:**\
+                        \ a short bullet list only \u2014 every form to enlarge, separate,\
+                        \ simplify, or delete so the silhouette holds at thumbnail\
+                        \ size. Just the fixes, not the reasoning.\n\nSkip anything\
+                        \ not on that list: no tradeoff essays, no runner-up post-mortems,\
+                        \ no notes on your own process.\n\n## Part B \u2014 the final\
+                        \ prompt\n\nEnd your response with the final image-generation\
+                        \ prompt for the chosen character, and nothing after it.\n\
+                        \nFormat it as a single fenced code block labelled `FINAL\
+                        \ IMAGE PROMPT`, so it can be copied cleanly. Use the labelled-block\
+                        \ template from step 1 in order: Concept \u2192 Character\
+                        \ \u2192 Details \u2192 Style \u2192 Camera \u2192 Lighting\
+                        \ \u2192 Background \u2192 Constraints last.\n\n**Length:\
+                        \ 180\u2013250 words.** Long enough to carry the full spec,\
+                        \ short enough that no single instruction gets diluted. If\
+                        \ you are over, cut adjectives and repeated style words before\
+                        \ you cut any material, lighting, or framing rule.\n\nHard\
+                        \ requirements for that prompt:\n\n- It states plainly that\
+                        \ this is a **fun chibi CGI-style render**, **polished and\
+                        \ premium**.\n- It gives the head-to-body ratio and the framing\
+                        \ and aspect explicitly, with the character **centred as the\
+                        \ hero**.\n- It names **specific materials and finishes**\
+                        \ per part rather than saying \"3D style\", and gives the\
+                        \ lighting recipe \u2014 soft key, gentle fill, rim separation,\
+                        \ soft contact shadow.\n- It avoids the photoreal trigger\
+                        \ words entirely \u2014 no *photorealistic*, no *real photograph*,\
+                        \ no *shot on camera*.\n- It specifies a clean studio background\
+                        \ with nothing competing for attention.\n- The exclusion list\
+                        \ comes **last**, after every positive descriptor, and includes\
+                        \ no text and no watermark.\n- It is self-contained: someone\
+                        \ pasting it cold, with no memory of this conversation, gets\
+                        \ the same image. No \"as described above\", no \"the character\
+                        \ from earlier\".\n- One prompt only. No variants, no alternates,\
+                        \ no commentary after the code block.\n"
+                -   command: ai_query
+                    delay: '300'
+                    mode_ai_wait: slow
+                    text: Generate the image take all the time you need
+                -   command: save_image_generated
+                    file_name: initial_generated_chibi.png
+                    mode_ai_wait: slow
+                -   command: close_tab
+                file_test: initial_generated_chibi.png
+                retries_until_complete: 0
+            taxonomy_1: computer
+            taxonomy_10: ''
+            taxonomy_11: ''
+            taxonomy_12: ''
+            taxonomy_13: ''
+            taxonomy_14: ''
+            taxonomy_15: ''
+            taxonomy_2: network
+            taxonomy_3: hardware
+            taxonomy_4: access_point_device_type
+            taxonomy_5: named
+            taxonomy_6: plaidey_accerson_name
+            taxonomy_7: 192_168_1_10_ip_address
+            taxonomy_8: computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+            taxonomy_9: ''
+            url_chat: https://chatgpt.com/c/6aa9f77b-f650-83eb-925c-ef791d6e3fca
+        dict_data_files: {}
+        dict_data_files_exists: {}
+        file_output: label_oomp.svg
+        file_template: C:\od\OneDrive\docs\computer_network_base\source_file\template_jinja\template_jinja_label_oomlout_76_2_mm_50_8_mm\working.svg.j2
+        search_and_replace: []
+    file_test: label_oomp.pdf
+    retries_until_complete: 0
+oomp_key: oomp_computer_network_hardware_access_point_device_type_named_plaidey_accerson_name_192_168_1_10_ip_address_computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+taxonomy_1: computer
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Computer
+taxonomy_1_first_letter: c
+taxonomy_1_first_letter_upper: C
+taxonomy_1_length_1: c
+taxonomy_1_length_2: co
+taxonomy_1_length_3: com
+taxonomy_1_length_4: comp
+taxonomy_1_length_5: compu
+taxonomy_1_upper: COMPUTER
+taxonomy_1_upper_length_1: C
+taxonomy_1_upper_length_2: CO
+taxonomy_1_upper_length_3: COM
+taxonomy_1_upper_length_4: COMP
+taxonomy_1_upper_length_5: COMPU
+taxonomy_2: network
+taxonomy_2_capital: Network
+taxonomy_2_first_letter: n
+taxonomy_2_first_letter_upper: N
+taxonomy_2_length_1: n
+taxonomy_2_length_2: ne
+taxonomy_2_length_3: net
+taxonomy_2_length_4: netw
+taxonomy_2_length_5: netwo
+taxonomy_2_upper: NETWORK
+taxonomy_2_upper_length_1: N
+taxonomy_2_upper_length_2: NE
+taxonomy_2_upper_length_3: NET
+taxonomy_2_upper_length_4: NETW
+taxonomy_2_upper_length_5: NETWO
+taxonomy_3: hardware
+taxonomy_3_capital: Hardware
+taxonomy_3_first_letter: h
+taxonomy_3_first_letter_upper: H
+taxonomy_3_length_1: h
+taxonomy_3_length_2: ha
+taxonomy_3_length_3: har
+taxonomy_3_length_4: hard
+taxonomy_3_length_5: hardw
+taxonomy_3_upper: HARDWARE
+taxonomy_3_upper_length_1: H
+taxonomy_3_upper_length_2: HA
+taxonomy_3_upper_length_3: HAR
+taxonomy_3_upper_length_4: HARD
+taxonomy_3_upper_length_5: HARDW
+taxonomy_4: access_point_device_type
+taxonomy_4_capital: Access Point Device Type
+taxonomy_4_first_letter: a
+taxonomy_4_first_letter_upper: A
+taxonomy_4_length_1: a
+taxonomy_4_length_2: ac
+taxonomy_4_length_3: acc
+taxonomy_4_length_4: acce
+taxonomy_4_length_5: acces
+taxonomy_4_upper: ACCESS_POINT_DEVICE_TYPE
+taxonomy_4_upper_length_1: A
+taxonomy_4_upper_length_2: AC
+taxonomy_4_upper_length_3: ACC
+taxonomy_4_upper_length_4: ACCE
+taxonomy_4_upper_length_5: ACCES
+taxonomy_5: named
+taxonomy_5_capital: Named
+taxonomy_5_first_letter: n
+taxonomy_5_first_letter_upper: N
+taxonomy_5_length_1: n
+taxonomy_5_length_2: na
+taxonomy_5_length_3: nam
+taxonomy_5_length_4: name
+taxonomy_5_length_5: named
+taxonomy_5_upper: NAMED
+taxonomy_5_upper_length_1: N
+taxonomy_5_upper_length_2: NA
+taxonomy_5_upper_length_3: NAM
+taxonomy_5_upper_length_4: NAME
+taxonomy_5_upper_length_5: NAMED
+taxonomy_6: plaidey_accerson_name
+taxonomy_6_capital: Plaidey Accerson Name
+taxonomy_6_first_letter: p
+taxonomy_6_first_letter_upper: P
+taxonomy_6_length_1: p
+taxonomy_6_length_2: pl
+taxonomy_6_length_3: pla
+taxonomy_6_length_4: plai
+taxonomy_6_length_5: plaid
+taxonomy_6_upper: PLAIDEY_ACCERSON_NAME
+taxonomy_6_upper_length_1: P
+taxonomy_6_upper_length_2: PL
+taxonomy_6_upper_length_3: PLA
+taxonomy_6_upper_length_4: PLAI
+taxonomy_6_upper_length_5: PLAID
+taxonomy_7: 192_168_1_10_ip_address
+taxonomy_7_capital: 192.168.1.10 Ip Address
+taxonomy_7_first_letter: '1'
+taxonomy_7_first_letter_upper: '1'
+taxonomy_7_length_1: '1'
+taxonomy_7_length_2: '19'
+taxonomy_7_length_3: '192'
+taxonomy_7_length_4: '192_'
+taxonomy_7_length_5: '192_1'
+taxonomy_7_upper: 192_168_1_10_IP_ADDRESS
+taxonomy_7_upper_length_1: '1'
+taxonomy_7_upper_length_2: '19'
+taxonomy_7_upper_length_3: '192'
+taxonomy_7_upper_length_4: '192_'
+taxonomy_7_upper_length_5: '192_1'
+taxonomy_8: computer_network_hardware_access_point_device_type_ubiqiti_manufacturer_uap_lr_part_number_device_id
+taxonomy_8_capital: Computer Network Hardware Access Point Device Type Ubiqiti Manufacturer
+    Uap Lr Part Number Device Id
+taxonomy_8_first_letter: c
+taxonomy_8_first_letter_upper: C
+taxonomy_8_length_1: c
+taxonomy_8_length_2: co
+taxonomy_8_length_3: com
+taxonomy_8_length_4: comp
+taxonomy_8_length_5: compu
+taxonomy_8_upper: COMPUTER_NETWORK_HARDWARE_ACCESS_POINT_DEVICE_TYPE_UBIQITI_MANUFACTURER_UAP_LR_PART_NUMBER_DEVICE_ID
+taxonomy_8_upper_length_1: C
+taxonomy_8_upper_length_2: CO
+taxonomy_8_upper_length_3: COM
+taxonomy_8_upper_length_4: COMP
+taxonomy_8_upper_length_5: COMPU
+taxonomy_9: ''
+url_chat: https://chatgpt.com/c/6aa9f77b-f650-83eb-925c-ef791d6e3fca

@@ -1,0 +1,11 @@
+line_id: "line_001"
+scene: "scene_2"
+scene_number: 2
+sequence: 1
+block: "opening"
+character: "canal_duck"
+voice_profile: "canal_duck"
+style: ""
+text: "Here I am between the River Calder and the Rochdale Canal. Which side suits you, Canal Duck?"
+audio_file: "line.mp3"
+story_function: ""

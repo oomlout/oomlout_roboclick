@@ -1,0 +1,24 @@
+﻿id: google_test_05_add_file
+enabled: false
+name: "Google Gemini Test 05 - Add File"
+directory: test/google/parts/05_add_file
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini add file test
+        log_url: true
+    -   command: add_file
+        base_ai_provider: gemini
+        file_name: test_image.png
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Describe the image in one sentence.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: image_description.txt
+    -   command: close_tab
+    file_test: image_description.txt
+    retries_until_complete: 0

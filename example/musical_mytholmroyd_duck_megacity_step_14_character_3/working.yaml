@@ -1,0 +1,254 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- gift
+- waste
+bip_39_2_word_no_space: giftwaste
+bip_39_2_word_space: gift waste
+bip_39_2_word_underscore: gift_waste
+bip_39_3_word_array:
+- gift
+- waste
+- exile
+bip_39_3_word_no_space: giftwasteexile
+bip_39_3_word_space: gift waste exile
+bip_39_3_word_underscore: gift_waste_exile
+bip_39_full_array:
+- gift
+- waste
+- exile
+- sniff
+- grit
+- salmon
+- layer
+- spring
+- endorse
+- share
+- cattle
+- woman
+bip_39_full_no_space: giftwasteexilesniffgritsalmonlayerspringendorsesharecattlewoman
+bip_39_full_space: gift waste exile sniff grit salmon layer spring endorse share cattle
+    woman
+bip_39_full_underscore: gift_waste_exile_sniff_grit_salmon_layer_spring_endorse_share_cattle_woman
+character_id: nora_greenwood
+character_name: Nora Greenwood
+character_number: 3
+copy_source_dir: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3
+directory: parts/musical_mytholmroyd_duck_megacity_step_14_character_3
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_14_character_3
+id_no_class: musical_mytholmroyd_duck_megacity_step_14_character_3
+id_no_size: musical_mytholmroyd_duck_megacity_step_14_character_3
+id_no_type: musical_mytholmroyd_duck_megacity_step_14_character_3
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_14_character_3
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_14_character_3
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_14_character_3
+md5: 61def53ee6b66b7cdf969949d8a4917e
+md5_10: 61def53ee6
+md5_10_upper: 61DEF53EE6
+md5_5: 61def
+md5_5_upper: 61DEF
+md5_6: 61def5
+md5_6_alpha: 3th4l
+md5_6_alpha_upper: 3TH4L
+md5_6_upper: 61DEF5
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 14 Character 3
+name_no_class: Musical Mytholmroyd Duck Megacity Step 14 Character 3
+name_no_size: Musical Mytholmroyd Duck Megacity Step 14 Character 3
+name_no_type: Musical Mytholmroyd Duck Megacity Step 14 Character 3
+name_proper: Musical Mytholmroyd Duck Megacity Step 14 Character 3
+name_space: musical mytholmroyd duck megacity step 14 character 3
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 14 CHARACTER 3
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_text_file
+        content: "step_id: step_14_character_3\nstep_name: Character Asset Packet\
+            \ nora_greenwood\ndescription: Compatibility publication of the fixed\
+            \ step_04a character files for nora_greenwood.\nfiles:\n  - name: character_description.md\n\
+            \    destination: production/08a_character_assets/character_3/character_description.md\n\
+            \    description: Producer-readable character reference\n  - name: elevenlabs_voice_prompt.md\n\
+            \    destination: production/08a_character_assets/character_3/elevenlabs_voice_prompt.md\n\
+            \    description: Direct ElevenLabs Voice Design prompt\n  - name: suno_voice_description.yaml\n\
+            \    destination: production/08a_character_assets/character_3/suno_voice_description.yaml\n\
+            \    description: Fixed structured Suno-friendly singing voice description\
+            \ reused across songs\n  - name: image_prompt.md\n    destination: production/08a_character_assets/character_3/image_prompt.md\n\
+            \    description: Self-contained character image prompt\n  - name: character.yaml\n\
+            \    destination: production/08a_character_assets/character_3/character.yaml\n\
+            \    description: Animatic cast entry\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_14_character_3\nstep_name: Character Asset Packet\
+            \ nora_greenwood\ndescription: Compatibility publication of the fixed\
+            \ step_04a character files for nora_greenwood.\nfiles:\n  - name: character_description.md\n\
+            \    destination: production/08a_character_assets/character_3/character_description.md\n\
+            \    description: Producer-readable character reference\n  - name: elevenlabs_voice_prompt.md\n\
+            \    destination: production/08a_character_assets/character_3/elevenlabs_voice_prompt.md\n\
+            \    description: Direct ElevenLabs Voice Design prompt\n  - name: suno_voice_description.yaml\n\
+            \    destination: production/08a_character_assets/character_3/suno_voice_description.yaml\n\
+            \    description: Fixed structured Suno-friendly singing voice description\
+            \ reused across songs\n  - name: image_prompt.md\n    destination: production/08a_character_assets/character_3/image_prompt.md\n\
+            \    description: Self-contained character image prompt\n  - name: character.yaml\n\
+            \    destination: production/08a_character_assets/character_3/character.yaml\n\
+            \    description: Animatic cast entry\n"
+        file_name: file_creation_list.yaml
+    -   command: file_copy
+        file_destination: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\character_description.md
+        file_source: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3\character_description.md
+    -   command: file_copy
+        file_destination: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\elevenlabs_voice_prompt.md
+        file_source: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3\elevenlabs_voice_prompt.md
+    -   command: file_copy
+        file_destination: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\suno_voice_description.yaml
+        file_source: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3\suno_voice_description.yaml
+    -   command: file_copy
+        file_destination: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\image_prompt.md
+        file_source: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3\image_prompt.md
+    -   command: file_copy
+        file_destination: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\character.yaml
+        file_source: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_04a_character_3\character.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: verify_structured
+        file_name: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\suno_voice_description.yaml
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: C:\od\OneDrive\docs\show_musical_generator_roboclick_fable\parts\musical_mytholmroyd_duck_megacity_step_14_character_3\character.yaml
+        mode_ai_wait: slow
+        retries: 1
+    file_test: ''
+    retries_until_complete: 0
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_14_character_3
+page_size: a4_facing_text_left_image_right
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_14
+taxonomy_3_capital: Step 14
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_14
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: character_3
+taxonomy_4_capital: Character 3
+taxonomy_4_first_letter: c
+taxonomy_4_first_letter_upper: C
+taxonomy_4_length_1: c
+taxonomy_4_length_2: ch
+taxonomy_4_length_3: cha
+taxonomy_4_length_4: char
+taxonomy_4_length_5: chara
+taxonomy_4_upper: CHARACTER_3
+taxonomy_4_upper_length_1: C
+taxonomy_4_upper_length_2: CH
+taxonomy_4_upper_length_3: CHA
+taxonomy_4_upper_length_4: CHAR
+taxonomy_4_upper_length_5: CHARA
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: character_copy
+url_chat: ''

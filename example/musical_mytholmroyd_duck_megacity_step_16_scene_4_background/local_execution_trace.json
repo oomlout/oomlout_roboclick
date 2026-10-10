@@ -1,0 +1,11 @@
+{
+  "status": "DRAFT",
+  "input_files": [
+    "local_input_inventory.json"
+  ],
+  "source_claims": "A modest existing village hall has a broad open doorway, pale cream walls and a teal door frame. Simple empty seating shapes sit at the far sides, leaving the central floor entirely free. Small plain coloured notices at the edge have no letters or diagrams. Keep the room recognizably the interior of the previously seen hall.",
+  "assumptions": "Static backdrop; required musical action is separate.",
+  "changes_made": "Copied world style verbatim and expanded the declared location.",
+  "open_questions": [],
+  "verification_notes": "No ZIP; no early future reveal or duplicate primary prop."
+}

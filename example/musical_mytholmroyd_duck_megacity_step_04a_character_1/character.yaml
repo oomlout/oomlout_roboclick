@@ -1,0 +1,8 @@
+character_id: canal_duck
+display_name: Canal Duck
+short_name: Canal Duck
+aliases:
+- Canal Duck
+- canal_duck
+asset_folder: production/08a_character_assets/character_1
+color: '#168A8A'

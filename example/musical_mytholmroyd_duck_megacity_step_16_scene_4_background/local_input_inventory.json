@@ -1,0 +1,56 @@
+[
+  {
+    "context_name": "settings_basic.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\source\\settings_basic.yaml",
+    "sha256": "f71fa7b27930b26e2fc85e2ac64c4fdfbf456f9146c7e38bea4cd906cf4db410",
+    "bytes": 12759
+  },
+  {
+    "context_name": "show_config.yaml",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_03_canon_1\\show_config.yaml",
+    "sha256": "cab42bd7a4d66b5126580cae0070c8b0b57b08f18e69bf2830e966887d1dc5a0",
+    "bytes": 852
+  },
+  {
+    "context_name": "image_visual_guide.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_15_image_director_1\\image_visual_guide.md",
+    "sha256": "fe64a88db4464cfc228c7a402b7db4bab107ded032f97488900dba8185986860",
+    "bytes": 15616
+  },
+  {
+    "context_name": "staging_guide.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_11_stage_director_1\\staging_guide.md",
+    "sha256": "820b80cb68a91facbc2e2f3862223f6d958d5893561bd73c9a5f6075cc772e47",
+    "bytes": 9855
+  },
+  {
+    "context_name": "staging_guide.json",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_11_stage_director_1\\staging_guide.json",
+    "sha256": "97aabbc9383e62c0fba971f922d5f7156dcad6a3366bfa04bd0188fc7c5cfeb2",
+    "bytes": 8305
+  },
+  {
+    "context_name": "scene_direction.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_05_director_1\\scene_direction_S04.md",
+    "sha256": "2d4ce2a0b23ea38f3828909b94fb010c3d48b225dfac1cd721fae608a57e37fa",
+    "bytes": 6000
+  },
+  {
+    "context_name": "this_scene.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_4_background\\this_scene.md",
+    "sha256": "2429be50bddba8f9e74fc09203e4602a03b25543812ddc86491fee29f589b90b",
+    "bytes": 462
+  },
+  {
+    "context_name": "song_guidance.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_06_music_director_1\\song_guidance_N04.md",
+    "sha256": "208a96f7d40900b9984f52565e1651702d075685f8a4381a19099e2206049108",
+    "bytes": 5837
+  },
+  {
+    "context_name": "song_lyrics.md",
+    "path": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_07a_song_N04_final\\lyrics.md",
+    "sha256": "c056b62185e35470c07dd0642a0865e0237e56524933d5d8092d3d9b8143e62b",
+    "bytes": 1263
+  }
+]

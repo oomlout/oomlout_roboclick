@@ -27,6 +27,7 @@ def describe():
     d["category"] = 'ai'
     v = []
     if True:
+        v.append({'name': 'base_ai_provider', 'description': 'AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.', 'type': 'string', 'default': 'open_ai'})
         v.append({'name': 'file_source', 'description': 'path of the file, referenced to current directory', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
@@ -46,7 +47,8 @@ def _scroll_lock_toggled():
     return False
 
 def ai_add_image(**kwargs):
-    return _dispatch_action("ai_add_image", **kwargs)
+    import oomlout_roboclick
+    return oomlout_roboclick.run_single_action(action={"command": "ai_add_image"}, **kwargs)
 
 def action(**kwargs):
     return robo_roboclick.robo_action_run("roboclick_action_ai_file_add_file", old, **kwargs)

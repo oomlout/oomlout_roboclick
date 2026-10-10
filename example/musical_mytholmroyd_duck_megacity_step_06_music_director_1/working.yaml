@@ -1,0 +1,1782 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- invest
+- object
+bip_39_2_word_no_space: investobject
+bip_39_2_word_space: invest object
+bip_39_2_word_underscore: invest_object
+bip_39_3_word_array:
+- invest
+- object
+- cabbage
+bip_39_3_word_no_space: investobjectcabbage
+bip_39_3_word_space: invest object cabbage
+bip_39_3_word_underscore: invest_object_cabbage
+bip_39_full_array:
+- invest
+- object
+- cabbage
+- grit
+- coach
+- iron
+- meadow
+- drip
+- supply
+- aerobic
+- evolve
+- feel
+bip_39_full_no_space: investobjectcabbagegritcoachironmeadowdripsupplyaerobicevolvefeel
+bip_39_full_space: invest object cabbage grit coach iron meadow drip supply aerobic
+    evolve feel
+bip_39_full_underscore: invest_object_cabbage_grit_coach_iron_meadow_drip_supply_aerobic_evolve_feel
+directory: parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_06_music_director_1
+id_no_class: musical_mytholmroyd_duck_megacity_step_06_music_director_1
+id_no_size: musical_mytholmroyd_duck_megacity_step_06_1
+id_no_type: musical_mytholmroyd_duck_megacity_step_06_1
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_06_music_director_1
+md5: 75f3007eb352caeca26a19d9c08538aa
+md5_10: 75f3007eb3
+md5_10_upper: 75F3007EB3
+md5_5: 75f30
+md5_5_upper: 75F30
+md5_6: 75f300
+md5_6_alpha: 4log0
+md5_6_alpha_upper: 4LOG0
+md5_6_upper: 75F300
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 06 Music Director 1
+name_no_class: Musical Mytholmroyd Duck Megacity Step 06 Music Director 1
+name_no_size: Musical Mytholmroyd Duck Megacity Step 06 1
+name_no_type: Musical Mytholmroyd Duck Megacity Step 06 1
+name_proper: Musical Mytholmroyd Duck Megacity Step 06 Music Director 1
+name_space: musical mytholmroyd duck megacity step 06 music director 1
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 06 MUSIC DIRECTOR 1
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_zip
+        files: &id001
+        -   arcname: settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        -   arcname: show_config.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/show_config.yaml
+        -   arcname: canon_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/canon_bible.md
+        -   arcname: character_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_bible.md
+        -   arcname: character_voices.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_voices.md
+        -   arcname: character_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_list.csv
+        -   arcname: character_registry.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_registry.json
+        -   arcname: beat_sheet.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/beat_sheet.md
+        -   arcname: act_structure.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/act_structure.md
+        -   arcname: scene_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_list.csv
+        -   arcname: song_list.csv
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/song_list.csv
+        -   arcname: scene_song_ledger.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_song_ledger.md
+        -   arcname: scene_song_ledger.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_02_story_structure_1/scene_song_ledger.json
+        -   arcname: character_assets/canal_duck/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/suno_voice_description.yaml
+        -   arcname: character_assets/mabel_lockwood/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_2/suno_voice_description.yaml
+        -   arcname: character_assets/nora_greenwood/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_3/suno_voice_description.yaml
+        -   arcname: character_assets/asha_rahman/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_4/suno_voice_description.yaml
+        -   arcname: character_assets/elsie_sutcliffe/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_5/suno_voice_description.yaml
+        -   arcname: character_assets/miriam_vale/suno_voice_description.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04a_character_6/suno_voice_description.yaml
+        -   arcname: direction_guide.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/direction_guide.md
+        -   arcname: scene_direction/scene_direction_S01.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S01.md
+        -   arcname: scene_direction/scene_direction_S02.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S02.md
+        -   arcname: scene_direction/scene_direction_S03.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S03.md
+        -   arcname: scene_direction/scene_direction_S04.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S04.md
+        -   arcname: scene_direction/scene_direction_S05.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S05.md
+        -   arcname: scene_direction/scene_direction_S06.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S06.md
+        -   arcname: scene_direction/scene_direction_S07.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S07.md
+        -   arcname: scene_direction/scene_direction_S08.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S08.md
+        -   arcname: scene_direction/scene_direction_S09.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S09.md
+        -   arcname: scene_direction/scene_direction_S10.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_05_director_1/scene_direction_S10.md
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_06\nstep_name: Music Director\ndescription: Develops\
+            \ the show's musical identity and produces refined guidance for every\
+            \ song.\nfiles:\n  - name: musical_style_guide.md\n    destination: production/04_music_direction/musical_style_guide.md\n\
+            \    description: Overall musical style and sound world for the show\n\
+            \  - name: song_guidance_N01.md\n    destination: production/04_music_direction/song_guidance_N01.md\n\
+            \    description: Refined music and lyric brief for song N01\n  - name:\
+            \ song_guidance_N02.md\n    destination: production/04_music_direction/song_guidance_N02.md\n\
+            \    description: Refined music and lyric brief for song N02\n  - name:\
+            \ song_guidance_N03.md\n    destination: production/04_music_direction/song_guidance_N03.md\n\
+            \    description: Refined music and lyric brief for song N03\n  - name:\
+            \ song_guidance_N04.md\n    destination: production/04_music_direction/song_guidance_N04.md\n\
+            \    description: Refined music and lyric brief for song N04\n  - name:\
+            \ song_guidance_N05.md\n    destination: production/04_music_direction/song_guidance_N05.md\n\
+            \    description: Refined music and lyric brief for song N05\n  - name:\
+            \ song_guidance_N06.md\n    destination: production/04_music_direction/song_guidance_N06.md\n\
+            \    description: Refined music and lyric brief for song N06\n  - name:\
+            \ song_guidance_N07.md\n    destination: production/04_music_direction/song_guidance_N07.md\n\
+            \    description: Refined music and lyric brief for song N07\n  - name:\
+            \ song_guidance_N08.md\n    destination: production/04_music_direction/song_guidance_N08.md\n\
+            \    description: Refined music and lyric brief for song N08\n  - name:\
+            \ song_guidance_N09.md\n    destination: production/04_music_direction/song_guidance_N09.md\n\
+            \    description: Refined music and lyric brief for song N09\n  - name:\
+            \ song_guidance_N10.md\n    destination: production/04_music_direction/song_guidance_N10.md\n\
+            \    description: Refined music and lyric brief for song N10\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_06\nstep_name: Music Director\ndescription: Develops\
+            \ the show's musical identity and produces refined guidance for every\
+            \ song.\nfiles:\n  - name: musical_style_guide.md\n    destination: production/04_music_direction/musical_style_guide.md\n\
+            \    description: Overall musical style and sound world for the show\n\
+            \  - name: song_guidance_N01.md\n    destination: production/04_music_direction/song_guidance_N01.md\n\
+            \    description: Refined music and lyric brief for song N01\n  - name:\
+            \ song_guidance_N02.md\n    destination: production/04_music_direction/song_guidance_N02.md\n\
+            \    description: Refined music and lyric brief for song N02\n  - name:\
+            \ song_guidance_N03.md\n    destination: production/04_music_direction/song_guidance_N03.md\n\
+            \    description: Refined music and lyric brief for song N03\n  - name:\
+            \ song_guidance_N04.md\n    destination: production/04_music_direction/song_guidance_N04.md\n\
+            \    description: Refined music and lyric brief for song N04\n  - name:\
+            \ song_guidance_N05.md\n    destination: production/04_music_direction/song_guidance_N05.md\n\
+            \    description: Refined music and lyric brief for song N05\n  - name:\
+            \ song_guidance_N06.md\n    destination: production/04_music_direction/song_guidance_N06.md\n\
+            \    description: Refined music and lyric brief for song N06\n  - name:\
+            \ song_guidance_N07.md\n    destination: production/04_music_direction/song_guidance_N07.md\n\
+            \    description: Refined music and lyric brief for song N07\n  - name:\
+            \ song_guidance_N08.md\n    destination: production/04_music_direction/song_guidance_N08.md\n\
+            \    description: Refined music and lyric brief for song N08\n  - name:\
+            \ song_guidance_N09.md\n    destination: production/04_music_direction/song_guidance_N09.md\n\
+            \    description: Refined music and lyric brief for song N09\n  - name:\
+            \ song_guidance_N10.md\n    destination: production/04_music_direction/song_guidance_N10.md\n\
+            \    description: Refined music and lyric brief for song N10\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_10:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N08'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N08 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N08. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N08 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN08. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N08&&& tags.\n\n&&&guidance_N08&&&\n\
+            ## Song N08 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N08&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N08.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N08&&&'
+        tag_open: '&&&guidance_N08&&&'
+    -   command: close_tab
+    file_test: song_guidance_N08.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_11:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N09'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N09 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N09. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N09 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN09. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N09&&& tags.\n\n&&&guidance_N09&&&\n\
+            ## Song N09 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N09&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N09.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N09&&&'
+        tag_open: '&&&guidance_N09&&&'
+    -   command: close_tab
+    file_test: song_guidance_N09.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_12:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N10'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N10 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N10. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N10 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN10. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N10&&& tags.\n\n&&&guidance_N10&&&\n\
+            ## Song N10 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N10&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N10.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N10&&&'
+        tag_open: '&&&guidance_N10&&&'
+    -   command: close_tab
+    file_test: song_guidance_N10.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block music_director'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Music Director \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_06_music_director
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: musical_style_guide.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N01'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N01 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N01. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N01 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN01. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N01&&& tags.\n\n&&&guidance_N01&&&\n\
+            ## Song N01 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N01&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N01.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N01&&&'
+        tag_open: '&&&guidance_N01&&&'
+    -   command: close_tab
+    file_test: song_guidance_N01.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_4:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N02'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N02 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N02. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N02 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN02. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N02&&& tags.\n\n&&&guidance_N02&&&\n\
+            ## Song N02 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N02&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N02.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N02&&&'
+        tag_open: '&&&guidance_N02&&&'
+    -   command: close_tab
+    file_test: song_guidance_N02.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_5:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N03'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N03 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N03. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N03 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN03. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N03&&& tags.\n\n&&&guidance_N03&&&\n\
+            ## Song N03 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N03&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N03.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N03&&&'
+        tag_open: '&&&guidance_N03&&&'
+    -   command: close_tab
+    file_test: song_guidance_N03.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_6:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N04'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N04 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N04. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N04 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN04. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N04&&& tags.\n\n&&&guidance_N04&&&\n\
+            ## Song N04 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N04&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N04.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N04&&&'
+        tag_open: '&&&guidance_N04&&&'
+    -   command: close_tab
+    file_test: song_guidance_N04.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_7:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N05'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N05 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N05. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N05 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN05. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N05&&& tags.\n\n&&&guidance_N05&&&\n\
+            ## Song N05 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N05&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N05.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N05&&&'
+        tag_open: '&&&guidance_N05&&&'
+    -   command: close_tab
+    file_test: song_guidance_N05.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_8:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N06'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N06 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N06. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N06 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN06. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N06&&& tags.\n\n&&&guidance_N06&&&\n\
+            ## Song N06 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N06&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N06.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N06&&&'
+        tag_open: '&&&guidance_N06&&&'
+    -   command: close_tab
+    file_test: song_guidance_N06.md
+    retries_until_complete: 3
+oomlout_ai_roboclick_9:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block song_guidance_N07'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Song guidance N07 \u2014 step 06"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: add_file
+        file_name: musical_style_guide.md
+    -   action_root: prompts/step_06_song_guidance
+        command: ai_query
+        delay: 300
+        text: "You are the Music Director of a stage musical, writing the refined\n\
+            guidance document for ONE song: song N07. All show details\nare in the\
+            \ attached files -- do not use prior knowledge or memory\nabout any show.\
+            \ Base everything only on these documents.\n\nAttached:\n- upload.zip:\
+            \ the show documents -- settings_basic.yaml (base_song_style\n  is the\
+            \ binding style baseline), show_config.yaml, canon_bible.md,\n  character_bible.md,\
+            \ character_voices.md, character_registry.json,\n  character_assets/<character_id>/suno_voice_description.yaml,\n\
+            \  beat_sheet.md, act_structure.md, scene_list.csv, song_list.csv,\n \
+            \ scene_song_ledger.md (the binding pacing contract),\n  direction_guide.md,\
+            \ and scene_direction/ (the director's per-scene\n  briefs).\n- musical_style_guide.md:\
+            \ the show's finished musical style guide.\n  This is YOUR OWN style guide\
+            \ -- treat every motif, vocal lock,\n  distinctness call, and \"never\
+            \ do\" rule in it as binding.\n\nTHE SHOW IS SUNG-THROUGH: each scene\
+            \ has only\n2 to 4 spoken lines\nbefore its song, so the song carries\
+            \ ALL of the scene's storytelling.\nYour guidance must hand the songwriter\
+            \ the concrete story events the\nsong must narrate, not just a mood.\n\
+            \nWrite the refined guidance document for song N07 only.\n\nUse song_list.csv\
+            \ to find the row whose song_number is exactly\nN07. Do not write guidance\
+            \ for any other song. The total song\ncount for this run is base_length\
+            \ from settings_basic.yaml: 10.\nIf any source or foundation note implies\
+            \ a different approximate count,\nignore it for output-count purposes;\
+            \ settings_basic.yaml controls the\nnumber of song guidance documents.\n\
+            \nCross-reference scene_song_ledger.md and the matching scene_direction\n\
+            document before writing. The ledger is binding: this song gets one\nprincipal\
+            \ story turn, and any extra turn named in \"Do not also\" must\nstay out\
+            \ of the guidance.\n\nDistinctness is binding too: musical_style_guide.md\
+            \ decides what keeps\nthis song sonically its own (its rhythmic family,\
+            \ tempo territory,\ntexture, and hook type). Lead with those song-specific\
+            \ qualities;\nthe shared show genre is the backdrop, not the headline.\n\
+            \nWrite the document between &&&guidance_N07&&& tags.\n\n&&&guidance_N07&&&\n\
+            ## Song N07 - [Chosen Working Title]\nA working title you are proposing.\
+            \ Not final, but evocative of the song's core.\n\n## Dramatic Mission\n\
+            What this song must accomplish in the story. One tight paragraph.\nStart\
+            \ from scene_song_ledger.md, the director's scene brief, and the\nmatching\
+            \ song_list.csv row: what single principal turn does this song\nland,\
+            \ what emotional state does the audience arrive in, what concrete\nstory\
+            \ events must the song narrate, and where must they be when the\nlast\
+            \ note lands?\n\n## Pacing Guardrail\nName the adjacent setup or payoff\
+            \ that must be protected so this song\nhas room to breathe. Then name\
+            \ the tempting extra turn this song must\nnot try to land.\n\n## Singer\
+            \ and Voice\nWho sings it. Use cast members from character_registry.json\
+            \ only; never\ninvent a new or unnamed character. Use canonical character_id\
+            \ values.\nExplain their character state at this moment and what their\
+            \ musical voice\nspecifically needs to sound like here, drawn from character_voices.md\
+            \ and\nyour musical style analysis.\n\nAlso include a \"Suno vocal lock\"\
+            \ line for every singer in this song.\nCopy the description value from\n\
+            character_assets/<character_id>/suno_voice_description.yaml VERBATIM and\n\
+            confirm it matches musical_style_guide.md's \"Singer Vocal Locks for\n\
+            Suno\" section. Never adapt or freshly describe it. Include the exact\n\
+            display_name from the YAML. These values are binding for step_07's Suno\n\
+            style text and for the voice tag before every Suno lyric section.\n\n\
+            Also state this song's PERSONA: the persona_name of the dominant\nsinger\
+            \ from their suno_voice_description.yaml, which the producer\nselects\
+            \ in Custom Mode so this character sounds like the same singer\nas in\
+            \ their other numbers. Write \"ensemble - no single Persona\" if no\n\
+            one singer dominates. And name the LEAD: only the lead singer's voice\n\
+            description (plus at most one other) belongs in the Style field.\nCramming\
+            \ three or more voice descriptions into one Style field\ndilutes all of\
+            \ them and is why ensemble numbers come back sounding\nlike one generic\
+            \ singer.\n\n## Musical Direction\nInstrumentation, tempo, feel, and harmonic\
+            \ character, drawn from and\nconsistent with musical_style_guide.md and\
+            \ the base_song_style in\nsettings_basic.yaml. Be specific enough that\
+            \ a composer can hear it before\nwriting a note. State how the singer\
+            \ vocal lock should sit against the\ntrack: lead, duet, call-and-response,\
+            \ or ensemble layer. Do not invent\nany voices outside character_registry.json.\
+            \ The audio generator sings\neach song section in a single voice, so plan\
+            \ any duet, exchange, or\ncall-and-response as alternating whole sections\
+            \ -- one singer per\nsection -- never as voices trading lines inside one\
+            \ section.\n\n## Structural Shape\nHow the song is built: proposed structure,\
+            \ where the emotional peak\nfalls, and how it resolves or deliberately\
+            \ withholds resolution. The\nshape must make the principal turn appreciable,\
+            \ not rush through a\nlist of plot points.\n\nNAME EVERY SECTION FROM\
+            \ THE AUDIO GENERATOR'S CANONICAL VOCABULARY:\nIntro, Verse, Pre-Chorus,\
+            \ Chorus, Post-Chorus, Refrain, Hook, Bridge,\nBreak, Instrumental Break,\
+            \ Drop, Outro, End - with a number or letter\nsuffix where useful (Verse\
+            \ 1, Verse 2a, Chorus 2). The generator only\nrecognises structure tags\
+            \ it was trained on, so an evocative label\nlike \"Test Sequence A\",\
+            \ \"Discovery Build\" or \"Open Button\" is not read\nas structure at\
+            \ all and the section's shape is left to chance. Put the\nevocative naming\
+            \ in your prose description of each section, never in\nthe section's label.\n\
+            \nAssign every proposed section to exactly one singer (or the full\nensemble\
+            \ singing together); if singers must trade or interrupt, shape\nthat as\
+            \ short alternating sections rather than voice changes inside a\nsection.\
+            \ Keep sections SHORT (four to eight lines) in any song with\nmore than\
+            \ one singer - the generator holds a voice well across a short\nsection\
+            \ and drifts across a long one, and it is least reliable exactly\nwhere\
+            \ singers alternate.\n\nThe last section ends the SONG, not the scene:\
+            \ any canonical label may\nclose it. See \"How This Song Ends\" below.\n\
+            \n## Lyric Direction\nThe show is sung-through, so start with the concrete\
+            \ story events this\nsong must narrate from the director's scene brief.\
+            \ Then cover the central\nimage or idea, the world the characters inhabit,\
+            \ the language register\nthat fits this character and moment, and what\
+            \ the lyrics must not do.\nWhatever the register, the baseline for every\
+            \ song is plain, concrete,\nspoken language a listener follows on one\
+            \ sung hearing: direct the\nsongwriter toward saying who does what, and\
+            \ away from dense imagery,\ninverted phrasing, or rhyme-first wording.\
+            \ Clarity outranks cleverness.\n\n## How This Song Ends\nThe song does\
+            \ NOT carry the hand-off to the next scene. Each scene has\nspoken lines\
+            \ after the song, and those lines take the audience into\nwhat comes next.\
+            \ A song that also announces it makes the audience hear\nthe same hand-off\
+            \ twice, which is why the sung version was removed.\n\nBrief the ending\
+            \ as a MUSICAL and EMOTIONAL one:\n- The arrival point: the state this\
+            \ song's principal turn leaves the\n  singer in, once the turn has landed.\
+            \ That is what the final section\n  expresses.\n- How the arrangement\
+            \ ends: full close, sudden stop, fade, held\n  chord, a return of the\
+            \ opening figure -- whatever suits the turn.\n  The song may end open\
+            \ or closed musically; what it must not do is\n  end by TELLING the audience\
+            \ where the character is going.\n- What the final section must not contain:\
+            \ the next action, the next\n  location, the next person, prophecy, motto,\
+            \ a description of the\n  finished future, or a summary of the song just\
+            \ sung.\n\nIf this is the LAST song in the show, its ending lands the\
+            \ show's\nending, and the scene's closing spoken lines land the final\
+            \ curtain\nrather than a hand-off.\n\n## Connections\nHow this song connects\
+            \ to adjacent songs in song_list.csv and to recurring\nmusical motifs\
+            \ from musical_style_guide.md.\n&&&guidance_N07&&&\n"
+    -   action_root: prompts/step_06_song_guidance
+        command: save_text
+        file_name: song_guidance_N07.md
+        skip_if_tag_missing: true
+        tag_close: '&&&guidance_N07&&&'
+        tag_open: '&&&guidance_N07&&&'
+    -   command: close_tab
+    file_test: song_guidance_N07.md
+    retries_until_complete: 3
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_06_music_director_1
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_06_music_director
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+song_numbers:
+- N01
+- N02
+- N03
+- N04
+- N05
+- N06
+- N07
+- N08
+- N09
+- N10
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_06
+taxonomy_3_capital: Step 06
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_06
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: music_director_1
+taxonomy_4_capital: Music Director 1
+taxonomy_4_first_letter: m
+taxonomy_4_first_letter_upper: M
+taxonomy_4_length_1: m
+taxonomy_4_length_2: mu
+taxonomy_4_length_3: mus
+taxonomy_4_length_4: musi
+taxonomy_4_length_5: music
+taxonomy_4_upper: MUSIC_DIRECTOR_1
+taxonomy_4_upper_length_1: M
+taxonomy_4_upper_length_2: MU
+taxonomy_4_upper_length_3: MUS
+taxonomy_4_upper_length_4: MUSI
+taxonomy_4_upper_length_5: MUSIC
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: music_director
+url_chat: ''
+zip_sources: *id001

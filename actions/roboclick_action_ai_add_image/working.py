@@ -210,16 +210,24 @@ def action_open_web_ui(**kwargs):
     return ""
 
 def test(**kwargs):
-    try:
-        import oomlout_test
-    except Exception:
-        return callable(old) and callable(new)
-
-    test_fn = getattr(oomlout_test, "test", None)
-    if not callable(test_fn):
-        return callable(old) and callable(new)
-
-    try:
-        return bool(test_fn(**kwargs))
-    except Exception:
-        return callable(old) and callable(new)
+    test_file = os.path.join(os.path.dirname(__file__), "oomlout_test.py")
+    if os.path.exists(test_file):
+        import importlib.util
+        import sys
+        dir_path = os.path.dirname(__file__)
+        added_to_path = False
+        if dir_path not in sys.path:
+            sys.path.insert(0, dir_path)
+            added_to_path = True
+        try:
+            spec = importlib.util.spec_from_file_location(f"test_module_{abs(hash(test_file))}", test_file)
+            if spec and spec.loader:
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                test_fn = getattr(mod, "test", None)
+                if callable(test_fn):
+                    return test_fn(**kwargs)
+        finally:
+            if added_to_path and dir_path in sys.path:
+                sys.path.remove(dir_path)
+    return callable(old) and callable(new)

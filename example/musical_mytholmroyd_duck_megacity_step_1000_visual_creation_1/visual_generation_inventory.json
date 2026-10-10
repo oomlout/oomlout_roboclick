@@ -1,0 +1,459 @@
+{
+  "status": "DRAFT",
+  "tool": "built-in imagegen",
+  "generated_sources": [
+    {
+      "job_index": 0,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-be789b1b-e70f-4321-b987-30e0570ed1f4.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_1/image_prompt.md"
+    },
+    {
+      "job_index": 1,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-046f18eb-cda4-4200-9f76-22622c234fd0.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_2/image_prompt.md"
+    },
+    {
+      "job_index": 2,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-3f365ae8-e79d-4b0a-ae7b-d878144b1e6b.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_3/image_prompt.md"
+    },
+    {
+      "job_index": 3,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-c764be4e-7af9-4082-b08e-15c3acb8f507.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_4/image_prompt.md"
+    },
+    {
+      "job_index": 4,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-7208eaa4-fe28-408e-94ea-8d813691b086.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_5/image_prompt.md"
+    },
+    {
+      "job_index": 5,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-88b114bb-d5c5-4d1b-82c5-50289c9fc782.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_14_character_6/image_prompt.md"
+    },
+    {
+      "job_index": 6,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-46eec662-f24e-49ac-8cc4-b94cda9ec0b9.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_18c_cd_art_disc_1/image_prompt.md"
+    },
+    {
+      "job_index": 7,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-beabb76d-4003-456c-bf89-778f3f410edc.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_18a_cd_art_front_1/image_prompt.md"
+    },
+    {
+      "job_index": 8,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-bebf1a75-d61f-4c1f-96a6-0353402f4136.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_1_background/image_prompt.md"
+    },
+    {
+      "job_index": 9,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-845bad2b-4501-4304-ba4b-d597933172bd.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_10_background/image_prompt.md"
+    },
+    {
+      "job_index": 10,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-f6874cdb-169b-4fca-a930-51c7cda3009c.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_17_scene_10_prop_1/image_prompt.md"
+    },
+    {
+      "job_index": 11,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-ea954c26-83d6-4d12-8a5f-55afb45f1d24.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_17_scene_1_prop_1/image_prompt.md"
+    },
+    {
+      "job_index": 12,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-ea858e36-a304-47c8-9754-61be8712e060.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_2_background/image_prompt.md"
+    },
+    {
+      "job_index": 14,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-23228e4b-4349-4cc6-846a-c665153cde53.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_3_background/image_prompt.md"
+    },
+    {
+      "job_index": 15,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-0ada73d7-9367-4507-9bb6-aa591062b52c.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_17_scene_3_prop_1/image_prompt.md"
+    },
+    {
+      "job_index": 16,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-e5b64d7c-2852-4321-935c-edcdc731d665.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_4_background/image_prompt.md"
+    },
+    {
+      "job_index": 18,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-40a3e5a3-c117-4bed-9858-b5250b591a32.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_5_background/image_prompt.md"
+    },
+    {
+      "job_index": 20,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-422b0287-eb1f-4296-b714-f21e304288cf.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_6_background/image_prompt.md"
+    },
+    {
+      "job_index": 22,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-2f075a8f-139e-47c2-b50b-04aa7150698b.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_7_background/image_prompt.md"
+    },
+    {
+      "job_index": 24,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-f526894d-a2d0-43fd-806e-98c12a494207.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_8_background/image_prompt.md"
+    },
+    {
+      "job_index": 26,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-e13822f2-5092-4b9c-9533-aee0948a3bdd.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_16_scene_9_background/image_prompt.md"
+    },
+    {
+      "job_index": 28,
+      "source": "C:\\Users\\aaron\\.codex\\generated_images\\01a0775d-3de7-7af1-8569-2ae28457f80c\\exec-e766aa98-fed2-4dc7-937c-038d32515305.png",
+      "prompt": "parts/musical_mytholmroyd_duck_megacity_step_18b_cd_art_tray_1/image_prompt.md"
+    }
+  ],
+  "outputs": [
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "407ab85c116678aeac54768ccfd73910a3791fbb44e5446a080496304ed2347b"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_2\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_2\\image.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "cba48f4190ed198ef9d6885c2724b1836c0974bddf6d2b53e32ef8a1bd79e0d8"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_3\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_3\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "4c6b5dad1b942a77d0a9b80ca7c22266e2fe84cecc50442841c7f89539e14491"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_4\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_4\\image.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "8e3d854ac4b6634050d36b3c25e48a92cb5e56b8384b85836dadd93d68bdf4da"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_5\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_5\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "4bfee164c69275a25a2246e7c9388bb1bb878d8877b3f96e20bae79abacbba58"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_6\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_14_character_6\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "592e1a12eeab2906a166eb405f25212d9a9f98e67435e6955353f76b5bc0f390"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18c_cd_art_disc_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18c_cd_art_disc_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "f191303d4156a17d9d395870608c50d712af0f62310de121bc6fda0f727f7ee4"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18a_cd_art_front_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18a_cd_art_front_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "873e5e53ade109798d3f8ab4d241adbf9d946e9ed8ccb9a8d9494f88abe3837b"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_1_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_1_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "0300981121e9ac96e619ff9a3364b7fd8f62149f0e41716ed9d1d2b2fc4418ed"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_10_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_10_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "87587eb73a6f06621e1fcfd7f7e5eec0b4dcbefc0e1be747f862e462430b482f"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_10_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_10_prop_1\\image.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "e4f052747cb2b8f14f9d5fc701c4cbb0eb9d65ad6030ea4517d4d1572ec532a6"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_1_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_1_prop_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "44952eee142a2843e824e5d4a2039deca59606790e48c279f877be13f4f70922"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_2_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_2_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "fcf1dd3f33213720dcbfb0cb4b62c9ddbf2f861139a328b0ba60f8d0f30463f1"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_2_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_2_prop_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "44952eee142a2843e824e5d4a2039deca59606790e48c279f877be13f4f70922"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_3_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_3_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "1205208aa2c0488fc169461d1074a1e852bd9c47bf5402fe105292a94ae08e42"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_3_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_3_prop_1\\image.png",
+      "size": [
+        1332,
+        1181
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "9b98dad8924fbedc6d96099278538464562e7d2e084ebcc6e48e61f65eccc4fd"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_4_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_4_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "f3f7bd719cd576299fa2889d9b0fac51cd2287c1af36224e65edf7f895ad3171"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_4_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_4_prop_1\\image.png",
+      "size": [
+        1332,
+        1181
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "9b98dad8924fbedc6d96099278538464562e7d2e084ebcc6e48e61f65eccc4fd"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_5_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_5_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "239c52d943d92aaba57401b0d65934806d76bba15a5695cebd5356fb1b4d0f8e"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_5_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_5_prop_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "44952eee142a2843e824e5d4a2039deca59606790e48c279f877be13f4f70922"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_6_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_6_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "9911a84b087a6e6154d87fcf24dd6277703f1eade42217b62fafb970f6624377"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_6_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_6_prop_1\\image.png",
+      "size": [
+        1332,
+        1181
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "9b98dad8924fbedc6d96099278538464562e7d2e084ebcc6e48e61f65eccc4fd"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_7_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_7_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "bfdace925de21daafa26aee0ea6b9ca2175df777bb9f6e7520dc82cae56edb3c"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_7_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_7_prop_1\\image.png",
+      "size": [
+        1332,
+        1181
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "9b98dad8924fbedc6d96099278538464562e7d2e084ebcc6e48e61f65eccc4fd"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_8_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_8_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "60310713ee481b3143a51a95279d9a99377b2e3ca448d5304fdc458397a94b7a"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_8_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_8_prop_1\\image.png",
+      "size": [
+        1332,
+        1181
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "9b98dad8924fbedc6d96099278538464562e7d2e084ebcc6e48e61f65eccc4fd"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_9_background\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_16_scene_9_background\\image.png",
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "9ef428fd448fd3b74e4bf12dc870ee9ab895c0a646b953221f897ff32b52b078"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_9_prop_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_17_scene_9_prop_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "keyed": true,
+      "sha256": "44952eee142a2843e824e5d4a2039deca59606790e48c279f877be13f4f70922"
+    },
+    {
+      "prompt": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18b_cd_art_tray_1\\image_prompt.md",
+      "image": "C:\\od\\OneDrive\\docs\\show_musical_generator_roboclick_fable\\parts\\musical_mytholmroyd_duck_megacity_step_18b_cd_art_tray_1\\image.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "keyed": false,
+      "sha256": "530afa2f21ba5ccdb9d8938462d973390b34e0c3ca08cff9d4b3d312cf469f8a"
+    }
+  ],
+  "reused_occurrences": {
+    "canal_front": [
+      1,
+      2,
+      5,
+      9
+    ],
+    "plain_reverse": [
+      3,
+      4,
+      6,
+      7,
+      8
+    ]
+  },
+  "verification_notes": [
+    "Every unique image visually inspected as returned.",
+    "Disc art corrected once to remove literal hub/cutout and excess detail.",
+    "Seven repeated prop occurrences reuse identical artwork to preserve the canonical object.",
+    "Executed the declared repository image_remove_background_keyed action with its exact thresholds.",
+    "All 16 sprite/prop images have genuine alpha; original generated files remain in the built-in output directory."
+  ]
+}

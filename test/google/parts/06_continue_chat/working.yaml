@@ -1,0 +1,32 @@
+﻿id: google_test_06_continue_chat
+enabled: false
+name: "Google Gemini Test 06 - Continue Chat"
+directory: test/google/parts/06_continue_chat
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini continue chat - session 1
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Remember the secret code word MANGO. Confirm you have remembered it.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: continue_chat
+        base_ai_provider: gemini
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: What was the secret code word I asked you to remember? Reply with the single word only.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: recall_response.txt
+    -   command: close_tab
+    file_test: recall_response.txt
+    retries_until_complete: 0

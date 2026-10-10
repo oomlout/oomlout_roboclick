@@ -1,0 +1,31 @@
+{
+  "cues": [
+    {
+      "type": "line",
+      "who": "canal_duck",
+      "text": "Dawn again, Canal Duck. Back on your usual bank of the Rochdale Canal.",
+      "audioFile": "assets/dialogue/scene_1/line_001/line.mp3"
+    },
+    {
+      "type": "line",
+      "who": "canal_duck",
+      "text": "Home in Mytholmroyd. Right, I'll try my usual round once more.",
+      "audioFile": "assets/dialogue/scene_1/line_002/line.mp3"
+    },
+    {
+      "type": "song"
+    },
+    {
+      "type": "line",
+      "who": "canal_duck",
+      "text": "I'll walk to that strip between the River Calder and the canal.",
+      "audioFile": "assets/dialogue/scene_1/line_003/line.mp3"
+    },
+    {
+      "type": "line",
+      "who": "canal_duck",
+      "text": "I want a proper look at what's beside me.",
+      "audioFile": "assets/dialogue/scene_1/line_004/line.mp3"
+    }
+  ]
+}

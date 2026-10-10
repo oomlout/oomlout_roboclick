@@ -1,0 +1,21 @@
+﻿id: google_test_03_save_text
+enabled: false
+name: "Google Gemini Test 03 - Save Text"
+directory: test/google/parts/03_save_text
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini save text test
+        log_url: true
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Write a single sentence describing what a robot is.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: save_text
+        base_ai_provider: gemini
+        file_name: response.txt
+    -   command: close_tab
+    file_test: response.txt
+    retries_until_complete: 0

@@ -1,5 +1,5 @@
 import os
-
+import re
 import pyautogui
 import robo_roboclick
 
@@ -30,12 +30,13 @@ def describe():
     d["category"] = 'AI'
     v = []
     if True:
+        v.append({'name': 'base_ai_provider', 'description': 'AI provider to use for this action. Options: open_ai, claude, gemini, open_web_ui.', 'type': 'string', 'default': 'open_ai'})
         v.append({'name': 'text', 'description': 'Text content used by this action.', 'type': 'string', 'default': ''})
-        #filename
         v.append({'name': 'file_name', 'description': 'File name to read or write for this action. if folder name starts with source_files it will pull from project source_files rather than folder', 'type': 'string', 'default': ''})
         v.append({'name': 'delay', 'description': 'Delay duration in seconds.', 'type': 'string', 'default': ''})
         v.append({'name': 'mode_ai_wait', 'description': 'AI wait strategy (slow, fast_button_state, or fast_clipboard_state).', 'type': 'string', 'default': ''})
         v.append({'name': 'method', 'description': 'Query input method (typing or paste).', 'type': 'string', 'default': ''})
+        v.append({'name': 'position_click', 'description': 'Screen position to click before executing the step.', 'type': 'string', 'default': ''})
     d["variables"] = v
     return d
 
@@ -53,268 +54,205 @@ def _check_key_pressed():
 def _scroll_lock_toggled():
     return False
 
-
-
 def action(**kwargs):
     return robo_roboclick.robo_action_run("roboclick_action_ai_query", new, **kwargs)
 
-
-def new(**kwargs): 
-    """Send query to AI"""
-    print("")
-    print(".:action:. -- ai_query -- sending a query")
-
-    directory = kwargs.get("directory", "") #current directory of the part
+def _get_action(kwargs):
     action = kwargs.get("action", {})
-    
-    #get the query from the action
-    action = kwargs.get("action", {})
-    delay = action.get("delay", 60)
+    if not isinstance(action, dict):
+        action = {}
+    return action
+
+def _get_base_ai_provider(kwargs):
+    action = _get_action(kwargs)
+    workings = kwargs.get("workings", {})
+    if not isinstance(workings, dict):
+        workings = {}
+    provider = kwargs.get("base_ai_provider", workings.get("base_ai_provider", action.get("base_ai_provider", "open_ai")))
+    if provider in (None, ""):
+        provider = "open_ai"
+    provider = str(provider).strip().lower().replace("-", "_")
+    aliases = {
+        "openai": "open_ai",
+        "chatgpt": "open_ai",
+        "open_webui": "open_web_ui",
+        "openwebui": "open_web_ui",
+    }
+    return aliases.get(provider, provider)
+
+def _position_click(kwargs, default):
+    action = _get_action(kwargs)
+    position = action.get("position_click", "")
+    if isinstance(position, (list, tuple)) and len(position) >= 2:
+        return list(position[:2])
+    if isinstance(position, str) and position.strip():
+        cleaned = position.replace("[", "").replace("]", "").replace("(", "").replace(")", "")
+        parts = [part.strip() for part in cleaned.split(",")]
+        if len(parts) >= 2:
+            try:
+                return [int(float(parts[0])), int(float(parts[1]))]
+            except Exception:
+                pass
+    return default
+
+def new(**kwargs):
+    provider = _get_base_ai_provider(kwargs)
+    if provider == "open_ai":
+        return action_open_ai(**kwargs)
+    if provider == "claude":
+        return action_claude(**kwargs)
+    if provider == "gemini":
+        return action_gemini(**kwargs)
+    if provider == "open_web_ui":
+        return action_open_web_ui(**kwargs)
+    print(f"ai_query -- unknown base_ai_provider '{provider}', defaulting to open_ai")
+    return action_open_ai(**kwargs)
+
+def old(**kwargs):
+    return action_open_ai(**kwargs)
+
+def _load_query_texts(kwargs):
+    directory = kwargs.get("directory", "")
+    action = _get_action(kwargs)
     query_text = action.get("text", "")
     file_name = action.get("file_name", "")
     folder_name = action.get("folder_name", "")
     f_string_replace = action.get("f_string_replace", True)
     
-    #load query text
     query_texts = []
     if query_text != "":
         query_texts.append(query_text)
-    #getting query from files or folder
     else:
-        #both file_name and query_text are defined
         if file_name != "" and query_text != "":
-            print(f"     ERROR bothquery text and file are defined query text will be used")
+            print(f"     ERROR both query text and file are defined query text will be used")
             robo_roboclick.robo_delay(delay=10)
         
-        ##load the text from the file
         file_names = file_name
-        #put filename into an array if it isn't already
-        if True:
-            if not isinstance(file_names, list):
-                file_names = [file_names]
-        #if folder_name load the filenames from there
+        if not isinstance(file_names, list):
+            file_names = [file_names]
         if folder_name != "":
-            #upto 50
             file_names = []
             for i in range(1, 50):
                 file_name_check = f"{folder_name}\\working_{i}.md"
                 file_names.append(file_name_check)
         for file_name_seed in file_names:
             file_name = file_name_seed
-            if True:
-                #load text from file.
-                #file is in the prompt directory of the project
-                filename_absolute = ""
-                if file_name.startswith("prompt\\") or file_name.startswith("prompt/") or file_name.startswith("roboclick\\") or file_name.startswith("roboclick/"):                
-                    filename_absolute = os.path.abspath(file_name)
-            #file is in the directory of the part
+            if file_name.startswith("prompt\\") or file_name.startswith("prompt/") or file_name.startswith("roboclick\\") or file_name.startswith("roboclick/"):
+                filename_absolute = os.path.abspath(file_name)
+            else:
+                file_name = f"{directory}\\{file_name}"
+                filename_absolute = os.path.abspath(file_name)
+            if filename_absolute != "":
+                if os.path.exists(filename_absolute):
+                    with open(filename_absolute, 'r', encoding='utf-8') as f:
+                        query_text = f.read()
+                        if f_string_replace:
+                            workings = kwargs.get("workings", {})
+                            query_text = re.sub(
+                                r"\{([A-Za-z_][A-Za-z0-9_]*)\}",
+                                lambda m: str(workings[m.group(1)]) if m.group(1) in workings else m.group(0),
+                                query_text,
+                            )
+                    query_texts.append(query_text)
+                    print(f"     Loaded query text from {filename_absolute}")
                 else:
-                    file_name = f"{directory}\\{file_name}"
-                    filename_absolute = os.path.abspath(file_name)
-                if filename_absolute != "":
-                    #if the file exists
-                    if os.path.exists(filename_absolute):
-                        
-                        with open(filename_absolute, 'r', encoding='utf-8') as f:
-                            query_text = f.read()
-                            if f_string_replace:
-                                #replace {tags} in query_text with values from workings, leaving missing tags
-                                #and literal braces (JSON examples) unchanged. str.format_map raised on any
-                                #literal '{' and silently disabled substitution for the whole text.
-                                    import re
-                                    workings = kwargs.get("workings", {})
-                                    query_text = re.sub(
-                                        r"\{([A-Za-z_][A-Za-z0-9_]*)\}",
-                                        lambda m: str(workings[m.group(1)]) if m.group(1) in workings else m.group(0),
-                                        query_text,
-                                    )
-                        query_texts.append(query_text)
-                        print(f"     Loaded query text from {filename_absolute}")
-                        
-                    else:
-                        ###error checking annoying because of folder
-                        if folder_name == "":
-                            print(f"     File Missing")
-                            robo_roboclick.robo_delay(delay=10)
-                        
-                        #get the folder name of the file                        
-                        folder_name_check = os.path.dirname(filename_absolute)
-                        #if the folder doesnt eiistt print error
-                        if not os.path.exists(folder_name_check):
-                            print(f"     Folder {folder_name_check} does not exist for file {filename_absolute}")
-                            robo_roboclick.robo_delay(delay=10)
-                        
-                        
-                else:
-                    print(f"     No valid file name provided for query text.")
-                    robo_roboclick.robo_delay(delay=10)
-                    query_text = ""
-        
-    
-    #### default to slow mode if not specified
-    mode_ai = action.get("mode_ai_wait", "slow")
-    if mode_ai == None:
-        mode_ai = "slow"
+                    if folder_name == "":
+                        print(f"     File Missing")
+                        robo_roboclick.robo_delay(delay=10)
+                    folder_name_check = os.path.dirname(filename_absolute)
+                    if not os.path.exists(folder_name_check):
+                        print(f"     Folder {folder_name_check} does not exist for file {filename_absolute}")
+                        robo_roboclick.robo_delay(delay=10)
+            else:
+                print(f"     No valid file name provided for query text.")
+                robo_roboclick.robo_delay(delay=10)
+                query_text = ""
+    return query_texts
 
-    #### default to typing in prompt
-    method = action.get("method", "typing")  #"standard" or "line_by_line"
+def _send_query_texts_impl(query_texts, kwargs, default_focus_pos=None):
+    action = _get_action(kwargs)
+    delay = action.get("delay", 60)
+    mode_ai = action.get("mode_ai_wait", "slow") or "slow"
+    method = action.get("method", "typing")
 
-    ##loop logic for multiple querytext
-    #make query_texts an array if it isn't
-    
-    if not isinstance(query_texts, list):
-        query_texts = [query_texts]
+    if default_focus_pos:
+        pos = _position_click(kwargs, default_focus_pos)
+        robo_roboclick.robo_mouse_click(position=pos, delay=2)
 
     for query_text in query_texts:
-        robo_roboclick.ai_check_for_too_many_requests(**kwargs)#clear text box
-        if True:
-            print(".:clearing:.")
-            #select all
-            robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
-            #back space
-            robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
+        robo_roboclick.ai_check_for_too_many_requests(**kwargs)
+        print(".:clearing:.")
+        robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
+        robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
 
-        #if query text is more than 1000 characters use paste method
         if len(query_text) > 1000:
             method = "paste"
             print(".:paste_method:.")
 
         if method == "typing":
-            #split the text on line breaks
-            query_text = query_text.replace("\r\n", "\n").replace("\r", "\n")
-            query_text_lines = query_text.split("\n")
+            query_text_clean = query_text.replace("\r\n", "\n").replace("\r", "\n")
+            query_text_lines = query_text_clean.split("\n")
             for line in query_text_lines:
-                #send each line with a delay of 1 second between lines
                 robo_roboclick.robo_keyboard_send(string=line, delay=0.1)
-                robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
+                robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)
         elif method == "paste":
-            #press space twice to ensure focus
             robo_roboclick.robo_keyboard_send(string="  ")
             robo_roboclick.robo_keyboard_paste(text=query_text)
-            #paste the entire text at once
-            #delay 5 seconds
             robo_roboclick.robo_delay(delay=10)
-            #robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
-        
-        #remove tabs and new lines
+
         query_text_print = query_text.replace("\n", "\\n").replace("\t", "\\t")
-        print("")
-        print(f".: text: {query_text_print[:60]}:.")
-        
-        if mode_ai =="slow":
-            #robo_roboclick.robo_keyboard_press_enter(delay=delay)
-            #ctrl enter
+        print(f"\n.: text: {query_text_print[:60]}:.")
+
+        if mode_ai == "slow":
             robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
-            #check for too many requests
             robo_roboclick.ai_check_for_too_many_requests(**kwargs)
-        elif "fast" in mode_ai: 
-            #robo_roboclick.robo_keyboard_press_enter(delay=1)
+        elif "fast" in mode_ai:
             robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
             robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai, **kwargs)
 
+def action_open_ai(**kwargs):
+    """Send query to OpenAI"""
+    print("\n.:action:. -- ai_query (open_ai) -- sending a query")
+    query_texts = _load_query_texts(kwargs)
+    _send_query_texts_impl(query_texts, kwargs)
 
-def old(**kwargs):
-    """Send query to AI"""
-    directory = kwargs.get("directory", "")
-    action = kwargs.get("action", {})
-    print("ai_query -- sending a query")
-    #get the query from the action
-    action = kwargs.get("action", {})
-    delay = action.get("delay", 60)
-    query_text = action.get("text", "")
-    file_name = action.get("file_name", "")
-    
-    
-    
-    #load query text
-    if True:
-        if file_name != "" and query_text != "":
-            print(f"     ERROR bothquery text and file are defined query text will be used")
-            robo_roboclick.robo_delay(delay=10)
-        if query_text == "" and file_name != "":
-            #load text from file.
-            #file is in the prompt directory of the project
-            filename_absolute = ""
-            if file_name.startswith("prompt\\") or file_name.startswith("prompt/"):                
-                filename_absolute = os.path.abspath(file_name)
-        #file is in the directory of the part
-            else:
-                file_name = f"{directory}\\{file_name}"
-                filename_absolute = os.path.abspath(file_name)
-            if filename_absolute != "":
-                try:
-                    with open(filename_absolute, 'r', encoding='utf-8') as f:
-                        query_text = f.read()
-                    print(f"     Loaded query text from {filename_absolute}")
-                except Exception as e:
-                    print(f"     Error loading query text from {filename_absolute}: {e}")
-                    robo_roboclick.robo_delay(delay=10)
-                    query_text = ""
-            else:
-                print(f"     No valid file name provided for query text.")
-                robo_roboclick.robo_delay(delay=10)
-                query_text = ""
-    mode_ai = action.get("mode_ai_wait", "slow")
-    if mode_ai == None:
-        mode_ai = "slow"
-    method = action.get("method", "typing")  #"standard" or "line_by_line"
+def action_claude(**kwargs):
+    """Send query to Claude"""
+    print("\n.:action:. -- ai_query (claude) -- sending a query")
+    query_texts = _load_query_texts(kwargs)
+    _send_query_texts_impl(query_texts, kwargs, default_focus_pos=[650, 470])
 
-    #clear text box
-    if True:
-        print("    Clearing text box before query...")
-        #select all
-        robo_roboclick.robo_keyboard_press_ctrl_generic(string="a", delay=2)
-        #back space
-        robo_roboclick.robo_keyboard_press_backspace(delay=2, repeat=1)
+def action_gemini(**kwargs):
+    """Send query to Google Gemini"""
+    print("\n.:action:. -- ai_query (gemini) -- sending a query")
+    query_texts = _load_query_texts(kwargs)
+    _send_query_texts_impl(query_texts, kwargs, default_focus_pos=[650, 860])
 
-    #if query text is more than 1000 characters use paste method
-    if len(query_text) > 1000:
-        method = "paste"
-        print("    Query text is long, using paste method.")
-
-    if method == "typing":
-        #split the text on line breaks
-        query_text = query_text.replace("\r\n", "\n").replace("\r", "\n")
-        query_text_lines = query_text.split("\n")
-        for line in query_text_lines:
-            #send each line with a delay of 1 second between lines
-            robo_roboclick.robo_keyboard_send(string=line, delay=0.1)
-            robo_roboclick.robo_keyboard_press_shift_enter(delay=0.1)  # Press Shift+Enter to create a new line
-    elif method == "paste":
-        #press space twice to ensure focus
-        robo_roboclick.robo_keyboard_send(string="  ")
-        robo_roboclick.robo_keyboard_paste(text=query_text)
-        #paste the entire text at once
-        #delay 5 seconds
-        robo_roboclick.robo_delay(delay=5)
-        robo_roboclick.robo_keyboard_press_ctrl_generic(string="v", delay=2)
-    
-    # remove tabs and new lines
-    
-    query_text_print = query_text.replace("\n", "\\n").replace("\t", "\\t")
-    print("")
-    print(f".: text: {query_text_print[:60]}:.")
-    
-    if mode_ai =="slow":
-        #robo_roboclick.robo_keyboard_press_enter(delay=delay)
-        #ctrl enter
-        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=delay)
-    elif "fast" in mode_ai: 
-        #robo_roboclick.robo_keyboard_press_enter(delay=1)
-        robo_roboclick.robo_keyboard_press_ctrl_generic(string="enter", delay=1)
-        robo_roboclick.ai_wait_mode_fast_check(mode_ai_wait=mode_ai, **kwargs)
+def action_open_web_ui(**kwargs):
+    """Send query to Open WebUI"""
+    print("\n.:action:. -- ai_query (open_web_ui) -- sending a query")
+    query_texts = _load_query_texts(kwargs)
+    _send_query_texts_impl(query_texts, kwargs, default_focus_pos=[650, 860])
 
 def test(**kwargs):
-    try:
-        import oomlout_test
-    except Exception:
-        return callable(old)
-
-    test_fn = getattr(oomlout_test, "test", None)
-    if not callable(test_fn):
-        return callable(old)
-
-    try:
-        return bool(test_fn(**kwargs))
-    except Exception:
-        return callable(old)
+    test_file = os.path.join(os.path.dirname(__file__), "oomlout_test.py")
+    if os.path.exists(test_file):
+        import importlib.util
+        import sys
+        dir_path = os.path.dirname(__file__)
+        added_to_path = False
+        if dir_path not in sys.path:
+            sys.path.insert(0, dir_path)
+            added_to_path = True
+        try:
+            spec = importlib.util.spec_from_file_location(f"test_module_{abs(hash(test_file))}", test_file)
+            if spec and spec.loader:
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                test_fn = getattr(mod, "test", None)
+                if callable(test_fn):
+                    return test_fn(**kwargs)
+        finally:
+            if added_to_path and dir_path in sys.path:
+                sys.path.remove(dir_path)
+    return callable(old) and callable(new)

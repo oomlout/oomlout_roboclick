@@ -1,0 +1,35 @@
+{
+  "status": "DRAFT",
+  "execution": "authorized direct local generation",
+  "input_files": [
+    "source/raw/20260705_brain_dump/transcript.md",
+    "source/raw/20260705_improvement_session/transcript.md",
+    "source/raw/20260705_intake_interview/transcript.md",
+    "source/raw/20260706_feedback_run1/transcript.md",
+    "source/raw/20260718_feedback_run2/transcript.md",
+    "source/raw/20260718_open_questions_session/transcript.md",
+    "source/raw/20260719_improvement_session/transcript.md",
+    "source/raw/20260720_settings_keys_session/transcript.md",
+    "source/foundation/decision_log.md",
+    "source/foundation/foundation.md",
+    "source/foundation/guardrails.md",
+    "source/foundation/interview_digest.md",
+    "source/foundation/lessons.md",
+    "source/foundation/story_notes.md",
+    "source/foundation/style_preferences.md"
+  ],
+  "source_claims": [
+    "CANON-001–056 with recorded supersessions"
+  ],
+  "assumptions": [
+    "Research assessments inherited; no fresh research"
+  ],
+  "changes_made": [
+    "Normalized existing evidence to required schemas",
+    "Wrote production brief and exhaustive synthesis"
+  ],
+  "open_questions": [],
+  "verification_notes": [
+    "All declared JSON parsed; source unchanged"
+  ]
+}

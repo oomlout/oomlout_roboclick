@@ -156,21 +156,22 @@ def _make_run_folder_runner(config: dict[str, Any]) -> Callable[[], dict[str, An
 
 def _load_test_definitions() -> list[tuple[Path, dict[str, Any]]]:
     definitions: list[tuple[Path, dict[str, Any]]] = []
-    if not TESTS_DIR.exists():
-        return definitions
+    search_dirs = [TESTS_DIR, ROOT_DIR / "test"]
+    seen_files: set[Path] = set()
 
-    for test_dir in sorted(TESTS_DIR.iterdir(), key=lambda p: p.name):
-        if not test_dir.is_dir():
+    for base_dir in search_dirs:
+        if not base_dir.exists():
             continue
-        definition_file = test_dir / "working.yaml"
-        if not definition_file.is_file():
-            continue
-        definition = _load_yaml_file(definition_file)
-        if not definition:
-            continue
-        if definition.get("enabled", True) is False:
-            continue
-        definitions.append((definition_file, definition))
+        for definition_file in sorted(base_dir.rglob("working.yaml")):
+            if not definition_file.is_file() or definition_file in seen_files:
+                continue
+            seen_files.add(definition_file)
+            definition = _load_yaml_file(definition_file)
+            if not definition:
+                continue
+            if definition.get("enabled", True) is False:
+                continue
+            definitions.append((definition_file, definition))
 
     if PYTHON_TEST_DEFINITION_FILE.is_file():
         try:

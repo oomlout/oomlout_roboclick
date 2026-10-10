@@ -1,0 +1,337 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- logic
+- speak
+bip_39_2_word_no_space: logicspeak
+bip_39_2_word_space: logic speak
+bip_39_2_word_underscore: logic_speak
+bip_39_3_word_array:
+- logic
+- speak
+- aisle
+bip_39_3_word_no_space: logicspeakaisle
+bip_39_3_word_space: logic speak aisle
+bip_39_3_word_underscore: logic_speak_aisle
+bip_39_full_array:
+- logic
+- speak
+- aisle
+- sea
+- lizard
+- federal
+- filter
+- reflect
+- sign
+- lesson
+- spike
+- race
+bip_39_full_no_space: logicspeakaislesealizardfederalfilterreflectsignlessonspikerace
+bip_39_full_space: logic speak aisle sea lizard federal filter reflect sign lesson
+    spike race
+bip_39_full_underscore: logic_speak_aisle_sea_lizard_federal_filter_reflect_sign_lesson_spike_race
+directory: parts/musical_mytholmroyd_duck_megacity_step_01_research_source_1
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_01_research_source_1
+id_no_class: musical_mytholmroyd_duck_megacity_step_01_research_source_1
+id_no_size: musical_mytholmroyd_duck_megacity_step_01_source_1
+id_no_type: musical_mytholmroyd_duck_megacity_step_01_source_1
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_01_research_source_1
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_01_research_source_1
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_01_research_source_1
+md5: 839a1816e0f82ca8d59da1c8500f4758
+md5_10: 839a1816e0
+md5_10_upper: 839A1816E0
+md5_5: 839a1
+md5_5_upper: 839A1
+md5_6: 839a18
+md5_6_alpha: 54uu0
+md5_6_alpha_upper: 54UU0
+md5_6_upper: 839A18
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 01 Research Source 1
+name_no_class: Musical Mytholmroyd Duck Megacity Step 01 Research Source 1
+name_no_size: Musical Mytholmroyd Duck Megacity Step 01 Source 1
+name_no_type: Musical Mytholmroyd Duck Megacity Step 01 Source 1
+name_proper: Musical Mytholmroyd Duck Megacity Step 01 Research Source 1
+name_space: musical mytholmroyd duck megacity step 01 research source 1
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 01 RESEARCH SOURCE 1
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_zip
+        dirs:
+        -   arcname_prefix: source/raw
+            path: ../../source/raw
+        -   arcname_prefix: source/foundation
+            path: ../../source/foundation
+        -   arcname_prefix: source/processed/structured
+            path: ../../source/processed/structured
+        files:
+        -   arcname: source/settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_01\nstep_name: Research Source\ndescription: Extracts\
+            \ structured indexes from source transcripts and produces the producer\
+            \ brief.\nfiles:\n  - name: story_guide.md\n    destination: production/03_story/story_guide.md\n\
+            \    description: Producer narrative brief for the show\n  - name: source_synthesis.md\n\
+            \    destination: production/00_admin/source_synthesis.md\n    description:\
+            \ Cross-chat narrative synthesis\n  - name: characters.json\n    destination:\
+            \ source/processed/structured/characters.json\n    description: Character\
+            \ index extracted from source\n  - name: places.json\n    destination:\
+            \ source/processed/structured/places.json\n    description: Place index\
+            \ extracted from source\n  - name: song_seeds.json\n    destination: source/processed/structured/song_seeds.json\n\
+            \    description: Song seed ideas extracted from source\n  - name: lyric_fragments.json\n\
+            \    destination: source/processed/structured/lyric_fragments.json\n \
+            \   description: Lyric fragments extracted from source\n  - name: themes.json\n\
+            \    destination: source/processed/structured/themes.json\n    description:\
+            \ Themes extracted from source\n  - name: narrative_threads.json\n   \
+            \ destination: source/processed/structured/narrative_threads.json\n  \
+            \  description: Narrative threads extracted from source\n  - name: facts.json\n\
+            \    destination: source/processed/structured/facts.json\n    description:\
+            \ Facts extracted from source\n  - name: craft_notes.json\n    destination:\
+            \ source/processed/structured/craft_notes.json\n    description: Craft\
+            \ notes extracted from source\n  - name: open_questions.json\n    destination:\
+            \ source/processed/structured/open_questions.json\n    description: Open\
+            \ questions extracted from source\n  - name: conflicts.json\n    destination:\
+            \ source/processed/structured/conflicts.json\n    description: Conflicts\
+            \ extracted from source\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_01\nstep_name: Research Source\ndescription: Extracts\
+            \ structured indexes from source transcripts and produces the producer\
+            \ brief.\nfiles:\n  - name: story_guide.md\n    destination: production/03_story/story_guide.md\n\
+            \    description: Producer narrative brief for the show\n  - name: source_synthesis.md\n\
+            \    destination: production/00_admin/source_synthesis.md\n    description:\
+            \ Cross-chat narrative synthesis\n  - name: characters.json\n    destination:\
+            \ source/processed/structured/characters.json\n    description: Character\
+            \ index extracted from source\n  - name: places.json\n    destination:\
+            \ source/processed/structured/places.json\n    description: Place index\
+            \ extracted from source\n  - name: song_seeds.json\n    destination: source/processed/structured/song_seeds.json\n\
+            \    description: Song seed ideas extracted from source\n  - name: lyric_fragments.json\n\
+            \    destination: source/processed/structured/lyric_fragments.json\n \
+            \   description: Lyric fragments extracted from source\n  - name: themes.json\n\
+            \    destination: source/processed/structured/themes.json\n    description:\
+            \ Themes extracted from source\n  - name: narrative_threads.json\n   \
+            \ destination: source/processed/structured/narrative_threads.json\n  \
+            \  description: Narrative threads extracted from source\n  - name: facts.json\n\
+            \    destination: source/processed/structured/facts.json\n    description:\
+            \ Facts extracted from source\n  - name: craft_notes.json\n    destination:\
+            \ source/processed/structured/craft_notes.json\n    description: Craft\
+            \ notes extracted from source\n  - name: open_questions.json\n    destination:\
+            \ source/processed/structured/open_questions.json\n    description: Open\
+            \ questions extracted from source\n  - name: conflicts.json\n    destination:\
+            \ source/processed/structured/conflicts.json\n    description: Conflicts\
+            \ extracted from source\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block research_step_01'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: "Research \u2014 step_01"
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_01_research_source
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test:
+    - story_guide.md
+    - source_synthesis.md
+    - characters.json
+    - places.json
+    - song_seeds.json
+    - lyric_fragments.json
+    - themes.json
+    - narrative_threads.json
+    - facts.json
+    - craft_notes.json
+    - open_questions.json
+    - conflicts.json
+    retries_until_complete: 3
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\characters.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\places.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\song_seeds.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\lyric_fragments.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\themes.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\narrative_threads.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\facts.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\craft_notes.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\open_questions.json
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_01_research_source_1\conflicts.json
+        mode_ai_wait: slow
+        retries: 1
+    file_test: ''
+    retries_until_complete: 0
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_01_research_source_1
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_01_research_source
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_01
+taxonomy_3_capital: Step 01
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_01
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: research_source_1
+taxonomy_4_capital: Research Source 1
+taxonomy_4_first_letter: r
+taxonomy_4_first_letter_upper: R
+taxonomy_4_length_1: r
+taxonomy_4_length_2: re
+taxonomy_4_length_3: res
+taxonomy_4_length_4: rese
+taxonomy_4_length_5: resea
+taxonomy_4_upper: RESEARCH_SOURCE_1
+taxonomy_4_upper_length_1: R
+taxonomy_4_upper_length_2: RE
+taxonomy_4_upper_length_3: RES
+taxonomy_4_upper_length_4: RESE
+taxonomy_4_upper_length_5: RESEA
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: research
+url_chat: ''

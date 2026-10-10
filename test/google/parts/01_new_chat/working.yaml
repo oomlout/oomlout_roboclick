@@ -1,0 +1,12 @@
+﻿id: google_test_01_new_chat
+enabled: false
+name: "Google Gemini Test 01 - New Chat"
+directory: test/google/parts/01_new_chat
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Open a fresh Gemini chat session
+        log_url: true
+    file_test: ''
+    retries_until_complete: 0

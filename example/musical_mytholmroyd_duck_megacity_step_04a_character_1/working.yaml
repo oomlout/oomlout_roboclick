@@ -1,0 +1,335 @@
+base_age: 6-10
+base_dialogue_closing_lines_max: 4
+base_dialogue_closing_lines_min: 2
+base_dialogue_lines_max: 4
+base_dialogue_lines_min: 2
+base_illustration_style: "fun chibi vector illustration with simple bold colours;\
+    \ simple, uncluttered compositions favouring intimate shots of characters talking\
+    \ to one another over wide detailed vistas; modern structures (metro stations,\
+    \ tunnels, trains, the finished city's towers) are clean-cut contemporary MTR/HDB\
+    \ style with NO historical sandstone or brickwork; the metro is always double-stacked;\
+    \ scenes 1-8 all sit in ONE consistent season \u2014 late spring/summer \u2014\
+    \ and scene 10 opens on a new dawn mirroring scene 1's canal bank at dawn; the\
+    \ plan is never drawn as a recurring object (no consistent plan drawing/model/poster\
+    \ carried across scenes)"
+base_length: 10
+base_music_palette: "modern driving pop/electronic \u2014 beats, synths, momentum;\
+    \ the sound of the metro itself. Vignette numbers (scenes 5-8) are character-flavoured\
+    \ over that metro spine \u2014 e.g. Mabel canal-folk-tinged, Elsie gentler \u2014\
+    \ with the electronic pulse kept underneath; the score's identity stays the metro\
+    \ sound"
+base_number_of_characters: 6
+base_number_of_props: 2
+base_show_shape: "sung-through \u2014 the story is carried in song with only a few\
+    \ spoken dialogue lines to link numbers, spoken naturalistically by whoever is\
+    \ in the scene (never a narrator); NAMED VOICES ONLY: every sung line belongs\
+    \ to one of the 6 named characters \u2014 unnamed villagers/ensemble never sing;\
+    \ 10 scenes on the producer-authored 10-beat spine (a-j), ~10 songs; duck-plus-one\
+    \ staging \u2014 full company only at the meeting (scene 4) and scenes 9-10; scene\
+    \ 10 is ONE sectioned mega-finale (train reveal \u2192 recognition \u2192 arc\
+    \ landing \u2192 open button), never separate finale songs"
+base_song_style: "modern driving pop/electronic \u2014 beats, synths, momentum; the\
+    \ sound of the metro itself; vignette numbers (scenes 5-8) character-flavoured\
+    \ over that spine (Mabel canal-folk-tinged, Elsie gentler) with the electronic\
+    \ pulse kept underneath"
+base_song_words_max: 500
+base_story_name: mytholmroyd_duck_megacity
+base_story_style: "an earnest, funny, momentum-filled community-transformation tale\
+    \ on the producer-authored 10-beat spine (storybook: the same 10 beats in order\
+    \ plus the two AUTHORED extra beats \u2014 the Mytholmroyd name-meaning discovery\
+    \ ('clearing where two rivers meet') beside beat b, and a Yorkshire hawker-hall\
+    \ family meal (Yorkshire puddings, curry, dim sum, parkin under one roof) beside\
+    \ the finale \u2014 12 total): no villain, exactly ONE setback (the failed presentation,\
+    \ beats c/d, witnessed as a flashback within scene 3) resolved by hearing concerns\
+    \ one at a time in intimate duck-plus-one vignettes on their canon locations (canal\
+    \ bank at dawn; the strip between river and canal; outside then inside the village\
+    \ hall; a lock gate; Nora's lane; the station platform; Elsie's front room; the\
+    \ locks drained one by one), everyone converting before the build, then lock-by-lock\
+    \ construction (scene 9, the only construction scene) and a single triumphant\
+    \ reveal held to scene 10 \u2014 opening on a new dawn that mirrors scene 1, the\
+    \ first double-stacked train arriving with Asha Rahman aboard (in the storybook\
+    \ this reveal is the book's one double-page spread) \u2014 that ends open-ended:\
+    \ 'so much more to discover and become'. The whole tale sits in one late-spring/summer\
+    \ season, and the 2015 flood is never referenced \u2014 no beat, lyric, or image"
+base_suno_style_chars_max: 400
+bip_39_2_word_array:
+- absorb
+- busy
+bip_39_2_word_no_space: absorbbusy
+bip_39_2_word_space: absorb busy
+bip_39_2_word_underscore: absorb_busy
+bip_39_3_word_array:
+- absorb
+- busy
+- debris
+bip_39_3_word_no_space: absorbbusydebris
+bip_39_3_word_space: absorb busy debris
+bip_39_3_word_underscore: absorb_busy_debris
+bip_39_full_array:
+- absorb
+- busy
+- debris
+- army
+- tank
+- method
+- live
+- code
+- someone
+- indoor
+- bunker
+- give
+bip_39_full_no_space: absorbbusydebrisarmytankmethodlivecodesomeoneindoorbunkergive
+bip_39_full_space: absorb busy debris army tank method live code someone indoor bunker
+    give
+bip_39_full_underscore: absorb_busy_debris_army_tank_method_live_code_someone_indoor_bunker_give
+character_id: canal_duck
+character_name: Canal Duck
+character_number: 1
+directory: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1
+generate_stl: false
+id: musical_mytholmroyd_duck_megacity_step_04a_character_1
+id_no_class: musical_mytholmroyd_duck_megacity_step_04a_character_1
+id_no_size: musical_mytholmroyd_duck_megacity_step_04a_character_1
+id_no_type: musical_mytholmroyd_duck_megacity_step_04a_character_1
+link_github: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_04a_character_1
+link_main: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_04a_character_1
+link_redirect: https://github.com/oomlout/oomlout_oomp_version_1_messy/tree/main/parts/musical_mytholmroyd_duck_megacity_step_04a_character_1
+md5: 00c3e4e1860ddb1860a968cf0e6079b1
+md5_10: 00c3e4e186
+md5_10_upper: 00C3E4E186
+md5_5: 00c3e
+md5_5_upper: 00C3E
+md5_6: 00c3e4
+md5_6_alpha: 12p0
+md5_6_alpha_upper: 12P0
+md5_6_upper: 00C3E4
+musical_title: Mytholmroyd Duck Megacity
+name: Musical Mytholmroyd Duck Megacity Step 04A Character 1
+name_no_class: Musical Mytholmroyd Duck Megacity Step 04A Character 1
+name_no_size: Musical Mytholmroyd Duck Megacity Step 04A Character 1
+name_no_type: Musical Mytholmroyd Duck Megacity Step 04A Character 1
+name_proper: Musical Mytholmroyd Duck Megacity Step 04A Character 1
+name_space: musical mytholmroyd duck megacity step 04a character 1
+name_upper: MUSICAL MYTHOLMROYD DUCK MEGACITY STEP 04A CHARACTER 1
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: create_text_file
+        content: '# This Character
+
+            character_id: canal_duck
+
+            character_name: Canal Duck
+
+            character_number: 1
+
+            asset_folder: production/08a_character_assets/character_1
+
+
+            Write the character description, ElevenLabs voice prompt, Suno voice description
+            YAML, image prompt, and character.yaml for this character only.
+
+            Write character_description.md before image_prompt.md so the image prompt
+            can be built from a stable description.
+
+            Write elevenlabs_voice_prompt.md before image_prompt.md so the voice design
+            lives beside the character asset.
+
+            Write suno_voice_description.yaml once and keep its description compact
+            enough to repeat verbatim in every Suno section tag.
+
+            character.yaml must include short_name, aliases, and a quoted CSS hex
+            color like "#00bcd4".
+
+            Aliases should include common dialogue speaker forms such as first names.
+
+            Use the binding foundation visual guardrails when defining their stable
+            appearance.
+
+            '
+        file_name: this_character.md
+    -   command: create_zip
+        files: &id001
+        -   arcname: settings_basic.yaml
+            source: ../../source/settings_basic.yaml
+        -   arcname: show_config.yaml
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/show_config.yaml
+        -   arcname: canon_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_03_canon_1/canon_bible.md
+        -   arcname: character_bible.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_bible.md
+        -   arcname: character_voices.md
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_voices.md
+        -   arcname: character_registry.json
+            source: ../../parts/musical_mytholmroyd_duck_megacity_step_04_character_bible_1/character_registry.json
+        -   arcname: foundation/guardrails.md
+            source: ../../source/foundation/guardrails.md
+        -   arcname: foundation/style_preferences.md
+            source: ../../source/foundation/style_preferences.md
+        -   arcname: this_character.md
+            source: this_character.md
+        zip_path: upload.zip
+    -   command: create_text_file
+        content: "step_id: step_04a_character_1\nstep_name: Early Character Creation\
+            \ canal_duck\ndescription: Fixed character, spoken voice, singing voice,\
+            \ image prompt, and cast data used by later pipeline steps for canal_duck.\n\
+            files:\n  - name: character_description.md\n    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/character_description.md\n\
+            \    description: Producer-readable description of who the character is,\
+            \ how they look, and how they perform\n  - name: elevenlabs_voice_prompt.md\n\
+            \    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/elevenlabs_voice_prompt.md\n\
+            \    description: Direct ElevenLabs Voice Design prompt for this character,\
+            \ 900 characters or fewer\n  - name: suno_voice_description.yaml\n   \
+            \ destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/suno_voice_description.yaml\n\
+            \    description: Fixed compact Suno-friendly singing voice description,\
+            \ reused verbatim across songs\n  - name: image_prompt.md\n    destination:\
+            \ parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/image_prompt.md\n\
+            \    description: Complete self-contained image prompt\n  - name: character.yaml\n\
+            \    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/character.yaml\n\
+            \    description: Animatic cast entry -- character_id, display_name, short_name,\
+            \ aliases, quoted CSS hex color\n"
+        file_name: file_creation_list.md
+    -   command: create_text_file
+        content: "step_id: step_04a_character_1\nstep_name: Early Character Creation\
+            \ canal_duck\ndescription: Fixed character, spoken voice, singing voice,\
+            \ image prompt, and cast data used by later pipeline steps for canal_duck.\n\
+            files:\n  - name: character_description.md\n    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/character_description.md\n\
+            \    description: Producer-readable description of who the character is,\
+            \ how they look, and how they perform\n  - name: elevenlabs_voice_prompt.md\n\
+            \    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/elevenlabs_voice_prompt.md\n\
+            \    description: Direct ElevenLabs Voice Design prompt for this character,\
+            \ 900 characters or fewer\n  - name: suno_voice_description.yaml\n   \
+            \ destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/suno_voice_description.yaml\n\
+            \    description: Fixed compact Suno-friendly singing voice description,\
+            \ reused verbatim across songs\n  - name: image_prompt.md\n    destination:\
+            \ parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/image_prompt.md\n\
+            \    description: Complete self-contained image prompt\n  - name: character.yaml\n\
+            \    destination: parts/musical_mytholmroyd_duck_megacity_step_04a_character_1/character.yaml\n\
+            \    description: Animatic cast entry -- character_id, display_name, short_name,\
+            \ aliases, quoted CSS hex color\n"
+        file_name: file_creation_list.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_2:
+    actions:
+    -   command: wait_for_file
+        file_name: upload.zip
+        timeout: 0
+    -   command: delay
+        delay: 45.0
+        message: '[pacing] before AI block character_creation_1'
+        mode_scroll_lock_skip: true
+        mode_skip_key: true
+        rand: 30
+    -   command: new_chat
+        description: Early character creation canal_duck
+    -   command: add_file
+        file_name: upload.zip
+    -   command: ai_from_directory
+        directory: prompts/step_04a_character_creation
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test:
+    - character_description.md
+    - elevenlabs_voice_prompt.md
+    - suno_voice_description.yaml
+    - image_prompt.md
+    - character.yaml
+    retries_until_complete: 3
+oomlout_ai_roboclick_3:
+    actions:
+    -   command: file_text_yaml_fix
+        file_name: character.yaml
+    file_test: ''
+    retries_until_complete: 0
+oomlout_ai_roboclick_4:
+    actions:
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_04a_character_1\suno_voice_description.yaml
+        mode_ai_wait: slow
+        retries: 1
+    -   command: verify_structured
+        file_name: parts\musical_mytholmroyd_duck_megacity_step_04a_character_1\character.yaml
+        mode_ai_wait: slow
+        retries: 1
+    file_test: ''
+    retries_until_complete: 0
+oomp_key: oomp_musical_mytholmroyd_duck_megacity_step_04a_character_1
+page_size: a4_facing_text_left_image_right
+prompt_chain: prompts/step_04a_character_creation
+run_action: false
+run_oomp: true
+run_oomp_populate: true
+run_scad: false
+taxonomy_1: musical
+taxonomy_10: ''
+taxonomy_11: ''
+taxonomy_12: ''
+taxonomy_13: ''
+taxonomy_14: ''
+taxonomy_15: ''
+taxonomy_1_capital: Musical
+taxonomy_1_first_letter: m
+taxonomy_1_first_letter_upper: M
+taxonomy_1_length_1: m
+taxonomy_1_length_2: mu
+taxonomy_1_length_3: mus
+taxonomy_1_length_4: musi
+taxonomy_1_length_5: music
+taxonomy_1_upper: MUSICAL
+taxonomy_1_upper_length_1: M
+taxonomy_1_upper_length_2: MU
+taxonomy_1_upper_length_3: MUS
+taxonomy_1_upper_length_4: MUSI
+taxonomy_1_upper_length_5: MUSIC
+taxonomy_2: mytholmroyd_duck_megacity
+taxonomy_2_capital: Mytholmroyd Duck Megacity
+taxonomy_2_first_letter: m
+taxonomy_2_first_letter_upper: M
+taxonomy_2_length_1: m
+taxonomy_2_length_2: my
+taxonomy_2_length_3: myt
+taxonomy_2_length_4: myth
+taxonomy_2_length_5: mytho
+taxonomy_2_upper: MYTHOLMROYD_DUCK_MEGACITY
+taxonomy_2_upper_length_1: M
+taxonomy_2_upper_length_2: MY
+taxonomy_2_upper_length_3: MYT
+taxonomy_2_upper_length_4: MYTH
+taxonomy_2_upper_length_5: MYTHO
+taxonomy_3: step_04a
+taxonomy_3_capital: Step 04A
+taxonomy_3_first_letter: s
+taxonomy_3_first_letter_upper: S
+taxonomy_3_length_1: s
+taxonomy_3_length_2: st
+taxonomy_3_length_3: ste
+taxonomy_3_length_4: step
+taxonomy_3_length_5: step_
+taxonomy_3_upper: STEP_04A
+taxonomy_3_upper_length_1: S
+taxonomy_3_upper_length_2: ST
+taxonomy_3_upper_length_3: STE
+taxonomy_3_upper_length_4: STEP
+taxonomy_3_upper_length_5: STEP_
+taxonomy_4: character_1
+taxonomy_4_capital: Character 1
+taxonomy_4_first_letter: c
+taxonomy_4_first_letter_upper: C
+taxonomy_4_length_1: c
+taxonomy_4_length_2: ch
+taxonomy_4_length_3: cha
+taxonomy_4_length_4: char
+taxonomy_4_length_5: chara
+taxonomy_4_upper: CHARACTER_1
+taxonomy_4_upper_length_1: C
+taxonomy_4_upper_length_2: CH
+taxonomy_4_upper_length_3: CHA
+taxonomy_4_upper_length_4: CHAR
+taxonomy_4_upper_length_5: CHARA
+taxonomy_5: ''
+taxonomy_6: ''
+taxonomy_7: ''
+taxonomy_8: ''
+taxonomy_9: ''
+type: character_image
+url_chat: ''
+zip_sources: *id001

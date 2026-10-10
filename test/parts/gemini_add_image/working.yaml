@@ -1,0 +1,21 @@
+﻿id: gemini_add_image
+enabled: false
+name: Gemini Test Add Image
+directory: test/parts/gemini_add_image
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini add image test setup
+        log_url: true
+    -   command: add_file
+        base_ai_provider: gemini
+        file_name: source_image.png
+    -   command: ai_query
+        base_ai_provider: gemini
+        text: Describe the image briefly. Reply with one sentence.
+        delay: '30'
+        mode_ai_wait: slow
+    -   command: close_tab
+    file_test: ''
+    retries_until_complete: 0

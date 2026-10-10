@@ -1,0 +1,9 @@
+character_id: nora_greenwood
+display_name: Nora Greenwood
+short_name: Nora
+aliases:
+- Nora Greenwood
+- Nora
+- nora_greenwood
+asset_folder: production/08a_character_assets/character_3
+color: '#4C79BC'

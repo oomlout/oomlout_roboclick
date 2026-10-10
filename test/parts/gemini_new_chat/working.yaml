@@ -1,0 +1,12 @@
+﻿id: gemini_new_chat
+enabled: false
+name: Gemini Test New Chat
+directory: test/parts/gemini_new_chat
+oomlout_ai_roboclick_1:
+    actions:
+    -   command: new_chat
+        base_ai_provider: gemini
+        description: Gemini new chat test
+        log_url: true
+    file_test: ''
+    retries_until_complete: 0
