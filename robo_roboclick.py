@@ -9,7 +9,7 @@ import jinja2
 import pickle
 import copy
 
-position_text_box = [917, 1008]
+position_text_box = [917, 990]
 
 _ACTION_LOG_IMPORTANT_KEYS = (
     "file_name",
